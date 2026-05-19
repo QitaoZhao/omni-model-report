@@ -322,9 +322,9 @@ footer { border-top: 1px solid var(--line); margin-top: 34px; padding-top: 20px;
   <div class="stats">
     <div class="stat"><strong>6</strong><span>models</span></div>
     <div class="stat"><strong>37</strong><span>matrix test cases</span></div>
-    <div class="stat"><strong>19</strong><span>understanding cases</span></div>
+    <div class="stat"><strong>27</strong><span>understanding cases</span></div>
     <div class="stat"><strong>7</strong><span>capacity groups</span></div>
-    <div class="stat"><strong>277</strong><span>image artifacts on page</span></div>
+    <div class="stat"><strong>285</strong><span>image artifacts on page</span></div>
   </div>
 </header>
 <main>
@@ -3390,41 +3390,45 @@ footer { border-top: 1px solid var(--line); margin-top: 34px; padding-top: 20px;
   </section></div>
     <div class="tab-panel" id="tab-understanding"><section>
   <h2>Image Understanding Summary</h2>
-  <p class="section-intro">This tab uses fixed input images and model-specific VQA/OCR paths. It is separate from self-readback: the model is not judging its own generated image, it is answering questions about a controlled input image.</p>
+  <p class="section-intro">This tab uses fixed input images and model-specific VQA/OCR paths. It is separate from self-readback: the model is not judging its own generated image, it is answering questions about controlled, real-world, and harder reasoning images.</p>
   <table>
-    <thead><tr><th>Model</th><th>Completed</th><th>Pass / Partial / Fail</th><th>ID Pass</th><th>OOD Pass</th><th>Real-World Pass</th><th>Notes</th></tr></thead>
+    <thead><tr><th>Model</th><th>Completed</th><th>Pass / Partial / Fail</th><th>ID Pass</th><th>OOD Pass</th><th>Real-World Pass</th><th>Hard Pass</th><th>Notes</th></tr></thead>
     <tbody>
       <tr>
           <td><strong>Janus-Pro-7B</strong></td>
-          <td>19</td>
-          <td>15 / 4 / 0</td>
+          <td>27</td>
+          <td>18 / 9 / 0</td>
           <td>5 / 5</td>
           <td>3 / 5</td>
           <td>7 / 9</td>
+          <td>3 / 8</td>
           <td>Heuristic checks are coarse; inspect answers for qualitative detail.</td>
         </tr><tr>
           <td><strong>BAGEL-7B-MoT</strong></td>
-          <td>19</td>
-          <td>15 / 2 / 2</td>
+          <td>27</td>
+          <td>19 / 3 / 5</td>
           <td>5 / 5</td>
           <td>3 / 5</td>
           <td>7 / 9</td>
+          <td>4 / 8</td>
           <td>Heuristic checks are coarse; inspect answers for qualitative detail.</td>
         </tr><tr>
           <td><strong>SenseNova-U1-8B-MoT</strong></td>
-          <td>19</td>
-          <td>19 / 0 / 0</td>
+          <td>27</td>
+          <td>24 / 3 / 0</td>
           <td>5 / 5</td>
           <td>5 / 5</td>
           <td>9 / 9</td>
+          <td>5 / 8</td>
           <td>Heuristic checks are coarse; inspect answers for qualitative detail.</td>
         </tr><tr>
           <td><strong>Show-o2-1.5B</strong></td>
-          <td>19</td>
-          <td>9 / 6 / 4</td>
+          <td>27</td>
+          <td>11 / 8 / 8</td>
           <td>3 / 5</td>
           <td>0 / 5</td>
           <td>6 / 9</td>
+          <td>2 / 8</td>
           <td>Heuristic checks are coarse; inspect answers for qualitative detail.</td>
         </tr><tr>
           <td><strong>Emu3.5-Image vLLM 8x80GB</strong></td>
@@ -3433,6 +3437,7 @@ footer { border-top: 1px solid var(--line); margin-top: 34px; padding-top: 20px;
           <td>0 / 5</td>
           <td>0 / 5</td>
           <td>0 / 9</td>
+          <td>0 / 8</td>
           <td>Unsupported in the current Emu3.5-Image generation/X2I runner.</td>
         </tr><tr>
           <td><strong>OneCAT-3B</strong></td>
@@ -3441,17 +3446,18 @@ footer { border-top: 1px solid var(--line); margin-top: 34px; padding-top: 20px;
           <td>5 / 5</td>
           <td>4 / 5</td>
           <td>0 / 9</td>
+          <td>0 / 8</td>
           <td>Original synthetic cases are present; real-world reasoning cases were not run because the 8x OneCAT job was stopped and the 1x job lacked OneCAT deps.</td>
         </tr>
     </tbody>
   </table>
   <div class="callout">
-    <p><strong>Takeaways:</strong> SenseNova and OneCAT were strongest on this compact understanding set; BAGEL was very strong on ID/OCR/chart and most OOD cases; Janus did well on simple ID but struggled with mirror/calendar edge cases; Show-o2's 432px path handled simple ID but degraded on OOD symbolic reasoning. Emu3.5-Image remains generation-only in this report.</p>
+    <p><strong>Takeaways:</strong> The easy ID/OOD fixtures are now less discriminative, so the hard reasoning rows should be read as stress tests for multi-step visual logic, counterfactuals, spatial constraints, and derived quantities. Emu3.5-Image remains generation-only in this report.</p>
   </div>
-  <p class="meta"><strong>Source:</strong> artifacts/pluto_omni_demo/image_understanding/full_run_20260519_realworld_reasoning/combined_image_understanding_with_realworld.json</p>
+  <p class="meta"><strong>Source:</strong> artifacts/pluto_omni_demo/image_understanding/full_run_20260519_hard_reasoning/combined_image_understanding_with_hard.json</p>
 </section><section>
   <h2>Image Understanding ID/OOD/Real-World Cases</h2>
-  <p class="section-intro">The first ten fixtures are controlled ID/OOD probes. The added real-world reasoning set uses sourced Wikimedia photos and asks traffic-rule, visual commonsense, physical/spatial, temporal-rule, and arithmetic questions.</p>
+  <p class="section-intro">The first ten fixtures are controlled ID/OOD probes. The real-world set uses sourced Wikimedia photos. The hard reasoning set adds diagrammatic puzzles where the answer requires combining visual evidence with constraints.</p>
   <article class="case-block understanding-case">
     <div class="case-head">
       <h3>Object count and coarse spatial layout</h3>
@@ -5486,6 +5492,1231 @@ Based on the label, here is the breakdown for two servings:
   </article>
       </div>
     </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Hard layer-order occlusion puzzle</h3>
+      <span class="tag adapted">Hard reasoning</span>
+      <span class="tag">occlusion</span><span class="tag">layer order</span><span class="tag">spatial reasoning</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hard_layer_order.png" alt="Hard layer-order occlusion puzzle">
+        <p class="prompt"><strong>Question:</strong> Using the overlap cues, list the four shapes from back to front. Then answer: which shape is immediately behind the yellow diamond?</p>
+        <p class="meta"><strong>Expected:</strong> Back-to-front order is blue square, green circle, red triangle, yellow diamond. The red triangle is immediately behind the yellow diamond.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic hard visual-reasoning fixture designed for this comparison; not from paper. Requires occlusion/layer order inference.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The four shapes from back to front are:
+1. Blue square (B)
+2. Red triangle (A)
+3. Yellow diamond (D)
+4. Green circle (C)
+
+The shape immediately behind the yellow diamond is the green circle (C).</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> red behind yellow diamond, triangle identified (0.667)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The four shapes from back to front are:
+
+1. Blue square (B)
+2. Green circle (C)
+3. Red triangle (A)
+4. Yellow diamond (D)
+
+The shape immediately behind the yellow diamond (D) is the red triangle (A).</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> back-to-front order, red behind yellow diamond, triangle identified (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>No concise final answer emitted before max_new_tokens; the raw model output is a reasoning trace.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> back-to-front order, red behind yellow diamond, triangle identified (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to determine the layering order of the shapes based on the provided image and text.
+
+1.  **Analyze the text cues:**
+    *   &quot;Visible overlap cues: D is on top of A&quot; -&gt; This means D is in front of A. So, A is behind D.
+    *   &quot;A covers C&quot; -&gt; This means A is in front of C. So, C is behind A.
+    *   &quot;C covers B&quot; -&gt; This means C is in front of B. So, B is behind C.
+
+2.  **Combine the cues to form a chain:**
+    *   D is on top of A (D &gt; A)
+    *   A is on top of C (A &gt; C)
+    *   C is on top of B (C &gt; B)
+
+    So the order from front to back is: D -&gt; A -&gt; C -&gt; B.
+    Therefore, the order from back to front is: B -&gt; C -&gt; A -&gt; D.
+
+3.  **Identify the shapes:**
+    *   B is the &quot;blue square&quot;.
+    *   C is the green circle (implied, though not explicitly labeled with a letter, the text says &quot;C covers B&quot; and there is a green circle visible under the blue square and red triangle. Wait, let me look closer. The green shape is a circle. The text says &quot;C covers B&quot;. The blue square is B. The green circle is partially visible. Wait, looking at the image, there is a green circle. Is that C? Let's re-read carefully.
+    *   The text says &quot;Visible overlap cues: D is on top of A; A covers C; C covers B.&quot;
+    *   Let's look at the shapes again.
+        *   Blue square: Labeled &quot;B blue square&quot;.
+        *   Red triangle: Labeled &quot;A red&quot;.
+        *   Yellow diamond: Labeled &quot;D yellow&quot;.
+        *   Green circle: It's partially visible. It's under the blue square and the red triangle. Wait, let's look at the overlaps.
+        *   The blue square (B) is on top of the green circle. The text says &quot;C covers B&quot;. This implies C is the green circle. Let's verify. The green circle is visible *under* the blue square? No, looking closely at the intersection of the blue square and the red triangle, there is a green circle. The blue square is on top of the green circle? Or is the green circle on top?
+        *   Let's re-examine the text: &quot;C covers B&quot;. This means C is in front of B. So the green circle (C) must be in front of the blue square (B). But in the image, the blue square is clearly on top of the green circle. Wait, let me look really closely at the intersection.
+        *   Actually, looking at the intersection of the blue square and the red triangle, there is a green circle. The blue square's right edge is visible. The red triangle's left edge is visible. The green circle is visible *between* them? No, the green circle is visible *under* the blue square? No, the green circle is visible *under* the red triangle?
+        *   Let's look at the text again. &quot;C covers B&quot;. This means C is in front of B. So C is the green circle. But visually, the blue square (B) seems to be on top of the green circle. Let me re-read the prompt. &quot;Visible overlap cues: D is on top of A; A covers C; C covers B.&quot;
+        *   Okay, let's trust the text cues over my initial visual interpretation if they conflict, or maybe I'm misinterpreting the visual.
+        *   Let's look at the green circle again. It is visible *under* the blue square? No, the blue square is opaque. The green circle is visible to the right of the blue square's edge. Wait, no. The green circle is visible *under* the blue square? No, the blue square is on the left. The red triangle is in the middle. The green circle is peeking out from under the blue square? No, it looks like the green circle is behind the blue square.
+        *   Let's look at the text &quot;C covers B&quot;. This means C is in front of B. So C is the green circle. This implies the green circle is in front of the blue square. But in the image, the blue square is clearly drawn *over* the green circle. Wait, let me look at the intersection of the blue square and the red triangle. The green circle is visible. Is it possible that the green circle is actually *behind* the blue square?
+        *   Let's re-read the text carefully. &quot;Visible overlap cues: D is on top of A; A covers C; C covers B.&quot;
+        *</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The four shapes from back to front are: blue square, red triangle, green circle, and yellow diamond. The shape immediately behind the yellow diamond is the red triangle.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      <p><strong>Matched checks:</strong> red behind yellow diamond, triangle identified (0.667)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag ">not_run_current_env_unavailable</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Not run in the current environment: the available 1x A100 job does not have a validated OneCAT image-understanding runner.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: not_run_current_env_unavailable</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Hard pipe-flow with closed valves</h3>
+      <span class="tag adapted">Hard reasoning</span>
+      <span class="tag">graph reasoning</span><span class="tag">physical flow</span><span class="tag">state tracking</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hard_pipe_flow.png" alt="Hard pipe-flow with closed valves">
+        <p class="prompt"><strong>Question:</strong> Water starts at the tank and can pass only through open green valves; red X valves block flow. Which cups will receive water?</p>
+        <p class="meta"><strong>Expected:</strong> Only Cup B receives water. V1 and V3 are open along the path to B; V2 blocks A, V4 blocks D, and C is isolated by the blocked upper route despite V5 being open.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic hard visual-reasoning fixture designed for this comparison; not from paper. Requires graph flow through open/closed valves.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Water can flow only through open green valves; red X valves block flow.
+
+To determine which cups will receive water, we need to identify the green valves that are open.
+
+1. The first green valve is labeled &quot;V1 open.&quot;
+2. The second green valve is labeled &quot;V3 open.&quot;
+3. The third green valve is labeled &quot;V5 open.&quot;
+
+These green valves are open, allowing water to flow.
+
+The red valves are labeled &quot;V2 closed&quot; and &quot;V4 closed.&quot; These valves block the flow of water.
+
+Therefore, the cups that will receive water are:
+Cup A
+Cup B
+Cup C
+Cup D
+
+The answer is: A</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> cup B, only B, closed valves block other cups (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>Water can flow only through open green valves; red X valves block flow.
+
+To determine which cups will receive water, we need to identify the green valves that are open.
+
+1. The first green valve is labeled &quot;V1 open.&quot;
+2. The second green valve is labeled &quot;V3 open.&quot;
+3. The third green valve is labeled &quot;V5 open.&quot;
+
+These green valves are open, allowing water to flow.
+
+The red valves are labeled &quot;V2 closed&quot; and &quot;V4 closed.&quot; These valves block the flow of water.
+
+Therefore, the cups that will receive water are:
+- Cup A
+- Cup B
+- Cup C
+- Cup D
+
+The answer is: A</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Based on the diagram, water can flow through the open green valves (V1, V3, and V5) and will fill the cups connected to these valves. Therefore, Cup B and Cup D will receive water.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> cup B, closed valves block other cups (0.667)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>No concise final answer emitted before max_new_tokens; the raw model output is a reasoning trace.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> cup B, only B, closed valves block other cups (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to identify which cups will receive water based on the provided diagram.
+
+**1. Analyze the Diagram:**
+*   **Source:** There's a blue box labeled &quot;TANK&quot; at the top left. This is the starting point for the water.
+*   **Pipes:** There are grey pipes connecting the tank to various cups.
+*   **Valves:** There are circular icons on the pipes representing valves.
+    *   **Green 'O' circle:** Represents an &quot;open&quot; valve. The text says &quot;Water can flow only through open green valves&quot;.
+    *   **Red 'X' circle:** Represents a closed valve. The text says &quot;red X valves block flow&quot;.
+*   **Labels:**
+    *   **V1:** Green 'O', labeled &quot;V1 open&quot;. This valve is on the main horizontal pipe coming from the tank.
+    *   **V2:** Red 'X', labeled &quot;V2 closed&quot;. This valve is on a branch going to Cup A.
+    *   **V3:** Green 'O', labeled &quot;V3 open&quot;. This valve is on a vertical pipe going to Cup B.
+    *   **V4:** Red 'X', labeled &quot;V4 closed&quot;. This valve is on a vertical pipe going to Cup D. Wait, let me look closer.
+    *   **V5:** Green 'O', labeled &quot;V5 open&quot;. This valve is on a vertical pipe going to Cup C.
+
+**2. Trace the Flow:**
+*   **Start at Tank:** Water leaves the tank and goes into the horizontal pipe.
+*   **First Junction:** The pipe splits.
+    *   **Path 1 (Left/Down):** Goes through valve **V1**.
+        *   V1 is **Green (Open)**. So water flows through here.
+        *   After V1, the pipe splits again.
+            *   **Branch to Cup A:** The pipe goes down, then right, then down to Cup A. Wait, let me re-examine the connections.
+            *   Let's look at the structure carefully.
+            *   From the Tank, a pipe goes right.
+            *   It hits a junction.
+                *   One path goes down through **V1** (Green/Open).
+                *   Another path goes right, then down through **V4** (Red/Closed). Wait, looking at the layout, V4 is on the rightmost vertical pipe. Let's trace from the main horizontal line.
+                *   The main horizontal line goes from the Tank.
+                *   It hits a T-junction.
+                    *   Downward path: Goes through **V1** (Green/Open).
+                    *   Rightward path: Goes to the right side. Then down through **V4** (Red/Closed). Wait, let's look at the labels.
+                    *   Actually, let's look at the connections to the cups directly.
+
+Let's trace backwards from the cups to the tank to be sure.
+
+*   **Cup A:**
+    *   Connected to a vertical pipe going up.
+    *   This vertical pipe goes up, turns right, and goes through a valve.
+    *   The valve is **V2** (Red 'X', &quot;V2 closed&quot;).
+    *   Since V2 is closed, water cannot reach Cup A.
+    *   Wait, let's look at the connection again. The pipe from Cup A goes up, turns right, goes through V2. Yes. So Cup A is blocked by V2.
+
+*   **Cup B:**
+    *   Connected to a vertical pipe going up.
+    *   This vertical pipe goes up through a valve.
+    *   The valve is **V3** (Green 'O', &quot;V3 open&quot;).
+    *   So water can flow to Cup B *if* it reaches V3.
+    *   Where does the pipe from V3 come from? It goes left, then up, then right through **V1**.
+    *   V1 is **Green (Open)**.
+    *   So, flow path: Tank -&gt; Main Pipe -&gt; V1 (Open) -&gt; Turn Left/Down -&gt; V3 (Open) -&gt; Cup B.
+    *   Therefore, **Cup B receives water**.
+
+*   **Cup C:**
+    *   Connected to a vertical pipe going up.
+    *   This vertical pipe goes up through a valve.
+    *   The valve is **V5** (Green 'O', &quot;V5 open&quot;).
+    *   So water can flow to Cup C *if* it reaches V5.
+    *   Where does the pipe from V5 come from? It goes up, then left, then up through **V1**.
+    *   Wait, let's look at the junction near V1.
+    *   The pipe from V1 goes down. Then it splits.
+        *   One branch goes left, then down through</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag ">fail</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Cup A</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag ">not_run_current_env_unavailable</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Not run in the current environment: the available 1x A100 job does not have a validated OneCAT image-understanding runner.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: not_run_current_env_unavailable</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Hard constrained route grid</h3>
+      <span class="tag adapted">Hard reasoning</span>
+      <span class="tag">route planning</span><span class="tag">constraint satisfaction</span><span class="tag">grid reasoning</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hard_route_constraints.png" alt="Hard constrained route grid">
+        <p class="prompt"><strong>Question:</strong> Find a shortest route from S to G that visits C, avoids black X cells and yellow $ toll cells, and moves only up/down/left/right. Give the route as directions and the number of steps.</p>
+        <p class="meta"><strong>Expected:</strong> One shortest valid route is down, down, down, right, right, down, right, right: 8 steps. It visits C, avoids black X cells, and avoids yellow $ toll cells.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic hard visual-reasoning fixture designed for this comparison; not from paper. Requires path planning with constraints.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>To find the shortest route from S to G that visits C and avoids black X cells and yellow $ toll cells, and moves only up/down/left/right, we can analyze the grid and the given directions.
+
+1. **Starting Point (S):**
+The starting point is marked with a blue &quot;S&quot; in the top-left corner of the grid.
+
+2. **Visiting Point C:**
+The point C is marked with a green &quot;C&quot; in the second row, third column.
+
+3. **Visiting Point G:**
+The goal is to reach the bottom-right corner, marked with a green &quot;G&quot;.
+
+4. **Avoiding X Cells:**
+Black X cells are marked in the second row, first column, second row, second column, second row, third column, and second row, fourth column.
+
+5. **Avoiding $ Cells:**
+Yellow $ cells are marked in the second row, second column, second row, third column, and second row, fourth column.
+
+6. **Moving Only Up/Down/Left/Right:**
+The movement is restricted to the rows and columns marked with white</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> visits checkpoint C, avoids obstacles/tolls (0.5)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>To find the shortest route from S to G that visits C and avoids black X cells and yellow $ toll cells, and moves only up/down/left/right, we can analyze the grid and the given directions.
+
+1. **Starting Point (S):**
+   - The starting point is marked with a blue &quot;S&quot; in the top-left corner of the grid.
+
+2. **Visiting Point C:**
+   - The point C is marked with a green &quot;C&quot; in the second row, third column.
+
+3. **Visiting Point G:**
+   - The goal is to reach the bottom-right corner, marked with a green &quot;G&quot;.
+
+4. **Avoiding X Cells:**
+   - Black X cells are marked in the second row, first column, second row, second column, second row, third column, and second row, fourth column.
+
+5. **Avoiding $ Cells:**
+   - Yellow $ cells are marked in the second row, second column, second row, third column, and second row, fourth column.
+
+6. **Moving Only Up/Down/Left/Right:**
+   - The movement is restricted to the rows and columns marked with white</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>To find the shortest route from S to G that visits C, avoids black X cells and yellow $ toll cells, and moves only up/down/left/right, follow these steps:
+
+1. Start at S (top-left corner).
+2. Move right to the next cell (1 step).
+3. Move down to the next cell (2 steps).
+4. Move right to the next cell (3 steps).
+5. Move down to the next cell (4 steps).
+6. Move right to the next cell (5 steps).
+7. Move down to the next cell (6 steps).
+8. Move right to the next cell (7 steps).
+9. Move down to the next cell (8 steps).
+10. Move right to the next cell (9 steps).
+11. Move down to the next cell (10 steps).
+12. Move right to the next cell (11 steps).
+13. Move down to the next cell (12 steps).
+14. Move right to the next cell (13 steps).
+15. Move down to the next cell (14 steps).
+16. Move right to the next cell (15 steps).
+17. Move down to the next cell (16 steps).
+18. Move right to the next cell (17 steps).
+19. Move down to the next cell (18 steps).
+20. Move right to the next cell (19 steps).
+21. Move down to the next cell (20 steps).
+22. Move right to the next cell (21 steps).
+23. Move down to the next cell (22 steps).
+24. Move right to the next cell (23 steps).
+25. Move down to the next cell (24 steps).
+26. Move right to the next cell (25 steps).
+27. Move down to the next cell (26 steps).
+28. Move right to the next cell (27 steps).
+29. Move down to the next cell (28 steps).
+30. Move right to the next cell (29 steps).
+31. Move down to the next cell (30 steps).
+32. Move right to the next cell (31 steps).
+33. Move down to the next cell (32 steps).
+34. Move right to the next cell (33 steps).
+35. Move down to the next cell (34 steps).
+36. Move right to the</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> 8-step route, visits checkpoint C, avoids obstacles/tolls, correct direction sequence (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>No concise final answer emitted before max_new_tokens; the raw model output is a reasoning trace.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> avoids obstacles/tolls, correct direction sequence (0.5)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to find a path from 'S' to 'G' on the provided grid.
+
+**1. Analyze the Grid:**
+*   **Grid Size:** 5x5.
+*   **Start (S):** Top-left corner (Row 1, Column 1).
+*   **End (G):** Bottom-right corner (Row 5, Column 5).
+*   **Target (C):** Row 4, Column 3.
+*   **Obstacles:**
+    *   **Black X cells (Blocked):**
+        *   (Row 2, Col 2)
+        *   (Row 2, Col 5)
+        *   (Row 3, Col 2)
+        *   (Row 4, Col 4)
+    *   **Yellow $ cells (Toll - Avoid):**
+        *   (Row 3, Col 4)
+        *   (Row 5, Col 2)
+
+**2. Define Coordinates:**
+Let's use (row, col) where top-left is (1,1).
+*   S = (1, 1)
+*   G = (5, 5)
+*   C = (4, 3)
+*   X obstacles: (2,2), (2,5), (3,2), (4,4)
+*   $ obstacles: (3,4), (5,2)
+
+**3. Plan the Path:**
+I need to go from (1,1) to (4,3) and then to (5,5).
+Let's break it down into two legs: S -&gt; C and C -&gt; G.
+
+**Leg 1: S (1,1) to C (4,3)**
+*   Start at (1,1).
+*   I need to get to (4,3).
+*   Let's look at the immediate neighbors of S.
+    *   Right (1,2): Open.
+    *   Down (2,1): Open.
+*   Let's try going Right first.
+    *   (1,1) -&gt; (1,2) -&gt; (1,3) -&gt; (1,4) -&gt; (1,5). This seems long.
+    *   Let's try going Down first.
+    *   (1,1) -&gt; (2,1). (2,1) is open.
+    *   From (2,1), I can go Right to (2,2) -&gt; **BLOCKED**.
+    *   So from (2,1), I must go Down to (3,1).
+    *   From (3,1), I can go Right to (3,2) -&gt; **BLOCKED**.
+    *   So from (3,1), I must go Down to (4,1).
+    *   From (4,1), I can go Right to (4,2).
+    *   From (4,2), I can go Right to (4,3) which is **C**.
+    *   Let's check this path: (1,1) -&gt; (2,1) -&gt; (3,1) -&gt; (4,1) -&gt; (4,2) -&gt; (4,3).
+    *   Steps: 5 steps.
+    *   Is there a shorter way?
+    *   Let's re-evaluate (1,1) -&gt; (1,2).
+    *   (1,1) -&gt; (1,2) -&gt; (1,3) -&gt; (2,3) -&gt; (3,3) -&gt; (4,3).
+    *   Let's check obstacles on this path.
+        *   (1,2): Open.
+        *   (1,3): Open.
+        *   (2,3): Open. (Obstacles are at 2,2 and 2,5).
+        *   (3,3): Open. (Obstacles are at 3,2 and 3,4).
+        *   (4,3): This is C.
+    *   This path is: (1,1) -&gt; (1,2) -&gt; (1,3) -&gt; (2,3) -&gt; (3,3) -&gt; (4,3).
+    *   Steps: 5 steps.
+    *   Wait, let's look at the grid again.
+    *   Row 1: S, empty, empty, empty, empty.
+    *   Row 2: empty, X, empty, empty, X.
+    *   Row 3: empty, X, empty, $, empty.
+    *   Row 4: empty, empty, C, X, empty.
+    *   Row 5: empty, $, empty, empty, G.
+
+    Let's re-trace the path (1,1) -&gt; (1,2) -&gt; (1,3) -&gt; (2,3) -&gt;</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag ">fail</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>S - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X - X -</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag ">not_run_current_env_unavailable</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Not run in the current environment: the available 1x A100 job does not have a validated OneCAT image-understanding runner.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: not_run_current_env_unavailable</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Hard three-set Venn logic</h3>
+      <span class="tag adapted">Hard reasoning</span>
+      <span class="tag">set logic</span><span class="tag">diagram reasoning</span><span class="tag">spatial membership</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hard_venn_logic.png" alt="Hard three-set Venn logic">
+        <p class="prompt"><strong>Question:</strong> Which labeled dot is inside the red and blue circles but outside the green circle? Answer with only the label and a short reason.</p>
+        <p class="meta"><strong>Expected:</strong> P. It lies in the overlap of the red and blue circles above the green circle, so it is outside green.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic hard visual-reasoning fixture designed for this comparison; not from paper. Requires set-membership reasoning from Venn geometry.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>P. The dot P is inside the red circle but outside the green circle.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> identifies P, outside green (0.667)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag ">fail</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>P</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> identifies P (0.333)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>P. It is located in the overlapping section of the red (&quot;mammals&quot;) and blue (&quot;aquatic&quot;) circles, but sits above the green (&quot;lays eggs&quot;) circle, placing it outside that set.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> identifies P, red and blue intersection, outside green (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to identify a specific dot based on a Venn diagram.
+
+1.  **Analyze the Request:**
+    *   Target condition: Inside the RED circle AND inside the BLUE circle BUT outside the GREEN circle.
+    *   Output format: Just the label and a short reason.
+
+2.  **Analyze the Image:**
+    *   **Red Circle:** Labeled &quot;mammals&quot;.
+    *   **Blue Circle:** Labeled &quot;aquatic&quot;.
+    *   **Green Circle:** Labeled &quot;lays eggs&quot;.
+    *   **Dots:**
+        *   **P:** Inside Red and Blue. Outside Green. Wait, let me look closer.
+            *   P is in the intersection of Red and Blue.
+            *   Is it inside Green? No, it's above the green circle. So P is inside Red and Blue, outside Green.
+        *   **Q:** Inside Red, Blue, and Green. (Intersection of all three).
+        *   **R:** Inside Red and Green. Outside Blue.
+        *   **S:** Inside Blue and Green. Outside Red.
+        *   **T:** Inside Green. Outside Red and Blue.
+        *   **U:** Outside all three.
+        *   **V:** Outside all three.
+
+3.  **Evaluate the Condition:**
+    *   &quot;Inside RED and BLUE&quot;: This narrows it down to the intersection of the red and blue circles. The dots in this region are P and Q.
+    *   &quot;But outside GREEN&quot;: This eliminates Q (which is in the center, inside green) and keeps P (which is in the upper intersection, clearly above the green circle).
+
+4.  **Formulate the Answer:**
+    *   The dot is **P**.
+    *   Reason: It is located in the overlapping section of the red (&quot;mammals&quot;) and blue (&quot;aquatic&quot;) circles, but it is positioned above the green (&quot;lays eggs&quot;) circle, meaning it is not inside it.
+
+5.  **Final Check:**
+    *   Does P fit &quot;inside red&quot;? Yes.
+    *   Does P fit &quot;inside blue&quot;? Yes.
+    *   Does P fit &quot;outside green&quot;? Yes.
+    *   The question asks for &quot;the dot inside RED and BLUE but outside GREEN&quot;.
+    *   Wait, let me re-examine dot P.
+    *   Looking very closely at the image...
+    *   The red circle is on the left. The blue circle is on the right.
+    *   The intersection of Red and Blue is the top part.
+    *   Dot P is in that top intersection.
+    *   The green circle is at the bottom.
+    *   The intersection of Red and Blue is *above* the green circle. So P is outside the green circle.
+    *   Let's check dot Q. Q is in the center. It is inside Red, Blue, and Green. So Q is inside Green. This doesn't fit the &quot;outside GREEN&quot; criteria.
+    *   So, P is the correct answer.
+
+    *   Wait, let me look at the text at the bottom: &quot;Question asks for the dot inside RED and BLUE but outside GREEN.&quot;
+    *   This confirms my analysis. The text is basically giving me the question to solve.
+    *   So the answer is definitely P.
+
+    *   Let's double check the other dots just in case.
+    *   R: Inside Red and Green. Outside Blue. (Fails &quot;inside Blue&quot;).
+    *   S: Inside Blue and Green. Outside Red. (Fails &quot;inside Red&quot;).
+    *   T: Inside Green. Outside Red and Blue. (Fails &quot;inside Red and Blue&quot;).
+
+    *   Conclusion stands: P is the correct dot.
+
+    *   Drafting the response: &quot;P. It is located in the intersection of the red and blue circles but is positioned above the green circle, placing it outside the green set.&quot;
+&lt;/think&gt;
+
+P. It is located in the overlapping section of the red (&quot;mammals&quot;) and blue (&quot;aquatic&quot;) circles, but sits above the green (&quot;lays eggs&quot;) circle, placing it outside that set.</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag ">fail</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>U</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag ">not_run_current_env_unavailable</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Not run in the current environment: the available 1x A100 job does not have a validated OneCAT image-understanding runner.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: not_run_current_env_unavailable</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Hard balance-scale counterfactual</h3>
+      <span class="tag adapted">Hard reasoning</span>
+      <span class="tag">counterfactual reasoning</span><span class="tag">physical balance</span><span class="tag">arithmetic</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hard_balance_counterfactual.png" alt="Hard balance-scale counterfactual">
+        <p class="prompt"><strong>Question:</strong> The scale is balanced now. If one red weight-2 block is removed from the left pan, which side tips down and why?</p>
+        <p class="meta"><strong>Expected:</strong> The right side tips down. Left changes from 6 to 4 while the right remains 6.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic hard visual-reasoning fixture designed for this comparison; not from paper. Requires counterfactual physical arithmetic.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The scale is balanced now. If one red weight-2 block is removed from the left pan, the left side will tip down. This is because the left side has three red blocks, each weighing 2, for a total of 6. If one of these blocks is removed, the left side will have two blocks left, each weighing 2, for a total of 4. The right side has one blue block weighing 6. Since 4 (left side) is less than 6 (right side), the left side will tip down.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> right tips down, left total 4, right total 6, counterfactual removal (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>If one red weight-2 block is removed from the left pan, the left pan will now have a total weight of 4 (2 + 2). The right pan still has a weight of 6. Since 4 is less than 6, the right pan will tip down because it has a greater weight.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> right tips down, left total 4, right total 6, counterfactual removal (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The **right side** will tip down.
+
+Here is the step-by-step breakdown:
+
+1.  **Current State:** The scale is balanced because the left side has a total weight of 6 (3 red blocks × 2 each) and the right side has a weight of 6 (1 blue block).
+2.  **The Change:** If you remove one red block (which weighs 2) from the left side, the new total weight on the left becomes **4** (2 + 2).
+3.  **The Result:** The right side still weighs **6**. Since 6 is heavier than 4, the right side will tip down.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> right tips down, left total 4, right total 6, counterfactual removal (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to solve a simple physics puzzle based on an image.
+
+**1. Analyze the initial state:**
+*   **Left side:** There are three red blocks. The text says &quot;three red blocks, each weigh 2&quot;. So, total weight on the left = 2 + 2 + 2 = 6.
+*   **Right side:** There is one blue block. The text says &quot;one blue block, weight 6&quot;. So, total weight on the right = 6.
+*   **Balance:** The scale is currently balanced because 6 (left) = 6 (right). This matches the visual of the scale being level.
+
+**2. Analyze the proposed change:**
+*   **Action:** &quot;if one red block is removed from the left pan&quot;.
+*   **New Left Side Weight:** Originally 6. Remove one block of weight 2. New weight = 6 - 2 = 4.
+*   **New Right Side Weight:** The right side is untouched. It still has the blue block of weight 6. So, weight = 6.
+
+**3. Determine the outcome:**
+*   Compare the new weights.
+*   Left side: 4
+*   Right side: 6
+*   Since 6 &gt; 4, the right side is heavier.
+*   Therefore, the right side will tip down.
+
+**4. Formulate the answer:**
+*   Start by calculating the initial weights to confirm understanding. Left: 3 * 2 = 6. Right: 6. They are equal.
+*   Calculate the new weight on the left side. Remove one '2' block. 6 - 2 = 4.
+*   State the weight on the right side remains 6.
+*   Compare the two sides. The right side (6) is heavier than the left side (4).
+*   Conclude that the right side tips down.
+*   Explain *why*: Because the right side is now heavier (6 vs 4).
+
+**Drafting the response:**
+*   **Direct Answer:** The right side tips down.
+*   **Reasoning:**
+    *   Initially, the left side has 3 blocks x 2 weight = 6 total.
+    *   The right side has 1 block x 6 weight = 6 total.
+    *   If you remove one red block (weight 2) from the left, the left side now has a total weight of 4 (2 + 2).
+    *   The right side still has a weight of 6.
+    *   Since 6 is greater than 4, the heavier right side will tip down.
+&lt;/think&gt;
+
+The **right side** will tip down.
+
+Here is the step-by-step breakdown:
+
+1.  **Current State:** The scale is balanced because the left side has a total weight of 6 (3 red blocks × 2 each) and the right side has a weight of 6 (1 blue block).
+2.  **The Change:** If you remove one red block (which weighs 2) from the left side, the new total weight on the left becomes **4** (2 + 2).
+3.  **The Result:** The right side still weighs **6**. Since 6 is heavier than 4, the right side will tip down.</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The side that tips down is the right pan. If one red weight-2 block is removed from the left pan, the left pan will have 2 red blocks and 2 blue blocks, totaling 4 blocks. The right pan will have 6 blue blocks. Since the right pan has more weight, it will tip down.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      <p><strong>Matched checks:</strong> right tips down, left total 4, right total 6, counterfactual removal (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag ">not_run_current_env_unavailable</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Not run in the current environment: the available 1x A100 job does not have a validated OneCAT image-understanding runner.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: not_run_current_env_unavailable</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Hard derived table speed question</h3>
+      <span class="tag adapted">Hard reasoning</span>
+      <span class="tag">table reasoning</span><span class="tag">arithmetic</span><span class="tag">comparison</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hard_table_derived_speed.png" alt="Hard derived table speed question">
+        <p class="prompt"><strong>Question:</strong> Which robot has the highest speed, computed as distance divided by time? Give the robot and speed.</p>
+        <p class="meta"><strong>Expected:</strong> Robots A, B, and D tie for highest speed at 3 m/s. C is 2 m/s.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic hard visual-reasoning fixture designed for this comparison; not from paper. Requires table reading plus derived calculation.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The robot with the highest speed, computed as distance divided by time, is C. The speed is 16 m / 8 s = 2 m/s.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> A/B/D tie, C is 2 m/s (0.667)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>To determine which robot has the highest speed, we need to calculate the speed for each robot by dividing the distance by the time.
+
+1. **Robot A:**
+Distance: 12 m
+Time: 4 s
+Speed: \( \frac{12 \text{ m}}{4 \text{ s}} = 3 \text{ m/s} \)
+
+2. **Robot B:**
+Distance: 15 m
+Time: 5 s
+Speed: \( \frac{15 \text{ m}}{5 \text{ s}} = 3 \text{ m/s} \)
+
+3. **Robot C:**
+Distance: 16 m
+Time: 8 s
+Speed: \( \frac{16 \text{ m}}{8 \text{ s}} = 2 \text{ m/s} \)
+
+4. **Robot D:**
+Distance: 9 m
+Time: 3 s
+Speed: \( \frac{9 \text{ m}}{3 \text{ s}} = 3 \text{ m/s} \)
+
+Comparing the speeds:
+Robot A: 3 m/s
+Robot B: 3 m/s
+Robot C: 2 m/s
+Robot D: 3 m/s
+
+All robots A, B, and D have the same speed of 3 m/s. Therefore, the robots with the highest speed are A, B, and D, each with a speed of 3 m/s.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> A/B/D tie, 3 m/s top speed, C is 2 m/s (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>To determine which robot has the highest speed, we need to calculate the speed for each robot by dividing the distance by the time.
+
+1. **Robot A:**
+   - Distance: 12 m
+   - Time: 4 s
+   - Speed: \( \frac{12 \text{ m}}{4 \text{ s}} = 3 \text{ m/s} \)
+
+2. **Robot B:**
+   - Distance: 15 m
+   - Time: 5 s
+   - Speed: \( \frac{15 \text{ m}}{5 \text{ s}} = 3 \text{ m/s} \)
+
+3. **Robot C:**
+   - Distance: 16 m
+   - Time: 8 s
+   - Speed: \( \frac{16 \text{ m}}{8 \text{ s}} = 2 \text{ m/s} \)
+
+4. **Robot D:**
+   - Distance: 9 m
+   - Time: 3 s
+   - Speed: \( \frac{9 \text{ m}}{3 \text{ s}} = 3 \text{ m/s} \)
+
+Comparing the speeds:
+- Robot A: 3 m/s
+- Robot B: 3 m/s
+- Robot C: 2 m/s
+- Robot D: 3 m/s
+
+All robots A, B, and D have the same speed of 3 m/s. Therefore, the robots with the highest speed are A, B, and D, each with a speed of 3 m/s.</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Based on the calculations of speed (distance divided by time), there is a three-way tie for the highest speed.
+
+Here is the breakdown:
+**Robot A:** $12\text{ m} / 4\text{ s} = \mathbf{3\text{ m/s}}$
+**Robot B:** $15\text{ m} / 5\text{ s} = \mathbf{3\text{ m/s}}$
+**Robot C:** $16\text{ m} / 8\text{ s} = 2\text{ m/s}$
+**Robot D:** $9\text{ m} / 3\text{ s} = \mathbf{3\text{ m/s}}$
+*Robots A, B, and D** all have the highest speed of **3 m/s**.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> A/B/D tie, 3 m/s top speed (0.667)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to find the robot with the highest speed based on the provided table.
+
+1.  **Identify the relevant columns:** I need to look at the &quot;Robot&quot;, &quot;Distance&quot;, and &quot;Time&quot; columns. The &quot;Battery&quot; column is irrelevant for this specific calculation.
+2.  **Extract the data for each robot:**
+    *   **Robot A:** Distance = 12 m, Time = 4 s
+    *   **Robot B:** Distance = 15 m, Time = 5 s
+    *   **Robot C:** Distance = 16 m, Time = 8 s
+    *   **Robot D:** Distance = 9 m, Time = 3 s
+3.  **Perform the calculation (Speed = Distance / Time) for each robot:**
+    *   **Robot A:** $12 \text{ m} / 4 \text{ s} = 3 \text{ m/s}$
+    *   **Robot B:** $15 \text{ m} / 5 \text{ s} = 3 \text{ m/s}$
+    *   **Robot C:** $16 \text{ m} / 8 \text{ s} = 2 \text{ m/s}$
+    *   **Robot D:** $9 \text{ m} / 3 \text{ s} = 3 \text{ m/s}$
+4.  **Compare the results:**
+    *   Robot A: 3 m/s
+    *   Robot B: 3 m/s
+    *   Robot C: 2 m/s
+    *   Robot D: 3 m/s
+5.  **Determine the highest speed:** The highest speed is 3 m/s.
+6.  **Identify the robots with this speed:** Robots A, B, and D all have the same highest speed of 3 m/s.
+7.  **Formulate the final answer:** State that there is a tie. Robots A, B, and D are tied for the highest speed. Wait, let me re-read the prompt. &quot;Which robot has the highest speed... Give the robot and speed.&quot; It implies a singular answer, but the math shows a tie. I should report the tie.
+
+    *   Robot A: $12/4 = 3$
+    *   Robot B: $15/5 = 3$
+    *   Robot C: $16/8 = 2$
+    *   Robot D: $9/3 = 3$
+
+    Okay, so Robots A, B, and D are all tied at 3 m/s. I will list all of them.
+
+    Let me double-check the calculations.
+    $12 / 4 = 3$. Correct.
+    $15 / 5 = 3$. Correct.
+    $16 / 8 = 2$. Correct.
+    $9 / 3 = 3$. Correct.
+
+    So the answer is a three-way tie between Robot A, Robot B, and Robot D. I will present this clearly.
+&lt;/think&gt;
+
+Based on the calculations of speed (distance divided by time), there is a three-way tie for the highest speed.
+
+Here is the breakdown:
+
+*   **Robot A:** $12\text{ m} / 4\text{ s} = \mathbf{3\text{ m/s}}$
+*   **Robot B:** $15\text{ m} / 5\text{ s} = \mathbf{3\text{ m/s}}$
+*   **Robot C:** $16\text{ m} / 8\text{ s} = 2\text{ m/s}$
+*   **Robot D:** $9\text{ m} / 3\text{ s} = \mathbf{3\text{ m/s}}$
+
+**Robots A, B, and D** all have the highest speed of **3 m/s**.</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Compute the speed for each robot.
+A: Distance = 12 m, Time = 4 s = 3 m/s
+B: Distance = 15 m, Time = 5 s = 3 m/s
+C: Distance = 16 m, Time = 8 s = 2 m/s
+D: Distance = 9 m, Time = 3 s = 3 m/s
+The highest speed is 3 m/s.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      <p><strong>Matched checks:</strong> A/B/D tie, 3 m/s top speed, C is 2 m/s (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag ">not_run_current_env_unavailable</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Not run in the current environment: the available 1x A100 job does not have a validated OneCAT image-understanding runner.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: not_run_current_env_unavailable</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Hard block support stability</h3>
+      <span class="tag adapted">Hard reasoning</span>
+      <span class="tag">support reasoning</span><span class="tag">physical stability</span><span class="tag">counterfactual</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hard_block_support.png" alt="Hard block support stability">
+        <p class="prompt"><strong>Question:</strong> If the blue base block is removed, which colored blocks lose direct support from below? Do not include blocks that are only indirectly affected.</p>
+        <p class="meta"><strong>Expected:</strong> The red and green blocks lose direct support from below. Yellow is supported by red/green, and purple is not directly supported by the blue base.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic hard visual-reasoning fixture designed for this comparison; not from paper. Requires support/contact reasoning.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The blue base block is directly supporting the red, green, and purple blocks. If the blue base block is removed, the red, green, and purple blocks lose direct support from below. Therefore, the colored blocks that lose direct support are the red, green, and purple blocks.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> red and green affected, direct support from blue (0.667)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag ">fail</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The red and green blocks lose direct support from below.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> red and green affected (0.333)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>No concise final answer emitted before max_new_tokens; the raw model output is a reasoning trace.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> red and green affected, direct support from blue, yellow/purple not direct (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to identify which blocks lose direct support if the blue block is removed.
+
+1.  **Analyze the image:**
+    *   There's a stack of colored blocks.
+    *   **Blue block:** This is at the bottom, sitting on the gray base. It's labeled &quot;blue&quot;.
+    *   **Red block:** This is sitting on top of the blue block. It's labeled &quot;red&quot;.
+    *   **Green block:** This is sitting on top of the blue block. It's labeled &quot;green&quot;.
+    *   **Yellow block:** This is sitting on top of the green block. It's labeled &quot;yellow&quot;.
+    *   **Purple block:** This is sitting on top of the green block. It's labeled &quot;purple&quot;.
+
+2.  **Determine &quot;direct support from below&quot;:**
+    *   The blue block is the base for the red and green blocks.
+    *   The red block rests directly on the blue block.
+    *   The green block rests directly on the blue block.
+    *   The yellow block rests on the green block.
+    *   The purple block rests on the green block.
+
+3.  **Simulate removing the blue block:**
+    *   If the blue block is gone, the red block has nothing underneath it. It loses direct support.
+    *   If the blue block is gone, the green block has nothing underneath it. It loses direct support.
+    *   The yellow and purple blocks are supported by the green block. While they will eventually fall if the green block falls, they do *not* lose direct support from the blue block. Their direct support is the green block. The question asks for blocks that lose *direct* support from below. Wait, let me re-read carefully. &quot;which colored blocks lose direct support from below?&quot;
+    *   The red block is directly on the blue block. So removing blue removes its support.
+    *   The green block is directly on the blue block. So removing blue removes its support.
+    *   The yellow block is on the green block. It doesn't touch the blue block.
+    *   The purple block is on the green block. It doesn't touch the blue block.
+
+4.  **Formulate the answer:**
+    *   The blocks directly on top of the blue block are the red and green blocks.
+    *   Therefore, removing the blue block causes the red and green blocks to lose their direct support.
+
+    *   Wait, let's look closer at the alignment.
+    *   The red block is to the left. The green block is to the right. Both seem to be resting on the blue block.
+    *   The yellow block is on top of the green block.
+    *   The purple block is on top of the green block (or maybe next to the yellow one? No, it looks like it's on the green block). Let's re-examine the connections.
+    *   Blue is at the bottom.
+    *   Red is on the left side of the blue block.
+    *   Green is on the right side of the blue block.
+    *   Yellow is on top of the green block.
+    *   Purple is to the right of the yellow block. Is it on the green block? Yes, it looks like it's resting on the green block.
+
+    *   So, direct support from the blue block goes to:
+        *   Red block
+        *   Green block
+
+    *   The question asks: &quot;which colored blocks lose direct support from below?&quot;
+    *   This implies blocks that were *directly* supported by the blue block.
+    *   Those are the red and green blocks.
+
+    *   Let's check the wording again. &quot;if the blue base block is removed, which colored blocks lose direct support from below?&quot;
+    *   This could be interpreted in two ways:
+        1.  Which blocks are *currently* directly supported by the blue block? (Answer: Red and Green).
+        2.  Which blocks will fall immediately? (Answer: Red and Green).
+        3.  Which blocks lose *any* support? (Answer: Red, Green, Yellow, Purple). But the question specifies &quot;direct support from below&quot;. This phrasing usually points to the immediate contact. If I remove the floor, the table loses support. If I remove the table, the chair loses support. The chair doesn't lose support from the floor directly, it loses support from the table.
+        *   So, &quot;lose direct support from below&quot; means &quot;lose the block that is directly underneath them&quot;.
+        *   The block directly underneath the red block is the blue block. So red loses direct support.
+        *   The block directly underneath the green block is the blue block. So green loses direct support.
+        *   The block directly underneath the yellow block is the green block. So yellow loses support from the green block, not the blue block.
+        *   The block directly underneath the</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>If the blue base block is removed, the red and green blocks lose direct support from below.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      <p><strong>Matched checks:</strong> red and green affected, direct support from blue (0.667)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag ">not_run_current_env_unavailable</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Not run in the current environment: the available 1x A100 job does not have a validated OneCAT image-understanding runner.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: not_run_current_env_unavailable</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Hard mirror direction consistency</h3>
+      <span class="tag adapted">Hard reasoning</span>
+      <span class="tag">mirror reasoning</span><span class="tag">orientation</span><span class="tag">spatial consistency</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hard_mirror_direction.png" alt="Hard mirror direction consistency">
+        <p class="prompt"><strong>Question:</strong> The real arrow on the left points toward the mirror. Which reflected arrow, R1, R2, or R3, is physically consistent with a vertical mirror? Explain briefly.</p>
+        <p class="meta"><strong>Expected:</strong> R1 or R3 directionally face left, but only R1 is positioned opposite the real arrow at the matching height. R2 points the wrong way.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic hard visual-reasoning fixture designed for this comparison; not from paper. Requires mirror/reflection direction reasoning.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The real arrow on the left points toward the mirror, and the reflected arrows R1, R2, and R3 are shown on the right side. The question asks which reflected arrow is physically consistent with a vertical mirror. In a vertical mirror, the reflected image is a mirror image of the real object, meaning the reflected arrow should point in the opposite direction of the real arrow. Therefore, R1, which is pointing to the right, is physically consistent with a vertical mirror.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> selects R1, rejects R2, rejects R3 height (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag ">fail</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The reflected arrow that is physically consistent with a vertical mirror is R1. When an object is placed in front of a vertical mirror, the reflection appears as if the object is behind the mirror, but the direction of the arrow remains the same. Therefore, R1, which points to the right, is the correct reflection of the real arrow pointing to the left.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> selects R1 (0.333)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>No concise final answer emitted before max_new_tokens; the raw model output is a reasoning trace.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> selects R1, rejects R3 height (0.667)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to identify the correct reflection of the arrow shown in the image.
+
+1.  **Analyze the &quot;Real arrow&quot;:**
+    *   It is a red arrow pointing to the left.
+    *   It is located to the left of the vertical mirror.
+    *   Wait, let me look closer. The arrow is pointing *towards* the mirror? No, the arrowhead is on the left side. So it's pointing *away* from the mirror, to the left.
+    *   Let me re-read the prompt. &quot;The real arrow on the left points toward the mirror.&quot;
+    *   Let me look at the image again very carefully.
+    *   The arrow labeled &quot;Real arrow&quot; has its head on the left side. So it is pointing to the left. This means it is pointing *away* from the mirror.
+    *   Wait, let me look at the prompt again. &quot;The real arrow on the left points toward the mirror.&quot; This is a premise given by the user. Let me check the image to see if I'm misinterpreting.
+    *   Ah, looking at the arrow labeled &quot;Real arrow&quot;, the triangular head is on the left. The tail is on the right, near the mirror. So it is pointing *away* from the mirror.
+    *   Let me re-read the prompt's premise. &quot;The real arrow on the left points toward the mirror.&quot; This seems contradictory to the visual. Let me look really closely at the arrow.
+    *   Okay, let's look at the arrow labeled &quot;Real arrow&quot;. The pointy bit is on the left. The flat back is on the right. So it points Left.
+    *   The mirror is in the middle.
+    *   So the arrow is pointing *away* from the mirror.
+    *   Let me re-read the prompt again. Maybe I am misinterpreting &quot;points toward&quot;. No, &quot;points toward&quot; means the arrowhead is facing the object.
+    *   Let's look at the arrow again. Is it possible the arrow is pointing *right*? No, the triangle is clearly on the left.
+    *   Is it possible the prompt is a trick or has a typo? Or maybe I am blind. Let's look at the other arrows.
+    *   R1 points Right.
+    *   R2 points Left.
+    *   R3 points Right.
+    *   If the real arrow points Left (away from mirror), the reflection should point Right (towards the mirror).
+    *   If the real arrow points Right (towards mirror), the reflection should point Left (away from mirror).
+    *   Let's look at the &quot;Real arrow&quot; again. The text &quot;Real arrow&quot; is above it. The arrow shape is a triangle pointing left.
+    *   Wait, let me look at the prompt again. &quot;The real arrow on the left points toward the mirror.&quot; This is a statement. If I assume this statement is true, then the arrow must be pointing right. But the image shows it pointing left.
+    *   Let's reconsider the image. Maybe the arrow is pointing *right*? No, the vertex is on the left.
+    *   Maybe the prompt is describing a *different* scenario or I am misinterpreting the image.
+    *   Let's look at the arrow labeled &quot;Real arrow&quot; again. It is a red shape. The pointy end is on the left. The flat end is on the right. So it points Left.
+    *   The mirror is to its right. So it is pointing *away* from the mirror.
+    *   Let's look at the prompt again. &quot;The real arrow on the left points toward the mirror.&quot; This is confusing. Let me assume the user made a mistake in the description and just look at the image.
+    *   Image: Real arrow points Left (away from mirror).
+    *   Physics of reflection: A vertical mirror flips left and right.
+    *   If an object points Left (away from mirror), its reflection should point Right (towards the mirror).
+    *   Let's check the options:
+        *   R1: Points Right.
+        *   R2: Points Left.
+        *   R3: Points Right.
+    *   So, if the real arrow points Left, the reflection must point Right. This leaves R1 and R3.
+    *   Wait, let's look at the vertical position.
+    *   The &quot;Real arrow&quot; is vertically centered relative to the mirror? No, it looks slightly lower than the top, maybe middle.
+    *   R1 is high up.
+    *   R2 is middle.
+    *   R3 is low down.
+    *   The &quot;Real arrow&quot; is vertically aligned with... actually, it looks like it's roughly in the middle, maybe slightly lower than the top third. Let's compare it to R2. R2 is in the middle. The real arrow</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag ">fail</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>R1 is physically consistent with a vertical mirror.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      <p><strong>Matched checks:</strong> selects R1 (0.333)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag ">not_run_current_env_unavailable</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Not run in the current environment: the available 1x A100 job does not have a validated OneCAT image-understanding runner.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: not_run_current_env_unavailable</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article>
+      </div>
+    </div>
   </article>
 </section></div>
     <div class="tab-panel" id="tab-interleaved"><section>
@@ -6137,7 +7368,7 @@ Based on the label, here is the breakdown for two servings:
     <ul>
       <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/all_results_report/build_all_results_report.js</code></li>
       <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/all_results_report/publish_20260519_1325_interleaved_tabs_self_readback/index.html</code></li>
-      <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/cross_eval/cross_eval_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_eval/expanded_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_eval/paper_ood_cases_v2.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_eval/interesting_cases_v1.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_eval/model_metadata.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/report_site/data/summaries/janus_pro_7b/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/report_site/data/summaries/bagel_7b_mot/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/report_site/data/summaries/sensenova_u1_8b_mot/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/janus_pro_7b/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/bagel_7b_mot/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/sensenova_u1_8b_mot/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/show_o2_1_5b/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/emu3_5_image_vllm_8x80/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/onecat_3b/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/janus_pro_7b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/bagel_7b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/sensenova_u1_8b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/emu3_5_image_vllm_8x80/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/onecat_3b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/janus_pro_7b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/bagel_7b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/sensenova_u1_8b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/emu3_5_image_vllm_8x80/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/onecat_3b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/saltwater_edit_more_models/full_run_20260519_0108/outputs/saltwater_more_models/onecat_3b/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/saltwater_edit_more_models/full_run_20260519_0108/outputs/saltwater_more_models/emu3_5_image_vllm_8x80/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/show_o_corrected_report/full_run_20260518_2308/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/show_o_corrected_report/full_run_20260518_2308/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_paper/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/show_o_corrected_report/full_run_20260518_2308/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_interesting/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0242/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/summary_interleaved.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0214/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/summary_interleaved.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0146/outputs/exact_interleaved_20260519_0136/emu3_5_vllm_8x80/summary_interleaved.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/self_readback/manifest_20260519_0310.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/self_readback/full_run_20260519_self_readback/combined_self_readback.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/image_understanding/full_run_20260519_realworld_reasoning/combined_image_understanding_with_realworld.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/collected_outputs/bagel_7b_mot/summary.json</code></li>
+      <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/cross_eval/cross_eval_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_eval/expanded_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_eval/paper_ood_cases_v2.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_eval/interesting_cases_v1.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_eval/model_metadata.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/report_site/data/summaries/janus_pro_7b/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/report_site/data/summaries/bagel_7b_mot/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/report_site/data/summaries/sensenova_u1_8b_mot/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/janus_pro_7b/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/bagel_7b_mot/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/sensenova_u1_8b_mot/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/show_o2_1_5b/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/emu3_5_image_vllm_8x80/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/onecat_3b/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/janus_pro_7b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/bagel_7b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/sensenova_u1_8b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/emu3_5_image_vllm_8x80/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/onecat_3b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/janus_pro_7b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/bagel_7b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/sensenova_u1_8b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/emu3_5_image_vllm_8x80/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/onecat_3b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/saltwater_edit_more_models/full_run_20260519_0108/outputs/saltwater_more_models/onecat_3b/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/saltwater_edit_more_models/full_run_20260519_0108/outputs/saltwater_more_models/emu3_5_image_vllm_8x80/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/show_o_corrected_report/full_run_20260518_2308/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/show_o_corrected_report/full_run_20260518_2308/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_paper/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/show_o_corrected_report/full_run_20260518_2308/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_interesting/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0242/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/summary_interleaved.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0214/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/summary_interleaved.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0146/outputs/exact_interleaved_20260519_0136/emu3_5_vllm_8x80/summary_interleaved.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/self_readback/manifest_20260519_0310.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/self_readback/full_run_20260519_self_readback/combined_self_readback.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/image_understanding/full_run_20260519_hard_reasoning/combined_image_understanding_with_hard.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/collected_outputs/bagel_7b_mot/summary.json</code></li>
     </ul>
   </footer>
 </main>
