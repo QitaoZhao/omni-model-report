@@ -1,0 +1,140 @@
+[
+  {
+    "id": "id_emu35_comic_dogs",
+    "split": "ID",
+    "title": "Emu3.5 comic dogs with speech bubbles",
+    "type": "text_to_image",
+    "prompt": "A lively comic-style illustration depicting two humorous cartoon dogs interacting near a freshly dug backyard hole surrounded by scattered dirt, garden tools, blooming flowers, and a wooden fence background. At the upper-left side, Dog One stands nervously near the messy hole, ears down and eyes wide open with an expression of concern. Its speech bubble is an oval shape, outlined neatly with smooth, slightly rounded corners, positioned clearly above Dog One's head. Inside, clearly readable playful handwritten-style text emphasizes the dog's worried tone, saying, \"You sure the humans won't notice this giant hole here?\". Toward the lower-right side, Dog Two sits calmly and confidently with a cheerful, carefree expression, wagging its tail gently. Its speech bubble is rectangular with softly rounded edges, placed slightly overlapping with Dog One's speech bubble to guide the reader naturally downward diagonally across the frame. Dog Two's friendly, humorous response appears in a whimsical italicized comic font, clearly stating, \"Relax! We'll just blame it on the neighbor's cat again!\". Each speech bubble creates the playful and engaging backyard scene.",
+    "expected": "Two-panel-like comic composition with two dogs, two correctly placed speech bubbles, and readable quoted text.",
+    "source_provenance": {
+      "model_family": "Emu3.5",
+      "source_type": "official repo example config",
+      "citation": "Emu3.5 example_config_t2i.py text-rich comic prompt.",
+      "url": "https://github.com/baaivision/Emu3.5",
+      "figure_or_location": "configs/example_config_t2i.py example prompt."
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/janus_pro_7b/id_emu35_comic_dogs/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/janus_pro_7b/id_emu35_comic_dogs/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b"
+  },
+  {
+    "id": "id_onecat_panda_peace",
+    "split": "ID",
+    "title": "OneCAT panda with PEACE wall text",
+    "type": "text_to_image",
+    "prompt": "A high-contrast photo of a panda riding a horse. The panda is wearing a wizard hat and is reading a book. The horse is standing on a street against a gray concrete wall. Colorful flowers and the word \"PEACE\" are painted on the wall. Green grass grows from cracks in the street. DSLR photograph. daytime lighting.",
+    "expected": "Panda riding a horse, wizard hat, book, gray wall with readable PEACE text, flowers, grass, photo style.",
+    "source_provenance": {
+      "model_family": "OneCAT",
+      "source_type": "official repo example prompt",
+      "citation": "OneCAT public repo comprehensive inference example prompt.",
+      "url": "https://github.com/onecat-ai/OneCAT",
+      "figure_or_location": "onecat/var_model/tools/comprehensive_infer.py prompt list."
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/janus_pro_7b/id_onecat_panda_peace/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/janus_pro_7b/id_onecat_panda_peace/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b"
+  },
+  {
+    "id": "ood_multi_object_count",
+    "split": "OOD",
+    "title": "Counting and attributes",
+    "type": "text_to_image",
+    "prompt": "A product photo on a matte black table: exactly seven glass marbles in a row. Marbles 1, 3, 5, and 7 are transparent red; marbles 2, 4, and 6 are opaque blue. Put a small white number below each marble, from 1 to 7.",
+    "expected": "Seven marbles, alternating colors by index, readable numbers 1-7.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress exact count, ordinal binding, and text.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/janus_pro_7b/ood_multi_object_count/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/janus_pro_7b/ood_multi_object_count/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b",
+    "readback_question": "Read all visible text. Then describe the positions and attributes of the main objects.",
+    "readback_answer": "The image shows a collection of spherical objects, which appear to be glass or plastic spheres, arranged on a dark surface. These spheres are of various colors, including clear, green, red, blue, and brown. They are glossy and reflective, with some showing light reflections and refractions.\n\nIn the foreground, there are three small transparent rings placed near the spheres. The spheres are positioned in a loose cluster, with some overlapping each other. The arrangement is not uniform, and the spheres are placed randomly.\n\nThe text visible in the image is \"11000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+    "id": "ood_chart_microtext",
+    "split": "OOD",
+    "title": "Tiny chart with legend",
+    "type": "text_to_image",
+    "prompt": "A simple clean bar chart titled \"Q2 MIX\" with three vertical bars: Alpha = 20, Beta = 45, Gamma = 30. Use a white background, black axes, and a legend in the lower right that says \"units\".",
+    "expected": "Readable chart title, three labeled bars with approximate relative heights and lower-right legend.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress chart generation and small text.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/janus_pro_7b/ood_chart_microtext/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/janus_pro_7b/ood_chart_microtext/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b",
+    "readback_question": "Read all visible text. Then describe the positions and attributes of the main objects.",
+    "readback_answer": "The visible text in the image is:\n\n- 02.mil.k\n- บริษัทที่ 1\n- บริษัทที่ 2\n- บริษัทที่ 3\n- บริษัทที่ 4\n- บริษัทที่ 5\n- บริษัทที่ 6\n- บริษัทที่ 7\n- บริษัทที่ 8\n- บริษัทที่ 9\n- บริษัทที่ 10\n- บร"
+  },
+  {
+    "id": "ood_physics_reflection",
+    "split": "OOD",
+    "title": "Mirror reflection consistency",
+    "type": "text_to_image",
+    "prompt": "A studio photograph of a red mug sitting in front of a vertical mirror. The mug has a white crescent moon printed on its left side. The mirror reflection should show the crescent on the reflected mug's right side. Keep the background plain gray.",
+    "expected": "Mirror geometry is consistent: crescent appears left on mug and right in reflection.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress physical/geometric consistency.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/janus_pro_7b/ood_physics_reflection/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/janus_pro_7b/ood_physics_reflection/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b",
+    "readback_question": "Read all visible text. Then describe the positions and attributes of the main objects.",
+    "readback_answer": "The image shows a red mug with a white crescent moon design on it. The mug is positioned in front of a rectangular mirror. The reflection of the mug is visible in the mirror, showing the crescent moon design on the mug. The mug is placed on a flat surface, and the mirror is standing upright behind it. The background is a plain gray color."
+  },
+  {
+    "id": "ood_ui_screenshot",
+    "split": "OOD",
+    "title": "Mini app screenshot",
+    "type": "text_to_image",
+    "prompt": "A crisp screenshot of a compact desktop app named \"Flux Desk\". The left sidebar has three items: Inbox, Drafts, Archive. The main panel shows a table with two columns, Task and Status, and three rows: Sketch - Done, Render - Pending, Ship - Blocked.",
+    "expected": "UI screenshot with readable app name, sidebar labels, table headers, and three row/status pairs.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress UI/text/table generation.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/janus_pro_7b/ood_ui_screenshot/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/janus_pro_7b/ood_ui_screenshot/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b",
+    "readback_question": "Read all visible text. Then describe the positions and attributes of the main objects.",
+    "readback_answer": "The visible text in the image includes:\n\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n- \"DRAFT\"\n-"
+  }
+]

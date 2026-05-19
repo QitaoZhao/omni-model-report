@@ -1,0 +1,49 @@
+[
+  {
+    "id": "id_janus_princess",
+    "split": "ID",
+    "type": "text_to_image",
+    "prompt": "A stunning princess from kabul in red, white traditional clothing, blue eyes, brown hair",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/sensenova_u1_8b_mot/id_janus_princess.png"
+  },
+  {
+    "id": "id_sensenova_peacock",
+    "split": "ID",
+    "type": "text_to_image",
+    "prompt": "A male peacock trying to attract a female",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/sensenova_u1_8b_mot/id_sensenova_peacock.png"
+  },
+  {
+    "id": "id_bagel_fairy",
+    "split": "ID",
+    "type": "text_to_image",
+    "prompt": "A female cosplayer portraying an ethereal fairy or elf, wearing a flowing dress made of delicate fabrics in soft, mystical colors like emerald green and silver. She has pointed ears, a gentle, enchanting expression, and her outfit is adorned with sparkling jewels and intricate patterns. The background is a magical forest with glowing plants, mystical creatures, and a serene atmosphere.",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/sensenova_u1_8b_mot/id_bagel_fairy.png"
+  },
+  {
+    "id": "ood_text_spatial",
+    "split": "OOD",
+    "type": "text_to_image",
+    "prompt": "A clean white poster with the exact readable title \"OMNI TEST\"; below it, a red triangle is left of a blue circle, and a green square is in the lower right corner.",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/sensenova_u1_8b_mot/ood_text_spatial.png",
+    "readback_question": "Read the title and describe all visible objects, labels, and spatial relationships.",
+    "readback_answer": "<think>\nThe user wants me to describe the image based on the title and visible objects.\n\n1.  **Identify the title:** The text at the top says \"OMNI TEST\" in bold, black, sans-serif font.\n2.  **Identify the objects:**\n    *   There's a red triangle.\n    *   There's a blue circle.\n    *   There's a green square.\n3.  **Identify spatial relationships:**\n    *   The title is at the top center.\n    *   The red triangle is on the left side, below the title.\n    *   The blue circle is to the right of the red triangle, roughly at the same vertical level.\n    *   The green square is below the blue circle, towards the bottom right.\n    *   The entire composition is on a white piece of paper.\n    *   The paper is hanging on a wooden surface (likely a wall or board) using two black clips at the top corners.\n    *   There are strings holding the clips.\n\n**Drafting the description:**\n*   **Title:** \"OMNI TEST\" in large black letters.\n*   **Objects:**\n    *   Red triangle: Pointing upwards, located on the left.\n    *   Blue circle: Located to the right of the triangle.\n    *   Green square: Located below the circle, towards the right.\n*   **Context:** The shapes are on a white sheet of paper. The paper is clipped to a wooden background.\n\n**Refining the description:**\n*   Start with the title.\n*   Describe the shapes and their colors.\n*   Describe their positions relative to each other.\n*   Mention the background and how the paper is displayed.\n\nLet's organize it logically.\n- Top: Title \"OMNI TEST\".\n- Middle Left: Red triangle.\n- Middle Right: Blue circle.\n- Bottom Right: Green square.\n- Background: Wooden texture.\n- Mounting: Two black clips with strings.\n\nFinal check of the prompt requirements: \"Read the title and describe all visible objects, labels, and spatial relationships.\"\n\nOkay, I will structure the response to cover these points clearly.\n</think>\n\nBased on the image provided, here is a description of the visible elements:\n\n**Title:**\nAt the top center of the white paper, the text **\"OMNI TEST\"** is printed in large, bold, black capital letters.\n\n**Visible Objects and Labels:**\nBelow the title, there are three distinct geometric shapes, each a solid color:\n1.  **Red Triangle:** Located on the left side.\n2.  **Blue Circle:** Located to the right of the triangle.\n3.  **Green Square:** Located below the circle, towards the bottom right corner.\n\n**Spatial Relationships:**\n*   The entire composition is centered on a white sheet of paper.\n*   The red triangle and blue circle are positioned roughly on the same horizontal plane in the middle of the page.\n*   The green square is positioned lower down and to the right, creating a staggered layout.\n*   The paper is hanging against a light brown, wood-grain background. It is suspended by two black clips attached to thin strings at the top left and top right corners."
+  },
+  {
+    "id": "ood_grid_labels",
+    "split": "OOD",
+    "type": "text_to_image",
+    "prompt": "A clean 2 by 2 white infographic titled \"GRID CHECK\". Top-left cell: red apple labeled \"A1\". Top-right cell: blue cup labeled \"B2\". Bottom-left cell: green leaf labeled \"C3\". Bottom-right cell: yellow star labeled \"D4\". Use thin black grid lines and keep all labels readable.",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/sensenova_u1_8b_mot/ood_grid_labels.png",
+    "readback_question": "Read the title and describe all visible objects, labels, and spatial relationships.",
+    "readback_answer": "<think>\nThe user wants me to describe the image based on the title and visible elements.\n\n1.  **Title:** The title at the top is \"GRID CHECK\" in bold, black, uppercase letters.\n2.  **Structure:** The image is divided into four quadrants by a vertical and a horizontal black line, forming a 2x2 grid.\n3.  **Quadrant 1 (Top Left):**\n    *   **Object:** A red apple with a small green stem and two leaves.\n    *   **Label:** Below the apple is the text \"A1\".\n4.  **Quadrant 2 (Top Right):**\n    *   **Object:** A blue coffee mug or cup with a handle on the right side.\n    *   **Label:** Below the cup is the text \"B2\".\n5.  **Quadrant 3 (Bottom Left):**\n    *   **Object:** A green leaf with visible veins.\n    *   **Label:** Below the leaf is the text \"C3\".\n6.  **Quadrant 4 (Bottom Right):**\n    *   **Object:** A yellow five-pointed star.\n    *   **Label:** Below the star is the text \"D4\".\n7.  **Spatial Relationships:**\n    *   The grid lines intersect in the center.\n    *   The labels (A1, B2, C3, D4) are positioned directly underneath their respective icons.\n    *   The icons are centered within their quadrants.\n    *   The entire grid is set against a white background, framed by a light grey border.\n\n**Drafting the response:**\n*   Start with the title.\n*   Describe the grid layout.\n*   Go through each quadrant (A1, B2, C3, D4) describing the icon and the label.\n*   Mention the spatial arrangement (top-left, top-right, etc.).\n\nLet's refine the description for clarity.\n- \"The image features a title 'GRID CHECK' at the top.\"\n- \"Below the title is a 2x2 grid divided by black lines.\"\n- \"Top Left (A1): A red apple.\"\n- \"Top Right (B2): A blue mug.\"\n- \"Bottom Left (C3): A green leaf.\"\n- \"Bottom Right (D4): A yellow star.\"\n- \"The labels correspond to the grid coordinates (A1, B2, C3, D4).\"\n\nThis covers all the requirements.\n</think>\n\nBased on the title and visible elements, here is a description of the image:\n\n**Title:**\nAt the very top, the text **\"GRID CHECK\"** is written in bold, black, uppercase letters.\n\n**Layout:**\nThe main content is a 2x2 grid divided by a vertical and a horizontal black line. Each quadrant contains an icon and a corresponding label below it.\n\n**Visible Objects and Labels:**\n\n*   **Top Left Quadrant (A1):** There is a red apple with a green stem and two leaves. Below it is the label **\"A1\"**.\n*   **Top Right Quadrant (B2):** There is a blue coffee mug with a handle on the right side. Below it is the label **\"B2\"**.\n*   **Bottom Left Quadrant (C3):** There is a green leaf with visible veins. Below it is the label **\"C3\"**.\n*   **Bottom Right Quadrant (D4):** There is a yellow five-pointed star. Below it is the label **\"D4\"**.\n\n**Spatial Relationships:**\nThe grid lines intersect in the center of the image. The icons are centered within their respective quadrants, and the alphanumeric labels (A1, B2, C3, D4) are centered directly underneath each icon. The entire graphic is set against a white background with a light grey border."
+  },
+  {
+    "id": "ood_physics_saltwater_edit",
+    "split": "OOD",
+    "type": "image_edit",
+    "prompt": "Change the water to high-concentration saltwater so the egg floats in the middle of the glass, while preserving the glass, egg appearance, lighting, and background.",
+    "input": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/generated_inputs/cross_eval_egg_in_water.png",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/sensenova_u1_8b_mot/ood_physics_saltwater_edit.png"
+  }
+]

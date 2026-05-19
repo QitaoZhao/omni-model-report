@@ -1,0 +1,359 @@
+[
+  {
+    "id": "paper_janus_multilingual_snow",
+    "split": "ID-paper",
+    "category": "paper_figure_prompt",
+    "title": "Janus multilingual snowy mountains",
+    "capacity_tags": [
+      "multilingual prompt following",
+      "landscape realism",
+      "emergent T2I"
+    ],
+    "type": "text_to_image",
+    "prompt": "这是一张雪山写实照片，阳光照耀下的山峰在晴朗的蓝天下熠熠生辉。前景中高大的常青树被白雪覆盖，为这令人惊叹的高山景色增添了深度。",
+    "expected": "Realistic snowy mountain scene with sunlit peaks, clear blue sky, and snow-covered evergreen trees in the foreground.",
+    "source_provenance": {
+      "model_family": "Janus / Janus-Pro",
+      "source_type": "paper supplemental figure prompt",
+      "citation": "Janus CVPR 2025 supplemental, Figure 3 multilingual text-to-image samples.",
+      "url": "https://openaccess.thecvf.com/content/CVPR2025/supplemental/Wu_Janus_Decoupling_Visual_CVPR_2025_supplemental.pdf",
+      "figure_or_location": "Supplemental Figure 3; Chinese prompt extracted from local text lines around 229-234."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/paper_ood_eval/bagel_7b_mot/paper_janus_multilingual_snow.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot"
+  },
+  {
+    "id": "paper_bagel_car_small_cars",
+    "split": "ID-paper",
+    "category": "paper_figure_prompt",
+    "title": "BAGEL car made of small cars",
+    "capacity_tags": [
+      "thinking-aided generation",
+      "part-whole composition",
+      "scale reasoning"
+    ],
+    "type": "text_to_image",
+    "prompt": "A car made of small cars.",
+    "expected": "A large car shape whose body is composed of many smaller cars, with the composition readable at both object and part scales.",
+    "source_provenance": {
+      "model_family": "BAGEL",
+      "source_type": "paper figure prompt",
+      "citation": "BAGEL paper, Figure 1 showcase and Figure 13 thinking-aided generation.",
+      "url": "https://arxiv.org/pdf/2505.14683",
+      "figure_or_location": "Figure 1 and Figure 13; prompt appears verbatim in extracted text."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/paper_ood_eval/bagel_7b_mot/paper_bagel_car_small_cars.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot"
+  },
+  {
+    "id": "paper_bagel_hello_blackboard",
+    "split": "ID-paper",
+    "category": "paper_figure_prompt",
+    "title": "BAGEL Hello BAGEL blackboard",
+    "capacity_tags": [
+      "text rendering",
+      "training-scale emergence",
+      "simple typography"
+    ],
+    "type": "text_to_image",
+    "prompt": "A clear image of a blackboard with a clean, dark green surface and the word 'Hello BAGEL' written precisely and legibly in the center with bold, white chalk letters.",
+    "expected": "A dark green blackboard with the exact readable text 'Hello BAGEL' centered in white chalk.",
+    "source_provenance": {
+      "model_family": "BAGEL",
+      "source_type": "paper figure prompt",
+      "citation": "BAGEL paper, Figure 8 comparison across training checkpoints.",
+      "url": "https://arxiv.org/pdf/2505.14683",
+      "figure_or_location": "Figure 8; prompt appears verbatim in extracted text around line 704."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/paper_ood_eval/bagel_7b_mot/paper_bagel_hello_blackboard.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, and spatial relations.",
+    "readback_answer": "The visible text on the image reads \"HELLO BAGEL.\" The main objects, which are the words \"HELLO\" and \"BAGEL,\" are centered on the blackboard and are the only visible text. The layout is straightforward with the words placed one above the other, with \"HELLO\" at the top and \"BAGEL\" directly below it. The spatial relation between the words is vertical alignment, with no other objects or text present in the image. The count of main objects is two, corresponding to the two words written on the blackboard."
+  },
+  {
+    "id": "paper_showo2_be_kind_portrait",
+    "split": "ID-paper",
+    "category": "paper_figure_prompt",
+    "title": "Show-o2 BE KIND winter portrait",
+    "capacity_tags": [
+      "photorealism",
+      "long prompt following",
+      "text rendering"
+    ],
+    "type": "text_to_image",
+    "prompt": "A soft, natural portrait photograph captures a young woman with fair skin and long, ash-blonde hair cascading gently over her shoulders, her striking light blue eyes subtly enhanced with natural makeup and a gentle, calm smile playing on her lips. She wears a cozy, cream-colored winter sweater and a delicate woolen scarf adorned with subtle snowflake patterns, positioned slightly off-center, creating a sense of relaxed elegance. Behind her, a softly blurred snowy Moscow street scene unfolds, with traditional architecture and the diffused, golden glow of a winter afternoon contributing to a serene and contemplative atmosphere. At the very bottom of the frame, in simple, elegant lettering, appears the phrase \"BE KIND\".",
+    "expected": "Photographic winter portrait with soft Moscow street background and exact readable bottom text 'BE KIND'.",
+    "source_provenance": {
+      "model_family": "Show-o2",
+      "source_type": "paper appendix prompt",
+      "citation": "Show-o2 paper Appendix A.2, text prompts for Figure 2 image generation.",
+      "url": "https://arxiv.org/pdf/2506.15564",
+      "figure_or_location": "Figure 2 / Appendix A.2; prompt appears verbatim."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/paper_ood_eval/bagel_7b_mot/paper_showo2_be_kind_portrait.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, and spatial relations.",
+    "readback_answer": "The image shows a person wearing a white knitted scarf with black snowflake patterns. The scarf is wrapped around the neck, and the person is wearing a light-colored sweater. The background appears to be an outdoor setting with buildings and a snowy ground, suggesting a winter scene. The main objects, which are the scarf and the sweater, are well-positioned and satisfy the requested layout. The scarf is prominently displayed around the neck, and the sweater is visible underneath. The spatial relations between the scarf and the sweater are appropriate, with the scarf neatly wrapped around the neck. There is no visible text in the image."
+  },
+  {
+    "id": "paper_emu35_balcony_tutorial",
+    "split": "ID-paper",
+    "category": "paper_figure_prompt",
+    "title": "Emu3.5 balcony vegetable tutorial",
+    "capacity_tags": [
+      "visual narrative",
+      "multi-step generation",
+      "procedural reasoning"
+    ],
+    "type": "text_to_image",
+    "prompt": "Generate a visual tutorial explaining how to grow vegetables on a balcony, from preparing soil and planting seeds to harvesting and composting leftovers.",
+    "expected": "A coherent visual tutorial or infographic with multiple steps covering soil preparation, seed planting, harvest, and composting.",
+    "source_provenance": {
+      "model_family": "Emu3.5",
+      "source_type": "paper figure prompt",
+      "citation": "Emu3.5 paper, Figure 16 visual narrative results.",
+      "url": "https://arxiv.org/pdf/2510.26583",
+      "figure_or_location": "Figure 16; prompt appears verbatim in extracted text around line 1732."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/paper_ood_eval/bagel_7b_mot/paper_emu35_balcony_tutorial.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot"
+  },
+  {
+    "id": "paper_onecat_turtle_ocean",
+    "split": "ID-paper",
+    "category": "paper_figure_prompt",
+    "title": "OneCAT turtle near ocean surface",
+    "capacity_tags": [
+      "autoregressive image generation",
+      "natural scene",
+      "lighting"
+    ],
+    "type": "text_to_image",
+    "prompt": "Turtle swimming near ocean surface with sun rays penetrating water, peaceful marine life scene.",
+    "expected": "Underwater turtle scene near the ocean surface with visible sun rays and peaceful marine-life atmosphere.",
+    "source_provenance": {
+      "model_family": "OneCAT",
+      "source_type": "paper figure prompt",
+      "citation": "OneCAT paper, Figure 12 visual token analysis prompt.",
+      "url": "https://arxiv.org/pdf/2509.03498",
+      "figure_or_location": "Figure 12; prompt appears verbatim in extracted text."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/paper_ood_eval/bagel_7b_mot/paper_onecat_turtle_ocean.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot"
+  },
+  {
+    "id": "paper_sensenova_infographic_reconstructed",
+    "split": "ID-paper-reconstructed",
+    "category": "paper_capacity_reconstruction",
+    "title": "SenseNova infographic-style generation",
+    "capacity_tags": [
+      "complex infographic generation",
+      "text-rich layout",
+      "commercial visual content"
+    ],
+    "type": "text_to_image",
+    "prompt": "Create a polished business infographic titled \"Solar Farm Output\". Show three labeled sections: Capacity 120 MW, Storage 48 MWh, Savings 32%. Use a clean white background, green and blue accents, simple icons, and readable professional typography.",
+    "expected": "A clean infographic with title, three sections, exact values, icons, and readable typography.",
+    "source_provenance": {
+      "model_family": "SenseNova-U1",
+      "source_type": "paper figure concept reconstructed",
+      "citation": "SenseNova-U1 paper Figure 1 showcases infographics and human generation; quantitative sections emphasize text-rich and complex infographic generation.",
+      "url": "https://arxiv.org/pdf/2604.24763",
+      "figure_or_location": "Figure 1 / Sections 5.1.3 and Complex Infographic Generation; exact prompt not extractable from paper text."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/paper_ood_eval/bagel_7b_mot/paper_sensenova_infographic_reconstructed.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, and spatial relations.",
+    "readback_answer": "The visible text reads as follows:\n\n- UIINFNTD BATMFA\n- V05L92\n- 572\n- SLDacerGustans\n- Booksore urtiot\n- S35 Gmre\n- 305iart\n- Peoriplcinaus\n- II14S2\n- Royal Anonic GAltlee\n- Btovce Brpgn\n- N200G\n- RE UTFF\n\nThe main objects in the image are the text elements and the icons. The text is arranged in a somewhat scattered manner, with no clear layout or organization. The icons are placed randomly around the text, with no apparent relation to the text they are near. The count of text elements is 11, and the count of icons is 5. The spatial relations between the text and icons are irregular, with no discernible pattern or structure. Overall, the layout of the main objects does not satisfy a clear or coherent design."
+  },
+  {
+    "id": "ood_multilingual_signage",
+    "split": "OOD",
+    "category": "custom_capacity_probe",
+    "title": "Multilingual signage with layout",
+    "capacity_tags": [
+      "multilingual text rendering",
+      "layout binding",
+      "icon-text alignment"
+    ],
+    "type": "text_to_image",
+    "prompt": "A bright airport wayfinding sign with three stacked lines of readable text: \"GATE 12\" on the top line, \"登机口\" on the middle line, and \"搭乗口\" on the bottom line. Put a white airplane icon on the left and a yellow arrow pointing right on the far right.",
+    "expected": "Three exact multilingual text lines, airplane icon left, yellow right arrow, clean airport sign layout.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress multilingual typography and spatial binding.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/paper_ood_eval/bagel_7b_mot/ood_multilingual_signage.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, and spatial relations.",
+    "readback_answer": "The visible text reads:\n- GATE\n- GATE 1\n- 查机 < 闲口\n- 咨集 : 蕾香\n\nThe main objects are the signs with the text and arrows. The layout is straightforward, with the signs stacked vertically, each with its own arrow indicating direction. The text is clear and legible, and the spatial relations between the signs and arrows are consistent, with each sign having a corresponding arrow pointing to the right. The signs are well-organized and easy to read, satisfying the requested layout and spatial relations."
+  },
+  {
+    "id": "ood_negation_empty_plate",
+    "split": "OOD",
+    "category": "custom_capacity_probe",
+    "title": "Negation and absence",
+    "capacity_tags": [
+      "negation",
+      "object absence",
+      "single-object control"
+    ],
+    "type": "text_to_image",
+    "prompt": "A studio photo of a plain white dinner plate on a wooden table. On the plate there is exactly one small red toy car. There is no fork, no spoon, no knife, no food, and no cup anywhere in the image.",
+    "expected": "Only one red toy car on a white plate; no extra utensils, food, cups, or distractor objects.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to probe negative constraints and object hallucination.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/paper_ood_eval/bagel_7b_mot/ood_negation_empty_plate.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, and spatial relations.",
+    "readback_answer": "The image shows a small red toy car placed in the center of a white plate, which is situated on a wooden surface. The car is oriented horizontally, with its front facing towards the right side of the image. The plate is empty except for the car, and there is no visible text on the car or the plate. The layout is simple and centered, with the car being the main object on the plate. The spatial relation between the car and the plate is that the car is directly on top of the plate, and the plate is on the wooden surface. There are no other objects in the image, so the count of main objects is one (the car) and the layout is straightforward with the car being the focal point."
+  },
+  {
+    "id": "ood_transparent_occlusion",
+    "split": "OOD",
+    "category": "custom_capacity_probe",
+    "title": "Transparent occlusion ordering",
+    "capacity_tags": [
+      "depth ordering",
+      "transparent material",
+      "label binding"
+    ],
+    "type": "text_to_image",
+    "prompt": "A minimal 3D render on a gray floor: a transparent blue glass sphere is in the center, a red cube is partially visible behind the sphere, and a green cylinder stands in front of the sphere. Label the objects with small readable text: SPHERE, CUBE, CYLINDER.",
+    "expected": "Correct depth ordering and transparency: cube behind sphere, cylinder in front, all three labels readable.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to probe 3D spatial consistency and material handling.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/paper_ood_eval/bagel_7b_mot/ood_transparent_occlusion.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, and spatial relations.",
+    "readback_answer": "The visible text reads: \"CUBE,\" \"SPHERE,\" \"CYRBE,\" and \"CYLINDER.\" The main objects are a red cube, a blue sphere, and a green cylinder. The layout is simple and clear, with each object labeled and positioned distinctly. The cube is to the left of the sphere, and the cylinder is to the right of the sphere. The spatial relations are straightforward, with each object having its own space and no overlapping. The count of objects is three, and they satisfy the requested layout with clear labels and distinct positioning."
+  },
+  {
+    "id": "ood_week_calendar",
+    "split": "OOD",
+    "category": "custom_capacity_probe",
+    "title": "Calendar table fidelity",
+    "capacity_tags": [
+      "table generation",
+      "small text",
+      "alignment"
+    ],
+    "type": "text_to_image",
+    "prompt": "A clean weekly calendar page titled \"MAY PLAN\". Make five columns labeled Mon, Tue, Wed, Thu, Fri. The entries are: Mon: Lab, Tue: Model, Wed: Report, Thu: Review, Fri: Ship. Keep all words readable and aligned inside table cells.",
+    "expected": "Readable five-column weekly calendar with exact headers and exact cell entries.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to probe table/text alignment beyond prior UI and chart cases.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/paper_ood_eval/bagel_7b_mot/ood_week_calendar.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, and spatial relations.",
+    "readback_answer": "The visible text reads \"MAY PLAN\" at the top, followed by the days of the week: \"Tre\" (Tuesday), \"Wed\" (Wednesday), \"Thu\" (Thursday), and \"Risew\" (Thursday). Below the days of the week, there are five rows with the following text: \"Lab,\" \"Modl,\" \"Reprpt,\" \"Thu Review,\" and \"Ship.\" The text is arranged in a grid format, with each day of the week having a corresponding column and each row representing a different task or activity. The main objects (days of the week and tasks) satisfy the requested layout, with each day of the week having a corresponding column and each task having a corresponding row. The spatial relations between the objects are organized and clear, with each day of the week and task occupying its own cell in the grid."
+  },
+  {
+    "id": "ood_causal_flow_diagram",
+    "split": "OOD",
+    "category": "custom_capacity_probe",
+    "title": "Causal flow diagram",
+    "capacity_tags": [
+      "diagram generation",
+      "causal ordering",
+      "text-symbol binding"
+    ],
+    "type": "text_to_image",
+    "prompt": "A simple educational diagram titled \"PLANT CYCLE\" with four boxes connected by arrows in a clockwise loop. The boxes must read: SEED, SPROUT, FLOWER, FRUIT. Add a tiny plant icon in each box matching the stage.",
+    "expected": "Four-box clockwise loop with exact stage labels and matching icons.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to probe symbolic process diagrams.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/paper_ood_eval/bagel_7b_mot/ood_causal_flow_diagram.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, and spatial relations.",
+    "readback_answer": "The visible text reads \"PLANT CYCLE\" at the top, with \"SEED SPROUT\" on the left, \"STOD FLOWER\" on the right, and \"FRUIT\" at the bottom. The main objects, which are the illustrations of the plant cycle stages, are arranged in a circular layout with arrows indicating the flow from one stage to the next. The objects are evenly spaced and follow a clockwise direction, starting from the seed sprout, moving to the fruit, and then to the stod flower, completing the cycle. The layout is simple and clear, with each stage distinctly labeled and connected by arrows, effectively communicating the sequence of the plant cycle."
+  },
+  {
+    "id": "ood_style_split_panel",
+    "split": "OOD",
+    "category": "custom_capacity_probe",
+    "title": "Same object across styles",
+    "capacity_tags": [
+      "style transfer in generation",
+      "identity consistency",
+      "panel layout"
+    ],
+    "type": "text_to_image",
+    "prompt": "A three-panel comparison image of the same ceramic teapot. Left panel labeled PHOTO shows a realistic teapot. Middle panel labeled WATERCOLOR shows the same teapot as a watercolor painting. Right panel labeled BLUEPRINT shows the same teapot as a white technical blueprint drawing on blue paper.",
+    "expected": "Three aligned panels with the same teapot identity, three distinct styles, and readable labels PHOTO, WATERCOLOR, BLUEPRINT.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to probe style control and cross-panel identity consistency.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/paper_ood_eval/bagel_7b_mot/ood_style_split_panel.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, and spatial relations.",
+    "readback_answer": "The visible text reads: \"PHOTO,\" \"WATERLCOW,\" \"BLUERRMY,\" \"PHOTO,\" \"WATERCLOR,\" \"BLEEPRNT.\"\n\nThe main objects, which are three images of a teapot, do not satisfy the requested layout, count, and spatial relations. The images are not arranged in a specific order or pattern, and there is no clear relationship between them. The text labels are not directly related to the images and do not provide any additional information about the layout or spatial relations."
+  }
+]

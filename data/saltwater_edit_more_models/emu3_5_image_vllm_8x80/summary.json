@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ood_physics_saltwater_edit",
+    "split": "OOD for cross-model edit; official example-style for SenseNova reasoning edit",
+    "type": "image_edit_like_x2i",
+    "prompt": "Edit the reference image: change the water to high-concentration saltwater so the egg floats in the middle of the glass, while preserving the glass, egg appearance, lighting, and background.",
+    "expected": "egg moves from bottom to suspended middle; glass/background preserved",
+    "source_provenance": {
+      "model_family": "SenseNova-U1",
+      "source_type": "official repo example / demo sample",
+      "figure_or_location": "examples/editing/data/samples_reasoning.jsonl -> images_reasoning/042_physics_change_the_water_to_high-con.jpg",
+      "citation": "Official prompt: Change the water to high-concentration saltwater. Adapted prompt and synthetic input used for cross-model comparison.",
+      "url": "https://github.com/OpenSenseNova/SenseNova-U1/blob/main/examples/editing/data/samples_reasoning.jsonl"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/saltwater_more_models/emu3_5_image_vllm_8x80/vis/ood_physics_saltwater_edit/001_00_image.png",
+    "model_key": "emu3_5_image_vllm_8x80",
+    "model_id": "BAAI/Emu3.5-Image",
+    "runtime_seconds": 347,
+    "runtime_note": "Emu3.5-Image X2I/reference-image generation through vLLM tensor parallel on 8x A100 80GB. Summary points to generated image 001_00_image.png, not the reference input.",
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "run_family": "expanded_omni_id_ood",
+  "updated_at": "2026-05-18",
+  "models": [
+    {
+      "key": "janus_pro_7b",
+      "display_name": "Janus-Pro-7B",
+      "checkpoint": "deepseek-ai/Janus-Pro-7B",
+      "image_generation_resolution": "384x384 in the official demo runner used here",
+      "generation_paradigm": "Decoder-only AR over discrete visual tokens; decoupled visual encoding for understanding vs generation; VQ-style visual tokenizer/decoder path.",
+      "interface_space": "discrete image-token space, decoded to pixels",
+      "runtime_env": "/home/colligo/venvs/omni_demo_janus_pro_7b",
+      "setup_config": "setup_configs/janus_pro_7b.yaml",
+      "notes": "Good low-cost baseline, but 384px resolution is a real bottleneck for OCR, charts, and small spatial details."
+    },
+    {
+      "key": "bagel_7b_mot",
+      "display_name": "BAGEL-7B-MoT",
+      "checkpoint": "ByteDance-Seed/BAGEL-7B-MoT",
+      "image_generation_resolution": "1024x1024 in the local BAGEL inferencer used here",
+      "generation_paradigm": "Unified decoder-only Mixture-of-Transformers with AR text/understanding and diffusion/DiT-style generation over VAE latent image representations.",
+      "interface_space": "VAE latent generation plus visual encoder features for understanding",
+      "runtime_env": "/home/colligo/venvs/omni_demo_bagel_7b_mot",
+      "setup_config": "setup_configs/bagel_7b_mot.yaml",
+      "notes": "Requires flash-attn at import time and benefits from a pod-local checkpoint copy when safetensors on /sensei-fs is flaky."
+    },
+    {
+      "key": "sensenova_u1_8b_mot",
+      "display_name": "SenseNova-U1-8B-MoT",
+      "checkpoint": "SenseNova-U1-8B-MoT",
+      "image_generation_resolution": "1024x1024 in the previous comparable runner; official infra docs also report 2048x2048 serving.",
+      "generation_paradigm": "NEO-Unify native multimodal MoT; autoregressive text with pixel-space flow matching for image generation; no separate ViT encoder or VAE tokenizer bottleneck.",
+      "interface_space": "pixel-space / patch-space continuous vision representation",
+      "runtime_env": "/home/colligo/venvs/omni_demo_sensenova_u1_8b_mot",
+      "setup_config": "setup_configs/sensenova_u1_8b_mot.yaml",
+      "notes": "Most relevant pixel-space contrast against VAE/tokenizer systems; report should flag when we run outside official trained bucket sizes."
+    },
+    {
+      "key": "show_o2_1_5b",
+      "display_name": "Show-o2-1.5B",
+      "checkpoint": "showlab/show-o2-1.5B",
+      "image_generation_resolution": "432x432 for the comparable base run; HQ 512/1024 configs hit positional-token mismatch on this checkpoint.",
+      "generation_paradigm": "Native unified multimodal transformer combining AR text modeling with flow matching for visual generation through a 3D causal VAE representation.",
+      "interface_space": "VAE latent / causal visual tokens with flow matching",
+      "runtime_env": "/home/colligo/venvs/omni_demo_show_o2_1_5b_hq",
+      "setup_config": "setup_configs/show_o2_1_5b.yaml",
+      "notes": "Include both base-resolution successes and the HQ failure mode in the report, because the resolution gap affects fairness."
+    },
+    {
+      "key": "emu3_5_image_vllm_8x80",
+      "display_name": "Emu3.5-Image vLLM 8x80GB",
+      "checkpoint": "BAAI/Emu3.5-Image",
+      "image_generation_resolution": "1024x1024 in the vLLM runner via image_area=1048576 and 1:1 aspect ratio",
+      "generation_paradigm": "Pure next-token-prediction / autoregressive generation over discrete vision-token sequences using an Emu3.5 vision tokenizer; not the DiDA diffusion variant.",
+      "interface_space": "discrete visual-token space decoded by the Emu3.5 vision tokenizer",
+      "runtime_env": "/home/colligo/venvs/omni_demo_emu3_5_vllm",
+      "setup_config": "setup_configs/emu3_5_image_vllm_8x80.yaml",
+      "notes": "Slow because image generation is thousands of sequential visual tokens; vLLM/8x80 reduces memory pressure and helps throughput, but it remains AR."
+    },
+    {
+      "key": "onecat_3b",
+      "display_name": "OneCAT-3B",
+      "checkpoint": "onecat-ai/OneCAT-3B",
+      "image_generation_resolution": "t2i_stage=3 produces about 1.0M px, normally 1024x1024 for 1:1 prompts; t2i_stage=2 is about 512x512.",
+      "generation_paradigm": "Pure decoder-only autoregressive transformer with modality-specific MoE and multi-scale visual autoregressive / next-scale prediction. The public runner uses an Infinity VAE checkpoint for final image reconstruction.",
+      "interface_space": "multi-scale visual AR representation decoded with Infinity VAE assets in the public release",
+      "runtime_env": "/home/colligo/venvs/omni_demo_onecat_3b",
+      "setup_config": "setup_configs/onecat_3b.yaml",
+      "notes": "New model for this report. Use 8 single-GPU workers on the 8x80GB job so the install can be reused and each card holds one model instance."
+    }
+  ]
+}

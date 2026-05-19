@@ -1,0 +1,228 @@
+{
+  "run_id": "paper_id_ood_v2_20260518",
+  "description": "Paper-shown ID probes beyond repo demos plus additional OOD capacity probes for all unified omni models.",
+  "generation_cases": [
+    {
+      "id": "paper_janus_multilingual_snow",
+      "split": "ID-paper",
+      "category": "paper_figure_prompt",
+      "title": "Janus multilingual snowy mountains",
+      "prompt_status": "paper_exact",
+      "exact_prompt": true,
+      "prompt": "这是一张雪山写实照片，阳光照耀下的山峰在晴朗的蓝天下熠熠生辉。前景中高大的常青树被白雪覆盖，为这令人惊叹的高山景色增添了深度。",
+      "expected": "Realistic snowy mountain scene with sunlit peaks, clear blue sky, and snow-covered evergreen trees in the foreground.",
+      "capacity_tags": ["multilingual prompt following", "landscape realism", "emergent T2I"],
+      "source_provenance": {
+        "model_family": "Janus / Janus-Pro",
+        "source_type": "paper supplemental figure prompt",
+        "citation": "Janus CVPR 2025 supplemental, Figure 3 multilingual text-to-image samples.",
+        "url": "https://openaccess.thecvf.com/content/CVPR2025/supplemental/Wu_Janus_Decoupling_Visual_CVPR_2025_supplemental.pdf",
+        "figure_or_location": "Supplemental Figure 3; Chinese prompt extracted from local text lines around 229-234.",
+        "prompt_status": "exact user prompt; no refined prompt used"
+      }
+    },
+    {
+      "id": "paper_bagel_car_small_cars",
+      "split": "ID-paper",
+      "category": "paper_figure_prompt",
+      "title": "BAGEL car made of small cars",
+      "prompt_status": "paper_exact",
+      "exact_prompt": true,
+      "prompt": "A car made of small cars.",
+      "expected": "A large car shape whose body is composed of many smaller cars, with the composition readable at both object and part scales.",
+      "capacity_tags": ["thinking-aided generation", "part-whole composition", "scale reasoning"],
+      "source_provenance": {
+        "model_family": "BAGEL",
+        "source_type": "paper figure prompt",
+        "citation": "BAGEL paper, Figure 1 showcase and Figure 13 thinking-aided generation.",
+        "url": "https://arxiv.org/pdf/2505.14683",
+        "figure_or_location": "Figure 1 and Figure 13; prompt appears verbatim in extracted text.",
+        "prompt_status": "exact user prompt; BAGEL paper also shows an internal refined prompt, which is not used here"
+      }
+    },
+    {
+      "id": "paper_bagel_hello_blackboard",
+      "split": "ID-paper",
+      "category": "paper_figure_prompt",
+      "title": "BAGEL Hello BAGEL blackboard",
+      "prompt_status": "paper_exact",
+      "exact_prompt": true,
+      "prompt": "A clear image of a blackboard with a clean, dark green surface and the word 'Hello BAGEL' written precisely and legibly in the center with bold, white chalk letters.",
+      "expected": "A dark green blackboard with the exact readable text 'Hello BAGEL' centered in white chalk.",
+      "capacity_tags": ["text rendering", "training-scale emergence", "simple typography"],
+      "source_provenance": {
+        "model_family": "BAGEL",
+        "source_type": "paper figure prompt",
+        "citation": "BAGEL paper, Figure 8 comparison across training checkpoints.",
+        "url": "https://arxiv.org/pdf/2505.14683",
+        "figure_or_location": "Figure 8; prompt appears verbatim in extracted text around line 704.",
+        "prompt_status": "exact user prompt; no refined prompt used"
+      }
+    },
+    {
+      "id": "paper_showo2_be_kind_portrait",
+      "split": "ID-paper",
+      "category": "paper_figure_prompt",
+      "title": "Show-o2 BE KIND winter portrait",
+      "prompt_status": "paper_exact",
+      "exact_prompt": true,
+      "prompt": "A soft, natural portrait photograph captures a young woman with fair skin and long, ash-blonde hair cascading gently over her shoulders, her striking light blue eyes subtly enhanced with natural makeup and a gentle, calm smile playing on her lips. She wears a cozy, cream-colored winter sweater and a delicate woolen scarf adorned with subtle snowflake patterns, positioned slightly off-center, creating a sense of relaxed elegance. Behind her, a softly blurred snowy Moscow street scene unfolds, with traditional architecture and the diffused, golden glow of a winter afternoon contributing to a serene and contemplative atmosphere. At the very bottom of the frame, in simple, elegant lettering, appears the phrase \"BE KIND\".",
+      "expected": "Photographic winter portrait with soft Moscow street background and exact readable bottom text 'BE KIND'.",
+      "capacity_tags": ["photorealism", "long prompt following", "text rendering"],
+      "source_provenance": {
+        "model_family": "Show-o2",
+        "source_type": "paper appendix prompt",
+        "citation": "Show-o2 paper Appendix A.2, text prompts for Figure 2 image generation.",
+        "url": "https://arxiv.org/pdf/2506.15564",
+        "figure_or_location": "Figure 2 / Appendix A.2; prompt appears verbatim.",
+        "prompt_status": "exact user prompt; no refined prompt used"
+      }
+    },
+    {
+      "id": "paper_emu35_balcony_tutorial",
+      "split": "ID-paper",
+      "category": "paper_figure_prompt",
+      "title": "Emu3.5 balcony vegetable tutorial",
+      "prompt_status": "paper_exact",
+      "exact_prompt": true,
+      "prompt": "Generate a visual tutorial explaining how to grow vegetables on a balcony, from preparing soil and planting seeds to harvesting and composting leftovers.",
+      "expected": "A coherent visual tutorial or infographic with multiple steps covering soil preparation, seed planting, harvest, and composting.",
+      "capacity_tags": ["visual narrative", "multi-step generation", "procedural reasoning"],
+      "source_provenance": {
+        "model_family": "Emu3.5",
+        "source_type": "paper figure prompt",
+        "citation": "Emu3.5 paper, Figure 16 visual narrative results.",
+        "url": "https://arxiv.org/pdf/2510.26583",
+        "figure_or_location": "Figure 16; prompt appears verbatim in extracted text around line 1732.",
+        "prompt_status": "exact user prompt; no refined prompt used"
+      }
+    },
+    {
+      "id": "paper_onecat_turtle_ocean",
+      "split": "ID-paper",
+      "category": "paper_figure_prompt",
+      "title": "OneCAT turtle near ocean surface",
+      "prompt_status": "paper_exact",
+      "exact_prompt": true,
+      "prompt": "Turtle swimming near ocean surface with sun rays penetrating water, peaceful marine life scene.",
+      "expected": "Underwater turtle scene near the ocean surface with visible sun rays and peaceful marine-life atmosphere.",
+      "capacity_tags": ["autoregressive image generation", "natural scene", "lighting"],
+      "source_provenance": {
+        "model_family": "OneCAT",
+        "source_type": "paper figure prompt",
+        "citation": "OneCAT paper, Figure 12 visual token analysis prompt.",
+        "url": "https://arxiv.org/pdf/2509.03498",
+        "figure_or_location": "Figure 12; prompt appears verbatim in extracted text.",
+        "prompt_status": "exact user prompt; no refined prompt used"
+      }
+    },
+    {
+      "id": "paper_sensenova_infographic_reconstructed",
+      "split": "ID-paper-reconstructed",
+      "category": "paper_capacity_reconstruction",
+      "title": "SenseNova infographic-style generation",
+      "prompt_status": "paper_capacity_reconstruction",
+      "exact_prompt": false,
+      "prompt": "Create a polished business infographic titled \"Solar Farm Output\". Show three labeled sections: Capacity 120 MW, Storage 48 MWh, Savings 32%. Use a clean white background, green and blue accents, simple icons, and readable professional typography.",
+      "expected": "A clean infographic with title, three sections, exact values, icons, and readable typography.",
+      "capacity_tags": ["complex infographic generation", "text-rich layout", "commercial visual content"],
+      "source_provenance": {
+        "model_family": "SenseNova-U1",
+        "source_type": "paper figure concept reconstructed",
+        "citation": "SenseNova-U1 paper Figure 1 showcases infographics and human generation; quantitative sections emphasize text-rich and complex infographic generation.",
+        "url": "https://arxiv.org/pdf/2604.24763",
+        "figure_or_location": "Figure 1 / Sections 5.1.3 and Complex Infographic Generation; exact prompt not extractable from paper text.",
+        "prompt_status": "adapted/reconstructed capacity probe, not an exact paper prompt"
+      }
+    },
+    {
+      "id": "ood_multilingual_signage",
+      "split": "OOD",
+      "category": "custom_capacity_probe",
+      "title": "Multilingual signage with layout",
+      "prompt": "A bright airport wayfinding sign with three stacked lines of readable text: \"GATE 12\" on the top line, \"登机口\" on the middle line, and \"搭乗口\" on the bottom line. Put a white airplane icon on the left and a yellow arrow pointing right on the far right.",
+      "expected": "Three exact multilingual text lines, airplane icon left, yellow right arrow, clean airport sign layout.",
+      "capacity_tags": ["multilingual text rendering", "layout binding", "icon-text alignment"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed for this comparison to stress multilingual typography and spatial binding.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "ood_negation_empty_plate",
+      "split": "OOD",
+      "category": "custom_capacity_probe",
+      "title": "Negation and absence",
+      "prompt": "A studio photo of a plain white dinner plate on a wooden table. On the plate there is exactly one small red toy car. There is no fork, no spoon, no knife, no food, and no cup anywhere in the image.",
+      "expected": "Only one red toy car on a white plate; no extra utensils, food, cups, or distractor objects.",
+      "capacity_tags": ["negation", "object absence", "single-object control"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed for this comparison to probe negative constraints and object hallucination.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "ood_transparent_occlusion",
+      "split": "OOD",
+      "category": "custom_capacity_probe",
+      "title": "Transparent occlusion ordering",
+      "prompt": "A minimal 3D render on a gray floor: a transparent blue glass sphere is in the center, a red cube is partially visible behind the sphere, and a green cylinder stands in front of the sphere. Label the objects with small readable text: SPHERE, CUBE, CYLINDER.",
+      "expected": "Correct depth ordering and transparency: cube behind sphere, cylinder in front, all three labels readable.",
+      "capacity_tags": ["depth ordering", "transparent material", "label binding"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed for this comparison to probe 3D spatial consistency and material handling.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "ood_week_calendar",
+      "split": "OOD",
+      "category": "custom_capacity_probe",
+      "title": "Calendar table fidelity",
+      "prompt": "A clean weekly calendar page titled \"MAY PLAN\". Make five columns labeled Mon, Tue, Wed, Thu, Fri. The entries are: Mon: Lab, Tue: Model, Wed: Report, Thu: Review, Fri: Ship. Keep all words readable and aligned inside table cells.",
+      "expected": "Readable five-column weekly calendar with exact headers and exact cell entries.",
+      "capacity_tags": ["table generation", "small text", "alignment"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed for this comparison to probe table/text alignment beyond prior UI and chart cases.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "ood_causal_flow_diagram",
+      "split": "OOD",
+      "category": "custom_capacity_probe",
+      "title": "Causal flow diagram",
+      "prompt": "A simple educational diagram titled \"PLANT CYCLE\" with four boxes connected by arrows in a clockwise loop. The boxes must read: SEED, SPROUT, FLOWER, FRUIT. Add a tiny plant icon in each box matching the stage.",
+      "expected": "Four-box clockwise loop with exact stage labels and matching icons.",
+      "capacity_tags": ["diagram generation", "causal ordering", "text-symbol binding"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed for this comparison to probe symbolic process diagrams.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "ood_style_split_panel",
+      "split": "OOD",
+      "category": "custom_capacity_probe",
+      "title": "Same object across styles",
+      "prompt": "A three-panel comparison image of the same ceramic teapot. Left panel labeled PHOTO shows a realistic teapot. Middle panel labeled WATERCOLOR shows the same teapot as a watercolor painting. Right panel labeled BLUEPRINT shows the same teapot as a white technical blueprint drawing on blue paper.",
+      "expected": "Three aligned panels with the same teapot identity, three distinct styles, and readable labels PHOTO, WATERCOLOR, BLUEPRINT.",
+      "capacity_tags": ["style transfer in generation", "identity consistency", "panel layout"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed for this comparison to probe style control and cross-panel identity consistency.",
+        "figure_or_location": "not in paper"
+      }
+    }
+  ],
+  "understanding_readback": {
+    "question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, and spatial relations.",
+    "applies_to_splits": ["OOD", "ID-paper", "ID-paper-reconstructed"],
+    "models_with_readback_in_current_runners": ["janus_pro_7b", "bagel_7b_mot", "sensenova_u1_8b_mot"]
+  }
+}

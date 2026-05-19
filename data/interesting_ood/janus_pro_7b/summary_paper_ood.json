@@ -1,0 +1,349 @@
+[
+  {
+    "id": "interesting_clock_737",
+    "split": "OOD-interesting",
+    "category": "custom_capacity_probe",
+    "title": "Analog Clock Exact Time",
+    "capacity_tags": [
+      "spatial reasoning",
+      "numeric text rendering",
+      "clock hand binding"
+    ],
+    "type": "text_to_image",
+    "prompt": "A clean product photo of a round white analog wall clock on a plain gray background. The clock has black numbers 1 through 12. The minute hand points exactly at 7 and the hour hand is between 7 and 8, showing 7:35. Add a small printed label below the clock that reads \"7:35\".",
+    "expected": "Analog clock with readable numbers, correct hand positions for 7:35, and exact bottom label 7:35.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed to test continuous spatial binding plus numeric text.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_clock_737/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_clock_737/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b"
+  },
+  {
+    "id": "interesting_4x4_sudoku",
+    "split": "OOD-interesting",
+    "category": "custom_capacity_probe",
+    "title": "4x4 Sudoku Grid",
+    "capacity_tags": [
+      "table generation",
+      "small text",
+      "symbol placement",
+      "alignment"
+    ],
+    "type": "text_to_image",
+    "prompt": "A crisp black-and-white 4 by 4 sudoku puzzle grid on paper. Fill the cells with these exact digits by row: row 1: 1 2 3 4; row 2: 3 4 1 2; row 3: 2 1 4 3; row 4: 4 3 2 1. Keep every digit centered and readable.",
+    "expected": "Exact 4x4 grid and exact row-wise digit layout.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed to stress exact table cell content and alignment.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_4x4_sudoku/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_4x4_sudoku/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, spatial relations, and any negative constraints.",
+    "readback_answer": "The visible text in the image is:\n\n```\n5 3\n7 30\n2 3\n3 3\n5 3\n1 5\n```\n\nThe layout:\n- The text is arranged in a grid-like structure, with each cell containing a single character or number.\n- The characters and numbers are placed within individual cells, with some cells containing multiple characters or numbers.\n\nCount:\n- There are 10 cells visible in the grid.\n- Each cell contains one character or number.\n\nSpatial relations:\n- The characters and numbers are placed within individual cells, with some cells containing multiple characters or numbers.\n- The characters and numbers are arranged in a way that follows the grid structure.\n\nNegative constraints:\n- There are no negative constraints visible in the image.\n\nThe main objects satisfy the requested layout, count, spatial relations, and negative constraints."
+  },
+  {
+    "id": "interesting_map_route",
+    "split": "OOD-interesting",
+    "category": "custom_capacity_probe",
+    "title": "Mini Map Route With Labels",
+    "capacity_tags": [
+      "map layout",
+      "path planning",
+      "label binding",
+      "spatial reasoning"
+    ],
+    "type": "text_to_image",
+    "prompt": "A simple top-down illustrated city map. Put a blue square labeled \"HOME\" in the lower left, a green circle labeled \"LAB\" in the upper right, and a red dashed route connecting HOME to LAB through exactly three turns. Include a small compass in the corner with N pointing up.",
+    "expected": "Correct lower-left HOME, upper-right LAB, red dashed route with exactly three turns, and north-up compass.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed to test path topology and label-location binding.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_map_route/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_map_route/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b"
+  },
+  {
+    "id": "interesting_ui_modal",
+    "split": "OOD-interesting",
+    "category": "custom_capacity_probe",
+    "title": "Exact UI Modal",
+    "capacity_tags": [
+      "UI generation",
+      "text rendering",
+      "layout binding",
+      "button ordering"
+    ],
+    "type": "text_to_image",
+    "prompt": "A realistic desktop app screenshot with a centered confirmation modal. The modal title must read \"Delete draft?\". Body text: \"This cannot be undone.\" There are two buttons at the bottom: a gray button labeled \"Cancel\" on the left and a red button labeled \"Delete\" on the right. The background app should be blurred.",
+    "expected": "Readable modal with exact title, body text, and two correctly ordered buttons.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed to probe screenshot-like UI generation and exact button ordering.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_ui_modal/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_ui_modal/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, spatial relations, and any negative constraints.",
+    "readback_answer": "The visible text in the image is:\n\n1. Աբովանդեան?\n2. Աբովանդեան անկանելու, \n3. Աբովանդեան անկանելու \n4. Աբովանդեան անկանելու \n5. Աբովանդեան անկանելու \n6. Աբովանդեան անկանելու \n"
+  },
+  {
+    "id": "interesting_recipe_card",
+    "split": "OOD-interesting",
+    "category": "custom_capacity_probe",
+    "title": "Recipe Card Exact Text",
+    "capacity_tags": [
+      "text rendering",
+      "list layout",
+      "icon-text binding"
+    ],
+    "type": "text_to_image",
+    "prompt": "A neat recipe card titled \"LEMON TEA\". Under the title, list exactly three ingredients as separate readable lines: \"1 lemon\", \"2 tsp honey\", \"1 cup water\". Add a small drawing of a lemon slice in the lower right corner.",
+    "expected": "Exact title and three exact ingredient lines, with lemon slice in lower right.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed to test medium-length text and list fidelity.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_recipe_card/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_recipe_card/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, spatial relations, and any negative constraints.",
+    "readback_answer": "The visible text reads:\n\n1. bimboon\n2. 2\n3. 2 vip tooy\n4. 1 cry water\n\nThe main objects in the image are two lemon slices.\n\nLayout: The text is arranged in a list format, with each item separated by a line. The lemon slices are placed on the right side of the text.\n\nCount: The text contains four items, and there are two lemon slices.\n\nSpatial Relations: The text is aligned to the left, while the lemon slices are positioned to the right of the text.\n\nNegative Constraints: The layout is well-organized, with the text and lemon slices occupying distinct spaces, ensuring no overlap or crowding."
+  },
+  {
+    "id": "interesting_math_plot",
+    "split": "OOD-interesting",
+    "category": "custom_capacity_probe",
+    "title": "Math Plot With Labels",
+    "capacity_tags": [
+      "chart generation",
+      "mathematical notation",
+      "spatial-symbol binding"
+    ],
+    "type": "text_to_image",
+    "prompt": "A clean educational chart of the parabola y = x^2 on white graph paper. Label the x-axis \"x\" and y-axis \"y\". Mark and label three points exactly: (-1,1), (0,0), and (1,1). The curve should pass through all three points.",
+    "expected": "Parabola through the three labeled points, with readable axis and point labels.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed to test graph geometry plus symbolic labels.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_math_plot/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_math_plot/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b"
+  },
+  {
+    "id": "interesting_nested_container",
+    "split": "OOD-interesting",
+    "category": "custom_capacity_probe",
+    "title": "Transparent Jar Counts",
+    "capacity_tags": [
+      "counting",
+      "transparent material",
+      "negation",
+      "text rendering"
+    ],
+    "type": "text_to_image",
+    "prompt": "A transparent glass jar on a white table. Inside the jar there are exactly three red balls and exactly two blue cubes. There are no green objects. The jar has a white label that reads \"5 ITEMS\".",
+    "expected": "Transparent jar with 3 red balls, 2 blue cubes, no green objects, exact label 5 ITEMS.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed to combine transparency, counting, and negative constraints.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_nested_container/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_nested_container/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, spatial relations, and any negative constraints.",
+    "readback_answer": "The visible text in the image is \"5 个球\". This translates to \"5 balls\" in English.\n\n1. **Layout**: The text is written on a label attached to the jar, which is the main container for the objects.\n\n2. **Count**: The label specifies that there are 5 balls inside the jar.\n\n3. **Spatial Relations**: The balls are arranged inside the jar, with some blue blocks also present. The balls are grouped together, and the blue blocks are positioned around them.\n\n4. **Negative Constraints**: The balls are contained within the jar, and the label clearly states the quantity and arrangement.\n\nThe main objects satisfy the layout, count, and spatial relations as specified. There are no negative constraints observed."
+  },
+  {
+    "id": "interesting_left_right_occlusion",
+    "split": "OOD-interesting",
+    "category": "custom_capacity_probe",
+    "title": "Left Right Occlusion",
+    "capacity_tags": [
+      "spatial reasoning",
+      "occlusion",
+      "label binding"
+    ],
+    "type": "text_to_image",
+    "prompt": "A minimal studio render with three objects on a straight horizontal line: a yellow cone on the left, a blue sphere in the center, and a red cube on the right. The blue sphere partially covers the red cube but does not cover the yellow cone. Add tiny labels LEFT, CENTER, RIGHT under the correct objects.",
+    "expected": "Correct left/center/right objects, specified occlusion, and labels under matching objects.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed to test positional words and occlusion ordering.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_left_right_occlusion/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_left_right_occlusion/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b"
+  },
+  {
+    "id": "interesting_before_after_melt",
+    "split": "OOD-interesting",
+    "category": "custom_capacity_probe",
+    "title": "Before After Melting Sequence",
+    "capacity_tags": [
+      "temporal reasoning",
+      "physical transformation",
+      "panel layout",
+      "text rendering"
+    ],
+    "type": "text_to_image",
+    "prompt": "A two-panel science illustration. Left panel labeled \"BEFORE\" shows a solid ice cube on a plate. Right panel labeled \"AFTER\" shows the same plate with a puddle of water and no ice cube. Use simple arrows from left to right.",
+    "expected": "Two panels with exact labels BEFORE/AFTER and correct physical state change.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed to test temporal/causal transformation in a single generated image.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_before_after_melt/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_before_after_melt/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, spatial relations, and any negative constraints.",
+    "readback_answer": "The visible text in the image is:\n\n- 冰块 (Ice block)\n- 水 (Water)\n- 水滴 (Water droplet)\n\nThe main objects in the image are:\n\n1. An ice block on a plate.\n2. A water droplet.\n\nThe layout is satisfied as the ice block is on the left side, and the water droplet is on the right side. The spatial relations are correct as the ice block is on a plate, and the water droplet is separate from the plate.\n\nThere are no negative constraints as the objects are correctly placed and clearly distinguishable."
+  },
+  {
+    "id": "interesting_periodic_tile",
+    "split": "OOD-interesting",
+    "category": "custom_capacity_probe",
+    "title": "Periodic Table Tile",
+    "capacity_tags": [
+      "scientific diagram",
+      "text rendering",
+      "layout binding"
+    ],
+    "type": "text_to_image",
+    "prompt": "A single chemistry periodic-table tile for carbon. Large centered letter \"C\". Top left number \"6\". Bottom text \"Carbon\". Bottom right text \"12.01\". Use a clean textbook style.",
+    "expected": "Periodic-table tile with exact C, 6, Carbon, and 12.01 in correct positions.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed to test structured scientific text placement.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_periodic_tile/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_periodic_tile/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, spatial relations, and any negative constraints.",
+    "readback_answer": "The visible text in the image is:\n\n- \"6\"\n- \"C\"\n- \"Carbon\"\n- \"14.01\"\n\nThe layout:\n- The number \"6\" is placed in the top left corner.\n- The letter \"C\" is placed in the center.\n- The word \"Carbon\" is placed at the bottom.\n- The number \"14.01\" is placed at the bottom right.\n\nSpatial relations:\n- The number \"6\" is aligned vertically with the letter \"C\".\n- The letter \"C\" is centrally aligned with the word \"Carbon\".\n- The number \"14.01\" is aligned horizontally with the word \"Carbon\".\n\nCount:\n- There are 6 visible objects: 1 number, 1 letter, 1 word, and 2 numbers.\n\nNegative constraints:\n- The layout is visually balanced, with the central placement of \"C\" and the word \"Carbon\" aligning well with the other elements.\n- The numbers and letters are clearly separated, and there is no overlap.\n\nThe main objects satisfy the requested layout, count, spatial relations, and no negative constraints."
+  },
+  {
+    "id": "interesting_nonexistent_object",
+    "split": "OOD-interesting",
+    "category": "custom_capacity_probe",
+    "title": "Object Made Of Letters",
+    "capacity_tags": [
+      "typographic image",
+      "negation",
+      "part-whole composition",
+      "text rendering"
+    ],
+    "type": "text_to_image",
+    "prompt": "A poster showing the silhouette of a cat made entirely from many small readable letters spelling \"MEOW\". There should be no real cat, no fur texture, and no photograph. The poster background is plain white.",
+    "expected": "Cat silhouette formed only from repeated readable MEOW letters, no photoreal animal.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed to test typographic composition and negation of photoreal fallback.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_nonexistent_object/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_nonexistent_object/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, spatial relations, and any negative constraints.",
+    "readback_answer": "The image depicts a silhouette of a cat made up of various words. The word \"MEOW\" is prominently displayed in the center of the cat's body. The cat is facing to the left, and its tail curls upward to the right.\n\nLayout: The layout is well-organized, with the word \"MEOW\" centrally placed and the rest of the words distributed evenly across the cat's body.\n\nCount: There are numerous words, but they are all contained within the silhouette of the cat, fitting the overall shape.\n\nSpatial Relations: The words are spatially arranged to form the shape of a cat, with the word \"MEOW\" in the center, and the rest of the words filling in the rest of the body and tail.\n\nNegative Constraints: The words do not overlap, and the overall silhouette is clear and distinct.\n\nThe main objects satisfy the requested layout, count, spatial relations, and negative constraints."
+  },
+  {
+    "id": "interesting_reflection_mismatch",
+    "split": "OOD-interesting",
+    "category": "custom_capacity_probe",
+    "title": "Mirror Reflection Exception",
+    "capacity_tags": [
+      "reflection reasoning",
+      "counterfactual text",
+      "text rendering",
+      "spatial consistency"
+    ],
+    "type": "text_to_image",
+    "prompt": "A surreal but precise scene: on a table there is a white mug with the word \"REAL\" printed on it. Behind it is a mirror. In the mirror reflection, the mug should appear but the printed word should read \"DREAM\" instead of REAL.",
+    "expected": "Foreground mug says REAL, reflected mug says DREAM, with otherwise consistent mirror geometry.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed to test controlled inconsistency across reflection and foreground.",
+      "figure_or_location": "not in paper"
+    },
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_reflection_mismatch/img_0.jpg"
+    ],
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/interesting_ood_v1/janus_pro_7b/interesting_reflection_mismatch/img_0.jpg",
+    "resolution": "384x384",
+    "width": 384,
+    "height": 384,
+    "model_key": "janus_pro_7b",
+    "readback_question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, spatial relations, and any negative constraints.",
+    "readback_answer": "The visible text on the mug reads \"REAL.\" The reflection of the text on the mirror shows the word \"REAL\" as well. The main objects in the image are a white mug with the word \"REAL\" on it and a mirror reflecting the mug. The spatial relations show that the mug is placed on a wooden surface, and the mirror is positioned behind the mug, reflecting its image. The layout is satisfied as the mug is clearly visible, and the reflection is accurate. There are no negative constraints; the objects are correctly positioned and clearly visible."
+  }
+]

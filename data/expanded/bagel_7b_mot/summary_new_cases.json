@@ -1,0 +1,128 @@
+[
+  {
+    "id": "id_emu35_comic_dogs",
+    "split": "ID",
+    "title": "Emu3.5 comic dogs with speech bubbles",
+    "type": "text_to_image",
+    "prompt": "A lively comic-style illustration depicting two humorous cartoon dogs interacting near a freshly dug backyard hole surrounded by scattered dirt, garden tools, blooming flowers, and a wooden fence background. At the upper-left side, Dog One stands nervously near the messy hole, ears down and eyes wide open with an expression of concern. Its speech bubble is an oval shape, outlined neatly with smooth, slightly rounded corners, positioned clearly above Dog One's head. Inside, clearly readable playful handwritten-style text emphasizes the dog's worried tone, saying, \"You sure the humans won't notice this giant hole here?\". Toward the lower-right side, Dog Two sits calmly and confidently with a cheerful, carefree expression, wagging its tail gently. Its speech bubble is rectangular with softly rounded edges, placed slightly overlapping with Dog One's speech bubble to guide the reader naturally downward diagonally across the frame. Dog Two's friendly, humorous response appears in a whimsical italicized comic font, clearly stating, \"Relax! We'll just blame it on the neighbor's cat again!\". Each speech bubble creates the playful and engaging backyard scene.",
+    "expected": "Two-panel-like comic composition with two dogs, two correctly placed speech bubbles, and readable quoted text.",
+    "source_provenance": {
+      "model_family": "Emu3.5",
+      "source_type": "official repo example config",
+      "citation": "Emu3.5 example_config_t2i.py text-rich comic prompt.",
+      "url": "https://github.com/baaivision/Emu3.5",
+      "figure_or_location": "configs/example_config_t2i.py example prompt."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/bagel_7b_mot/id_emu35_comic_dogs.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot"
+  },
+  {
+    "id": "id_onecat_panda_peace",
+    "split": "ID",
+    "title": "OneCAT panda with PEACE wall text",
+    "type": "text_to_image",
+    "prompt": "A high-contrast photo of a panda riding a horse. The panda is wearing a wizard hat and is reading a book. The horse is standing on a street against a gray concrete wall. Colorful flowers and the word \"PEACE\" are painted on the wall. Green grass grows from cracks in the street. DSLR photograph. daytime lighting.",
+    "expected": "Panda riding a horse, wizard hat, book, gray wall with readable PEACE text, flowers, grass, photo style.",
+    "source_provenance": {
+      "model_family": "OneCAT",
+      "source_type": "official repo example prompt",
+      "citation": "OneCAT public repo comprehensive inference example prompt.",
+      "url": "https://github.com/onecat-ai/OneCAT",
+      "figure_or_location": "onecat/var_model/tools/comprehensive_infer.py prompt list."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/bagel_7b_mot/id_onecat_panda_peace.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot"
+  },
+  {
+    "id": "ood_multi_object_count",
+    "split": "OOD",
+    "title": "Counting and attributes",
+    "type": "text_to_image",
+    "prompt": "A product photo on a matte black table: exactly seven glass marbles in a row. Marbles 1, 3, 5, and 7 are transparent red; marbles 2, 4, and 6 are opaque blue. Put a small white number below each marble, from 1 to 7.",
+    "expected": "Seven marbles, alternating colors by index, readable numbers 1-7.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress exact count, ordinal binding, and text.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/bagel_7b_mot/ood_multi_object_count.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot",
+    "readback_question": "Read all visible text. Then describe the positions and attributes of the main objects.",
+    "readback_answer": "The visible text in the image reads \"1 2 5 4 3.\" The main objects are five glossy spheres, each with a distinct color and number label beneath them. The spheres are arranged in a horizontal line on a dark surface. From left to right, the first sphere is red and labeled \"1,\" the second sphere is red and labeled \"2,\" the third sphere is blue and labeled \"5,\" the fourth sphere is blue and labeled \"4,\" and the fifth sphere is blue and labeled \"3.\" The spheres have a reflective surface, and the numbers are white and positioned directly below each sphere. The background is a solid dark color, providing a high contrast to the brightly colored spheres."
+  },
+  {
+    "id": "ood_chart_microtext",
+    "split": "OOD",
+    "title": "Tiny chart with legend",
+    "type": "text_to_image",
+    "prompt": "A simple clean bar chart titled \"Q2 MIX\" with three vertical bars: Alpha = 20, Beta = 45, Gamma = 30. Use a white background, black axes, and a legend in the lower right that says \"units\".",
+    "expected": "Readable chart title, three labeled bars with approximate relative heights and lower-right legend.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress chart generation and small text.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/bagel_7b_mot/ood_chart_microtext.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot",
+    "readback_question": "Read all visible text. Then describe the positions and attributes of the main objects.",
+    "readback_answer": "The image is a bar chart with the title \"Q2 MIX\" at the top. The chart has three vertical bars representing different categories: \"ALPHA,\" \"BEA,\" and \"GARMS.\" Each bar is labeled with a corresponding name and a smaller label underneath it. The vertical axis on the left side of the chart is labeled with numbers ranging from 30 to 45, with the numbers 30, 35, 40, and 45 clearly visible. The horizontal axis at the bottom of the chart is labeled with the names of the categories: \"ALPHA,\" \"BEA,\" and \"GARMS.\" The \"ALPHA\" bar is the shortest, reaching up to the 35 mark on the vertical axis. The \"BEA\" bar is slightly taller, reaching up to the 37 mark. The \"GARMS\" bar is the tallest, reaching up to the 45 mark. The chart has a white background with black text and bars. The chart is enclosed within a black border."
+  },
+  {
+    "id": "ood_physics_reflection",
+    "split": "OOD",
+    "title": "Mirror reflection consistency",
+    "type": "text_to_image",
+    "prompt": "A studio photograph of a red mug sitting in front of a vertical mirror. The mug has a white crescent moon printed on its left side. The mirror reflection should show the crescent on the reflected mug's right side. Keep the background plain gray.",
+    "expected": "Mirror geometry is consistent: crescent appears left on mug and right in reflection.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress physical/geometric consistency.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/bagel_7b_mot/ood_physics_reflection.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot",
+    "readback_question": "Read all visible text. Then describe the positions and attributes of the main objects.",
+    "readback_answer": "The image shows a red mug with a white crescent moon design on it, placed on a white surface. The mug is positioned in front of a rectangular mirror with a wooden frame. The mirror reflects the image of the mug, creating a symmetrical effect. The background is a plain gray wall. The mug is the main object in the foreground, while the mirror is slightly behind it, creating a sense of depth in the image. The overall scene is simple and minimalistic, with a focus on the red mug and its reflection in the mirror."
+  },
+  {
+    "id": "ood_ui_screenshot",
+    "split": "OOD",
+    "title": "Mini app screenshot",
+    "type": "text_to_image",
+    "prompt": "A crisp screenshot of a compact desktop app named \"Flux Desk\". The left sidebar has three items: Inbox, Drafts, Archive. The main panel shows a table with two columns, Task and Status, and three rows: Sketch - Done, Render - Pending, Ship - Blocked.",
+    "expected": "UI screenshot with readable app name, sidebar labels, table headers, and three row/status pairs.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress UI/text/table generation.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/bagel_7b_mot/ood_ui_screenshot.png",
+    "text": null,
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "bagel_7b_mot",
+    "readback_question": "Read all visible text. Then describe the positions and attributes of the main objects.",
+    "readback_answer": "The image depicts a digital interface with a list of tasks. The interface has a light gray background with a white task list area. The task list is divided into two columns: the left column lists categories, and the right column lists tasks.\n\n1. **Left Column (Categories):**\n   - **Inlok Drafts:** Positioned at the top of the left column, this category is written in black text.\n   - **Aróve:** Positioned below \"Inlok Drafts,\" this category is also written in black text.\n\n2. **Right Column (Tasks):**\n   - **Task:** Positioned at the top of the right column, this task is written in black text.\n   - **Shed Dace:** Positioned below \"Task,\" this task is written in black text.\n   - **Perderr:** Positioned below \"Shed Dace,\" this task is written in black text.\n   - **Ship:** Positioned below \"Perderr,\" this task is written in black text.\n   - **Ship:** Positioned below \"Ship,\" this task is written in black text.\n\n3. **Top Bar:**\n   - **Home:** Positioned at the top left corner, this button is yellow with black text.\n   - **Fillur Desk:** Positioned at the top center, this button is black with white text.\n   - **Eade:** Positioned at the top right corner, this button is green with white text.\n\n4. **Additional Elements:**\n   - **Erole:** Positioned to the right of the task list, this text is written in black.\n   - **Heart Icon:** Positioned to the right of \"Erole,\" this icon is a simple heart symbol.\n\nThe interface appears to be a task management application, with categories and tasks listed for easy organization and tracking. The design is clean and minimalistic, with a focus on functionality."
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "id": "paper_emu35_balcony_tutorial_interleaved",
+    "title": "Emu3.5 balcony vegetable tutorial, interleaved",
+    "split": "ID-paper-exact",
+    "type": "interleaved_text_image",
+    "prompt": "Generate a visual tutorial explaining how to grow vegetables on a balcony, from preparing soil and planting seeds to harvesting and composting leftovers.",
+    "expected": "A multi-step response with explanatory text and generated images interleaved in sequence.",
+    "capacity_tags": [
+      "interleaved text-image generation",
+      "visual tutorial",
+      "procedural reasoning"
+    ],
+    "source_provenance": {
+      "model_family": "Emu3.5",
+      "source_type": "paper exact prompt",
+      "citation": "Emu3.5 paper, visual tutorial / visual narrative example.",
+      "url": "https://arxiv.org/pdf/2510.26583",
+      "figure_or_location": "Prompt appears verbatim in the extracted paper text around line 1732.",
+      "prompt_status": "exact user prompt; no refined prompt used"
+    },
+    "model_key": "emu3_5_vllm_8x80",
+    "model_label": "Emu3.5 vLLM 8x80GB",
+    "model_id": "BAAI/Emu3.5",
+    "runner": "Emu3.5 base howto interleaved vLLM path; all temp files on pod-local SSD",
+    "runtime_seconds_total": 382.92,
+    "question_file": "/mnt/localssd/qitaoz_omni_interleaved/outputs/exact_interleaved_20260519_0136/emu3_5_vllm_8x80/vis/paper_emu35_balcony_tutorial_interleaved/000_question.txt",
+    "case_dir": "/mnt/localssd/qitaoz_omni_interleaved/outputs/exact_interleaved_20260519_0136/emu3_5_vllm_8x80/vis/paper_emu35_balcony_tutorial_interleaved",
+    "segments": [
+      {
+        "index": 1,
+        "text": "A sunny balcony is the perfect spot for a small vegetable garden. Choose a spot that gets at least six hours of sunlight daily and gather your supplies: pots or planters, potting soil, vegetable seeds or seedlings, gardening tools, and a watering can.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/exact_interleaved_20260519_0136/emu3_5_vllm_8x80/vis/paper_emu35_balcony_tutorial_interleaved/001_00_image.png",
+            "width": 880,
+            "height": 592,
+            "resolution": "880x592"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "text": "Fill your pots with a mix of potting soil and compost, ensuring good drainage. Create small holes and plant your seeds or seedlings according to the packet instructions. Gently water the soil to settle it around the roots.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/exact_interleaved_20260519_0136/emu3_5_vllm_8x80/vis/paper_emu35_balcony_tutorial_interleaved/002_00_image.png",
+            "width": 880,
+            "height": 592,
+            "resolution": "880x592"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "text": "As your seedlings grow, keep the soil consistently moist and provide support for taller plants with stakes or cages. Feed them with a balanced fertilizer every few weeks to encourage healthy growth.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/exact_interleaved_20260519_0136/emu3_5_vllm_8x80/vis/paper_emu35_balcony_tutorial_interleaved/003_00_image.png",
+            "width": 880,
+            "height": 592,
+            "resolution": "880x592"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "text": "With patience and care, your vegetables will begin to mature. Tomatoes turn red, peppers ripen to vibrant colors, and herbs fill the air with their fragrant leaves. Harvest them at the peak of their flavor and enjoy the fresh produce from your balcony garden.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/exact_interleaved_20260519_0136/emu3_5_vllm_8x80/vis/paper_emu35_balcony_tutorial_interleaved/004_00_image.png",
+            "width": 880,
+            "height": 592,
+            "resolution": "880x592"
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "text": "After harvesting, don’t discard the leftover vegetable scraps. Compost them to create nutrient-rich soil for your next planting season, completing the cycle of growth and sustainability.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/exact_interleaved_20260519_0136/emu3_5_vllm_8x80/vis/paper_emu35_balcony_tutorial_interleaved/005_00_image.png",
+            "width": 880,
+            "height": 592,
+            "resolution": "880x592"
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "text": "Your balcony has transformed into a thriving mini-garden, bursting with fresh vegetables and herbs. Enjoy the satisfaction of growing your own food and the beauty of nature right outside your door.",
+        "images": []
+      }
+    ],
+    "image_count": 5,
+    "text_segment_count": 6,
+    "first_image": "/mnt/localssd/qitaoz_omni_interleaved/outputs/exact_interleaved_20260519_0136/emu3_5_vllm_8x80/vis/paper_emu35_balcony_tutorial_interleaved/001_00_image.png",
+    "local_ssd_output": "/mnt/localssd/qitaoz_omni_interleaved/outputs/exact_interleaved_20260519_0136/emu3_5_vllm_8x80"
+  }
+]

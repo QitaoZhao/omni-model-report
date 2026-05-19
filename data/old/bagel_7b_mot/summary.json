@@ -1,0 +1,55 @@
+[
+  {
+    "id": "id_janus_princess",
+    "split": "ID",
+    "type": "text_to_image",
+    "prompt": "A stunning princess from kabul in red, white traditional clothing, blue eyes, brown hair",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/bagel_7b_mot/id_janus_princess.png",
+    "text": null
+  },
+  {
+    "id": "id_sensenova_peacock",
+    "split": "ID",
+    "type": "text_to_image",
+    "prompt": "A male peacock trying to attract a female",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/bagel_7b_mot/id_sensenova_peacock.png",
+    "text": null
+  },
+  {
+    "id": "id_bagel_fairy",
+    "split": "ID",
+    "type": "text_to_image",
+    "prompt": "A female cosplayer portraying an ethereal fairy or elf, wearing a flowing dress made of delicate fabrics in soft, mystical colors like emerald green and silver. She has pointed ears, a gentle, enchanting expression, and her outfit is adorned with sparkling jewels and intricate patterns. The background is a magical forest with glowing plants, mystical creatures, and a serene atmosphere.",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/bagel_7b_mot/id_bagel_fairy.png",
+    "text": null
+  },
+  {
+    "id": "ood_text_spatial",
+    "split": "OOD",
+    "type": "text_to_image",
+    "prompt": "A clean white poster with the exact readable title \"OMNI TEST\"; below it, a red triangle is left of a blue circle, and a green square is in the lower right corner.",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/bagel_7b_mot/ood_text_spatial.png",
+    "text": null,
+    "readback_question": "Read the title and describe all visible objects, labels, and spatial relationships.",
+    "readback_answer": "The title at the top of the image reads \"IOMNI TEST.\" Below the title, there are two visible objects: a red triangle and a blue circle. The red triangle is positioned above the blue circle. Additionally, there is a green square located at the bottom right corner of the image, outside the main white area. The spatial relationships between the objects are as follows: the red triangle is directly above the blue circle, and the green square is separate from the main white area."
+  },
+  {
+    "id": "ood_grid_labels",
+    "split": "OOD",
+    "type": "text_to_image",
+    "prompt": "A clean 2 by 2 white infographic titled \"GRID CHECK\". Top-left cell: red apple labeled \"A1\". Top-right cell: blue cup labeled \"B2\". Bottom-left cell: green leaf labeled \"C3\". Bottom-right cell: yellow star labeled \"D4\". Use thin black grid lines and keep all labels readable.",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/bagel_7b_mot/ood_grid_labels.png",
+    "text": null,
+    "readback_question": "Read the title and describe all visible objects, labels, and spatial relationships.",
+    "readback_answer": "The image is divided into four quadrants, each containing a different object and labeled with a letter and number. The top left quadrant (A1) contains a red apple with a green stem and leaves. The top right quadrant (B2) contains a blue coffee mug. The bottom left quadrant (C3) contains a green leaf. The bottom right quadrant (D4) contains a yellow star. Each quadrant is labeled with a letter (A, B, C, D) and a number (1, 2, 3, 4). The quadrants are arranged in a 2x2 grid, with the top row containing the apple and coffee mug, and the bottom row containing the leaf and star. The labels are positioned below each object. The quadrants are outlined with dashed lines, and there are grid lines on the background."
+  },
+  {
+    "id": "ood_physics_saltwater_edit",
+    "split": "OOD",
+    "type": "image_edit",
+    "prompt": "Change the water to high-concentration saltwater so the egg floats in the middle of the glass, while preserving the glass, egg appearance, lighting, and background.",
+    "input": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/generated_inputs/cross_eval_egg_in_water.png",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/bagel_7b_mot/ood_physics_saltwater_edit.png",
+    "text": null
+  }
+]

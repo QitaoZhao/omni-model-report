@@ -1,0 +1,51 @@
+[
+  {
+    "id": "id_janus_princess",
+    "split": "ID",
+    "type": "text_to_image",
+    "prompt": "A stunning princess from kabul in red, white traditional clothing, blue eyes, brown hair",
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/janus_pro_7b/id_janus_princess/img_0.jpg"
+    ]
+  },
+  {
+    "id": "id_sensenova_peacock",
+    "split": "ID",
+    "type": "text_to_image",
+    "prompt": "A male peacock trying to attract a female",
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/janus_pro_7b/id_sensenova_peacock/img_0.jpg"
+    ]
+  },
+  {
+    "id": "id_bagel_fairy",
+    "split": "ID",
+    "type": "text_to_image",
+    "prompt": "A female cosplayer portraying an ethereal fairy or elf, wearing a flowing dress made of delicate fabrics in soft, mystical colors like emerald green and silver. She has pointed ears, a gentle, enchanting expression, and her outfit is adorned with sparkling jewels and intricate patterns. The background is a magical forest with glowing plants, mystical creatures, and a serene atmosphere.",
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/janus_pro_7b/id_bagel_fairy/img_0.jpg"
+    ]
+  },
+  {
+    "id": "ood_text_spatial",
+    "split": "OOD",
+    "type": "text_to_image",
+    "prompt": "A clean white poster with the exact readable title \"OMNI TEST\"; below it, a red triangle is left of a blue circle, and a green square is in the lower right corner.",
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/janus_pro_7b/ood_text_spatial/img_0.jpg"
+    ],
+    "readback_question": "Read the title and describe all visible objects, labels, and spatial relationships.",
+    "readback_answer": "The image shows a piece of paper with the title \"OMN TEST\" written at the top. The word \"OMN\" is in black, bold, uppercase letters, and the word \"TEST\" is also in black, bold, uppercase letters. The \"O\" in \"OMN\" has a red triangle pointing downwards.\n\nBelow the title, there are two squares. The larger square is green with a blue outline, and the smaller square is green. The larger square is positioned above the smaller square, and both are aligned vertically. The larger square is located to the right of the smaller square.\n\nThe paper is placed on a wooden surface, and the image is taken at an angle, with the top-right corner of the paper slightly tilted."
+  },
+  {
+    "id": "ood_grid_labels",
+    "split": "OOD",
+    "type": "text_to_image",
+    "prompt": "A clean 2 by 2 white infographic titled \"GRID CHECK\". Top-left cell: red apple labeled \"A1\". Top-right cell: blue cup labeled \"B2\". Bottom-left cell: green leaf labeled \"C3\". Bottom-right cell: yellow star labeled \"D4\". Use thin black grid lines and keep all labels readable.",
+    "outputs": [
+      "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/cross_eval/janus_pro_7b/ood_grid_labels/img_0.jpg"
+    ],
+    "readback_question": "Read the title and describe all visible objects, labels, and spatial relationships.",
+    "readback_answer": "The title at the top of the image reads \"GRID CHECK\" in bold red letters. Below the title, there is a grid consisting of 3 rows and 4 columns.\n\nIn the first row:\n1. On the left, there is a red apple with a green leaf on top.\n2. On the right, there is a blue cup with a handle.\n\nIn the second row:\n1. On the left, there is a green leaf with a small blue circle below it.\n2. In the middle, there are two green leaves, one of which is partially cut off.\n3. On the right, there is a yellow star with the number \"1\" and the word \"star\" written inside it.\n\nIn the third row:\n1. On the left, there is a yellow star with the number \"1\" and the word \"star\" written inside it.\n2. On the right, there is a yellow star with the number \"1\" and the word \"star\" written inside it.\n\nThe spatial relationships between the objects are as follows:\n- The apple is in the first column of the first row.\n- The cup is in the second column of the first"
+  }
+]

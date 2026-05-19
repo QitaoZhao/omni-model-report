@@ -1,0 +1,179 @@
+{
+  "run_id": "interesting_ood_v1_20260518",
+  "description": "Additional diagnostic OOD prompts for omni image generation: structured text, tables, spatial binding, negation, physics, and multi-panel consistency.",
+  "generation_cases": [
+    {
+      "id": "interesting_clock_737",
+      "split": "OOD-interesting",
+      "category": "custom_capacity_probe",
+      "title": "Analog Clock Exact Time",
+      "prompt": "A clean product photo of a round white analog wall clock on a plain gray background. The clock has black numbers 1 through 12. The minute hand points exactly at 7 and the hour hand is between 7 and 8, showing 7:35. Add a small printed label below the clock that reads \"7:35\".",
+      "expected": "Analog clock with readable numbers, correct hand positions for 7:35, and exact bottom label 7:35.",
+      "capacity_tags": ["spatial reasoning", "numeric text rendering", "clock hand binding"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed to test continuous spatial binding plus numeric text.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "interesting_4x4_sudoku",
+      "split": "OOD-interesting",
+      "category": "custom_capacity_probe",
+      "title": "4x4 Sudoku Grid",
+      "prompt": "A crisp black-and-white 4 by 4 sudoku puzzle grid on paper. Fill the cells with these exact digits by row: row 1: 1 2 3 4; row 2: 3 4 1 2; row 3: 2 1 4 3; row 4: 4 3 2 1. Keep every digit centered and readable.",
+      "expected": "Exact 4x4 grid and exact row-wise digit layout.",
+      "capacity_tags": ["table generation", "small text", "symbol placement", "alignment"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed to stress exact table cell content and alignment.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "interesting_map_route",
+      "split": "OOD-interesting",
+      "category": "custom_capacity_probe",
+      "title": "Mini Map Route With Labels",
+      "prompt": "A simple top-down illustrated city map. Put a blue square labeled \"HOME\" in the lower left, a green circle labeled \"LAB\" in the upper right, and a red dashed route connecting HOME to LAB through exactly three turns. Include a small compass in the corner with N pointing up.",
+      "expected": "Correct lower-left HOME, upper-right LAB, red dashed route with exactly three turns, and north-up compass.",
+      "capacity_tags": ["map layout", "path planning", "label binding", "spatial reasoning"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed to test path topology and label-location binding.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "interesting_ui_modal",
+      "split": "OOD-interesting",
+      "category": "custom_capacity_probe",
+      "title": "Exact UI Modal",
+      "prompt": "A realistic desktop app screenshot with a centered confirmation modal. The modal title must read \"Delete draft?\". Body text: \"This cannot be undone.\" There are two buttons at the bottom: a gray button labeled \"Cancel\" on the left and a red button labeled \"Delete\" on the right. The background app should be blurred.",
+      "expected": "Readable modal with exact title, body text, and two correctly ordered buttons.",
+      "capacity_tags": ["UI generation", "text rendering", "layout binding", "button ordering"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed to probe screenshot-like UI generation and exact button ordering.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "interesting_recipe_card",
+      "split": "OOD-interesting",
+      "category": "custom_capacity_probe",
+      "title": "Recipe Card Exact Text",
+      "prompt": "A neat recipe card titled \"LEMON TEA\". Under the title, list exactly three ingredients as separate readable lines: \"1 lemon\", \"2 tsp honey\", \"1 cup water\". Add a small drawing of a lemon slice in the lower right corner.",
+      "expected": "Exact title and three exact ingredient lines, with lemon slice in lower right.",
+      "capacity_tags": ["text rendering", "list layout", "icon-text binding"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed to test medium-length text and list fidelity.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "interesting_math_plot",
+      "split": "OOD-interesting",
+      "category": "custom_capacity_probe",
+      "title": "Math Plot With Labels",
+      "prompt": "A clean educational chart of the parabola y = x^2 on white graph paper. Label the x-axis \"x\" and y-axis \"y\". Mark and label three points exactly: (-1,1), (0,0), and (1,1). The curve should pass through all three points.",
+      "expected": "Parabola through the three labeled points, with readable axis and point labels.",
+      "capacity_tags": ["chart generation", "mathematical notation", "spatial-symbol binding"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed to test graph geometry plus symbolic labels.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "interesting_nested_container",
+      "split": "OOD-interesting",
+      "category": "custom_capacity_probe",
+      "title": "Transparent Jar Counts",
+      "prompt": "A transparent glass jar on a white table. Inside the jar there are exactly three red balls and exactly two blue cubes. There are no green objects. The jar has a white label that reads \"5 ITEMS\".",
+      "expected": "Transparent jar with 3 red balls, 2 blue cubes, no green objects, exact label 5 ITEMS.",
+      "capacity_tags": ["counting", "transparent material", "negation", "text rendering"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed to combine transparency, counting, and negative constraints.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "interesting_left_right_occlusion",
+      "split": "OOD-interesting",
+      "category": "custom_capacity_probe",
+      "title": "Left Right Occlusion",
+      "prompt": "A minimal studio render with three objects on a straight horizontal line: a yellow cone on the left, a blue sphere in the center, and a red cube on the right. The blue sphere partially covers the red cube but does not cover the yellow cone. Add tiny labels LEFT, CENTER, RIGHT under the correct objects.",
+      "expected": "Correct left/center/right objects, specified occlusion, and labels under matching objects.",
+      "capacity_tags": ["spatial reasoning", "occlusion", "label binding"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed to test positional words and occlusion ordering.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "interesting_before_after_melt",
+      "split": "OOD-interesting",
+      "category": "custom_capacity_probe",
+      "title": "Before After Melting Sequence",
+      "prompt": "A two-panel science illustration. Left panel labeled \"BEFORE\" shows a solid ice cube on a plate. Right panel labeled \"AFTER\" shows the same plate with a puddle of water and no ice cube. Use simple arrows from left to right.",
+      "expected": "Two panels with exact labels BEFORE/AFTER and correct physical state change.",
+      "capacity_tags": ["temporal reasoning", "physical transformation", "panel layout", "text rendering"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed to test temporal/causal transformation in a single generated image.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "interesting_periodic_tile",
+      "split": "OOD-interesting",
+      "category": "custom_capacity_probe",
+      "title": "Periodic Table Tile",
+      "prompt": "A single chemistry periodic-table tile for carbon. Large centered letter \"C\". Top left number \"6\". Bottom text \"Carbon\". Bottom right text \"12.01\". Use a clean textbook style.",
+      "expected": "Periodic-table tile with exact C, 6, Carbon, and 12.01 in correct positions.",
+      "capacity_tags": ["scientific diagram", "text rendering", "layout binding"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed to test structured scientific text placement.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "interesting_nonexistent_object",
+      "split": "OOD-interesting",
+      "category": "custom_capacity_probe",
+      "title": "Object Made Of Letters",
+      "prompt": "A poster showing the silhouette of a cat made entirely from many small readable letters spelling \"MEOW\". There should be no real cat, no fur texture, and no photograph. The poster background is plain white.",
+      "expected": "Cat silhouette formed only from repeated readable MEOW letters, no photoreal animal.",
+      "capacity_tags": ["typographic image", "negation", "part-whole composition", "text rendering"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed to test typographic composition and negation of photoreal fallback.",
+        "figure_or_location": "not in paper"
+      }
+    },
+    {
+      "id": "interesting_reflection_mismatch",
+      "split": "OOD-interesting",
+      "category": "custom_capacity_probe",
+      "title": "Mirror Reflection Exception",
+      "prompt": "A surreal but precise scene: on a table there is a white mug with the word \"REAL\" printed on it. Behind it is a mirror. In the mirror reflection, the mug should appear but the printed word should read \"DREAM\" instead of REAL.",
+      "expected": "Foreground mug says REAL, reflected mug says DREAM, with otherwise consistent mirror geometry.",
+      "capacity_tags": ["reflection reasoning", "counterfactual text", "text rendering", "spatial consistency"],
+      "source_provenance": {
+        "source_type": "custom OOD probe",
+        "citation": "Designed to test controlled inconsistency across reflection and foreground.",
+        "figure_or_location": "not in paper"
+      }
+    }
+  ],
+  "understanding_readback": {
+    "question": "Read all visible text exactly. Then describe whether the main objects satisfy the requested layout, count, spatial relations, and any negative constraints.",
+    "applies_to_splits": ["OOD-interesting"],
+    "models_with_readback_in_current_runners": ["janus_pro_7b", "bagel_7b_mot", "sensenova_u1_8b_mot"]
+  }
+}

@@ -1,0 +1,159 @@
+[
+  {
+    "id": "sensenova_interleaved_wood_iron_density",
+    "title": "SenseNova wood vs iron buoyancy explanation",
+    "split": "OOD-custom",
+    "type": "interleaved_text_image",
+    "prompt": "Explain why wood floats and iron sinks in water. Generate two simple diagrams: first showing a wooden block floating, then showing an iron block sinking, with short text between the images.",
+    "expected": "Alternating explanation and two generated diagrams: wood floating, iron sinking.",
+    "capacity_tags": [
+      "interleaved text-image generation",
+      "science explanation",
+      "multi-image consistency",
+      "physical reasoning"
+    ],
+    "source_provenance": {
+      "model_family": "SenseNova-U1",
+      "source_type": "custom OOD prompt run through official interleave runner",
+      "citation": "SenseNova-U1 official repository example runner: examples/interleave/inference.py",
+      "url": "https://github.com/SenseTime-FVG/SenseNova-U1",
+      "figure_or_location": "Public repo interleave demo path; prompts are custom benchmark probes, not paper exact prompts.",
+      "prompt_status": "custom OOD prompt; no refined prompt used before submission"
+    },
+    "model_key": "sensenova_u1_8b_mot",
+    "model_label": "SenseNova-U1-8B-MoT",
+    "model_id": "sensenova/SenseNova-U1-8B-MoT",
+    "runner": "SenseNova-U1 official examples/interleave/inference.py with --jsonl, think_mode=true, 20 diffusion steps, 1536x1536",
+    "runtime_seconds_total": null,
+    "case_dir": "/mnt/localssd/qitaoz_sensenova_interleaved/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/raw",
+    "segments": [
+      {
+        "index": 1,
+        "text": "Wood floats and iron sinks because of their different densities. Wood is less dense than water, so the upward force of the water (buoyancy) is strong enough to hold it up. Iron is much denser and heavier than water, so its weight pulls it down to the bottom.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_sensenova_interleaved/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/raw/0001_think_image_0.png",
+            "width": 1536,
+            "height": 1536,
+            "resolution": "1536x1536"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "text": "As you can see, the wooden block stays on the surface because it is light enough to float.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_sensenova_interleaved/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/raw/0001_think_image_1.png",
+            "width": 1536,
+            "height": 1536,
+            "resolution": "1536x1536"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "text": "In contrast, the iron block is too heavy to stay afloat and sinks to the bottom of the water.",
+        "images": []
+      }
+    ],
+    "image_count": 2,
+    "text_segment_count": 3,
+    "first_image": "/mnt/localssd/qitaoz_sensenova_interleaved/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/raw/0001_think_image_0.png",
+    "local_ssd_output": "/mnt/localssd/qitaoz_sensenova_interleaved/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot"
+  },
+  {
+    "id": "sensenova_interleaved_seed_to_sprout",
+    "title": "SenseNova seed-to-sprout visual tutorial",
+    "split": "OOD-custom",
+    "type": "interleaved_text_image",
+    "prompt": "Create a short interleaved visual tutorial for a child showing how a seed becomes a sprout: planting the seed, watering it, sunlight, and the first green shoot.",
+    "expected": "A child-friendly step-by-step tutorial with text and multiple generated images interleaved.",
+    "capacity_tags": [
+      "interleaved text-image generation",
+      "procedural tutorial",
+      "storyboard consistency",
+      "child education"
+    ],
+    "source_provenance": {
+      "model_family": "SenseNova-U1",
+      "source_type": "custom OOD prompt run through official interleave runner",
+      "citation": "SenseNova-U1 official repository example runner: examples/interleave/inference.py",
+      "url": "https://github.com/SenseTime-FVG/SenseNova-U1",
+      "figure_or_location": "Public repo interleave demo path; prompts are custom benchmark probes, not paper exact prompts.",
+      "prompt_status": "custom OOD prompt; no refined prompt used before submission"
+    },
+    "model_key": "sensenova_u1_8b_mot",
+    "model_label": "SenseNova-U1-8B-MoT",
+    "model_id": "sensenova/SenseNova-U1-8B-MoT",
+    "runner": "SenseNova-U1 official examples/interleave/inference.py with --jsonl, think_mode=true, 20 diffusion steps, 1536x1536",
+    "runtime_seconds_total": null,
+    "case_dir": "/mnt/localssd/qitaoz_sensenova_interleaved/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/raw",
+    "segments": [
+      {
+        "index": 1,
+        "text": "Welcome to the \"Little Seed's Growth Diary\"! This is a magical journey about life, patience, and hope. Let's follow the little gardener and see how a tiny seed transforms into a vibrant green sprout. First, we need to find a quiet, sun-drenched corner. Look, the little gardener is crouching on the ground, focused on placing a plump, dark brown seed into a terracotta pot filled with moist soil. This is the starting point of the story, where the child becomes the guardian of life.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_sensenova_interleaved/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/raw/0002_think_image_0.png",
+            "width": 1536,
+            "height": 1536,
+            "resolution": "1536x1536"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "text": "Before we start, let's check our \"magic tools.\" We need a small pile of dark brown seeds, a bag of loose, fertile soil, a small metal trowel, and a vintage-style metal watering can. Don't forget the most important ingredient—sunlight! With these ready, we can begin our gardening adventure.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_sensenova_interleaved/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/raw/0002_think_image_1.png",
+            "width": 1536,
+            "height": 1536,
+            "resolution": "1536x1536"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "text": "The first step is \"Planting the Seed.\" The little gardener uses a small wooden spoon to carefully place the seed into a shallow hole in the center of the pot. The soil looks rich and moist, like a warm bed waiting for a new life to arrive. Every movement must be gentle and precise.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_sensenova_interleaved/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/raw/0002_think_image_2.png",
+            "width": 1536,
+            "height": 1536,
+            "resolution": "1536x1536"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "text": "Next is the \"Watering\" phase. The little gardener tilts the watering can, and a clear stream of water pours onto the soil. The water creates a small, sparkling pool around the seed, and tiny droplets splash against the rim of the pot. This is the \"first kiss\" that awakens the sleeping life.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_sensenova_interleaved/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/raw/0002_think_image_3.png",
+            "width": 1536,
+            "height": 1536,
+            "resolution": "1536x1536"
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "text": "After a few days of waiting, a miracle happens! A tiny, vibrant green sprout has broken through the soil, reaching toward the sky. The little gardener leans in close, pointing at the sprout with a look of wonder. Bathed in the warm, golden glow of the sun, the seed has finally become a beautiful life.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_sensenova_interleaved/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/raw/0002_think_image_4.png",
+            "width": 1536,
+            "height": 1536,
+            "resolution": "1536x1536"
+          }
+        ]
+      }
+    ],
+    "image_count": 5,
+    "text_segment_count": 5,
+    "first_image": "/mnt/localssd/qitaoz_sensenova_interleaved/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/raw/0002_think_image_0.png",
+    "local_ssd_output": "/mnt/localssd/qitaoz_sensenova_interleaved/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot"
+  }
+]

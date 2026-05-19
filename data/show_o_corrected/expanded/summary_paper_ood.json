@@ -1,0 +1,243 @@
+[
+  {
+    "id": "id_janus_princess",
+    "split": "ID",
+    "category": "paper_or_official_demo",
+    "title": "Janus princess portrait",
+    "capacity_tags": [],
+    "type": "text_to_image",
+    "prompt": "A stunning princess from kabul in red, white traditional clothing, blue eyes, brown hair",
+    "expected": "Portrait/fashion image; preserve red/white clothing, blue eyes, brown hair, and Kabul-princess identity cues.",
+    "source_provenance": {
+      "model_family": "Janus / Janus-Pro",
+      "source_type": "paper supplemental / official demo prompt",
+      "citation": "Janus CVPR 2025 supplemental prompt list; also used by the Janus-Pro demo runner.",
+      "url": "https://openaccess.thecvf.com/content/CVPR2025/supplemental/Wu_Janus_Decoupling_Visual_CVPR_2025_supplemental.pdf",
+      "figure_or_location": "Supplemental qualitative prompt list; prompt appears verbatim."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/id_janus_princess.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "id_sensenova_peacock",
+    "split": "ID",
+    "category": "paper_or_official_demo",
+    "title": "SenseNova peacock attraction",
+    "capacity_tags": [],
+    "type": "text_to_image",
+    "prompt": "A male peacock trying to attract a female",
+    "expected": "Male peacock in courtship display, ideally with fanned iridescent tail and a visible female.",
+    "source_provenance": {
+      "model_family": "SenseNova-U1",
+      "source_type": "official showcase-style prompt",
+      "citation": "SenseNova-U1 README / demo-style T2I reasoning showcase used in the previous run.",
+      "url": "https://github.com/OpenSenseNova/SenseNova-U1",
+      "figure_or_location": "Official prompt family; no exact paper figure confirmed yet."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/id_sensenova_peacock.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "id_bagel_fairy",
+    "split": "ID",
+    "category": "paper_or_official_demo",
+    "title": "BAGEL fairy / elf cosplayer",
+    "capacity_tags": [],
+    "type": "text_to_image",
+    "prompt": "A female cosplayer portraying an ethereal fairy or elf, wearing a flowing dress made of delicate fabrics in soft, mystical colors like emerald green and silver. She has pointed ears, a gentle, enchanting expression, and her outfit is adorned with sparkling jewels and intricate patterns. The background is a magical forest with glowing plants, mystical creatures, and a serene atmosphere.",
+    "expected": "High-fidelity fantasy portrait with pointed ears, emerald/silver costume, jewels, and magical forest.",
+    "source_provenance": {
+      "model_family": "BAGEL",
+      "source_type": "official model-card/widget prompt family",
+      "citation": "BAGEL model-card prompt family mirrored in public GGUF card history and used in previous BAGEL demo.",
+      "url": "https://huggingface.co/ByteDance-Seed/BAGEL-7B-MoT",
+      "figure_or_location": "Model card / widget sample; no exact paper figure confirmed yet."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/id_bagel_fairy.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "id_emu35_comic_dogs",
+    "split": "ID",
+    "category": "paper_or_official_demo",
+    "title": "Emu3.5 comic dogs with speech bubbles",
+    "capacity_tags": [],
+    "type": "text_to_image",
+    "prompt": "A lively comic-style illustration depicting two humorous cartoon dogs interacting near a freshly dug backyard hole surrounded by scattered dirt, garden tools, blooming flowers, and a wooden fence background. At the upper-left side, Dog One stands nervously near the messy hole, ears down and eyes wide open with an expression of concern. Its speech bubble is an oval shape, outlined neatly with smooth, slightly rounded corners, positioned clearly above Dog One's head. Inside, clearly readable playful handwritten-style text emphasizes the dog's worried tone, saying, \"You sure the humans won't notice this giant hole here?\". Toward the lower-right side, Dog Two sits calmly and confidently with a cheerful, carefree expression, wagging its tail gently. Its speech bubble is rectangular with softly rounded edges, placed slightly overlapping with Dog One's speech bubble to guide the reader naturally downward diagonally across the frame. Dog Two's friendly, humorous response appears in a whimsical italicized comic font, clearly stating, \"Relax! We'll just blame it on the neighbor's cat again!\". Each speech bubble creates the playful and engaging backyard scene.",
+    "expected": "Two-panel-like comic composition with two dogs, two correctly placed speech bubbles, and readable quoted text.",
+    "source_provenance": {
+      "model_family": "Emu3.5",
+      "source_type": "official repo example config",
+      "citation": "Emu3.5 example_config_t2i.py text-rich comic prompt.",
+      "url": "https://github.com/baaivision/Emu3.5",
+      "figure_or_location": "configs/example_config_t2i.py example prompt."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/id_emu35_comic_dogs.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "id_onecat_panda_peace",
+    "split": "ID",
+    "category": "paper_or_official_demo",
+    "title": "OneCAT panda with PEACE wall text",
+    "capacity_tags": [],
+    "type": "text_to_image",
+    "prompt": "A high-contrast photo of a panda riding a horse. The panda is wearing a wizard hat and is reading a book. The horse is standing on a street against a gray concrete wall. Colorful flowers and the word \"PEACE\" are painted on the wall. Green grass grows from cracks in the street. DSLR photograph. daytime lighting.",
+    "expected": "Panda riding a horse, wizard hat, book, gray wall with readable PEACE text, flowers, grass, photo style.",
+    "source_provenance": {
+      "model_family": "OneCAT",
+      "source_type": "official repo example prompt",
+      "citation": "OneCAT public repo comprehensive inference example prompt.",
+      "url": "https://github.com/onecat-ai/OneCAT",
+      "figure_or_location": "onecat/var_model/tools/comprehensive_infer.py prompt list."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/id_onecat_panda_peace.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "ood_text_spatial",
+    "split": "OOD",
+    "category": "custom_stress",
+    "title": "Exact title plus shape binding",
+    "capacity_tags": [],
+    "type": "text_to_image",
+    "prompt": "A clean white poster with the exact readable title \"OMNI TEST\"; below it, a red triangle is left of a blue circle, and a green square is in the lower right corner.",
+    "expected": "Exact text rendering plus correct triangle/circle/square spatial binding.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress OCR and spatial binding.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/ood_text_spatial.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "ood_grid_labels",
+    "split": "OOD",
+    "category": "custom_stress",
+    "title": "2x2 grid labels",
+    "capacity_tags": [],
+    "type": "text_to_image",
+    "prompt": "A clean 2 by 2 white infographic titled \"GRID CHECK\". Top-left cell: red apple labeled \"A1\". Top-right cell: blue cup labeled \"B2\". Bottom-left cell: green leaf labeled \"C3\". Bottom-right cell: yellow star labeled \"D4\". Use thin black grid lines and keep all labels readable.",
+    "expected": "Structured grid, four objects, four exact labels in correct cells.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress infographic layout and local label binding.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/ood_grid_labels.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "ood_multi_object_count",
+    "split": "OOD",
+    "category": "custom_stress",
+    "title": "Counting and attributes",
+    "capacity_tags": [],
+    "type": "text_to_image",
+    "prompt": "A product photo on a matte black table: exactly seven glass marbles in a row. Marbles 1, 3, 5, and 7 are transparent red; marbles 2, 4, and 6 are opaque blue. Put a small white number below each marble, from 1 to 7.",
+    "expected": "Seven marbles, alternating colors by index, readable numbers 1-7.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress exact count, ordinal binding, and text.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/ood_multi_object_count.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "ood_chart_microtext",
+    "split": "OOD",
+    "category": "custom_stress",
+    "title": "Tiny chart with legend",
+    "capacity_tags": [],
+    "type": "text_to_image",
+    "prompt": "A simple clean bar chart titled \"Q2 MIX\" with three vertical bars: Alpha = 20, Beta = 45, Gamma = 30. Use a white background, black axes, and a legend in the lower right that says \"units\".",
+    "expected": "Readable chart title, three labeled bars with approximate relative heights and lower-right legend.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress chart generation and small text.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/ood_chart_microtext.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "ood_physics_reflection",
+    "split": "OOD",
+    "category": "custom_stress",
+    "title": "Mirror reflection consistency",
+    "capacity_tags": [],
+    "type": "text_to_image",
+    "prompt": "A studio photograph of a red mug sitting in front of a vertical mirror. The mug has a white crescent moon printed on its left side. The mirror reflection should show the crescent on the reflected mug's right side. Keep the background plain gray.",
+    "expected": "Mirror geometry is consistent: crescent appears left on mug and right in reflection.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress physical/geometric consistency.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/ood_physics_reflection.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "ood_ui_screenshot",
+    "split": "OOD",
+    "category": "custom_stress",
+    "title": "Mini app screenshot",
+    "capacity_tags": [],
+    "type": "text_to_image",
+    "prompt": "A crisp screenshot of a compact desktop app named \"Flux Desk\". The left sidebar has three items: Inbox, Drafts, Archive. The main panel shows a table with two columns, Task and Status, and three rows: Sketch - Done, Render - Pending, Ship - Blocked.",
+    "expected": "UI screenshot with readable app name, sidebar labels, table headers, and three row/status pairs.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress UI/text/table generation.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/ood_ui_screenshot.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  }
+]

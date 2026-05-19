@@ -1,0 +1,283 @@
+[
+  {
+    "id": "paper_emu35_robot_friendship_interleaved",
+    "title": "Emu3.5 robot friendship cartoon story",
+    "split": "ID-paper-exact",
+    "type": "interleaved_text_image",
+    "prompt": "Create a cartoon story about a robot who discovers friendship.",
+    "expected": "A short cartoon story with generated images interleaved with narrative text.",
+    "capacity_tags": [
+      "interleaved text-image generation",
+      "visual storytelling",
+      "character consistency"
+    ],
+    "source_provenance": {
+      "model_family": "Emu3.5",
+      "source_type": "paper exact prompt",
+      "citation": "Emu3.5 paper, visual narrative example.",
+      "url": "https://arxiv.org/pdf/2510.26583",
+      "figure_or_location": "Prompt appears verbatim in the extracted paper text around line 1744.",
+      "prompt_status": "exact user prompt; no refined prompt used"
+    },
+    "model_key": "emu3_5_vllm_8x80",
+    "model_label": "Emu3.5 vLLM 8x80GB",
+    "model_id": "BAAI/Emu3.5",
+    "runner": "Emu3.5 base story interleaved vLLM path; all temp files on pod-local SSD",
+    "runtime_seconds_total": 167.3,
+    "question_file": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/paper_emu35_robot_friendship_interleaved/000_question.txt",
+    "case_dir": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/paper_emu35_robot_friendship_interleaved",
+    "segments": [
+      {
+        "index": 1,
+        "text": "In a bright, cartoon-style world, a young girl with blonde hair and a blue bow sits on the steps of a cozy home, surrounded by animated flowers and whimsical plants. She watches a small, blue, round robot named Morphle, who moves with curiosity and delight. A red, round creature with antennae stands nearby, watching them both. The house is nestled among colorful flowers and whimsical plants, creating a peaceful, playful atmosphere.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/paper_emu35_robot_friendship_interleaved/001_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "text": "As Morphle explores the garden, he accidentally steps on some vibrant flowers, causing them to bloom in a dazzling display of color. The girl watches in amazement, while the red creature seems both intrigued and a little concerned. Morphle’s playful nature is clear—he moves with enthusiasm and a childlike wonder, reveling in the beauty of the world around him.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/paper_emu35_robot_friendship_interleaved/002_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "text": "The girl decides to teach Morphle about friendship. She suggests that the ladybug, a shy creature, might like to play with him. Morphle looks uncertain at first but follows her lead, his big, curious eyes taking in the ladybug’s colorful shell and gentle movements.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/paper_emu35_robot_friendship_interleaved/003_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "text": "The ladybug and Morphle begin to interact, cautiously at first. Morphle reaches out tentatively, and the ladybug responds with a slow, graceful motion. The girl watches closely, offering gentle encouragement. As they get to know each other, their tentative gestures turn into playful touches and shared curiosity.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/paper_emu35_robot_friendship_interleaved/004_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "text": "Soon, the garden becomes a lively scene as Morphle, the ladybug, and the red creature play together. Flowers bloom, leaves rustle, and laughter fills the air. Morphle has found his place among his new friends, discovering that friendship is about understanding and kindness, not just appearances.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/paper_emu35_robot_friendship_interleaved/005_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      }
+    ],
+    "image_count": 5,
+    "text_segment_count": 5,
+    "first_image": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/paper_emu35_robot_friendship_interleaved/001_00_image.png",
+    "local_ssd_output": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80"
+  },
+  {
+    "id": "repo_emu35_hedgehog_fireflies_interleaved",
+    "title": "Emu3.5 hedgehog and fireflies story",
+    "split": "ID-repo-exact",
+    "type": "interleaved_text_image",
+    "prompt": "Imagine a heartwarming tale about a little hedgehog who overcomes his fear of the dark with the help of glowing fireflies.",
+    "expected": "A visual narrative with text and images interleaved in the official story preset.",
+    "capacity_tags": [
+      "interleaved text-image generation",
+      "visual storytelling",
+      "mood and lighting consistency"
+    ],
+    "source_provenance": {
+      "model_family": "Emu3.5",
+      "source_type": "official repo exact prompt",
+      "citation": "Emu3.5 official example_config_visual_narrative.py.",
+      "url": "https://github.com/baaivision/Emu3.5",
+      "figure_or_location": "configs/example_config_visual_narrative.py prompt list.",
+      "prompt_status": "exact user prompt; no refined prompt used"
+    },
+    "model_key": "emu3_5_vllm_8x80",
+    "model_label": "Emu3.5 vLLM 8x80GB",
+    "model_id": "BAAI/Emu3.5",
+    "runner": "Emu3.5 base story interleaved vLLM path; all temp files on pod-local SSD",
+    "runtime_seconds_total": 167.3,
+    "question_file": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/repo_emu35_hedgehog_fireflies_interleaved/000_question.txt",
+    "case_dir": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/repo_emu35_hedgehog_fireflies_interleaved",
+    "segments": [
+      {
+        "index": 1,
+        "text": "Our little hedgehog, Pip, loved his cozy burrow, especially at night when the forest grew quiet. But as the last sunbeams faded, a shiver ran down his spines. The darkness felt vast and empty, and the distant owl hoots made him twitch with fear. He longed for the warmth of daylight and the safety of his home.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/repo_emu35_hedgehog_fireflies_interleaved/001_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "text": "One evening, as Pip huddled in the dark, he noticed a faint, twinkling light beyond his burrow entrance. It was a cluster of fireflies, their soft glow dancing in the night air like tiny stars. Mesmerized, Pip watched as they fluttered, their light forming gentle patterns against the darkness. For the first time, the night didn’t feel so scary—it felt curious, full of quiet magic.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/repo_emu35_hedgehog_fireflies_interleaved/002_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "text": "Pip's curiosity grew stronger. He hesitantly pushed open the burrow door and peeked outside. The fireflies didn’t notice him at first, their attention on the dewdrops on a nearby blade of grass. Taking a deep breath, Pip stepped into the cool night air. One of the fireflies, as if sensing his presence, hovered gently before him. It shimmered in a soft, reassuring light, and Pip felt a warmth spread through him. He realized they weren’t frightening—he was just sharing their quiet glow.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/repo_emu35_hedgehog_fireflies_interleaved/003_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "text": "Encouraged by the gentle firefly, Pip began to explore the night. The little lights moved in and out of the shadows, leading him through the tall grass and over smooth stones. They didn’t rush him, but their steady presence gave him courage. He watched their light reflect in the dew and saw the quiet world in a new way—its secrets no longer frightening, but full of wonder.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/repo_emu35_hedgehog_fireflies_interleaved/004_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "text": "As the first hints of dawn painted the sky, Pip realized he wasn’t alone in the darkness. The fireflies, his small, luminous friends, had been with him all along. With a newfound sense of bravery, he made his way back to his burrow, the fireflies twinkling above like a guiding constellation. He knew the darkness wouldn’t be as scary anymore—he had them to light his way.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/repo_emu35_hedgehog_fireflies_interleaved/005_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "text": "The next evening, when the shadows deepened, Pip wasn’t afraid. He welcomed the fireflies back into his burrow, their soft glow lighting the way as he shared his story with his family. From that night on, the darkness was no longer his enemy, but a friend lit by the gentle light of his tiny companions. Pip had learned that courage often comes from unexpected",
+        "images": []
+      }
+    ],
+    "image_count": 5,
+    "text_segment_count": 6,
+    "first_image": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/repo_emu35_hedgehog_fireflies_interleaved/001_00_image.png",
+    "local_ssd_output": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80"
+  },
+  {
+    "id": "ood_emu35_water_cycle_interleaved",
+    "title": "OOD water cycle visual explainer",
+    "split": "OOD-custom",
+    "type": "interleaved_text_image",
+    "prompt": "Create a four-part illustrated explainer for a middle school student about the water cycle: evaporation, condensation, precipitation, and collection.",
+    "expected": "Four educational beats with diagrams or illustrations interleaved with concise explanatory text.",
+    "capacity_tags": [
+      "interleaved text-image generation",
+      "science explanation",
+      "multi-step structure"
+    ],
+    "source_provenance": {
+      "model_family": "Emu3.5",
+      "source_type": "custom OOD prompt",
+      "citation": "Designed for this comparison after the initial exact-prompt report.",
+      "url": "",
+      "figure_or_location": "N/A",
+      "prompt_status": "custom prompt; not from paper training/eval examples"
+    },
+    "model_key": "emu3_5_vllm_8x80",
+    "model_label": "Emu3.5 vLLM 8x80GB",
+    "model_id": "BAAI/Emu3.5",
+    "runner": "Emu3.5 base story interleaved vLLM path; all temp files on pod-local SSD",
+    "runtime_seconds_total": 167.3,
+    "question_file": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/ood_emu35_water_cycle_interleaved/000_question.txt",
+    "case_dir": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/ood_emu35_water_cycle_interleaved",
+    "segments": [
+      {
+        "index": 1,
+        "text": "In a quiet classroom, a child sits at a desk, surrounded by books and a large window revealing a peaceful landscape. They gaze out, reflecting on the natural world and the water cycle.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/ood_emu35_water_cycle_interleaved/001_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "text": "The child points to a tree in the forest as the sun shines above. They explain that the sun’s heat causes water in rivers and lakes to evaporate, turning into invisible vapor that rises into the air.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/ood_emu35_water_cycle_interleaved/002_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "text": "As the invisible water vapor rises, it cools and forms tiny water droplets that gather in the sky, creating clouds. The child sits in a classroom-like space, watching a drawing of a cloud on the whiteboard, linking the invisible vapor to the visible clouds above.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/ood_emu35_water_cycle_interleaved/003_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "text": "Finally, when the clouds become heavy with water, gravity pulls the water down as rain, snow, sleet, or hail. The child looks up as the sky darkens, watching the rain pour and imagining the water falling back to earth to collect in rivers, lakes, and oceans, ready to begin the cycle again.",
+        "images": [
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/ood_emu35_water_cycle_interleaved/004_00_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          },
+          {
+            "path": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/ood_emu35_water_cycle_interleaved/004_01_image.png",
+            "width": 960,
+            "height": 544,
+            "resolution": "960x544"
+          }
+        ]
+      }
+    ],
+    "image_count": 5,
+    "text_segment_count": 4,
+    "first_image": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/vis/ood_emu35_water_cycle_interleaved/001_00_image.png",
+    "local_ssd_output": "/mnt/localssd/qitaoz_omni_interleaved/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80"
+  }
+]

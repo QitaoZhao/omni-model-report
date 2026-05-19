@@ -1,0 +1,122 @@
+[
+  {
+    "id": "id_emu35_comic_dogs",
+    "split": "ID",
+    "title": "Emu3.5 comic dogs with speech bubbles",
+    "type": "text_to_image",
+    "prompt": "A lively comic-style illustration depicting two humorous cartoon dogs interacting near a freshly dug backyard hole surrounded by scattered dirt, garden tools, blooming flowers, and a wooden fence background. At the upper-left side, Dog One stands nervously near the messy hole, ears down and eyes wide open with an expression of concern. Its speech bubble is an oval shape, outlined neatly with smooth, slightly rounded corners, positioned clearly above Dog One's head. Inside, clearly readable playful handwritten-style text emphasizes the dog's worried tone, saying, \"You sure the humans won't notice this giant hole here?\". Toward the lower-right side, Dog Two sits calmly and confidently with a cheerful, carefree expression, wagging its tail gently. Its speech bubble is rectangular with softly rounded edges, placed slightly overlapping with Dog One's speech bubble to guide the reader naturally downward diagonally across the frame. Dog Two's friendly, humorous response appears in a whimsical italicized comic font, clearly stating, \"Relax! We'll just blame it on the neighbor's cat again!\". Each speech bubble creates the playful and engaging backyard scene.",
+    "expected": "Two-panel-like comic composition with two dogs, two correctly placed speech bubbles, and readable quoted text.",
+    "source_provenance": {
+      "model_family": "Emu3.5",
+      "source_type": "official repo example config",
+      "citation": "Emu3.5 example_config_t2i.py text-rich comic prompt.",
+      "url": "https://github.com/baaivision/Emu3.5",
+      "figure_or_location": "configs/example_config_t2i.py example prompt."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/sensenova_u1_8b_mot/id_emu35_comic_dogs.png",
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "sensenova_u1_8b_mot"
+  },
+  {
+    "id": "id_onecat_panda_peace",
+    "split": "ID",
+    "title": "OneCAT panda with PEACE wall text",
+    "type": "text_to_image",
+    "prompt": "A high-contrast photo of a panda riding a horse. The panda is wearing a wizard hat and is reading a book. The horse is standing on a street against a gray concrete wall. Colorful flowers and the word \"PEACE\" are painted on the wall. Green grass grows from cracks in the street. DSLR photograph. daytime lighting.",
+    "expected": "Panda riding a horse, wizard hat, book, gray wall with readable PEACE text, flowers, grass, photo style.",
+    "source_provenance": {
+      "model_family": "OneCAT",
+      "source_type": "official repo example prompt",
+      "citation": "OneCAT public repo comprehensive inference example prompt.",
+      "url": "https://github.com/onecat-ai/OneCAT",
+      "figure_or_location": "onecat/var_model/tools/comprehensive_infer.py prompt list."
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/sensenova_u1_8b_mot/id_onecat_panda_peace.png",
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "sensenova_u1_8b_mot"
+  },
+  {
+    "id": "ood_multi_object_count",
+    "split": "OOD",
+    "title": "Counting and attributes",
+    "type": "text_to_image",
+    "prompt": "A product photo on a matte black table: exactly seven glass marbles in a row. Marbles 1, 3, 5, and 7 are transparent red; marbles 2, 4, and 6 are opaque blue. Put a small white number below each marble, from 1 to 7.",
+    "expected": "Seven marbles, alternating colors by index, readable numbers 1-7.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress exact count, ordinal binding, and text.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/sensenova_u1_8b_mot/ood_multi_object_count.png",
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "sensenova_u1_8b_mot",
+    "readback_question": "Read all visible text. Then describe the positions and attributes of the main objects.",
+    "readback_answer": "<think>\nThe user wants me to identify the text and then describe the objects in the image.\n\n**1. Text Recognition:**\n- I see numbers below the spheres.\n- From left to right: 1, 2, 3, 4, 5, 6, 7.\n- These numbers correspond to the position of each sphere.\n\n**2. Object Description:**\n- **Main Objects:** There are 7 glass marbles or spheres lined up horizontally.\n- **Background:** A dark, possibly black or dark grey, textured surface (looks like a table). The background is blurred, suggesting a shallow depth of field, with a window visible on the left.\n- **Attributes of the spheres (from left to right, corresponding to numbers 1-7):**\n    - **Sphere 1:** Reddish-orange, translucent.\n    - **Sphere 2:** Blue, translucent.\n    - **Sphere 3:** Blue, translucent (slightly lighter than #2).\n    - **Sphere 4:** Light blue/cyan, translucent.\n    - **Sphere 5:** Reddish-orange, translucent (similar to #1).\n    - **Sphere 6:** Blue, translucent (similar to #2).\n    - **Sphere 7:** Reddish-orange, translucent (similar to #1 and #5).\n- **Lighting:** There are highlights on the top left of each sphere, indicating a light source from that direction. They cast soft shadows to the right.\n- **Numbers:** White, sans-serif font, positioned directly below each sphere.\n\n**Synthesizing the description:**\n- Start with the text.\n- Describe the row of marbles.\n- Detail the colors in order.\n- Mention the numbers.\n- Mention the setting (dark surface, blurred background).\n</think>\n\nThe visible text consists of the numbers **1, 2, 3, 4, 5, 6, 7** arranged horizontally below a row of objects.\n\n**Main Objects and Attributes:**\n\n*   **Seven Glass Marbles/Spheres:** There is a row of seven translucent glass spheres lined up on a dark, textured surface.\n*   **Color Pattern:** The spheres follow a repeating color pattern of red and blue.\n    *   **Sphere 1:** Reddish-orange.\n    *   **Sphere 2:** Blue.\n    *   **Sphere 3:** Blue.\n    *   **Sphere 4:** Light blue (cyan).\n    *   **Sphere 5:** Reddish-orange.\n    *   **Sphere 6:** Blue.\n    *   **Sphere 7:** Reddish-orange.\n*   **Numbering:** Each sphere is labeled with a white number underneath it, corresponding to its position from left to right (1 through 7).\n*   **Setting:** The objects are resting on a dark, matte surface, likely a table. The background is out of focus, showing a dimly lit room with a window visible on the far left. The lighting creates bright white reflections on the upper-left side of each sphere."
+  },
+  {
+    "id": "ood_chart_microtext",
+    "split": "OOD",
+    "title": "Tiny chart with legend",
+    "type": "text_to_image",
+    "prompt": "A simple clean bar chart titled \"Q2 MIX\" with three vertical bars: Alpha = 20, Beta = 45, Gamma = 30. Use a white background, black axes, and a legend in the lower right that says \"units\".",
+    "expected": "Readable chart title, three labeled bars with approximate relative heights and lower-right legend.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress chart generation and small text.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/sensenova_u1_8b_mot/ood_chart_microtext.png",
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "sensenova_u1_8b_mot",
+    "readback_question": "Read all visible text. Then describe the positions and attributes of the main objects.",
+    "readback_answer": "<think>\nSo, let's start by reading all the visible text in the image. First, the title at the top is \"Q2 MIX\". Then the y-axis has numbers: 0, 20, 30, 40, 80. The x-axis labels are \"Alpha\", \"Beta\", \"Gamma\". The bars have numbers: Alpha bar has 20, Beta has 45, Gamma has 30. There's a legend on the right that says \"Alpha units\". \n\nNow, describe the positions and attributes of the main objects. The main objects are the bar chart elements. Let's break it down:\n\n- Title: \"Q2 MIX\" is centered at the top of the chart.\n- Y-axis: Vertical axis on the left, labeled with values 0, 20, 30, 40, 80. The scale goes from 0 to 80.\n- X-axis: Horizontal axis at the bottom, with categories \"Alpha\", \"Beta\", \"Gamma\" labeled below each bar.\n- Bars: Three vertical bars. \n  - Alpha bar: White, height corresponding to 20 on the y-axis, labeled \"20\" inside the bar.\n  - Beta bar: Black, height corresponding to 45 (between 40 and 50, but the label is 45), labeled \"45\" inside.\n  - Gamma bar: Black, height corresponding to 30, labeled \"30\" inside.\n- Legend: A box on the right side, labeled \"Alpha units\", indicating the unit for the Alpha bar (and maybe others, but the legend specifies Alpha units).\n\nCheck if all text is read: Q2 MIX, 80, 40, 30, 20, 0, Alpha, 20, Beta, 45, Gamma, 30, Alpha units. Yes.\n\nNow, structure the description of positions and attributes.\n</think>\n\nThe visible text in the image includes: \"Q2 MIX\" (title), \"80\", \"40\", \"30\", \"20\", \"0\" (y - axis labels), \"Alpha\", \"20\", \"Beta\", \"45\", \"Gamma\", \"30\" (x - axis category labels and bar values), and \"Alpha units\" (legend text).  \n\n### Positions and Attributes of Main Objects:  \n1. **Title**: \"Q2 MIX\" is centered at the top of the chart.  \n2. **Y - axis**: A vertical axis on the left, marked with values 0, 20, 30, 40, 80 (increasing upward).  \n3. **X - axis**: A horizontal axis at the bottom, with three category labels: \"Alpha\" (left), \"Beta\" (middle), \"Gamma\" (right).  \n4. **Bars**:  \n   - *Alpha bar*: White, positioned under \"Alpha\", height corresponds to 20 on the y - axis, with \"20\" labeled inside.  \n   - *Beta bar*: Black, positioned under \"Beta\", height corresponds to 45 on the y - axis, with \"45\" labeled inside.  \n   - *Gamma bar*: Black, positioned under \"Gamma\", height corresponds to 30 on the y - axis, with \"30\" labeled inside.  \n5. **Legend**: A box on the right side of the chart, containing the text \"Alpha units\" to indicate the unit for the Alpha bar.  \n\nThe chart uses a black - and - white color scheme, with white text and outlines on a black background. The bars’ heights visually represent the values for each category, with the y - axis providing a scale for measurement."
+  },
+  {
+    "id": "ood_physics_reflection",
+    "split": "OOD",
+    "title": "Mirror reflection consistency",
+    "type": "text_to_image",
+    "prompt": "A studio photograph of a red mug sitting in front of a vertical mirror. The mug has a white crescent moon printed on its left side. The mirror reflection should show the crescent on the reflected mug's right side. Keep the background plain gray.",
+    "expected": "Mirror geometry is consistent: crescent appears left on mug and right in reflection.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress physical/geometric consistency.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/sensenova_u1_8b_mot/ood_physics_reflection.png",
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "sensenova_u1_8b_mot",
+    "readback_question": "Read all visible text. Then describe the positions and attributes of the main objects.",
+    "readback_answer": "<think>\nThe user wants me to identify visible text and then describe the main objects in the image.\n\n**1. Visible Text:**\n- I see a white crescent moon shape on the red mug. It's not text, but a symbol.\n- Wait, looking closely at the prompt \"Read all visible text\". There is no actual alphanumeric text in the image. The white shape is a crescent moon. I should clarify that there is no text, but there is a symbol. Or perhaps the user interprets the crescent as a letter 'C' or 'D'? No, it's clearly a crescent moon. I will state there is no text.\n\n**2. Main Objects:**\n- **Object 1: The Red Mug.**\n    - Position: Foreground, left side.\n    - Attributes: Bright red color, glossy finish, cylindrical shape, handle on the left. It has a white crescent moon design on the front.\n- **Object 2: The Mirror.**\n    - Position: Background, right side. It's a vertical rectangular frame.\n    - Attributes: Black frame, reflective surface.\n- **Object 3: The Reflection.**\n    - Position: Inside the mirror.\n    - Attributes: It shows the reflection of the red mug. The mug appears reversed (mirror image). The handle is on the right side in the reflection. The crescent moon is also reversed (opening to the left).\n\n**Drafting the response:**\n- Start with the text part. State clearly that there is no visible text.\n- Describe the red mug in detail (color, shape, symbol).\n- Describe the mirror (frame, position).\n- Describe the reflection (what is seen in the mirror).\n\nLet me refine the \"text\" part. The prompt asks to \"Read all visible text\". Since there is none, I will explicitly say \"There is no visible text in the image.\" This is the most accurate response.\n\nNow for the description:\n- **Red Mug:** Located on the left side of the foreground. It is a solid, bright red ceramic mug. It features a large white crescent moon symbol on its side. The handle is on the left.\n- **Mirror:** Located on the right side, slightly behind the mug. It has a thin black frame.\n- **Reflection:** Inside the mirror, there is a reflection of the red mug. The reflection shows the mug facing the opposite direction (handle on the right), and the crescent moon is mirrored.\n\nLet's combine this into a coherent response.\n</think>\n\nThere is no visible text in the image.\n\n**Main Objects:**\n\n1.  **Red Mug:** Located in the foreground on the left side. It is a bright red, glossy ceramic mug with a handle on the left. It features a large white crescent moon design on its front face.\n2.  **Mirror:** Located in the background on the right side. It is a vertical rectangular mirror with a thin black frame.\n3.  **Reflection:** Inside the mirror, there is a reflection of the red mug. The reflection shows the mug facing the opposite direction (handle on the right) and the white crescent moon symbol is mirrored."
+  },
+  {
+    "id": "ood_ui_screenshot",
+    "split": "OOD",
+    "title": "Mini app screenshot",
+    "type": "text_to_image",
+    "prompt": "A crisp screenshot of a compact desktop app named \"Flux Desk\". The left sidebar has three items: Inbox, Drafts, Archive. The main panel shows a table with two columns, Task and Status, and three rows: Sketch - Done, Render - Pending, Ship - Blocked.",
+    "expected": "UI screenshot with readable app name, sidebar labels, table headers, and three row/status pairs.",
+    "source_provenance": {
+      "source_type": "custom OOD probe",
+      "citation": "Designed for this comparison to stress UI/text/table generation.",
+      "figure_or_location": "not in paper"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/expanded_eval/sensenova_u1_8b_mot/ood_ui_screenshot.png",
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "sensenova_u1_8b_mot",
+    "readback_question": "Read all visible text. Then describe the positions and attributes of the main objects.",
+    "readback_answer": "<think>\nThe user wants me to extract text and describe the image.\n\n**1. Text Extraction:**\nI need to scan the image from top to bottom, left to right, focusing on the UI elements.\n- Top left of the UI: \"Flux Desk\"\n- Sidebar menu items: \"Inbox\", \"Drafts\", \"Archive\"\n- Table headers: \"Task\", \"Status\"\n- Table rows:\n    - \"Sketch\", \"Done\" (green)\n    - \"Render\", \"Pending\"\n    - \"Ship\", \"Blocked\" (red)\n- Top right of the UI: There are some small icons and numbers, looks like \"184\" or similar, but it's blurry. I'll focus on the clear text. Wait, looking closer at the top right, there's a small icon and the number \"184\".\n\n**2. Object Description:**\n- **Main Object:** A computer monitor (looks like an iMac) displaying a software interface.\n- **Interface:** A dark-themed dashboard or task manager called \"Flux Desk\".\n- **Layout:**\n    - Left sidebar: Navigation menu with checkboxes.\n    - Main area: A table with columns \"Task\" and \"Status\".\n- **Background:** A blurred office setting. A wooden desk, a plant on the left, a window in the back, a coffee mug on the right.\n- **Foreground:** A pen and part of a notebook are visible at the very bottom right.\n\n**3. Synthesizing the Description:**\n- Start with the text extraction as requested.\n- Then describe the visual elements: the monitor, the UI layout (sidebar, table), the specific text in the table (colors are important: green for Done, red for Blocked), and the surrounding environment (desk, mug, plant).\n\n**Refining the Text Extraction:**\n- \"Flux Desk\"\n- \"Inbox\" (with a checkmark icon)\n- \"Drafts\" (with an empty checkbox icon)\n- \"Archive\" (with an empty checkbox icon)\n- \"Task\"\n- \"Status\"\n- \"Sketch\" -> \"Done\" (Green text)\n- \"Render\" -> \"Pending\"\n- \"Ship\" -> \"Blocked\" (Red text)\n- Top right corner: \"184\" (partially visible)\n\n**Refining the Object Description:**\n- **Monitor:** Silver stand, black bezel.\n- **UI:** Dark mode. \"Flux Desk\" title. Sidebar on the left. Table on the right.\n- **Table Content:**\n    - Row 1: Sketch | Done (Green)\n    - Row 2: Render | Pending\n    - Row 3: Ship | Blocked (Red)\n- **Environment:** Wooden desk surface. White mug on the left. Dark blue mug on the right. Window with natural light. Blurry plant.\n\nLet's structure the final response clearly.\n</think>\n\n**Visible Text:**\n\n*   **Header:** \"Flux Desk\"\n*   **Sidebar Menu:**\n    *   \"Inbox\" (next to a checked checkbox icon)\n    *   \"Drafts\" (next to an unchecked checkbox icon)\n    *   \"Archive\" (next to an unchecked checkbox icon)\n*   **Table Headers:** \"Task\", \"Status\"\n*   **Table Content:**\n    *   \"Sketch\" | \"Done\" (in green text)\n    *   \"Render\" | \"Pending\"\n    *   \"Ship\" | \"Blocked\" (in red text)\n*   **Top Right Corner:** \"184\" (partially visible next to an icon)\n\n**Main Objects and Attributes:**\n\n*   **Computer Monitor:** A large, silver all-in-one desktop computer (resembling an iMac) sits centrally on a wooden desk. It displays a dark-themed software interface.\n*   **Software Interface (\"Flux Desk\"):**\n    *   **Sidebar:** Located on the left side, featuring a navigation menu with \"Inbox,\" \"Drafts,\" and \"Archive.\"\n    *   **Task List:** The main area is a table with two columns. The first column lists tasks (\"Sketch,\" \"Render,\" \"Ship\"), and the second column lists their status. The status \"Done\" is highlighted in green, while \"Blocked\" is highlighted in red, indicating different states.\n*   **Desk Accessories:**\n    *   **Mugs:** There is a white mug on the left side of the desk and a dark blue mug on the right side.\n    *   **Pen:** A black pen lies on the desk near the bottom right corner.\n    *   **Notebook:** A white notebook is partially visible in the bottom right corner.\n*   **Background:** The background is a softly blurred office environment featuring a window letting in natural light and a potted plant on the far left."
+  }
+]

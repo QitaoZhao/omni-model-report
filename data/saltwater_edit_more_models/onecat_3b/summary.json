@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ood_physics_saltwater_edit",
+    "split": "OOD for cross-model edit; official example-style for SenseNova reasoning edit",
+    "type": "image_edit",
+    "prompt": "Change the water to high-concentration saltwater so the egg floats in the middle of the glass, while preserving the glass, egg appearance, lighting, and background.",
+    "expected": "egg moves from bottom to suspended middle; glass/background preserved",
+    "source_provenance": {
+      "model_family": "SenseNova-U1",
+      "source_type": "official repo example / demo sample",
+      "figure_or_location": "examples/editing/data/samples_reasoning.jsonl -> images_reasoning/042_physics_change_the_water_to_high-con.jpg",
+      "citation": "Official prompt: Change the water to high-concentration saltwater. Adapted prompt and synthetic input used for cross-model comparison.",
+      "url": "https://github.com/OpenSenseNova/SenseNova-U1/blob/main/examples/editing/data/samples_reasoning.jsonl"
+    },
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/saltwater_more_models/onecat_3b/edited.png",
+    "resolution": "1024x1024",
+    "width": 1024,
+    "height": 1024,
+    "model_key": "onecat_3b",
+    "model_id": "onecat-ai/OneCAT-3B",
+    "runtime_seconds": 112,
+    "runtime_note": "OneCAT native generate_imgedit.py on one visible A100 80GB GPU."
+  }
+]

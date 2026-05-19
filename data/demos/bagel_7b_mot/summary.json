@@ -1,0 +1,42 @@
+[
+  {
+    "id": "paper_t2i_fairy_cosplayer",
+    "type": "text_to_image",
+    "prompt": "A female cosplayer portraying an ethereal fairy or elf, wearing a flowing dress made of delicate fabrics in soft, mystical colors like emerald green and silver. She has pointed ears, a gentle, enchanting expression, and her outfit is adorned with sparkling jewels and intricate patterns. The background is a magical forest with glowing plants, mystical creatures, and a serene atmosphere.",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/bagel_7b_mot/paper_t2i_fairy.png",
+    "text": null
+  },
+  {
+    "id": "paper_understanding_meme",
+    "type": "image_to_text",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/repos/Bagel/test_images/meme.jpg",
+    "answer": "The humor in this meme comes from the exaggerated change in handwriting style over the course of an exam. The first two pages show neat, legible handwriting, suggesting a calm and focused start to the exam. However, the middle pages show increasingly messy and difficult-to-read handwriting, indicating a possible loss of focus or stress as the exam progresses. The last two pages are comically represented by an electrocardiogram (ECG) line, which is a graph of the heart's electrical activity. This visual metaphor humorously suggests that the person's handwriting is so bad that it resembles the erratic and rapid heartbeat of someone under extreme stress or anxiety. The meme plays on the common experience of feeling overwhelmed or anxious during exams, which can lead to poor handwriting."
+  },
+  {
+    "id": "paper_edit_woman_subway",
+    "type": "image_edit",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/bagel_7b_mot/paper_edit_woman_subway.png",
+    "prompt": "She boards a modern subway, quietly reading a folded newspaper, wearing the same clothes.",
+    "text": null
+  },
+  {
+    "id": "extra_text_rich_spatial",
+    "type": "text_to_image",
+    "prompt": "A clean white poster with the exact readable title \"OMNI TEST\"; below it, a red triangle is left of a blue circle, and a green square is in the lower right corner.",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/bagel_7b_mot/extra_text_rich_spatial.png",
+    "text": null
+  },
+  {
+    "id": "extra_readback_text_rich_spatial",
+    "type": "image_to_text",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/bagel_7b_mot/extra_text_rich_spatial.png",
+    "answer": "The title \"OMNI TEST\" is at the top of the image. Below the title, there is a red triangle to the left and a blue circle to the right. At the bottom right corner of the image, there is a green square. The triangle and circle are positioned horizontally next to each other, while the square is vertically aligned with the circle."
+  },
+  {
+    "id": "extra_physics_edit",
+    "type": "image_edit",
+    "image": "/sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/outputs/bagel_7b_mot/extra_physics_edit.png",
+    "prompt": "Change the water to high-concentration saltwater so the egg floats in the middle of the glass, while preserving the glass, egg appearance, lighting, and background.",
+    "text": null
+  }
+]
