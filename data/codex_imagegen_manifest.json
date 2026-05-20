@@ -443,5 +443,101 @@
     "generation_mode": "built-in imagegen",
     "prompt_used": "A female cosplayer portraying an ethereal fairy or elf, wearing a flowing dress made of delicate fabrics in soft, mystical colors like emerald green and silver. She has pointed ears, a gentle, enchanting expression, and her outfit is adorned with sparkling jewels and intricate patterns. The background is a magical forest with glowing plants, mystical creatures, and a serene atmosphere.",
     "note": "Generated with the built-in imagegen tool using this test case prompt verbatim, without expected-answer text or report context."
+  },
+  {
+    "id": "hard_gen_gear_train_arrows",
+    "title": "Gear train with alternating arrows",
+    "prompt": "A clean technical diagram titled \"GEAR TRAIN\" showing three interlocking gears in a horizontal row. Gear A has a clockwise red arrow, gear B has a counterclockwise blue arrow, and gear C has a clockwise green arrow. Put the label \"POWER\" above gear A and \"OUTPUT\" below gear C. Use white background, black outlines, no extra gears.",
+    "index": 38,
+    "source_image": "/Users/qitaoz/.codex/generated_images/019e3c53-574f-7962-bef4-95f4d82e69a5/ig_01d2a0f26c9681fe016a0d8b2a1a688190a6a3881c102f7f8f.png",
+    "workspace_image": "/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/imagegen_codex_baseline/outputs/codex_imagegen_38_hard-gen-gear-train-arrows.png",
+    "asset_name": "codex_imagegen_38_hard-gen-gear-train-arrows.png",
+    "generation_mode": "built-in imagegen",
+    "prompt_used": "A clean technical diagram titled \"GEAR TRAIN\" showing three interlocking gears in a horizontal row. Gear A has a clockwise red arrow, gear B has a counterclockwise blue arrow, and gear C has a clockwise green arrow. Put the label \"POWER\" above gear A and \"OUTPUT\" below gear C. Use white background, black outlines, no extra gears.",
+    "note": "Generated with the built-in imagegen tool using this test case prompt verbatim, without expected-answer text or report context."
+  },
+  {
+    "id": "hard_gen_stove_knob_mapping",
+    "title": "Stove burner and knob mapping",
+    "prompt": "A top-down product-style diagram of a four-burner stove. The front-right burner is glowing orange. Below it are four round knobs labeled RL, RR, FL, FR; only the FR knob is turned to HIGH and the other knobs are OFF. Keep the burner layout and knob labels clear and readable.",
+    "index": 39,
+    "source_image": "/Users/qitaoz/.codex/generated_images/019e3c53-574f-7962-bef4-95f4d82e69a5/ig_01d2a0f26c9681fe016a0d8b67c4b081909a13eb25fd880b65.png",
+    "workspace_image": "/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/imagegen_codex_baseline/outputs/codex_imagegen_39_hard-gen-stove-knob-mapping.png",
+    "asset_name": "codex_imagegen_39_hard-gen-stove-knob-mapping.png",
+    "generation_mode": "built-in imagegen",
+    "prompt_used": "A top-down product-style diagram of a four-burner stove. The front-right burner is glowing orange. Below it are four round knobs labeled RL, RR, FL, FR; only the FR knob is turned to HIGH and the other knobs are OFF. Keep the burner layout and knob labels clear and readable.",
+    "note": "Generated with the built-in imagegen tool using this test case prompt verbatim, without expected-answer text or report context."
+  },
+  {
+    "id": "hard_gen_measurement_ruler_pencil",
+    "title": "Ruler measurement with bracket",
+    "prompt": "A clean tabletop photo/diagram with a centimeter ruler from 0 to 10. A yellow pencil lies exactly from the 2 cm mark to the 7 cm mark. Draw a bracket above the pencil labeled \"5 cm\". Use readable numbers and a white background.",
+    "index": 40,
+    "source_image": "/Users/qitaoz/.codex/generated_images/019e3c53-574f-7962-bef4-95f4d82e69a5/ig_01d2a0f26c9681fe016a0d8bbb2af881909f5035765496d7d0.png",
+    "workspace_image": "/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/imagegen_codex_baseline/outputs/codex_imagegen_40_hard-gen-measurement-ruler-pencil.png",
+    "asset_name": "codex_imagegen_40_hard-gen-measurement-ruler-pencil.png",
+    "generation_mode": "built-in imagegen",
+    "prompt_used": "A clean tabletop photo/diagram with a centimeter ruler from 0 to 10. A yellow pencil lies exactly from the 2 cm mark to the 7 cm mark. Draw a bracket above the pencil labeled \"5 cm\". Use readable numbers and a white background.",
+    "note": "Generated with the built-in imagegen tool using this test case prompt verbatim, without expected-answer text or report context."
+  },
+  {
+    "id": "hard_gen_domino_sequence",
+    "title": "Domino causal sequence",
+    "prompt": "A single-panel side-view illustration titled \"CHAIN REACTION\" with six numbered dominoes in a row. Domino 1 is already flat on the table, domino 2 is tilting right, and dominoes 3 through 6 are still upright. Add a small arrow showing the motion from left to right. No extra dominoes.",
+    "index": 41,
+    "source_image": "/Users/qitaoz/.codex/generated_images/019e3c53-574f-7962-bef4-95f4d82e69a5/ig_01d2a0f26c9681fe016a0d8bef0cd08190ae46c4ca38f948ca.png",
+    "workspace_image": "/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/imagegen_codex_baseline/outputs/codex_imagegen_41_hard-gen-domino-sequence.png",
+    "asset_name": "codex_imagegen_41_hard-gen-domino-sequence.png",
+    "generation_mode": "built-in imagegen",
+    "prompt_used": "A single-panel side-view illustration titled \"CHAIN REACTION\" with six numbered dominoes in a row. Domino 1 is already flat on the table, domino 2 is tilting right, and dominoes 3 through 6 are still upright. Add a small arrow showing the motion from left to right. No extra dominoes.",
+    "note": "Generated with the built-in imagegen tool using this test case prompt verbatim, without expected-answer text or report context."
+  },
+  {
+    "id": "hard_gen_transparency_color_mix",
+    "title": "Transparent acetate overlap colors",
+    "prompt": "A clean vector-style image of three transparent square acetate sheets overlapping: red sheet on the left, blue sheet on the right, yellow sheet on top center. The overlaps should visibly mix colors: red+blue purple, red+yellow orange, blue+yellow green. Add small labels RED, BLUE, YELLOW. White background.",
+    "index": 42,
+    "source_image": "/Users/qitaoz/.codex/generated_images/019e3c53-574f-7962-bef4-95f4d82e69a5/ig_01d2a0f26c9681fe016a0d8c2906c48190885ec42a0797434e.png",
+    "workspace_image": "/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/imagegen_codex_baseline/outputs/codex_imagegen_42_hard-gen-transparency-color-mix.png",
+    "asset_name": "codex_imagegen_42_hard-gen-transparency-color-mix.png",
+    "generation_mode": "built-in imagegen",
+    "prompt_used": "A clean vector-style image of three transparent square acetate sheets overlapping: red sheet on the left, blue sheet on the right, yellow sheet on top center. The overlaps should visibly mix colors: red+blue purple, red+yellow orange, blue+yellow green. Add small labels RED, BLUE, YELLOW. White background.",
+    "note": "Generated with the built-in imagegen tool using this test case prompt verbatim, without expected-answer text or report context."
+  },
+  {
+    "id": "hard_gen_traffic_crosswalk_state",
+    "title": "Traffic light and crosswalk state",
+    "prompt": "A street-corner diagram showing a traffic light with the red light on, a pedestrian signal showing \"DON'T WALK\", and a car stopped behind the stop line before the crosswalk. Add a small street sign that says \"MAIN ST\". Make all text readable and keep the scene uncluttered.",
+    "index": 43,
+    "source_image": "/Users/qitaoz/.codex/generated_images/019e3c53-574f-7962-bef4-95f4d82e69a5/ig_01d2a0f26c9681fe016a0d8c69b6d88190a19ddb14a94f25a8.png",
+    "workspace_image": "/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/imagegen_codex_baseline/outputs/codex_imagegen_43_hard-gen-traffic-crosswalk-state.png",
+    "asset_name": "codex_imagegen_43_hard-gen-traffic-crosswalk-state.png",
+    "generation_mode": "built-in imagegen",
+    "prompt_used": "A street-corner diagram showing a traffic light with the red light on, a pedestrian signal showing \"DON'T WALK\", and a car stopped behind the stop line before the crosswalk. Add a small street sign that says \"MAIN ST\". Make all text readable and keep the scene uncluttered.",
+    "note": "Generated with the built-in imagegen tool using this test case prompt verbatim, without expected-answer text or report context."
+  },
+  {
+    "id": "hard_gen_cutaway_sandwich_layers",
+    "title": "Sandwich cutaway layer order",
+    "prompt": "A precise cutaway illustration of a sandwich with visible layers from bottom to top: bread, lettuce, tomato, cheese, ham, bread. One triangular bite is removed from the front-right corner so the layers are visible. Add small right-side labels for each layer in the correct vertical order.",
+    "index": 44,
+    "source_image": "/Users/qitaoz/.codex/generated_images/019e3c53-574f-7962-bef4-95f4d82e69a5/ig_01d2a0f26c9681fe016a0d8cc304e48190b0790b978d4c2bb6.png",
+    "workspace_image": "/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/imagegen_codex_baseline/outputs/codex_imagegen_44_hard-gen-cutaway-sandwich-layers.png",
+    "asset_name": "codex_imagegen_44_hard-gen-cutaway-sandwich-layers.png",
+    "generation_mode": "built-in imagegen",
+    "prompt_used": "A precise cutaway illustration of a sandwich with visible layers from bottom to top: bread, lettuce, tomato, cheese, ham, bread. One triangular bite is removed from the front-right corner so the layers are visible. Add small right-side labels for each layer in the correct vertical order.",
+    "note": "Generated with the built-in imagegen tool using this test case prompt verbatim, without expected-answer text or report context."
+  },
+  {
+    "id": "hard_gen_magnetic_field_compass",
+    "title": "Compass needles around magnet",
+    "prompt": "A clean science diagram titled \"MAGNET TEST\". Place a horizontal bar magnet labeled N on the left end and S on the right end. Around it draw four small compass needles: above the magnet points left, below points right, left side points toward N, right side points away from N. Use simple arrows and readable labels.",
+    "index": 45,
+    "source_image": "/Users/qitaoz/.codex/generated_images/019e3c53-574f-7962-bef4-95f4d82e69a5/ig_01d2a0f26c9681fe016a0d8d0bb844819086506a36313db7ff.png",
+    "workspace_image": "/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/imagegen_codex_baseline/outputs/codex_imagegen_45_hard-gen-magnetic-field-compass.png",
+    "asset_name": "codex_imagegen_45_hard-gen-magnetic-field-compass.png",
+    "generation_mode": "built-in imagegen",
+    "prompt_used": "A clean science diagram titled \"MAGNET TEST\". Place a horizontal bar magnet labeled N on the left end and S on the right end. Around it draw four small compass needles: above the magnet points left, below points right, left side points toward N, right side points away from N. Use simple arrows and readable labels.",
+    "note": "Generated with the built-in imagegen tool using this test case prompt verbatim, without expected-answer text or report context."
   }
 ]
