@@ -1,0 +1,205 @@
+[
+  {
+    "id": "hard_gen_gear_train_arrows",
+    "split": "OOD",
+    "category": "Mechanistic diagram",
+    "title": "Gear train with alternating arrows",
+    "capacity_tags": [
+      "mechanistic diagram generation",
+      "causal direction binding",
+      "text rendering",
+      "spatial layout"
+    ],
+    "type": "text_to_image",
+    "prompt": "A clean technical diagram titled \"GEAR TRAIN\" showing three interlocking gears in a horizontal row. Gear A has a clockwise red arrow, gear B has a counterclockwise blue arrow, and gear C has a clockwise green arrow. Put the label \"POWER\" above gear A and \"OUTPUT\" below gear C. Use white background, black outlines, no extra gears.",
+    "expected": "Exactly three labeled gears A/B/C; adjacent arrows alternate; readable POWER and OUTPUT labels.",
+    "source_provenance": {
+      "citation": "Designed for this comparison",
+      "figure_or_location": "New 2026-05-20 hard generation case",
+      "source_type": "OOD/custom"
+    },
+    "image": "/mnt/localssd/qitaoz_hard_mixed_eval_20260520/outputs/generation/show_o2_1_5b/hard_gen_gear_train_arrows.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "hard_gen_stove_knob_mapping",
+    "split": "OOD",
+    "category": "Real-world control mapping",
+    "title": "Stove burner and knob mapping",
+    "capacity_tags": [
+      "real-world control mapping",
+      "text rendering",
+      "object-label binding"
+    ],
+    "type": "text_to_image",
+    "prompt": "A top-down product-style diagram of a four-burner stove. The front-right burner is glowing orange. Below it are four round knobs labeled RL, RR, FL, FR; only the FR knob is turned to HIGH and the other knobs are OFF. Keep the burner layout and knob labels clear and readable.",
+    "expected": "Four burners; front-right burner active; only FR knob set to HIGH; readable RL/RR/FL/FR labels.",
+    "source_provenance": {
+      "citation": "Designed for this comparison",
+      "figure_or_location": "New 2026-05-20 hard generation case",
+      "source_type": "OOD/custom"
+    },
+    "image": "/mnt/localssd/qitaoz_hard_mixed_eval_20260520/outputs/generation/show_o2_1_5b/hard_gen_stove_knob_mapping.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "hard_gen_measurement_ruler_pencil",
+    "split": "OOD",
+    "category": "Measurement and numeric binding",
+    "title": "Ruler measurement with bracket",
+    "capacity_tags": [
+      "measurement reasoning",
+      "numeric text rendering",
+      "spatial precision"
+    ],
+    "type": "text_to_image",
+    "prompt": "A clean tabletop photo/diagram with a centimeter ruler from 0 to 10. A yellow pencil lies exactly from the 2 cm mark to the 7 cm mark. Draw a bracket above the pencil labeled \"5 cm\". Use readable numbers and a white background.",
+    "expected": "Pencil spans 2 to 7 on the ruler and the bracket reads 5 cm.",
+    "source_provenance": {
+      "citation": "Designed for this comparison",
+      "figure_or_location": "New 2026-05-20 hard generation case",
+      "source_type": "OOD/custom"
+    },
+    "image": "/mnt/localssd/qitaoz_hard_mixed_eval_20260520/outputs/generation/show_o2_1_5b/hard_gen_measurement_ruler_pencil.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "hard_gen_domino_sequence",
+    "split": "OOD",
+    "category": "Temporal physical sequence",
+    "title": "Domino causal sequence",
+    "capacity_tags": [
+      "temporal sequence generation",
+      "counting",
+      "physical causality",
+      "text rendering"
+    ],
+    "type": "text_to_image",
+    "prompt": "A single-panel side-view illustration titled \"CHAIN REACTION\" with six numbered dominoes in a row. Domino 1 is already flat on the table, domino 2 is tilting right, and dominoes 3 through 6 are still upright. Add a small arrow showing the motion from left to right. No extra dominoes.",
+    "expected": "Exactly six numbered dominoes with the specified falling state sequence.",
+    "source_provenance": {
+      "citation": "Designed for this comparison",
+      "figure_or_location": "New 2026-05-20 hard generation case",
+      "source_type": "OOD/custom"
+    },
+    "image": "/mnt/localssd/qitaoz_hard_mixed_eval_20260520/outputs/generation/show_o2_1_5b/hard_gen_domino_sequence.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "hard_gen_transparency_color_mix",
+    "split": "OOD",
+    "category": "Transparency and compositional color",
+    "title": "Transparent acetate overlap colors",
+    "capacity_tags": [
+      "transparency",
+      "color compositionality",
+      "text rendering",
+      "occlusion"
+    ],
+    "type": "text_to_image",
+    "prompt": "A clean vector-style image of three transparent square acetate sheets overlapping: red sheet on the left, blue sheet on the right, yellow sheet on top center. The overlaps should visibly mix colors: red+blue purple, red+yellow orange, blue+yellow green. Add small labels RED, BLUE, YELLOW. White background.",
+    "expected": "Transparent sheets with correct overlap colors and readable color labels.",
+    "source_provenance": {
+      "citation": "Designed for this comparison",
+      "figure_or_location": "New 2026-05-20 hard generation case",
+      "source_type": "OOD/custom"
+    },
+    "image": "/mnt/localssd/qitaoz_hard_mixed_eval_20260520/outputs/generation/show_o2_1_5b/hard_gen_transparency_color_mix.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "hard_gen_traffic_crosswalk_state",
+    "split": "OOD",
+    "category": "Real-world rule visual",
+    "title": "Traffic light and crosswalk state",
+    "capacity_tags": [
+      "real-world rule visual",
+      "text rendering",
+      "spatial layout"
+    ],
+    "type": "text_to_image",
+    "prompt": "A street-corner diagram showing a traffic light with the red light on, a pedestrian signal showing \"DON'T WALK\", and a car stopped behind the stop line before the crosswalk. Add a small street sign that says \"MAIN ST\". Make all text readable and keep the scene uncluttered.",
+    "expected": "Red traffic light, DON'T WALK sign, car stopped before crosswalk, readable MAIN ST.",
+    "source_provenance": {
+      "citation": "Designed for this comparison",
+      "figure_or_location": "New 2026-05-20 hard generation case",
+      "source_type": "OOD/custom"
+    },
+    "image": "/mnt/localssd/qitaoz_hard_mixed_eval_20260520/outputs/generation/show_o2_1_5b/hard_gen_traffic_crosswalk_state.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "hard_gen_cutaway_sandwich_layers",
+    "split": "OOD",
+    "category": "Part-whole cutaway",
+    "title": "Sandwich cutaway layer order",
+    "capacity_tags": [
+      "part-whole composition",
+      "layer order",
+      "text rendering"
+    ],
+    "type": "text_to_image",
+    "prompt": "A precise cutaway illustration of a sandwich with visible layers from bottom to top: bread, lettuce, tomato, cheese, ham, bread. One triangular bite is removed from the front-right corner so the layers are visible. Add small right-side labels for each layer in the correct vertical order.",
+    "expected": "Six sandwich layers in the requested bottom-to-top order with a bite exposing the stack.",
+    "source_provenance": {
+      "citation": "Designed for this comparison",
+      "figure_or_location": "New 2026-05-20 hard generation case",
+      "source_type": "OOD/custom"
+    },
+    "image": "/mnt/localssd/qitaoz_hard_mixed_eval_20260520/outputs/generation/show_o2_1_5b/hard_gen_cutaway_sandwich_layers.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  },
+  {
+    "id": "hard_gen_magnetic_field_compass",
+    "split": "OOD",
+    "category": "Scientific diagram",
+    "title": "Compass needles around magnet",
+    "capacity_tags": [
+      "scientific diagram generation",
+      "arrow direction binding",
+      "text rendering"
+    ],
+    "type": "text_to_image",
+    "prompt": "A clean science diagram titled \"MAGNET TEST\". Place a horizontal bar magnet labeled N on the left end and S on the right end. Around it draw four small compass needles: above the magnet points left, below points right, left side points toward N, right side points away from N. Use simple arrows and readable labels.",
+    "expected": "Bar magnet N/S plus four compass arrows with requested directions.",
+    "source_provenance": {
+      "citation": "Designed for this comparison",
+      "figure_or_location": "New 2026-05-20 hard generation case",
+      "source_type": "OOD/custom"
+    },
+    "image": "/mnt/localssd/qitaoz_hard_mixed_eval_20260520/outputs/generation/show_o2_1_5b/hard_gen_magnetic_field_compass.png",
+    "resolution": "432x432",
+    "width": 432,
+    "height": 432,
+    "model_key": "show_o2_1_5b",
+    "readback_note": "Not run; this runner uses the official 432px T2I-only path."
+  }
+]

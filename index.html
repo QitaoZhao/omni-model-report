@@ -327,10 +327,10 @@ footer { border-top: 1px solid var(--line); margin-top: 34px; padding-top: 20px;
   <p class="lede">Merged archive with image generation, image understanding, interleaved text-image generation, exact prompt audit, and supplementary demo gallery separated into tabs.</p>
   <div class="stats">
     <div class="stat"><strong>6</strong><span>models</span></div>
-    <div class="stat"><strong>37</strong><span>matrix test cases</span></div>
-    <div class="stat"><strong>27</strong><span>understanding cases</span></div>
+    <div class="stat"><strong>45</strong><span>matrix test cases</span></div>
+    <div class="stat"><strong>35</strong><span>understanding cases</span></div>
     <div class="stat"><strong>7</strong><span>capacity groups</span></div>
-    <div class="stat"><strong>285</strong><span>image artifacts on page</span></div>
+    <div class="stat"><strong>341</strong><span>image artifacts on page</span></div>
   </div>
 </header>
 <main>
@@ -1717,6 +1717,402 @@ footer { border-top: 1px solid var(--line); margin-top: 34px; padding-top: 20px;
   </details>
   </article>
       </div>
+    </article><article class="case-block">
+      <div class="case-head">
+        <h3>Gear train with alternating arrows</h3>
+        <span class="tag">OOD</span>
+        
+        
+      </div>
+      <p class="prompt"><strong>Prompt:</strong> A clean technical diagram titled &quot;GEAR TRAIN&quot; showing three interlocking gears in a horizontal row. Gear A has a clockwise red arrow, gear B has a counterclockwise blue arrow, and gear C has a clockwise green arrow. Put the label &quot;POWER&quot; above gear A and &quot;OUTPUT&quot; below gear C. Use white background, black outlines, no extra gears.</p>
+      <p class="meta"><strong>Expected:</strong> Exactly three labeled gears A/B/C; adjacent arrows alternate; readable POWER and OUTPUT labels.</p>
+      <p class="meta"><strong>Source:</strong> Designed for this comparison | New 2026-05-20 hard generation case</p>
+      
+      <div class="matrix">
+        
+        <article class="card result">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag">384x384</span></div>
+    <img src="assets/hard_mixed_janus_pro_7b_hard_gen_gear_train_arrows.jpg" alt="Janus-Pro-7B hard_gen_gear_train_arrows">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The visible text in the image is: - GEAR TRAIN - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤ - ⬤⬤⬤</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: Janus-Pro-7B · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> run_janus_pro_demos.image_to_text</p>
+    <p><strong>Config:</strong> <code>bfloat16, cuda, do_sample=false, max_new_tokens=256</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_bagel_7b_mot_hard_gen_gear_train_arrows.png" alt="BAGEL-7B-MoT hard_gen_gear_train_arrows">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The image contains the following text: &quot;GEAR TRAIN&quot; at the top, &quot;POWER&quot; below the first gear, &quot;OPPWE.&quot; below the second gear, and &quot;OOUDTLT&quot; below the third gear. The image satisfies the requested counts, labels, directions, and spatial relationships as follows: - The text &quot;GEAR TRAIN&quot; is centered at the top of the image. - The text &quot;POWER&quot; is positioned directly below the first gear, which is colored red and has a red arrow pointing to the right. - The text &quot;OPPWE.&quot; is positioned directly below the second gear, which is colored blue and has a blue arrow pointing to the right. - The text &quot;OOUDTLT&quot; is positioned directly below the third gear, which is colored green and has a green arrow pointing to the right. The gears are arranged in a linear sequence, with each gear connected to the next by a blue arrow, indicating the direction of power transfer. The spatial relationships between the gears and the text labels are clear and consistent with the direction of the arrows.</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: BAGEL-7B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> InterleaveInferencer(..., understanding_output=True)</p>
+    <p><strong>Config:</strong> <code>bfloat16, text_temperature=0.3, do_sample=false, max_think_token_n=512</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_sensenova_u1_8b_mot_hard_gen_gear_train_arrows.png" alt="SenseNova-U1-8B-MoT hard_gen_gear_train_arrows">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>&lt;think&gt; The user wants me to extract text and then analyze the image based on specific criteria. **1. Text Extraction:** - Top banner: &quot;GEAR TRAIN&quot; - Left side label: &quot;POWER&quot; - Inside Gear A: &quot;A&quot; - Inside Gear B: &quot;B&quot; - Inside Gear C: &quot;C&quot; - Bottom right label: &quot;OUTPUT&quot; **2. Analysis of Criteria:** - **Counts:** There are three gears labeled A, B, and C. This matches a standard &quot;train&quot; of three gears. - **Labels:** - &quot;POWER&quot; is near the first gear (A). - &quot;OUTPUT&quot; is near the last gear (C). - &quot;GEAR TRAIN&quot; is the title. - &quot;A&quot;, &quot;B&quot;, &quot;C&quot; label the gears. - **Directions:** - Gear A (red arrows): Clockwise. - Gear B (blue arrows): Counter-clockwise. - Gear C (green arrows): Clockwise. - This is physically correct for meshing gears. If A turns clockwise, B turns counter-clockwise, and C turns clockwise. - **Spatial Relationships:** - The gears are arranged horizontally in a line: A -&gt; B -&gt; C. - They are meshed together. - &quot;POWER&quot; is above/left of Gear A. - &quot;OUTPUT&quot; is below/right of Gear C. **3. Synthesizing the response:** - First, list the visible text exactly as requested. - Then, describe the satisfaction of the criteria. - Counts: 3 gears (A, B, C). - Labels: Power, Output, Gear Train, A, B, C. - Directions: Alternating clockwise/counter-clockwise (A: CW, B: CCW, C: CW). This is correct. - Spatial: Linear arrangement, meshing. Let's refine the &quot;directions&quot; part. - Gear A: Red arrows show clockwise motion. - Gear B: Blue arrows show counter-clockwise motion. - Gear C: Green arrows show clockwise motion. This is consistent with how gears work. Let's refine the &quot;spatial relationships&quot; part. - The gears are side-by-side. - Power is associated with the input (Gear A). - Output is associated with the result (Gear C). The prompt asks to &quot;describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; Since no specific *requested* counts/labels were given in the prompt (it just says &quot;Read all visible text... Then describe whether the image satisfies the requested counts...&quot;), I will interpret &quot;requested&quot; as the standard expectations for such a diagram or simply describe the visible elements that *would* satisfy a standard request for this type of diagram. Wait, re-reading the prompt: &quot;Read all visible text exactly. Then describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This implies there might be a hidden request or I should just evaluate the image against standard logical consistency. I will assume the &quot;requested&quot; part refers to the visual elements present in the image itself acting as a self-contained diagram. I will describe the image's content and verify its logical consistency. Actually, looking at the prompt again, it's a standard VQA task. &quot;Requested counts&quot; likely refers to what is *in* the image. I will describe the image's features. Let's stick to the visible text first. - GEAR TRAIN - POWER - A - B - C - OUTPUT Now for the description part. - **Counts:** There are 3 gears. - **Labels:** The labels &quot;POWER&quot; and &quot;OUTPUT&quot; are present. The title &quot;GEAR TRAIN&quot; is present. The gears are labeled A, B, C. - **Directions:** The arrows indicate rotation. A is clockwise, B is counter-clockwise, C is clockwise. This is physically correct for a gear train. - **Spatial Relationships:** The gears are arranged linearly from left to right. Power is at the start (left), Output is at the end (right). I will formulate the final response. &lt;/think&gt; **Visible Text:** - GEAR TRAIN - POWER - A - B - C - OUTPUT **Description of Satisfaction:** The image effectively illustrates a gear train concept with the following characteristics: * **Counts:** There are exactly three gears labeled A, B, and C, which is a standard configuration for a simple gear train. * **Labels:** The diagram includes the title &quot;GEAR TRAIN,&quot; an input label &quot;POWER&quot; near the first gear, and an output label &quot;OUTPUT&quot; near the last gear. The gears themselves are clearly labeled A, B, and C. * **Directions:** The rotational directions are logically consistent. Gear A rotates clockwise (red arrows), which forces Gear B to rotate counter-clockwise (blue arrows), which in turn forces Gear C to rotate clockwise (green arrows</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: SenseNova-U1-8B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> examples/vqa/inference.py --jsonl</p>
+    <p><strong>Config:</strong> <code>bfloat16, sdpa, do_sample=false, max_new_tokens=1024</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag">432x432</span></div>
+    <img src="assets/hard_mixed_show_o2_1_5b_hard_gen_gear_train_arrows.png" alt="Show-o2-1.5B hard_gen_gear_train_arrows">
+    <p class="snippet">Not run; this runner uses the official 432px T2I-only path.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_emu3_5_image_vllm_8x80_hard_gen_gear_train_arrows.png" alt="Emu3.5-Image vLLM 8x80GB hard_gen_gear_train_arrows">
+    <p class="snippet">8x A100 80GB vLLM tensor-parallel path, including model load and all prompts.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_onecat_3b_hard_gen_gear_train_arrows.png" alt="OneCAT-3B hard_gen_gear_train_arrows">
+    
+    
+    
+  </article>
+      </div>
+    </article><article class="case-block">
+      <div class="case-head">
+        <h3>Stove burner and knob mapping</h3>
+        <span class="tag">OOD</span>
+        
+        
+      </div>
+      <p class="prompt"><strong>Prompt:</strong> A top-down product-style diagram of a four-burner stove. The front-right burner is glowing orange. Below it are four round knobs labeled RL, RR, FL, FR; only the FR knob is turned to HIGH and the other knobs are OFF. Keep the burner layout and knob labels clear and readable.</p>
+      <p class="meta"><strong>Expected:</strong> Four burners; front-right burner active; only FR knob set to HIGH; readable RL/RR/FL/FR labels.</p>
+      <p class="meta"><strong>Source:</strong> Designed for this comparison | New 2026-05-20 hard generation case</p>
+      
+      <div class="matrix">
+        
+        <article class="card result">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag">384x384</span></div>
+    <img src="assets/hard_mixed_janus_pro_7b_hard_gen_stove_knob_mapping.jpg" alt="Janus-Pro-7B hard_gen_stove_knob_mapping">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The image contains the following visible text: 1. &quot;Sonic Wave&quot; 2. &quot;Sonic Wave&quot; 3. &quot;Sonic Wave&quot; 4. &quot;Sonic Wave&quot; 5. &quot;Sonic Wave&quot; 6. &quot;Sonic Wave&quot; 7. &quot;Sonic Wave&quot; 8. &quot;Sonic Wave&quot; 9. &quot;Sonic Wave&quot; 10. &quot;Sonic Wave&quot; 11. &quot;Sonic Wave&quot; 12. &quot;Sonic Wave&quot; 13. &quot;Sonic Wave&quot; 14. &quot;Sonic Wave&quot; 15. &quot;Sonic Wave&quot; 16. &quot;Sonic Wave&quot; 17. &quot;Sonic Wave&quot; 18. &quot;Sonic Wave&quot; 19. &quot;Sonic Wave&quot; 20. &quot;Sonic Wave&quot; 21. &quot;Sonic Wave&quot; 22. &quot;Sonic Wave&quot; 23. &quot;Sonic Wave&quot; 24. &quot;Sonic Wave&quot; 25. &quot;Sonic Wave&quot; 26. &quot;Sonic Wave&quot; 27. &quot;Sonic Wave&quot; 28. &quot;Sonic Wave&quot; 29.</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: Janus-Pro-7B · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> run_janus_pro_demos.image_to_text</p>
+    <p><strong>Config:</strong> <code>bfloat16, cuda, do_sample=false, max_new_tokens=256</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_bagel_7b_mot_hard_gen_stove_knob_mapping.png" alt="BAGEL-7B-MoT hard_gen_stove_knob_mapping">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The image shows a gas stove with two burners and several control knobs. The visible text includes: - &quot;RL&quot; on the left knob - &quot;RF&quot; on the right knob - &quot;RLC&quot; on the left control knob - &quot;RR&quot; on the right control knob - &quot;P1&quot; on the top left control knob - &quot;P2&quot; on the top right control knob - &quot;B&quot; on the middle left control knob - &quot;C&quot; on the middle right control knob - &quot;IRG&quot; on the top right control knob The image satisfies the requested counts, labels, directions, and spatial relationships as follows: - There are two burners, each with a corresponding knob. - The left knob is labeled &quot;RL&quot; and the right knob is labeled &quot;RF&quot;. - The control knobs are arranged in a grid pattern, with &quot;RLC&quot; and &quot;RR&quot; being the top left and right knobs, respectively. - The middle left knob is labeled &quot;B&quot; and the middle right knob is labeled &quot;C&quot;. - The top right knob is labeled &quot;IRG&quot;. - The spatial relationships between the knobs and burners are consistent with a typical gas stove layout.</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: BAGEL-7B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> InterleaveInferencer(..., understanding_output=True)</p>
+    <p><strong>Config:</strong> <code>bfloat16, text_temperature=0.3, do_sample=false, max_think_token_n=512</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_sensenova_u1_8b_mot_hard_gen_stove_knob_mapping.png" alt="SenseNova-U1-8B-MoT hard_gen_stove_knob_mapping">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>&lt;think&gt; The user wants me to extract text from the image and then verify if the image matches some implicit or explicit criteria. Wait, the prompt says &quot;Read all visible text exactly. Then describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This implies there might be a hidden request or I need to infer the &quot;requested&quot; part. Looking at the image, it's a stove top with burners and knobs. Let's look at the text first. - Top center: &quot;T&quot; inside a circle, next to a lightbulb icon. It looks like a timer or light symbol. Let's call it &quot;T&quot;. - Bottom left burner label: &quot;FL&quot; - Bottom right burner label: &quot;FR&quot; - Knob labels from left to right: &quot;RL&quot;, &quot;RR&quot;, &quot;FL&quot;, &quot;FR&quot; Now, let's look at the &quot;requested counts, labels, directions, and spatial relationships&quot;. This part is tricky. Usually, these prompts come with a specific task like &quot;Is there 1 FL knob?&quot; or &quot;Are the knobs arranged RL, RR, FL, FR?&quot;. Since there is no specific request provided in the prompt *other than* the general instruction, I have to assume the &quot;requested&quot; part refers to the visible labels themselves acting as a self-check or perhaps the prompt is a template and I need to describe the image based on what is there. Actually, re-reading the prompt: &quot;Read all visible text exactly. Then describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This sounds like a standard VQA task where the &quot;requested&quot; part is missing. However, often in these datasets, the &quot;request&quot; is implicit in the image content itself (e.g., matching labels to positions). Let's look at the labels and their positions. - Burner labels: &quot;FL&quot; is under the bottom-left burner. &quot;FR&quot; is under the bottom-right burner. - Knob labels: &quot;RL&quot; is above the leftmost knob. &quot;RR&quot; is above the second knob. &quot;FL&quot; is above the third knob. &quot;FR&quot; is above the rightmost knob. Wait, let's look closer at the knob labels. - Leftmost knob: &quot;RL&quot; above it. - Second knob: &quot;RR&quot; above it. - Third knob: &quot;FL&quot; above it. - Rightmost knob: &quot;FR&quot; above it. Let's look at the burner labels again. - Bottom-left burner: &quot;FL&quot; below it. - Bottom-right burner: &quot;FR&quot; below it. There seems to be a mismatch or a specific pattern. - The knob labeled &quot;FL&quot; corresponds to the burner labeled &quot;FL&quot; (Front Left). - The knob labeled &quot;FR&quot; corresponds to the burner labeled &quot;FR&quot; (Front Right). - The knobs &quot;RL&quot; and &quot;RR&quot; don't have corresponding burner labels visible in the same way, or maybe the top burners are implied. The top burners don't have labels directly under them, but the layout suggests a 2x2 grid. - Top Left: No label. - Top Right: No label. - Bottom Left: &quot;FL&quot; - Bottom Right: &quot;FR&quot; Let's re-examine the whole image. - Top center: &quot;T&quot; with a lightbulb. - Burners: - Top Left: Unlabeled. - Top Right: Unlabeled. - Bottom Left: Labeled &quot;FL&quot;. - Bottom Right: Labeled &quot;FR&quot;. - Knobs: - Leftmost: &quot;RL&quot; - Second: &quot;RR&quot; - Third: &quot;FL&quot; - Rightmost: &quot;FR&quot; The prompt asks to &quot;describe whether the image satisfies the requested counts...&quot;. This implies I should check if the labels match the positions logically. - &quot;FL&quot; knob is the third one from the left. &quot;FL&quot; burner is the bottom-left one. - &quot;FR&quot; knob is the fourth one (rightmost). &quot;FR&quot; burner is the bottom-right one. - &quot;RL&quot; knob is the first one. &quot;RR&quot; knob is the second one. This looks like a standard gas hob layout. - RL = Rear Left - RR = Rear Right - FL = Front Left - FR = Front Right The labels on the knobs are: RL, RR, FL, FR. The labels on the burners are: FL, FR (only for the front ones). So, the text extraction is: - T (with lightbulb icon) - FL (under bottom-left burner) - FR (under bottom-right burner) - RL (above left knob) - RR (above second knob) - FL (above third knob) - FR (above right knob) Now, regarding &quot;satisfies the requested counts...&quot;: Since there is no explicit request like &quot;Are there 4 knobs?&quot;, I will assume the &quot;request&quot; is to verify the consistency of the labels with the visual layout.</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: SenseNova-U1-8B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> examples/vqa/inference.py --jsonl</p>
+    <p><strong>Config:</strong> <code>bfloat16, sdpa, do_sample=false, max_new_tokens=1024</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag">432x432</span></div>
+    <img src="assets/hard_mixed_show_o2_1_5b_hard_gen_stove_knob_mapping.png" alt="Show-o2-1.5B hard_gen_stove_knob_mapping">
+    <p class="snippet">Not run; this runner uses the official 432px T2I-only path.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_emu3_5_image_vllm_8x80_hard_gen_stove_knob_mapping.png" alt="Emu3.5-Image vLLM 8x80GB hard_gen_stove_knob_mapping">
+    <p class="snippet">8x A100 80GB vLLM tensor-parallel path, including model load and all prompts.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_onecat_3b_hard_gen_stove_knob_mapping.png" alt="OneCAT-3B hard_gen_stove_knob_mapping">
+    
+    
+    
+  </article>
+      </div>
+    </article><article class="case-block">
+      <div class="case-head">
+        <h3>Ruler measurement with bracket</h3>
+        <span class="tag">OOD</span>
+        
+        
+      </div>
+      <p class="prompt"><strong>Prompt:</strong> A clean tabletop photo/diagram with a centimeter ruler from 0 to 10. A yellow pencil lies exactly from the 2 cm mark to the 7 cm mark. Draw a bracket above the pencil labeled &quot;5 cm&quot;. Use readable numbers and a white background.</p>
+      <p class="meta"><strong>Expected:</strong> Pencil spans 2 to 7 on the ruler and the bracket reads 5 cm.</p>
+      <p class="meta"><strong>Source:</strong> Designed for this comparison | New 2026-05-20 hard generation case</p>
+      
+      <div class="matrix">
+        
+        <article class="card result">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag">384x384</span></div>
+    <img src="assets/hard_mixed_janus_pro_7b_hard_gen_measurement_ruler_pencil.jpg" alt="Janus-Pro-7B hard_gen_measurement_ruler_pencil">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The visible text in the image includes: 1. &quot;5cm&quot; written twice, once near the top and once near the bottom. 2. &quot;5m&quot; written near the bottom. 3. &quot;5m&quot; written near the top. 4. &quot;5m&quot; written near the bottom. 5. &quot;5m&quot; written near the top. 6. &quot;5m&quot; written near the bottom. 7. &quot;5m&quot; written near the top. 8. &quot;5m&quot; written near the bottom. 9. &quot;5m&quot; written near the top. 10. &quot;5m&quot; written near the bottom. 11. &quot;5m&quot; written near the top. 12. &quot;5m&quot; written near the bottom. 13. &quot;5m&quot; written near the top. 14. &quot;5m&quot; written near the bottom. 15. &quot;5m&quot; written near the top. 16. &quot;5m&quot; written near the bottom. 17. &quot;5m&quot; written near the top. 18. &quot;5m&quot; written near the bottom. 19. &quot;5m&quot; written near the top.</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: Janus-Pro-7B · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> run_janus_pro_demos.image_to_text</p>
+    <p><strong>Config:</strong> <code>bfloat16, cuda, do_sample=false, max_new_tokens=256</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_bagel_7b_mot_hard_gen_measurement_ruler_pencil.png" alt="BAGEL-7B-MoT hard_gen_measurement_ruler_pencil">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The image shows a ruler with measurements in centimeters. The ruler is marked with numbers at 0, 5, 10, 15, and 20 centimeters. There is a pencil placed vertically on the ruler, with its tip pointing downwards. The pencil is positioned at the 10 centimeter mark. The text &quot;c ctem&quot; is written above the pencil, indicating the measurement in centimeters. The image satisfies the requested counts, labels, directions, and spatial relationships as it clearly shows the ruler, the pencil, and the measurement in centimeters.</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: BAGEL-7B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> InterleaveInferencer(..., understanding_output=True)</p>
+    <p><strong>Config:</strong> <code>bfloat16, text_temperature=0.3, do_sample=false, max_think_token_n=512</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_sensenova_u1_8b_mot_hard_gen_measurement_ruler_pencil.png" alt="SenseNova-U1-8B-MoT hard_gen_measurement_ruler_pencil">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>&lt;think&gt; The user wants me to identify the text in the image and then evaluate if the image meets certain criteria. However, the prompt asks me to &quot;describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This implies there might be a specific task or set of constraints I'm supposed to check against, but none are explicitly provided in the prompt itself other than the implicit task of &quot;reading&quot; and &quot;describing.&quot; Wait, looking closer at the prompt structure: &quot;Read all visible text exactly. Then describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This sounds like a standard template for a specific type of image analysis task, possibly related to a dataset or a specific instruction set that isn't fully visible here. Let's break down the visible text first. - On the ruler: &quot;1&quot;, &quot;2&quot;, &quot;2&quot;, &quot;4&quot;, &quot;3&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;7&quot;, &quot;8&quot;, &quot;10&quot;, &quot;10&quot;. Wait, let me look closer at the ruler numbers. - Left side: &quot;1&quot;, &quot;2&quot;, &quot;2&quot; (looks like a typo or misalignment, actually it's 1, 2, 3... wait, let's re-examine). - The ruler numbers are: 1, 2, 2 (this is weird, let's look really closely), 4, 3, 5, 6, 7, 7, 8, 10. - Actually, let's look at the sequence. It goes 1, 2, 2 (maybe a 3 that looks like a 2?), 4, 3 (maybe a 5?), 5, 6, 7, 7 (maybe an 8?), 8, 10. - Let's look at the ruler again. It's a standard metric ruler. - The numbers visible are: 1, 2, 2 (this is definitely a 3 that is printed poorly or is a duplicate), 4, 3 (this is a 5 printed poorly?), 5, 6, 7, 7 (this is an 8 printed poorly?), 8, 10. - Actually, looking very closely at crop 4 and 5: - &quot;1&quot; - &quot;2&quot; - &quot;2&quot; -&gt; This is likely a &quot;3&quot; but looks like a &quot;2&quot;. Or maybe it's just a &quot;2&quot; and the next one is a &quot;3&quot;. Let's assume standard ruler markings. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. - Let's re-read the numbers from left to right carefully. - &quot;1&quot; - &quot;2&quot; - &quot;2&quot; -&gt; Wait, looking at the spacing, it's 1, 2, 3 (looks like a 2), 4, 5 (looks like a 3), 6, 7, 8 (looks like a 7), 9 (looks like an 8), 10. - Let's look at the full image again. - The numbers are: 1, 2, 2, 4, 3, 5, 6, 7, 7, 8, 10. - This is extremely garbled. Let's look at the ruler markings. - 1 cm mark. - 2 cm mark. - 3 cm mark (labeled '2'?? No, that's weird). Let's assume the text is just what is there. - Visible text on ruler: &quot;1&quot;, &quot;2&quot;, &quot;2&quot;, &quot;4&quot;, &quot;3&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;7&quot;, &quot;8&quot;, &quot;10&quot;. And &quot;10&quot; at the far right edge. - Wait, let's look at the label above the pencil. &quot;[ 5 cm ]&quot;. - Let's look at the ruler again. It seems like a generated or edited image where the numbers are messed up. - Let's transcribe exactly what is visible. - Ruler numbers: &quot;1&quot;, &quot;2&quot;, &quot;2&quot;, &quot;4&quot;, &quot;3&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;7&quot;, &quot;8&quot;, &quot;10&quot;. And a partial &quot;10&quot; on the far right. - Label: &quot;[ 5 cm ]&quot;. Now, regarding the second part: &quot;describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This part is tricky. There are no &quot;requested counts&quot; provided in the prompt. The prompt is just &quot;Read all visible text exactly. Then describe whether the image satisfies the requested counts...&quot; This suggests I might be missing context. Or, perhaps the &quot;requested counts</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: SenseNova-U1-8B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> examples/vqa/inference.py --jsonl</p>
+    <p><strong>Config:</strong> <code>bfloat16, sdpa, do_sample=false, max_new_tokens=1024</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag">432x432</span></div>
+    <img src="assets/hard_mixed_show_o2_1_5b_hard_gen_measurement_ruler_pencil.png" alt="Show-o2-1.5B hard_gen_measurement_ruler_pencil">
+    <p class="snippet">Not run; this runner uses the official 432px T2I-only path.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_emu3_5_image_vllm_8x80_hard_gen_measurement_ruler_pencil.png" alt="Emu3.5-Image vLLM 8x80GB hard_gen_measurement_ruler_pencil">
+    <p class="snippet">8x A100 80GB vLLM tensor-parallel path, including model load and all prompts.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_onecat_3b_hard_gen_measurement_ruler_pencil.png" alt="OneCAT-3B hard_gen_measurement_ruler_pencil">
+    
+    
+    
+  </article>
+      </div>
+    </article><article class="case-block">
+      <div class="case-head">
+        <h3>Domino causal sequence</h3>
+        <span class="tag">OOD</span>
+        
+        
+      </div>
+      <p class="prompt"><strong>Prompt:</strong> A single-panel side-view illustration titled &quot;CHAIN REACTION&quot; with six numbered dominoes in a row. Domino 1 is already flat on the table, domino 2 is tilting right, and dominoes 3 through 6 are still upright. Add a small arrow showing the motion from left to right. No extra dominoes.</p>
+      <p class="meta"><strong>Expected:</strong> Exactly six numbered dominoes with the specified falling state sequence.</p>
+      <p class="meta"><strong>Source:</strong> Designed for this comparison | New 2026-05-20 hard generation case</p>
+      
+      <div class="matrix">
+        
+        <article class="card result">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag">384x384</span></div>
+    <img src="assets/hard_mixed_janus_pro_7b_hard_gen_domino_sequence.jpg" alt="Janus-Pro-7B hard_gen_domino_sequence">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The visible text in the image reads &quot;CHAIN ELEGION.&quot; The image contains several dominoes arranged in a sequence, with each domino showing a different number of dots. The dominoes are aligned horizontally, and the sequence starts with a domino showing two dots on the leftmost side. The next domino shows one dot, followed by a domino with three dots, and so on, up to a domino with six dots on the rightmost side. The text &quot;CHAIN ELEGION&quot; is positioned above the dominoes, centered in the image. The spatial relationships in the image are as follows: - The dominoes are aligned in a straight horizontal line. - The text &quot;CHAIN ELEGION&quot; is positioned above the dominoes, centered horizontally. - The dots on the dominoes are arranged in a sequential order, with each domino showing a different number of dots. - The red arrows at the bottom of the image indicate the direction of the sequence, pointing from left to right. The image satisfies the requested counts, labels, directions, and spatial relationships.</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: Janus-Pro-7B · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> run_janus_pro_demos.image_to_text</p>
+    <p><strong>Config:</strong> <code>bfloat16, cuda, do_sample=false, max_new_tokens=256</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_bagel_7b_mot_hard_gen_domino_sequence.png" alt="BAGEL-7B-MoT hard_gen_domino_sequence">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The image contains the text &quot;CHAIN REACTION&quot; at the top. Below this text, there are five blocks with numbers on them, arranged in a sequence: 1, 3, 4, 3, 5. The blocks are aligned horizontally, and there is an arrow pointing to the left, indicating the direction of the chain reaction. The image satisfies the requested counts, labels, directions, and spatial relationships as follows: - The text &quot;CHAIN REACTION&quot; is present and correctly labeled. - The numbers on the blocks are correctly counted and labeled: 1, 3, 4, 3, 5. - The arrow is correctly directed to the left, indicating the direction of the chain reaction. - The blocks are correctly spatially related to each other in a horizontal sequence.</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: BAGEL-7B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> InterleaveInferencer(..., understanding_output=True)</p>
+    <p><strong>Config:</strong> <code>bfloat16, text_temperature=0.3, do_sample=false, max_think_token_n=512</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_sensenova_u1_8b_mot_hard_gen_domino_sequence.png" alt="SenseNova-U1-8B-MoT hard_gen_domino_sequence">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>&lt;think&gt; The user wants me to identify the text in the image and then evaluate if the image meets certain criteria. However, the prompt doesn't explicitly state *what* counts, labels, directions, or spatial relationships are requested. It just says &quot;Read all visible text exactly. Then describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; Wait, looking at the prompt again, it's a bit ambiguous. &quot;Read all visible text exactly. Then describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This sounds like a standard template prompt where the &quot;requested&quot; part is usually defined in a separate instruction or context that I might be missing. Or, perhaps, the user is asking me to *infer* what the image is trying to show and check against that. Let's look at the image content. - There are wooden blocks. - One block is lying flat on the left. - One block is leaning against the next one. - There are four blocks standing upright. - The blocks have numbers on them. - The leaning block has &quot;1.&quot; on the front face and &quot;2&quot; on the top face. - The flat block has no visible text. - The first standing block has &quot;3.&quot; on the front face. - The second standing block has &quot;3.&quot; on the front face. Wait, let me look closer. It looks like &quot;3.&quot; again. Or maybe it's a &quot;5.&quot;? No, the top loop is closed. It looks like a 3. Let me re-examine. - Block 1 (leaning): Front says &quot;1.&quot;, Top says &quot;2&quot;. - Block 2 (standing): Front says &quot;3.&quot;. - Block 3 (standing): Front says &quot;3.&quot;. Wait, is that a 5? The top part is flat. It looks like a 3. Let's assume it's a 3 for now, but maybe it's a 5. Let's look at the sequence. 1, 2, 3, 3, 4, 6. That's weird. Let's look really closely at the third block. It looks like a &quot;3.&quot;. - Block 4 (standing): Front says &quot;4.&quot;. - Block 5 (standing): Front says &quot;6.&quot;. Let's re-read the numbers. - Leaning block: &quot;1.&quot; on the side facing us, &quot;2&quot; on the top. - Standing block 1: &quot;3.&quot; - Standing block 2: &quot;3.&quot; -&gt; Actually, looking very closely at crop 2 and 5, the third block has a number that looks like a &quot;3.&quot; but the top is flat. Could it be a &quot;5.&quot;? No, the curve is distinct. It looks like a 3. Wait, let me look at the full image again. - Let's look at the sequence. 1, 2, 3, 3, 4, 6. This doesn't make a clear sequence. - Let's look at the third block again. It's the one between the first &quot;3.&quot; and the &quot;4.&quot;. The number is &quot;3.&quot;. Wait, is it a &quot;5.&quot;? The top horizontal bar is distinct. A '3' usually has a curved top. A '5' has a horizontal top. This number has a horizontal top. So it's likely a &quot;5.&quot;. Let's assume it's a 5. - So the sequence is: 1 (on side), 2 (on top), 3, 5, 4, 6. This is still jumbled. - Let's look at the blocks again. - Block 1 (leaning): Side &quot;1.&quot;, Top &quot;2&quot;. - Block 2 (standing): &quot;3.&quot; - Block 3 (standing): &quot;3.&quot; -&gt; Wait, let me look at the third crop. It shows &quot;3.&quot;. It looks exactly like the previous one. But that would be duplicate. - Block 4 (standing): &quot;4.&quot; - Block 5 (standing): &quot;6.&quot; Let's reconsider the &quot;requested&quot; part. The prompt is likely a test case for a VQA model where the &quot;request&quot; is implicit or I need to generate a description that *would* satisfy a request. But the prompt says &quot;describe whether the image satisfies the requested counts...&quot;. This implies there *were* requests. Since there are no specific requests provided in the prompt text (like &quot;Are there 5 blocks?&quot;), I have to assume the prompt is asking me to *perform* the task of reading text and then *evaluating* the image against some standard criteria, or perhaps the prompt is incomplete. However, often these prompts are &quot;Read text... then describe...&quot;. Let's assume the &quot;requested&quot; part refers to the visual elements present. Actually, looking at the prompt structure &quot;Read all visible text exactly. Then describe whether the image satisfies</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: SenseNova-U1-8B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> examples/vqa/inference.py --jsonl</p>
+    <p><strong>Config:</strong> <code>bfloat16, sdpa, do_sample=false, max_new_tokens=1024</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag">432x432</span></div>
+    <img src="assets/hard_mixed_show_o2_1_5b_hard_gen_domino_sequence.png" alt="Show-o2-1.5B hard_gen_domino_sequence">
+    <p class="snippet">Not run; this runner uses the official 432px T2I-only path.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_emu3_5_image_vllm_8x80_hard_gen_domino_sequence.png" alt="Emu3.5-Image vLLM 8x80GB hard_gen_domino_sequence">
+    <p class="snippet">8x A100 80GB vLLM tensor-parallel path, including model load and all prompts.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_onecat_3b_hard_gen_domino_sequence.png" alt="OneCAT-3B hard_gen_domino_sequence">
+    
+    
+    
+  </article>
+      </div>
+    </article><article class="case-block">
+      <div class="case-head">
+        <h3>Traffic light and crosswalk state</h3>
+        <span class="tag">OOD</span>
+        
+        
+      </div>
+      <p class="prompt"><strong>Prompt:</strong> A street-corner diagram showing a traffic light with the red light on, a pedestrian signal showing &quot;DON'T WALK&quot;, and a car stopped behind the stop line before the crosswalk. Add a small street sign that says &quot;MAIN ST&quot;. Make all text readable and keep the scene uncluttered.</p>
+      <p class="meta"><strong>Expected:</strong> Red traffic light, DON'T WALK sign, car stopped before crosswalk, readable MAIN ST.</p>
+      <p class="meta"><strong>Source:</strong> Designed for this comparison | New 2026-05-20 hard generation case</p>
+      
+      <div class="matrix">
+        
+        <article class="card result">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag">384x384</span></div>
+    <img src="assets/hard_mixed_janus_pro_7b_hard_gen_traffic_crosswalk_state.jpg" alt="Janus-Pro-7B hard_gen_traffic_crosswalk_state">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The visible text in the image is: 1. כניסה (Entrance) 2. כניסה חדשה (New Entrance) 3. כניסה חדשה מזרחית (New Entrance Historical) 4. כניסה חדשה מזרחית (New Entrance Historical) 5. כניסה חדשה מזרחית (New Entrance Historical) 6. כניסה חדשה מזרחית (New Entrance Historical) 7. כניסה חדשה מזרחית (New Entrance Historical) 8. כניסה חדשה מזרחית (New Entrance Historical) 9. כניסה חדשה מזרחית (New Entrance Historical) 10. כניסה חדשה מזרחית (New Entrance Historical</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: Janus-Pro-7B · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> run_janus_pro_demos.image_to_text</p>
+    <p><strong>Config:</strong> <code>bfloat16, cuda, do_sample=false, max_new_tokens=256</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_bagel_7b_mot_hard_gen_traffic_crosswalk_state.png" alt="BAGEL-7B-MoT hard_gen_traffic_crosswalk_state">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The image shows a street intersection with traffic lights and street signs. The visible text includes &quot;MAIN ST&quot; on the street signs. The image satisfies the requested counts, labels, directions, and spatial relationships as it clearly depicts the street signs and traffic lights at the intersection.</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: BAGEL-7B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> InterleaveInferencer(..., understanding_output=True)</p>
+    <p><strong>Config:</strong> <code>bfloat16, text_temperature=0.3, do_sample=false, max_think_token_n=512</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_sensenova_u1_8b_mot_hard_gen_traffic_crosswalk_state.png" alt="SenseNova-U1-8B-MoT hard_gen_traffic_crosswalk_state">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>&lt;think&gt; The user wants me to identify the text in the image and then evaluate if the image meets certain criteria. However, the prompt asks me to &quot;describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This implies there might be a specific request I'm supposed to be checking against, but no specific request was provided in the prompt itself. Wait, looking at the prompt again, it says &quot;Read all visible text exactly. Then describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This is a bit ambiguous. Usually, this kind of prompt comes with a specific set of constraints (e.g., &quot;There should be 3 cars,&quot; &quot;The text should say 'STOP'&quot;). Since there are no specific constraints provided *in the prompt*, I need to interpret &quot;requested counts&quot; as potentially referring to standard traffic rules or just a general description of what is there. Actually, re-reading the prompt structure, it looks like a standard template. &quot;Read all visible text exactly. Then describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This is likely a test of my ability to detect inconsistencies or just a general description task. But wait, if there are no *requested* counts, I can't check against them. Let me look at the image again. - Traffic light: Red light is on. Green light is also on? No, looking closely at the traffic light on the left: - Top light: Red (illuminated). - Middle light: Dark. - Bottom light: Green (illuminated). - This is a contradiction. A traffic light cannot be red and green at the same time. This is a visual error. - Pedestrian signal: &quot;DON'T WALK&quot; with a red hand (or walking figure with a slash? No, it's a red walking figure). Wait, the text says &quot;DON'T WALK&quot; but the icon is a red walking person. Usually, &quot;DON'T WALK&quot; is a red hand. A red walking person usually means &quot;Walk&quot; (but red?). No, a red walking person is confusing. Standard is: Green walking person = Walk. Red hand = Don't Walk. Red walking person is non-standard or an error. Wait, let me look closer. It's a red figure of a person walking. The text says &quot;DON'T WALK&quot;. This is a contradiction. Usually, a red hand means don't walk. A red walking figure is weird. Or maybe it's a &quot;Don't Walk&quot; signal which is often a red hand. Here it is a red walking figure. This is likely an error in the illustration. - Car: There is a car in the intersection. It looks like it's driving through the crosswalk while the pedestrian signal says &quot;DON'T WALK&quot; and the traffic light is confusing (Red/Green). Let's re-evaluate the traffic light. - Top circle: Red. - Middle circle: Dark. - Bottom circle: Green. This is definitely an error. Traffic lights don't show red and green simultaneously. Let's re-evaluate the pedestrian signal. - Text: &quot;DON'T WALK&quot;. - Icon: A red figure of a person walking. - Standard signals: Green walking person = Walk. Red hand = Don't Walk. Sometimes a flashing red hand means &quot;Don't Start Crossing&quot;. A solid red hand means &quot;Don't Walk&quot;. A red walking figure is not standard. It looks like a &quot;Walk&quot; symbol but colored red. This is confusing. Let's look at the car. - The car is in the middle of the intersection, seemingly driving through the crosswalk. - The pedestrian signal says &quot;DON'T WALK&quot;. - The traffic light is contradictory. Maybe the prompt implies I should check for *logical consistency* based on real-world rules? &quot;Describe whether the image satisfies the requested counts...&quot; -&gt; This phrasing suggests there *were* requests. Since there aren't any, I will assume the &quot;requests&quot; are implicit: &quot;Is this a realistic/consistent image?&quot; Let's look for text again. - &quot;MAIN ST&quot; on the street sign. - &quot;DON'T WALK&quot; on the pedestrian signal. Let's look for other details. - The traffic light has Red and Green lit. - The pedestrian signal has a red walking figure. Okay, let's formulate the response. 1. **Read text:** &quot;MAIN ST&quot;, &quot;DON'T WALK&quot;. 2. **Describe satisfaction:** The image contains several inconsistencies/errors that violate standard traffic rules and visual logic. * **Traffic Light:** The vertical traffic light shows both the Red light (top) and the Green light (bottom) illuminated at the same time. This is impossible. * **Pedestrian Signal:** The signal displays &quot;DON'T WALK&quot; but shows a red figure of a person walking. Standard signals use a red hand for &quot;Don't Walk&quot; and a green walking person for &quot;</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: SenseNova-U1-8B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> examples/vqa/inference.py --jsonl</p>
+    <p><strong>Config:</strong> <code>bfloat16, sdpa, do_sample=false, max_new_tokens=1024</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag">432x432</span></div>
+    <img src="assets/hard_mixed_show_o2_1_5b_hard_gen_traffic_crosswalk_state.png" alt="Show-o2-1.5B hard_gen_traffic_crosswalk_state">
+    <p class="snippet">Not run; this runner uses the official 432px T2I-only path.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_emu3_5_image_vllm_8x80_hard_gen_traffic_crosswalk_state.png" alt="Emu3.5-Image vLLM 8x80GB hard_gen_traffic_crosswalk_state">
+    <p class="snippet">8x A100 80GB vLLM tensor-parallel path, including model load and all prompts.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_onecat_3b_hard_gen_traffic_crosswalk_state.png" alt="OneCAT-3B hard_gen_traffic_crosswalk_state">
+    
+    
+    
+  </article>
+      </div>
+    </article><article class="case-block">
+      <div class="case-head">
+        <h3>Compass needles around magnet</h3>
+        <span class="tag">OOD</span>
+        
+        
+      </div>
+      <p class="prompt"><strong>Prompt:</strong> A clean science diagram titled &quot;MAGNET TEST&quot;. Place a horizontal bar magnet labeled N on the left end and S on the right end. Around it draw four small compass needles: above the magnet points left, below points right, left side points toward N, right side points away from N. Use simple arrows and readable labels.</p>
+      <p class="meta"><strong>Expected:</strong> Bar magnet N/S plus four compass arrows with requested directions.</p>
+      <p class="meta"><strong>Source:</strong> Designed for this comparison | New 2026-05-20 hard generation case</p>
+      
+      <div class="matrix">
+        
+        <article class="card result">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag">384x384</span></div>
+    <img src="assets/hard_mixed_janus_pro_7b_hard_gen_magnetic_field_compass.jpg" alt="Janus-Pro-7B hard_gen_magnetic_field_compass">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The visible text in the image is: 1. &quot;IRAGNET TEST&quot; 2. &quot;N&quot; 3. &quot;D&quot; 4. &quot;A&quot; 5. &quot;B&quot; 6. &quot;C&quot; 7. &quot;E&quot; 8. &quot;F&quot; 9. &quot;G&quot; 10. &quot;H&quot; 11. &quot;I&quot; 12. &quot;J&quot; 13. &quot;K&quot; 14. &quot;L&quot; 15. &quot;M&quot; 16. &quot;N&quot; 17. &quot;O&quot; 18. &quot;P&quot; 19. &quot;Q&quot; 20. &quot;R&quot; 21. &quot;S&quot; 22. &quot;T&quot; 23. &quot;U&quot; 24. &quot;V&quot; 25. &quot;W&quot; 26. &quot;X&quot; 27. &quot;Y&quot; 28. &quot;Z&quot; The image contains a diagram with arrows and labels, likely representing a magnetic field or a similar concept. The arrows are labeled with letters from A to Z, and there is a magnet-like object with a red and white color scheme. The image satisfies the requested counts</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: Janus-Pro-7B · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> run_janus_pro_demos.image_to_text</p>
+    <p><strong>Config:</strong> <code>bfloat16, cuda, do_sample=false, max_new_tokens=256</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_bagel_7b_mot_hard_gen_magnetic_field_compass.png" alt="BAGEL-7B-MoT hard_gen_magnetic_field_compass">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The image contains the text &quot;N MAGNET TEST&quot; at the top. Below this text, there is a blue rectangular bar with the letters &quot;N&quot; and &quot;S&quot; on the left and right ends, respectively. The &quot;N&quot; is on the left side of the bar, and the &quot;S&quot; is on the right side. The bar is oriented horizontally. The image also includes two arrows pointing in opposite directions, one on the left and one on the right, indicating the direction of the magnetic field lines. The left arrow is pointing downwards, and the right arrow is pointing upwards. The image satisfies the requested counts, labels, directions, and spatial relationships as follows: - The text &quot;N MAGNET TEST&quot; is present at the top. - The blue rectangular bar with &quot;N&quot; and &quot;S&quot; labels is present below the text. - The &quot;N&quot; is on the left side of the bar, and the &quot;S&quot; is on the right side. - The bar is oriented horizontally. - Two arrows are present, one pointing downwards on the left and one pointing upwards on the right, indicating the direction of the magnetic field lines.</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: BAGEL-7B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> InterleaveInferencer(..., understanding_output=True)</p>
+    <p><strong>Config:</strong> <code>bfloat16, text_temperature=0.3, do_sample=false, max_think_token_n=512</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_sensenova_u1_8b_mot_hard_gen_magnetic_field_compass.png" alt="SenseNova-U1-8B-MoT hard_gen_magnetic_field_compass">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>&lt;think&gt; The user wants me to extract text and then analyze the image based on specific criteria. **1. Text Extraction:** - Top title: &quot;MAGNET TEST&quot; - Top compass label: &quot;B&quot; - Top compass needle: &quot;N&quot; (blue), &quot;S&quot; (red) - Middle bar magnet labels: &quot;N&quot; (left, white on red), &quot;S&quot; (right, white on red) - Bottom compass label: &quot;S&quot; - Bottom compass needle: &quot;N&quot; (blue), &quot;S&quot; (red) **2. Analysis of Counts, Labels, Directions, and Spatial Relationships:** - **Counts:** - There are two compasses. - There is one bar magnet. - There are multiple arrows (cyan and red). - **Labels:** - &quot;MAGNET TEST&quot; is the main title. - &quot;B&quot; is above the top compass. - &quot;S&quot; is above the bottom compass. - &quot;N&quot; and &quot;S&quot; label the ends of the bar magnet. - &quot;N&quot; and &quot;S&quot; label the needles of the compasses. - **Directions:** - The bar magnet has a North pole (N) on the left and a South pole (S) on the right. - Red arrows point *away* from the magnet ends. This is physically incorrect for magnetic field lines (which go N to S outside the magnet) or force vectors (which would be repelled by like poles). Wait, let's look closer. - The red arrows are pointing *away* from the magnet. If the left end is N, a red arrow pointing left suggests repulsion? No, usually red arrows indicate the magnetic field direction. Magnetic field lines go *out* of North and *into* South. So, an arrow pointing left from the N pole is correct for field lines. An arrow pointing left from the S pole is *incorrect* for field lines (they should point in). Wait, let's re-examine the arrows. - Top compass: Cyan arrow points left towards the compass. The compass needle (red S) points right. This is confusing. Let's look at the bottom compass. - Bottom compass: Cyan arrows point inwards from left and right. The compass needle (red S) points up-right. The label &quot;S&quot; is above the compass. - Let's look at the red arrows again. There is a red arrow pointing left from the N pole. There is a red arrow pointing left from the S pole. This implies a force or field direction. - Actually, let's look at the cyan arrows. - Top: Cyan arrow points left. - Bottom: Cyan arrow points left (from left side) and cyan arrow points left (from right side). Wait, the bottom right cyan arrow points left. The bottom left cyan arrow points right. So they are pointing *towards* the compass. - Let's re-evaluate the whole diagram. It seems to be illustrating magnetic field lines or forces. - **Bar Magnet:** Left is N (Red block), Right is S (Red block). Wait, the gradient goes from Blue (left) to Red (right). Usually Blue is North and Red is South in physics diagrams, but here the labels say &quot;N&quot; on the red block and &quot;S&quot; on the red block. Wait, let me look really closely at the magnet. - Left block: Red background, white &quot;N&quot;. - Right block: Red background, white &quot;S&quot;. - Middle gradient: Blue on left, Red on right. This is confusing. Usually Blue = North, Red = South. But the labels say N on the left and S on the right. - Let's look at the compasses. - Top Compass: Label &quot;B&quot;. Needle points roughly North-East. Cyan arrow points left. - Bottom Compass: Label &quot;S&quot;. Needle points roughly North-East. Cyan arrows point inwards. Red arrow points up-right. Let's try to interpret the &quot;Magnet Test&quot;. - The magnet has N on the left and S on the right. - Magnetic field lines emerge from N and enter S. - So, lines should go Left (from N) and Right (towards S). - The red arrows: One points left from N. One points left from S. This is weird. If it's force, a compass near the N pole would be repelled. A compass near the S pole would be attracted. - Let's look at the cyan arrows. - Top: Points left. - Bottom: Points right (from left) and points left (from right). This looks like field lines converging? No, that would be a dipole field. - Let's look at the red arrow near the bottom compass. It points up and right, away from the magnet's S pole. Let's just describe what is visible without over</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: SenseNova-U1-8B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> examples/vqa/inference.py --jsonl</p>
+    <p><strong>Config:</strong> <code>bfloat16, sdpa, do_sample=false, max_new_tokens=1024</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag">432x432</span></div>
+    <img src="assets/hard_mixed_show_o2_1_5b_hard_gen_magnetic_field_compass.png" alt="Show-o2-1.5B hard_gen_magnetic_field_compass">
+    <p class="snippet">Not run; this runner uses the official 432px T2I-only path.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_emu3_5_image_vllm_8x80_hard_gen_magnetic_field_compass.png" alt="Emu3.5-Image vLLM 8x80GB hard_gen_magnetic_field_compass">
+    <p class="snippet">8x A100 80GB vLLM tensor-parallel path, including model load and all prompts.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_onecat_3b_hard_gen_magnetic_field_compass.png" alt="OneCAT-3B hard_gen_magnetic_field_compass">
+    
+    
+    
+  </article>
+      </div>
     </article>
   </section><section>
     <h2>Text, Typography, UI, And Signage</h2>
@@ -2860,6 +3256,138 @@ footer { border-top: 1px solid var(--line); margin-top: 34px; padding-top: 20px;
   </details>
   </article>
       </div>
+    </article><article class="case-block">
+      <div class="case-head">
+        <h3>Transparent acetate overlap colors</h3>
+        <span class="tag">OOD</span>
+        
+        
+      </div>
+      <p class="prompt"><strong>Prompt:</strong> A clean vector-style image of three transparent square acetate sheets overlapping: red sheet on the left, blue sheet on the right, yellow sheet on top center. The overlaps should visibly mix colors: red+blue purple, red+yellow orange, blue+yellow green. Add small labels RED, BLUE, YELLOW. White background.</p>
+      <p class="meta"><strong>Expected:</strong> Transparent sheets with correct overlap colors and readable color labels.</p>
+      <p class="meta"><strong>Source:</strong> Designed for this comparison | New 2026-05-20 hard generation case</p>
+      
+      <div class="matrix">
+        
+        <article class="card result">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag">384x384</span></div>
+    <img src="assets/hard_mixed_janus_pro_7b_hard_gen_transparency_color_mix.jpg" alt="Janus-Pro-7B hard_gen_transparency_color_mix">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The visible text in the image is: 1. オブ 2. オブ 3. オブ 4. オブ 5. オブ 6. オブ 7. オブ 8. オブ 9. オブ 10. オブ 11. オブ 12. オブ 13. オブ 14. オブ 15. オブ 16. オブ 17. オブ 18. オブ 19. オブ 20. オブ 21. オブ 22. オブ 23. オブ 24. オブ 25. オブ 26. オブ 27. オブ 28. オブ 29.</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: Janus-Pro-7B · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> run_janus_pro_demos.image_to_text</p>
+    <p><strong>Config:</strong> <code>bfloat16, cuda, do_sample=false, max_new_tokens=256</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_bagel_7b_mot_hard_gen_transparency_color_mix.png" alt="BAGEL-7B-MoT hard_gen_transparency_color_mix">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The image contains the following text: &quot;RED,&quot; &quot;BUBE,&quot; &quot;YELLOW,&quot; and &quot;RDE.&quot; The text &quot;RED&quot; is located at the bottom left, &quot;BUBE&quot; is at the bottom center, &quot;YELLOW&quot; is at the bottom right, and &quot;RDE&quot; is at the top right. The image shows overlapping colored rectangles with the colors red, blue, and yellow. The text labels are positioned below the corresponding colored rectangles. The image satisfies the requested counts, labels, directions, and spatial relationships as described.</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: BAGEL-7B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> InterleaveInferencer(..., understanding_output=True)</p>
+    <p><strong>Config:</strong> <code>bfloat16, text_temperature=0.3, do_sample=false, max_think_token_n=512</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_sensenova_u1_8b_mot_hard_gen_transparency_color_mix.png" alt="SenseNova-U1-8B-MoT hard_gen_transparency_color_mix">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>&lt;think&gt; The user wants me to identify the text in the image and then evaluate if the image meets certain criteria. However, the prompt asks me to &quot;describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This implies there might be a specific request I'm supposed to be checking against, but the prompt itself *is* the request. Wait, looking closer at the prompt structure: &quot;Read all visible text exactly. Then describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This is a bit ambiguous. Usually, this kind of prompt comes with a specific set of constraints (e.g., &quot;There should be 3 squares,&quot; &quot;The text should be centered&quot;). Since there are no specific constraints provided *in the prompt*, I need to interpret &quot;requested counts, labels, directions, and spatial relationships&quot; as referring to the visual elements present in the image itself, or perhaps the user is asking me to *generate* a description that *would* satisfy a hypothetical request. Actually, re-reading the prompt, it seems like a standard template. &quot;Read all visible text exactly. Then describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This sounds like a task where I need to check if the image *matches* a description. But there is no description provided. Let's look at the image again. It's an optical illusion or a color mixing diagram. - Text: &quot;RED&quot; at the top left. - Text: &quot;YELLOW&quot; in the center. - Text: &quot;BLUE&quot; at the bottom right. - Visuals: Overlapping translucent squares. - A large red square on the left. - A large blue square on the right. - A yellow square in the middle. - There are other overlapping squares creating secondary colors (orange, green, purple). Wait, let's look at the &quot;Yellow&quot; square. It's actually a yellow square with the word &quot;YELLOW&quot; on it. The red square is behind it to the left. The blue square is behind it to the right. The overlapping of Red and Blue usually makes Magenta/Purple. In the image, there is a purple square behind the yellow one. The overlapping of Red and Yellow makes Orange. There is an orange square. The overlapping of Blue and Yellow makes Green. There is a green square. So the image shows: - A red square. - A blue square. - A yellow square. - And intermediate squares (orange, green, purple) formed by overlaps. The text labels are &quot;RED&quot;, &quot;YELLOW&quot;, &quot;BLUE&quot;. The prompt asks me to &quot;describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This is strange. It sounds like I'm supposed to be verifying a specific set of requirements. Since none are given, I will assume the &quot;request&quot; is implicit in the image itself or I should just describe the image thoroughly. Let's re-read the prompt carefully. &quot;Read all visible text exactly. Then describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; Perhaps the &quot;requested&quot; part refers to the text labels themselves? - Count: 3 text labels. - Labels: RED, YELLOW, BLUE. - Directions: Top-left, Center, Bottom-right. - Spatial relationships: Red is left, Blue is right, Yellow is center/overlapping. Let's assume the user wants me to transcribe the text and then describe the layout. **Text Transcription:** - &quot;RED&quot; (top left) - &quot;YELLOW&quot; (center) - &quot;BLUE&quot; (bottom right) **Description of relationships:** - The image features three main colored squares: Red, Blue, and Yellow. - The Red square is on the left. - The Blue square is on the right. - The Yellow square is in the center, overlapping the others. - There are translucent layers showing color mixing: - Red + Yellow overlap creates Orange. - Blue + Yellow overlap creates Green. - Red + Blue overlap (behind the yellow square) creates Purple/Magenta. - The text &quot;RED&quot; is above the red square. - The text &quot;BLUE&quot; is below the blue square. - The text &quot;YELLOW&quot; is inside the yellow square. Wait, looking really closely at the &quot;Yellow&quot; square. It's a yellow square. Inside it is the word &quot;YELLOW&quot;. The red square is behind it. The blue square is behind it. Actually, looking at the layering: - There is a large red square on the left. - There is a large blue square on the right. - There is a yellow square in the middle. - Behind the yellow square, there are other squares. - To the left of the yellow square (overlapping red), there is an orange square. - To the right of the yellow square (overlapping blue), there is a green square. - Behind the yellow square, spanning across, there is a purple square (Red +</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: SenseNova-U1-8B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> examples/vqa/inference.py --jsonl</p>
+    <p><strong>Config:</strong> <code>bfloat16, sdpa, do_sample=false, max_new_tokens=1024</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag">432x432</span></div>
+    <img src="assets/hard_mixed_show_o2_1_5b_hard_gen_transparency_color_mix.png" alt="Show-o2-1.5B hard_gen_transparency_color_mix">
+    <p class="snippet">Not run; this runner uses the official 432px T2I-only path.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_emu3_5_image_vllm_8x80_hard_gen_transparency_color_mix.png" alt="Emu3.5-Image vLLM 8x80GB hard_gen_transparency_color_mix">
+    <p class="snippet">8x A100 80GB vLLM tensor-parallel path, including model load and all prompts.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_onecat_3b_hard_gen_transparency_color_mix.png" alt="OneCAT-3B hard_gen_transparency_color_mix">
+    
+    
+    
+  </article>
+      </div>
+    </article><article class="case-block">
+      <div class="case-head">
+        <h3>Sandwich cutaway layer order</h3>
+        <span class="tag">OOD</span>
+        
+        
+      </div>
+      <p class="prompt"><strong>Prompt:</strong> A precise cutaway illustration of a sandwich with visible layers from bottom to top: bread, lettuce, tomato, cheese, ham, bread. One triangular bite is removed from the front-right corner so the layers are visible. Add small right-side labels for each layer in the correct vertical order.</p>
+      <p class="meta"><strong>Expected:</strong> Six sandwich layers in the requested bottom-to-top order with a bite exposing the stack.</p>
+      <p class="meta"><strong>Source:</strong> Designed for this comparison | New 2026-05-20 hard generation case</p>
+      
+      <div class="matrix">
+        
+        <article class="card result">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag">384x384</span></div>
+    <img src="assets/hard_mixed_janus_pro_7b_hard_gen_cutaway_sandwich_layers.jpg" alt="Janus-Pro-7B hard_gen_cutaway_sandwich_layers">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The image shows a cross-section of a sandwich with various layers labeled in both English and Thai. The labels include: 1. ปริมณฑรสัมผัส (bread) 2. ลูกชิกสัมผัส (bread) 3. ลูกชิกสัมผัส (bread) 4. ลูกชิกสัมผัส (bread) 5. ลูกชิกสัมผัส (bread) 6. ลูกชิกสัมผัส (bread) 7. ลูกชิกสัมผัส (bread) 8. ลูกช</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: Janus-Pro-7B · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> run_janus_pro_demos.image_to_text</p>
+    <p><strong>Config:</strong> <code>bfloat16, cuda, do_sample=false, max_new_tokens=256</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_bagel_7b_mot_hard_gen_cutaway_sandwich_layers.png" alt="BAGEL-7B-MoT hard_gen_cutaway_sandwich_layers">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>The image contains the following visible text: - Brostok - Blurlass - Rlildrtl - ticp - Cl - 1 - 2 - Mast - Nicl The image does not satisfy the requested counts, labels, directions, and spatial relationships. The text labels are not clearly defined and do not correspond to the actual components of the sandwich. The spatial relationships between the labels and the sandwich components are not accurately represented.</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: BAGEL-7B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> InterleaveInferencer(..., understanding_output=True)</p>
+    <p><strong>Config:</strong> <code>bfloat16, text_temperature=0.3, do_sample=false, max_think_token_n=512</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_sensenova_u1_8b_mot_hard_gen_cutaway_sandwich_layers.png" alt="SenseNova-U1-8B-MoT hard_gen_cutaway_sandwich_layers">
+    <div class="readback-answer"><div class="readback-label">Self-readback</div><p>&lt;think&gt; The user wants me to extract the text from the image and then evaluate it against some criteria, although the specific criteria (counts, labels, directions, spatial relationships) aren't explicitly defined in the prompt. I will assume the prompt implies checking for consistency and accuracy based on the visual content. **1. Text Extraction:** I need to read all the labels pointing to the sandwich layers. - Top label: &quot;SURDEAD&quot; pointing to the top bread. - Next label down: &quot;BREAD&quot; pointing to the top bread crust. - Next label: &quot;USLL3BIC LAGEET&quot; (This looks like garbled text or a specific font issue, possibly &quot;USUALLY&quot; or something similar but it's very distorted. Wait, looking closer at crop 2, it says &quot;USLL3BIC LAGEET&quot;. It looks like a bad OCR or a specific stylistic choice. Let's look really closely. It actually looks like &quot;USUALLY&quot; but very distorted. Or maybe &quot;USLL3BIC&quot; is a typo for &quot;USUALLY&quot;? No, let's just transcribe what is visible. It looks like &quot;USLL3BIC LAGEET&quot;. Actually, looking at the full image, it's &quot;USLL3BIC LAGEET&quot;. Wait, let me re-examine. It looks like &quot;USLL3BIC&quot; on one line and &quot;LAGEET&quot; below it. It's very strange. Let's look at the context. It's pointing to the bread. Maybe it's meant to be &quot;USUALLY&quot;? No, that doesn't make sense. Let's just transcribe the visible characters. &quot;USLL3BIC LAGEET&quot;.) - Next label: &quot;HAM&quot; pointing to the meat layer. - Next label: &quot;HAM&quot; pointing to the same meat layer (duplicate label). - Next label: &quot;HAME&quot; pointing to the cheese layer. (Typo for HAM? Or maybe CHEESE? It says HAME). - Next label: &quot;LETTUS&quot; pointing to the lettuce. - Bottom label: &quot;BREAD&quot; pointing to the bottom bread. - Bottom-most label: &quot;BREAD&quot; pointing to the bottom bread (duplicate). Let's refine the transcription based on standard sandwich layers. - Top bread: &quot;SURDEAD&quot; (Typo for BREAD? Or SURFACE? It says SURDEAD). - Top bread crust: &quot;BREAD&quot;. - Next label: &quot;USLL3BIC LAGEET&quot;. This is very garbled. It looks like &quot;USUALLY&quot; but the letters are messed up. &quot;U S L L 3 B I C&quot;. And &quot;L A G E E T&quot;. This is likely a generated image with text errors. I will transcribe it exactly as it appears. - Meat layer: &quot;HAM&quot;. - Meat layer (duplicate): &quot;HAM&quot;. - Cheese layer: &quot;HAME&quot;. - Lettuce layer: &quot;LETTUS&quot;. - Bottom bread: &quot;BREAD&quot;. - Bottom bread (duplicate): &quot;BREAD&quot;. **2. Evaluation:** The prompt asks to &quot;describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; Since there are no specific requests (e.g., &quot;count the hams&quot;), I will interpret this as a general check of the image's logical consistency and text accuracy. - **Labels:** The labels are mostly correct for a sandwich (Bread, Ham, Lettus), but there are significant typos and duplicates. - &quot;SURDEAD&quot; instead of &quot;BREAD&quot; or &quot;TOP BREAD&quot;. - &quot;USLL3BIC LAGEET&quot; is nonsensical. - &quot;HAME&quot; instead of &quot;CHEESE&quot; or &quot;HAM&quot; (though there is a HAM label above). - Duplicate &quot;HAM&quot; and &quot;BREAD&quot; labels. - **Directions:** The lines point generally to the correct layers, but the text is weird. - **Spatial Relationships:** The layers are stacked logically (Bread -&gt; Meat -&gt; Cheese -&gt; Veg -&gt; Bread). Let's re-read the prompt. &quot;Read all visible text exactly. Then describe whether the image satisfies the requested counts, labels, directions, and spatial relationships.&quot; This sounds like a standard template prompt. I will provide the text and then a description of the image's content and the text's accuracy. **Text Transcription:** - SURDEAD - BREAD - USLL3BIC LAGEET - HAM - HAM - HAME - LETTUS - BREAD - BREAD **Description:** The image is a diagram of a sandwich with labels. - The top bread is labeled &quot;SURDEAD&quot; and &quot;BREAD&quot;. - There is a garbled label &quot;USLL3BIC LAGEET&quot;. - The meat layer is labeled &quot;HAM&quot; twice. - The cheese layer is labeled &quot;H</p></div>
+    
+    <details class="readback-config">
+    <summary>Self-readback config: SenseNova-U1-8B-MoT · same model: yes · status: completed</summary>
+    <p><strong>Runner:</strong> examples/vqa/inference.py --jsonl</p>
+    <p><strong>Config:</strong> <code>bfloat16, sdpa, do_sample=false, max_new_tokens=1024</code></p>
+    <p><strong>Note:</strong> Legacy stored readback from an earlier same-model summary, normalized into the current card format.</p>
+  </details>
+  </article><article class="card result">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag">432x432</span></div>
+    <img src="assets/hard_mixed_show_o2_1_5b_hard_gen_cutaway_sandwich_layers.png" alt="Show-o2-1.5B hard_gen_cutaway_sandwich_layers">
+    <p class="snippet">Not run; this runner uses the official 432px T2I-only path.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_emu3_5_image_vllm_8x80_hard_gen_cutaway_sandwich_layers.png" alt="Emu3.5-Image vLLM 8x80GB hard_gen_cutaway_sandwich_layers">
+    <p class="snippet">8x A100 80GB vLLM tensor-parallel path, including model load and all prompts.</p>
+    
+    
+  </article><article class="card result">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag">1024x1024</span></div>
+    <img src="assets/hard_mixed_onecat_3b_hard_gen_cutaway_sandwich_layers.png" alt="OneCAT-3B hard_gen_cutaway_sandwich_layers">
+    
+    
+    
+  </article>
+      </div>
     </article>
   </section><section>
     <h2>Counting, Part-Whole Composition, And Negation</h2>
@@ -3698,39 +4226,39 @@ footer { border-top: 1px solid var(--line); margin-top: 34px; padding-top: 20px;
     <tbody>
       <tr>
           <td><strong>Janus-Pro-7B</strong></td>
-          <td>27</td>
-          <td>18 / 9 / 0</td>
-          <td>5 / 5</td>
-          <td>3 / 5</td>
-          <td>7 / 9</td>
-          <td>3 / 8</td>
+          <td>35</td>
+          <td>23 / 10 / 2</td>
+          <td>0 / 5</td>
+          <td>0 / 5</td>
+          <td>0 / 9</td>
+          <td>0 / 16</td>
           <td>Heuristic checks are coarse; inspect answers for qualitative detail.</td>
         </tr><tr>
           <td><strong>BAGEL-7B-MoT</strong></td>
-          <td>27</td>
-          <td>19 / 3 / 5</td>
-          <td>5 / 5</td>
-          <td>3 / 5</td>
-          <td>7 / 9</td>
-          <td>4 / 8</td>
+          <td>35</td>
+          <td>23 / 5 / 7</td>
+          <td>0 / 5</td>
+          <td>0 / 5</td>
+          <td>0 / 9</td>
+          <td>0 / 16</td>
           <td>Heuristic checks are coarse; inspect answers for qualitative detail.</td>
         </tr><tr>
           <td><strong>SenseNova-U1-8B-MoT</strong></td>
-          <td>27</td>
-          <td>24 / 3 / 0</td>
-          <td>5 / 5</td>
-          <td>5 / 5</td>
-          <td>9 / 9</td>
-          <td>5 / 8</td>
+          <td>35</td>
+          <td>32 / 3 / 0</td>
+          <td>0 / 5</td>
+          <td>0 / 5</td>
+          <td>0 / 9</td>
+          <td>0 / 16</td>
           <td>Heuristic checks are coarse; inspect answers for qualitative detail.</td>
         </tr><tr>
           <td><strong>Show-o2-1.5B</strong></td>
-          <td>27</td>
-          <td>11 / 8 / 8</td>
-          <td>3 / 5</td>
+          <td>35</td>
+          <td>14 / 11 / 10</td>
           <td>0 / 5</td>
-          <td>6 / 9</td>
-          <td>2 / 8</td>
+          <td>0 / 5</td>
+          <td>0 / 9</td>
+          <td>0 / 16</td>
           <td>Heuristic checks are coarse; inspect answers for qualitative detail.</td>
         </tr><tr>
           <td><strong>Emu3.5-Image vLLM 8x80GB</strong></td>
@@ -3739,24 +4267,24 @@ footer { border-top: 1px solid var(--line); margin-top: 34px; padding-top: 20px;
           <td>0 / 5</td>
           <td>0 / 5</td>
           <td>0 / 9</td>
-          <td>0 / 8</td>
+          <td>0 / 16</td>
           <td>Unsupported in the current Emu3.5-Image generation/X2I runner.</td>
         </tr><tr>
           <td><strong>OneCAT-3B</strong></td>
-          <td>10</td>
-          <td>9 / 1 / 0</td>
-          <td>5 / 5</td>
-          <td>4 / 5</td>
+          <td>26</td>
+          <td>21 / 5 / 0</td>
+          <td>0 / 5</td>
+          <td>0 / 5</td>
           <td>0 / 9</td>
-          <td>0 / 8</td>
-          <td>Original synthetic cases are present; real-world reasoning cases were not run because the 8x OneCAT job was stopped and the 1x job lacked OneCAT deps.</td>
+          <td>0 / 16</td>
+          <td>Heuristic checks are coarse; inspect answers for qualitative detail.</td>
         </tr>
     </tbody>
   </table>
   <div class="callout">
     <p><strong>Takeaways:</strong> The easy ID/OOD fixtures are now less discriminative, so the hard reasoning rows should be read as stress tests for multi-step visual logic, counterfactuals, spatial constraints, and derived quantities. Emu3.5-Image remains generation-only in this report.</p>
   </div>
-  <p class="meta"><strong>Source:</strong> artifacts/pluto_omni_demo/image_understanding/full_run_20260519_hard_reasoning/combined_image_understanding_with_hard.json</p>
+  <p class="meta"><strong>Source:</strong> artifacts/pluto_omni_demo/image_understanding/full_run_20260520_hard_mixed/combined_image_understanding.json</p>
 </section><section>
   <h2>Image Understanding ID/OOD/Real-World Cases</h2>
   <p class="section-intro">The first ten fixtures are controlled ID/OOD probes. The real-world set uses sourced Wikimedia photos. The hard reasoning set adds diagrammatic puzzles where the answer requires combining visual evidence with constraints.</p>
@@ -7195,6 +7723,1222 @@ The user wants me to identify the correct reflection of the arrow shown in the i
   </article>
       </div>
     </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Gear train direction inference</h3>
+      <span class="tag adapted">Hard OOD</span>
+      <span class="tag">causal chain</span><span class="tag">mechanistic reasoning</span><span class="tag">direction inference</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hardu_gear_train_direction.png" alt="Gear train direction inference">
+        <p class="prompt"><strong>Question:</strong> Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?</p>
+        <p class="meta"><strong>Expected:</strong> Gear D rotates counterclockwise.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic 2026-05-20 hard understanding case; not in paper.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>To determine the direction of rotation for gear D, we need to consider the relationship between the adjacent gears and the direction of rotation for gear A.
+
+1. Gear A rotates clockwise.
+2. Since adjacent gears turn in opposite directions, gear B must rotate counterclockwise.
+3. Gear C, being adjacent to gear B, must also rotate counterclockwise.
+4. Finally, gear D, being adjacent to gear C, must rotate clockwise.
+
+Therefore, gear D rotates counterclockwise.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> D counterclockwise, reads A clockwise, uses alternating gear rule (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag ">fail</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Gear D rotates clockwise.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> reads A clockwise (0.333)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Based on the rule that &quot;Adjacent gears turn in opposite directions,&quot; here is the step-by-step breakdown:
+
+1.  **Gear A** rotates **clockwise** (as shown).
+2.  **Gear B** is adjacent to A, so it rotates in the opposite direction: **counter-clockwise**.
+3.  **Gear C** is adjacent to B, so it rotates in the opposite direction: **clockwise**.
+4.  **Gear D** is adjacent to C, so it rotates in the opposite direction: **counter-clockwise**.
+
+Therefore, gear D rotates **counter-clockwise**.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> D counterclockwise, reads A clockwise, uses alternating gear rule (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to determine the rotation direction of gear D based on the provided image and text.
+
+1.  **Analyze the initial condition:** The text says &quot;A rotates clockwise&quot;. The image shows a red arrow on gear A curving downwards, confirming a clockwise rotation.
+2.  **Analyze the rule:** The text at the bottom says &quot;Adjacent gears turn in opposite directions.&quot; This is the key rule.
+3.  **Step-by-step deduction:**
+    *   **Gear A:** Clockwise (given).
+    *   **Gear B:** Adjacent to A. So, it must turn in the opposite direction. Opposite of Clockwise is Counter-clockwise. So, Gear B rotates Counter-clockwise.
+    *   **Gear C:** Adjacent to B. So, it must turn in the opposite direction. Opposite of Counter-clockwise is Clockwise. So, Gear C rotates Clockwise.
+    *   **Gear D:** Adjacent to C. So, it must turn in the opposite direction. Opposite of Clockwise is Counter-clockwise. So, Gear D rotates Counter-clockwise.
+
+4.  **Final Conclusion:** Gear D rotates counter-clockwise.
+
+5.  **Formulate the response:** State the logic clearly.
+    *   Start with Gear A (Clockwise).
+    *   Explain Gear B is opposite (Counter-clockwise).
+    *   Explain Gear C is opposite to B (Clockwise).
+    *   Explain Gear D is opposite to C (Counter-clockwise).
+    *   State the final answer clearly.
+&lt;/think&gt;
+
+Based on the rule that &quot;Adjacent gears turn in opposite directions,&quot; here is the step-by-step breakdown:
+
+1.  **Gear A** rotates **clockwise** (as shown).
+2.  **Gear B** is adjacent to A, so it rotates in the opposite direction: **counter-clockwise**.
+3.  **Gear C** is adjacent to B, so it rotates in the opposite direction: **clockwise**.
+4.  **Gear D** is adjacent to C, so it rotates in the opposite direction: **counter-clockwise**.
+
+Therefore, gear D rotates **counter-clockwise**.</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Gear D rotates counterclockwise.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      <p><strong>Matched checks:</strong> D counterclockwise, reads A clockwise (0.667)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>To determine the direction in which gear D rotates, we need to analyze the rotational directions of the gears in the sequence.
+
+1. **Identify the Rotational Directions:**
+Gear A rotates clockwise.
+Gear B rotates counterclockwise.
+Gear C rotates clockwise.
+Gear D rotates counterclockwise.
+
+2. **Understand the Relationship Between Gears:**
+Adjacent gears turn in opposite directions. This means that if one gear rotates clockwise, the next gear will rotate counterclockwise, and vice versa.
+
+3. **Determine Gear D's Direction:**
+Since Gear A rotates clockwise and Gear B rotates counterclockwise, Gear C must rotate clockwise to maintain the opposite direction rule.
+Gear D, being the next gear, must rotate counterclockwise to continue the pattern.
+
+Therefore, Gear D rotates counterclockwise.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: completed</summary>
+      <p><strong>Runner:</strong> OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1000,&quot;do_sample&quot;:false,&quot;num_beams&quot;:1,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;,&quot;worker_id&quot;:0,&quot;num_workers&quot;:8}</code></p>
+      <p><strong>Matched checks:</strong> D counterclockwise, reads A clockwise, uses alternating gear rule (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>To determine the direction in which gear D rotates, we need to analyze the rotational directions of the gears in the sequence.
+
+1. **Identify the Rotational Directions:**
+   - Gear A rotates clockwise.
+   - Gear B rotates counterclockwise.
+   - Gear C rotates clockwise.
+   - Gear D rotates counterclockwise.
+
+2. **Understand the Relationship Between Gears:**
+   - Adjacent gears turn in opposite directions. This means that if one gear rotates clockwise, the next gear will rotate counterclockwise, and vice versa.
+
+3. **Determine Gear D's Direction:**
+   - Since Gear A rotates clockwise and Gear B rotates counterclockwise, Gear C must rotate clockwise to maintain the opposite direction rule.
+   - Gear D, being the next gear, must rotate counterclockwise to continue the pattern.
+
+Therefore, Gear D rotates counterclockwise.</p></details>
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Stove knob to burner mapping</h3>
+      <span class="tag adapted">Hard OOD</span>
+      <span class="tag">real-world rule</span><span class="tag">symbol grounding</span><span class="tag">spatial mapping</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hardu_stove_knob_mapping.png" alt="Stove knob to burner mapping">
+        <p class="prompt"><strong>Question:</strong> Which burner is on, and which knob position proves it?</p>
+        <p class="meta"><strong>Expected:</strong> The front-right burner is on; the FR knob is set to HIGH while the others are OFF.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic 2026-05-20 hard understanding case; not in paper.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The front right burner is on. This is indicated by the red color of the circle, which signifies that the burner is active. The knob corresponding to the front right burner is also in the &quot;FR HIGH&quot; position, which further confirms that the burner is on.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> front-right burner, FR knob, HIGH state (0.75)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The front right burner is on, as indicated by the yellow color and the red border around the burner. The corresponding knob position is set to the &quot;HIGH&quot; setting, as shown by the red arrow pointing to the rightmost position on the knob.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> front-right burner, HIGH state (0.5)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Based on the image provided:
+
+The **front right** burner is on.
+
+You can tell this because:
+1.  **Visual Cue:** The &quot;front right&quot; circle is colored yellow with a red outline, indicating heat, while the others are blue/grey.
+2.  **Knob Position:** The knob on the far right is turned to the right side (pointing towards the red indicator line). The text below it reads **&quot;FR: HIGH&quot;**, which corresponds to the Front Right burner being set to a high heat setting.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> front-right burner, FR knob, HIGH state, other knobs off (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to identify which stove burner is on and which knob corresponds to it based on the provided image.
+
+1.  **Analyze the &quot;Stove Panel&quot; section:**
+    *   There are four circles representing burners.
+    *   Top left: &quot;rear left&quot; - Blue outline, light blue fill. Looks off.
+    *   Top right: &quot;rear right&quot; - Blue outline, light blue fill. Looks off.
+    *   Bottom left: &quot;front left&quot; - Blue outline, light blue fill. Looks off.
+    *   Bottom right: &quot;front right&quot; - Pink/Red outline, yellow fill. This is clearly &quot;on&quot; or active. The color change (yellow inside, red outline) signifies heat.
+
+2.  **Analyze the &quot;Knobs&quot; section:**
+    *   There are four knobs at the bottom.
+    *   Knob 1 (leftmost): Pointer is up (vertical). Label below says &quot;RL: OFF&quot;. This likely corresponds to Rear Left.
+    *   Knob 2 (second from left): Pointer is up (vertical). Label below says &quot;RR: OFF&quot;. This likely corresponds to Rear Right.
+    *   Knob 3 (third from left): Pointer is up (vertical). Label below says &quot;FL: OFF&quot;. This likely corresponds to Front Left.
+    *   Knob 4 (rightmost): Pointer is pointing to the right (roughly 4 o'clock position). Label below says &quot;FR: HIGH&quot;. This likely corresponds to Front Right.
+
+3.  **Connect the two sections:**
+    *   The &quot;front right&quot; burner is the one that is visually &quot;on&quot; (yellow/red).
+    *   The corresponding knob is the fourth one, labeled &quot;FR: HIGH&quot;.
+    *   The label &quot;FR&quot; stands for Front Right.
+    *   The position of the knob pointer is turned to the right, indicating a high setting.
+
+4.  **Formulate the answer:**
+    *   Identify the active burner: The &quot;front right&quot; burner is on. I can tell because it has a yellow center and a red outline, unlike the others which are blue/grey.
+    *   Identify the knob: The knob on the far right is the one controlling it.
+    *   Explain the proof: The knob is turned to the right (pointing towards the red indicator line), and the text below it says &quot;FR: HIGH&quot;. &quot;FR&quot; corresponds to &quot;Front Right&quot;.
+
+    *   Wait, let me double check the mapping.
+        *   Knob 1: RL (Rear Left) -&gt; Matches top left burner.
+        *   Knob 2: RR (Rear Right) -&gt; Matches top right burner.
+        *   Knob 3: FL (Front Left) -&gt; Matches bottom left burner.
+        *   Knob 4: FR (Front Right) -&gt; Matches bottom right burner.
+
+    *   So, the &quot;front right&quot; burner is on.
+    *   The knob position is the far right knob, which is turned to the right side (indicating &quot;HIGH&quot;).
+    *   The text &quot;FR: HIGH&quot; confirms this.
+
+    *   Final check of the question: &quot;Which burner is on, and which knob position proves it?&quot;
+    *   Answer: The **front right** burner is on. The **far right knob** (labeled FR) is turned to the right position, indicating &quot;HIGH&quot;, which matches the active state of the burner. The text &quot;FR: HIGH&quot; explicitly states this.
+&lt;/think&gt;
+
+Based on the image provided:
+
+The **front right** burner is on.
+
+You can tell this because:
+1.  **Visual Cue:** The &quot;front right&quot; circle is colored yellow with a red outline, indicating heat, while the others are blue/grey.
+2.  **Knob Position:** The knob on the far right is turned to the right side (pointing towards the red indicator line). The text below it reads **&quot;FR: HIGH&quot;**, which corresponds to the Front Right burner being set to a high heat setting.</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The 'FR. HIGH' burner is on, as indicated by the red circle around the knob that is set to the 'FR. HIGH' position.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      <p><strong>Matched checks:</strong> front-right burner, FR knob, HIGH state (0.75)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The &quot;front right&quot; burner is on, as indicated by the red line on the &quot;FR: HIGH&quot; knob, which is the only knob with a line, suggesting that the corresponding burner is active.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: completed</summary>
+      <p><strong>Runner:</strong> OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1000,&quot;do_sample&quot;:false,&quot;num_beams&quot;:1,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;,&quot;worker_id&quot;:1,&quot;num_workers&quot;:8}</code></p>
+      <p><strong>Matched checks:</strong> front-right burner, FR knob, HIGH state (0.75)</p>
+      
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Shelf unit-price comparison</h3>
+      <span class="tag adapted">Hard OOD</span>
+      <span class="tag">OCR</span><span class="tag">arithmetic</span><span class="tag">comparison</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hardu_shelf_unit_price.png" alt="Shelf unit-price comparison">
+        <p class="prompt"><strong>Question:</strong> Which product has the lowest price per ounce? Show the arithmetic briefly.</p>
+        <p class="meta"><strong>Expected:</strong> Product C is cheapest: $5.00 / 25 oz = $0.20 per oz, lower than A ($0.30/oz) and B ($0.25/oz).</p>
+        <p class="meta"><strong>Source:</strong> Synthetic 2026-05-20 hard understanding case; not in paper.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Product A has the lowest price per ounce. The arithmetic is as follows:
+Product A: $3.00 / 10 oz = $0.30 per oz
+Product B: $4.50 / 18 oz = $0.25 per oz
+Product C: $5.00 / 25 oz = $0.20 per oz
+
+Therefore, Product A has the lowest price per ounce.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> Product C, $0.20/oz, compares A and B (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>Product A has the lowest price per ounce. The arithmetic is as follows:
+
+- Product A: $3.00 / 10 oz = $0.30 per oz
+- Product B: $4.50 / 18 oz = $0.25 per oz
+- Product C: $5.00 / 25 oz = $0.20 per oz
+
+Therefore, Product A has the lowest price per ounce.</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>To determine which product has the lowest price per ounce, we need to calculate the price per ounce for each product and then compare them.
+*Product A:**
+Price: $3.00
+Weight: 10 oz
+Price per ounce: $3.00 / 10 oz = $0.30 per oz
+*Product B:**
+Price: $4.50
+Weight: 18 oz
+Price per ounce: $4.50 / 18 oz = $0.25 per oz
+*Product C:**
+Price: $5.00
+Weight: 25 oz
+Price per ounce: $5.00 / 25 oz = $0.20 per oz
+
+Comparing the prices per ounce:
+Product A: $0.30 per oz
+Product B: $0.25 per oz
+Product C: $0.20 per oz
+
+Product C has the lowest price per ounce at $0.20 per oz.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> Product C, $0.20/oz, compares A and B (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>To determine which product has the lowest price per ounce, we need to calculate the price per ounce for each product and then compare them.
+
+**Product A:**
+- Price: $3.00
+- Weight: 10 oz
+- Price per ounce: $3.00 / 10 oz = $0.30 per oz
+
+**Product B:**
+- Price: $4.50
+- Weight: 18 oz
+- Price per ounce: $4.50 / 18 oz = $0.25 per oz
+
+**Product C:**
+- Price: $5.00
+- Weight: 25 oz
+- Price per ounce: $5.00 / 25 oz = $0.20 per oz
+
+Comparing the prices per ounce:
+- Product A: $0.30 per oz
+- Product B: $0.25 per oz
+- Product C: $0.20 per oz
+
+Product C has the lowest price per ounce at $0.20 per oz.</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Based on the calculations below, **Product C** has the lowest price per ounce.
+
+Here is the breakdown:
+**Product A:** $\$3.00 / 10 \text{ oz} = \mathbf{\$0.30 \text{ per oz}}$
+**Product B:** $\$4.50 / 18 \text{ oz} = \mathbf{\$0.25 \text{ per oz}}$
+**Product C:** $\$5.00 / 25 \text{ oz} = \mathbf{\$0.20 \text{ per oz}}$</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> Product C, $0.20/oz, compares A and B (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to identify the product with the lowest price per ounce based on the provided image.
+
+**1. Extract data from the image:**
+*   **Product A:**
+    *   Price: $3.00
+    *   Weight: 10 oz
+*   **Product B:**
+    *   Price: $4.50
+    *   Weight: 18 oz
+*   **Product C:**
+    *   Price: $5.00
+    *   Weight: 25 oz
+
+**2. Formulate the calculation:**
+I need to calculate the price per ounce for each product.
+Formula: Price / Weight = Price per ounce
+
+*   **Product A:** $3.00 / 10 oz
+*   **Product B:** $4.50 / 18 oz
+*   **Product C:** $5.00 / 25 oz
+
+**3. Perform the calculations:**
+*   **Product A:** 3.00 / 10 = 0.30 $/oz
+*   **Product B:** 4.50 / 18.
+    *   4.5 / 18 is the same as 45 / 180.
+    *   Divide both by 9: 5 / 20.
+    *   5 / 20 = 1 / 4 = 0.25 $/oz.
+*   **Product C:** 5.00 / 25.
+    *   5 / 25 = 1 / 5 = 0.20 $/oz.
+
+**4. Compare the results:**
+*   Product A: $0.30/oz
+*   Product B: $0.25/oz
+*   Product C: $0.20/oz
+
+**5. Determine the lowest:**
+$0.20 is the lowest number. Therefore, Product C has the lowest price per ounce.
+
+**6. Construct the final response:**
+*   State the calculation for each product clearly.
+*   Compare the final values.
+*   Declare the winner.
+&lt;/think&gt;
+
+Based on the calculations below, **Product C** has the lowest price per ounce.
+
+Here is the breakdown:
+
+*   **Product A:** $\$3.00 / 10 \text{ oz} = \mathbf{\$0.30 \text{ per oz}}$
+*   **Product B:** $\$4.50 / 18 \text{ oz} = \mathbf{\$0.25 \text{ per oz}}$
+*   **Product C:** $\$5.00 / 25 \text{ oz} = \mathbf{\$0.20 \text{ per oz}}$</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag ">fail</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Find the least number in the table. Remember to compare the numbers starting with the highest place value. The least number is $4.50.
+Now find the corresponding product. Product B corresponds to $4.50.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Product A has the lowest price per ounce. To calculate, divide the price of each product by the number of ounces: Product A = $3.00 / 10 oz = $0.30 per oz, Product B = $4.50 / 18 oz = $0.25 per oz, Product C = $5.00 / 25 oz = $0.20 per oz. Therefore, Product C has the lowest price per ounce at $0.20.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: completed</summary>
+      <p><strong>Runner:</strong> OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1000,&quot;do_sample&quot;:false,&quot;num_beams&quot;:1,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;,&quot;worker_id&quot;:2,&quot;num_workers&quot;:8}</code></p>
+      <p><strong>Matched checks:</strong> Product C, $0.20/oz, compares A and B (1)</p>
+      
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Elevator panel direction</h3>
+      <span class="tag adapted">Hard OOD</span>
+      <span class="tag">real-world state</span><span class="tag">direction inference</span><span class="tag">symbol reading</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hardu_elevator_direction.png" alt="Elevator panel direction">
+        <p class="prompt"><strong>Question:</strong> Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?</p>
+        <p class="meta"><strong>Expected:</strong> Higher floor next; the up arrow is lit and the display shows floor 3.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic 2026-05-20 hard understanding case; not in paper.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The elevator is set to go to a higher floor next. This is indicated by the green arrow pointing upwards, which typically signifies an upward movement in elevator controls.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> higher/up, uses arrow, mentions display/floor (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The elevator is set to go to a higher floor next, as indicated by the lit green upward-pointing arrow.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> higher/up, uses arrow, mentions display/floor (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Based on the display, the elevator is set to go to a **higher floor**.
+
+Here are the clues from the image:
+**Green Up Arrow:** The green triangle is pointing upwards, indicating upward movement.
+**Text:** At the bottom, it explicitly says &quot;UP call active.&quot;</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> higher/up, uses arrow, mentions display/floor (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants to know the direction of the elevator based on the image.
+
+1.  **Analyze the image:**
+    *   The sign says &quot;ELEVATOR&quot; at the top.
+    *   There is a digital display showing &quot;FLOOR 3&quot;. This indicates the current floor.
+    *   Below the display, there are two arrows.
+    *   The top arrow is a green triangle pointing upwards. In elevator contexts, a green upward arrow usually means the elevator is moving up or the &quot;Up&quot; button is pressed.
+    *   The bottom arrow is a grey triangle pointing downwards. This is unlit or inactive.
+    *   At the very bottom, there is text that says &quot;UP call active&quot;. This confirms that someone has pressed the button to go up.
+
+2.  **Synthesize the findings:**
+    *   The green arrow points up.
+    *   The text explicitly says &quot;UP call active&quot;.
+    *   Therefore, the elevator is set to go to a higher floor.
+
+3.  **Formulate the answer:**
+    *   Start with a direct answer: &quot;higher floor&quot;.
+    *   Explain the visual evidence: The green arrow is pointing up.
+    *   Mention the text confirmation: The text at the bottom says &quot;UP call active&quot;.
+&lt;/think&gt;
+
+Based on the display, the elevator is set to go to a **higher floor**.
+
+Here are the clues from the image:
+*   **Green Up Arrow:** The green triangle is pointing upwards, indicating upward movement.
+*   **Text:** At the bottom, it explicitly says &quot;UP call active.&quot;</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The elevator is set to go to a higher floor next, as indicated by the lit green upward arrow.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      <p><strong>Matched checks:</strong> higher/up, uses arrow, mentions display/floor (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The elevator is set to go to a higher floor next, as indicated by the lit green arrow pointing upwards.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: completed</summary>
+      <p><strong>Runner:</strong> OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1000,&quot;do_sample&quot;:false,&quot;num_beams&quot;:1,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;,&quot;worker_id&quot;:3,&quot;num_workers&quot;:8}</code></p>
+      <p><strong>Matched checks:</strong> higher/up, uses arrow, mentions display/floor (1)</p>
+      
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Missing chair bolt</h3>
+      <span class="tag adapted">Hard OOD</span>
+      <span class="tag">visual inspection</span><span class="tag">spatial relation</span><span class="tag">assembly reasoning</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hardu_assembly_missing_bolt.png" alt="Missing chair bolt">
+        <p class="prompt"><strong>Question:</strong> Which chair leg is missing its top bolt?</p>
+        <p class="meta"><strong>Expected:</strong> The rear-right leg is missing its top bolt.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic 2026-05-20 hard understanding case; not in paper.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The chair leg on the right side is missing its top bolt.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> top bolt missing (0.5)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The right front chair leg is missing its top bolt.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> top bolt missing (0.5)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Based on the image, the **back-right leg** (the leg on the right side that is straight down) is missing its top bolt.
+
+You can tell because:
+1.  There is a red circle at the top joint of that leg.
+2.  The text &quot;missing bolt&quot; is written right next to it in red.
+3.  The other three legs have grey circles indicating they have bolts.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> rear-right, top bolt missing (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to identify which chair leg is missing a bolt based on the provided image.
+
+1.  **Analyze the image:**
+    *   The image shows a diagram of a chair with four legs.
+    *   There are four circles at the top of the legs where they connect to the seat.
+    *   Three of these circles are grey.
+    *   One circle is red and outlined in red.
+    *   Next to the red circle, there is text that says &quot;missing bolt&quot;.
+    *   The text at the bottom says &quot;Each leg should have a gray bolt at the top joint.&quot;
+
+2.  **Locate the missing bolt:**
+    *   Looking at the legs from left to right:
+        *   Front-left leg: Has a grey bolt.
+        *   Back-left leg: Has a grey bolt.
+        *   Back-right leg: Has a red circle (missing bolt).
+        *   Front-right leg: Has a grey bolt. Wait, let me look closer.
+    *   Let's re-evaluate the leg positions.
+        *   Left side: Two legs. One angled out (front-left), one straight down (back-left). Both have grey bolts.
+        *   Right side: Two legs. One straight down (back-right), one angled out (front-right).
+        *   Wait, let's look at the connections.
+        *   Left side: There are two grey circles. One is on the angled leg, one is on the straight leg.
+        *   Right side: There is a red circle and a grey circle.
+        *   The red circle is on the leg that is straight down (the back-right leg).
+        *   The grey circle is on the leg that is angled out (the front-right leg).
+
+3.  **Formulate the answer:**
+    *   The question asks &quot;Which chair leg is missing its top bolt?&quot;.
+    *   The image explicitly labels the missing bolt with red text &quot;missing bolt&quot; pointing to the red circle.
+    *   The red circle is located on the back-right leg (the leg that is straight down on the right side).
+    *   So, the back-right leg is the one missing the bolt.
+
+4.  **Refine the description:**
+    *   It's the leg on the right side, specifically the one that is positioned further back (straight down).
+    *   The other leg on the right side (angled forward) has a grey bolt.
+    *   So, &quot;the back right leg&quot; or &quot;the right rear leg&quot; is the correct identification.
+    *   I can also just describe it by position: &quot;the leg on the right side that is straight down&quot;.
+
+    Let's double check.
+    - Left side: Two grey bolts.
+    - Right side: One red circle (missing bolt), one grey bolt.
+    - The red circle is on the leg that is vertical.
+    - The grey bolt is on the leg that is angled outwards.
+    - Therefore, the vertical leg on the right is the one missing the bolt.
+
+    Final Answer construction:
+    - Identify the visual cue: The red circle and the text &quot;missing bolt&quot;.
+    - Locate it: It's on the right side of the chair.
+    - Specify the leg: It's the back-right leg (the one standing straight up).
+&lt;/think&gt;
+
+Based on the image, the **back-right leg** (the leg on the right side that is straight down) is missing its top bolt.
+
+You can tell because:
+1.  There is a red circle at the top joint of that leg.
+2.  The text &quot;missing bolt&quot; is written right next to it in red.
+3.  The other three legs have grey circles indicating they have bolts.</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The chair leg on the left side of the image is missing its top bolt.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      <p><strong>Matched checks:</strong> top bolt missing (0.5)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The rightmost chair leg is missing its top bolt.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: completed</summary>
+      <p><strong>Runner:</strong> OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1000,&quot;do_sample&quot;:false,&quot;num_beams&quot;:1,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;,&quot;worker_id&quot;:4,&quot;num_workers&quot;:8}</code></p>
+      <p><strong>Matched checks:</strong> top bolt missing (0.5)</p>
+      
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Liquid transfer conservation</h3>
+      <span class="tag adapted">Hard OOD</span>
+      <span class="tag">physical reasoning</span><span class="tag">conservation</span><span class="tag">diagram reading</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hardu_liquid_conservation.png" alt="Liquid transfer conservation">
+        <p class="prompt"><strong>Question:</strong> After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.</p>
+        <p class="meta"><strong>Expected:</strong> No. The diagram states no liquid is spilled, so the same total amount is conserved even though it is now in glass B.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic 2026-05-20 hard understanding case; not in paper.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag ">fail</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Yes. The total amount of liquid changed because the liquid in container A was transferred to container B, leaving container A empty.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> transferred to B (0.333)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag ">fail</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>No, the total amount of liquid did not change. The transfer only moved the liquid from one container to another, maintaining the same total volume.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> no change (0.333)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>No.
+
+The total amount of liquid did not change. The image shows liquid being moved from container A to container B. The text at the bottom explicitly states, &quot;No liquid is spilled during the transfer,&quot; which means the total volume of liquid is conserved; it is simply redistributed from one container to the other.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> no change, conservation reason, transferred to B (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to determine if the total amount of liquid changed based on the provided image.
+
+1.  **Analyze the &quot;Before&quot; state:**
+    *   Container A has a certain amount of liquid (let's call it $V_A$).
+    *   Container B has a certain amount of liquid (let's call it $V_B$).
+    *   Visually, $V_A$ looks like it's about half full. $V_B$ looks like it's about half full as well, maybe slightly less. Wait, let's look closer.
+    *   Container A is shorter and wider. The liquid level is roughly in the middle.
+    *   Container B is taller and narrower. The liquid level is roughly in the middle.
+    *   Actually, let's just look at the total volume. The blue area represents the liquid.
+
+2.  **Analyze the &quot;After&quot; state:**
+    *   Container A is labeled &quot;A empty&quot;. It has no blue liquid.
+    *   Container B has liquid in it. The liquid level is higher than in the &quot;Before&quot; state.
+    *   The label says &quot;No liquid is spilled during the transfer.&quot; This is a huge clue.
+
+3.  **Compare &quot;Before&quot; and &quot;After&quot;:**
+    *   In the &quot;Before&quot; image, there is liquid in A and liquid in B.
+    *   In the &quot;After&quot; image, the liquid from A has been moved into B.
+    *   The text explicitly states &quot;No liquid is spilled during the transfer.&quot;
+    *   Therefore, the total volume of liquid is the sum of liquid in A and liquid in B before, which is equal to the liquid in B after (since A is empty).
+    *   Conservation of mass/volume applies here. The liquid just moved from one container to another.
+
+4.  **Formulate the answer:**
+    *   **Direct Answer:** No.
+    *   **Explanation:** The image shows liquid moving from container A to container B. The text at the bottom explicitly states &quot;No liquid is spilled during the transfer.&quot; This means the total volume of liquid remains constant; it just changes location. The blue area in the &quot;After&quot; section (container B) represents the sum of the blue areas in the &quot;Before&quot; section (containers A and B).
+
+    *   Wait, let me double check the visual levels.
+    *   Before: A has ~50% full. B has ~50% full.
+    *   After: A is empty. B is ~75% full.
+    *   This implies the liquid from A was transferred to B.
+    *   The question is &quot;did the total amount of liquid change?&quot;.
+    *   The answer is definitely No. The total amount is conserved.
+
+    *   Let's refine the explanation.
+    *   Start with &quot;No&quot;.
+    *   Explain that the liquid was simply moved from container A to container B.
+    *   Point out the text &quot;No liquid is spilled during the transfer&quot; which confirms conservation of volume.
+    *   Visually, the blue area in the &quot;After&quot; picture (just in B) is equal to the blue area in the &quot;Before&quot; picture (in A + B).
+
+    *   Final check: Does the user want a simple &quot;yes or no&quot;? The prompt says &quot;Answer yes or no and explain briefly.&quot; So I need to start with the answer.
+
+    *   Draft: No. The image illustrates a transfer where liquid moves from container A to container B. The text at the bottom confirms that &quot;No liquid is spilled,&quot; meaning the total volume of liquid remains the same, just redistributed between the containers.
+&lt;/think&gt;
+
+No.
+
+The total amount of liquid did not change. The image shows liquid being moved from container A to container B. The text at the bottom explicitly states, &quot;No liquid is spilled during the transfer,&quot; which means the total volume of liquid is conserved; it is simply redistributed from one container to the other.</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>No, the total amount of liquid did not change. The liquid was transferred from the beaker labeled 'Before' to the beaker labeled 'A empty', resulting in the same volume of liquid remaining in both beakers.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      <p><strong>Matched checks:</strong> no change, conservation reason (0.667)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag adapted">partial</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>No, the total amount of liquid did not change. Initially, there was a combined total of 100% liquid in both containers A and B. After the transfer, the total amount of liquid remained at 100%, with container A now containing 50% and container B containing 50%.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: completed</summary>
+      <p><strong>Runner:</strong> OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1000,&quot;do_sample&quot;:false,&quot;num_beams&quot;:1,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;,&quot;worker_id&quot;:5,&quot;num_workers&quot;:8}</code></p>
+      <p><strong>Matched checks:</strong> no change, transferred to B (0.667)</p>
+      
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Transit transfer timing</h3>
+      <span class="tag adapted">Hard OOD</span>
+      <span class="tag">OCR</span><span class="tag">time arithmetic</span><span class="tag">schedule reasoning</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hardu_train_transfer.png" alt="Transit transfer timing">
+        <p class="prompt"><strong>Question:</strong> Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?</p>
+        <p class="meta"><strong>Expected:</strong> Blue and Green tie for earliest at 09:24. Blue arrives at 09:18 plus 6 minutes; Green arrives at 09:24 plus 0 minutes. Red is later at 09:27.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic 2026-05-20 hard understanding case; not in paper.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag ">fail</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Green</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>To determine which line or lines get to the Museum earliest after adding the transfer time, we need to calculate the earliest arrival time for each line.
+
+1. **Blue Line:**
+Arrival time: 09:18
+Transfer time: 6 minutes
+Earliest arrival time: 09:18 + 6 minutes = 09:24
+
+2. **Red Line:**
+Arrival time: 09:15
+Transfer time: 12 minutes
+Earliest arrival time: 09:15 + 12 minutes = 09:27
+
+3. **Green Line:**
+Arrival time: 09:24
+Transfer time: 0 minutes
+Earliest arrival time: 09:24 + 0 minutes = 09:24
+
+Comparing the earliest arrival times:
+Blue Line: 09:24
+Red Line: 09:27
+Green Line: 09:24
+
+Both the Blue and Green lines arrive at the Museum at the same earliest time, which is 09:24. Therefore, the Blue and Green lines get to the Museum earliest after adding the transfer time.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> Blue and Green, 09:24, adds transfer times, Red later (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>To determine which line or lines get to the Museum earliest after adding the transfer time, we need to calculate the earliest arrival time for each line.
+
+1. **Blue Line:**
+   - Arrival time: 09:18
+   - Transfer time: 6 minutes
+   - Earliest arrival time: 09:18 + 6 minutes = 09:24
+
+2. **Red Line:**
+   - Arrival time: 09:15
+   - Transfer time: 12 minutes
+   - Earliest arrival time: 09:15 + 12 minutes = 09:27
+
+3. **Green Line:**
+   - Arrival time: 09:24
+   - Transfer time: 0 minutes
+   - Earliest arrival time: 09:24 + 0 minutes = 09:24
+
+Comparing the earliest arrival times:
+- Blue Line: 09:24
+- Red Line: 09:27
+- Green Line: 09:24
+
+Both the Blue and Green lines arrive at the Museum at the same earliest time, which is 09:24. Therefore, the Blue and Green lines get to the Museum earliest after adding the transfer time.</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>&lt;think&gt;
+The user wants me to determine which train line arrives at the Museum earliest based on the provided image.
+
+1.  **Identify the current time:** The image states &quot;Current time: 09:12&quot;.
+2.  **Identify the columns:** The table has columns for &quot;Line&quot;, &quot;Arrives&quot;, &quot;Transfer&quot;, and &quot;Destination&quot;.
+3.  **Identify the rows:**
+Row 1: Blue line, Arrives 09:18, Transfer 6 min, Destination Museum.
+Row 2: Red line, Arrives 09:15, Transfer 12 min, Destination Museum.
+Row 3: Green line, Arrives 09:24, Transfer 0 min, Destination Museum.
+4.  **Understand the calculation:** The text at the bottom says &quot;Earliest arrival = train arrival time + transfer time.&quot; This is a bit confusingly phrased. It likely means &quot;Total time to get to destination = Arrival time + Transfer time&quot;. Wait, let me re-read. &quot;Earliest arrival = train arrival time + transfer time.&quot; This implies the *final* arrival time at the Museum is the sum of when the train arrives and how long the transfer takes.
+Let's check the logic.
+Blue: Arrives 09:18. Transfer takes 6 mins. So, you get to the Museum at 09:18 + 6 mins = 09:24.
+Red: Arrives 09:15. Transfer takes 12 mins. So, you get to the Museum at 09:15 + 12 mins = 09:27.
+Green: Arrives 09:24. Transfer takes 0 mins. So, you get to the Museum at 09:24 + 0 mins = 09:24.
+Wait, let me look closer at the &quot;Arrives&quot; column.*
+    Does &quot;Arrives&quot; mean &quot;Arrives at the transfer station&quot; or &quot;Arrives at the final destination&quot;?
+    The column header is just &quot;Arrives&quot;. The destination is &quot;Museum&quot;.
+    If the destination is already &quot;Museum&quot;, then the &quot;Arrives&quot; time is the arrival time at the Museum.
+    But then what is the &quot;Transfer&quot; column for?
+    Maybe the &quot;Arrives&quot; time is when the train arrives at a *transfer point*, and the &quot;Transfer&quot; time is how long it takes to get to the Museum from that point?
+    Let's re-read the bottom text: &quot;Earliest arrival = train arrival time + transfer time.&quot;
+    This formula suggests that the &quot;Earliest arrival&quot; (presumably at the final destination) is calculated by adding the &quot;train arrival time&quot; (from the &quot;Arrives&quot; column) and the &quot;transfer time&quot;.
+    This implies the &quot;Arrives&quot; column is *not* the final arrival time at the Museum, but rather the arrival time at a transfer station.
+    Let's assume the &quot;Arrives&quot; column is the time the train gets to the transfer hub.
+Blue train arrives at hub at 09:18. Transfer takes 6 mins. Total time to Museum = 09:18 + 6 min = 09:24.
+Red train arrives at hub at 09:15. Transfer takes 12 mins. Total time to Museum = 09:15 + 12 min = 09:27.
+Green train arrives at hub at 09:24. Transfer takes 0 mins. Total time to Museum = 09:24 + 0 min = 09:24.
+Alternative interpretation:* Maybe the &quot;Arrives&quot; column is the arrival time at the Museum, and the &quot;Transfer&quot; column is irrelevant or refers to something else? No, that doesn't make sense with the formula at the bottom.
+    The formula &quot;Earliest arrival = train arrival time + transfer time&quot; strongly implies that the &quot;Arrives&quot; column is an intermediate time.
+    Let's look at the Green line. Arrives 09:24, Transfer 0 min. This suggests the train arrives at the Museum at 09:24 and you don't need to transfer.
+    Let's look at the Blue line. Arrives 09:18. If this is the time at the transfer station, and transfer takes 6 mins, you arrive at the Museum at 09:24.
+    Let's look at the Red line. Arrives 09:15. If this is the time at the transfer station, and transfer takes 12 mins, you arrive at the Museum at 09:27.
+
+    So</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> Blue and Green, 09:24, adds transfer times, Red later (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to determine which train line arrives at the Museum earliest based on the provided image.
+
+1.  **Identify the current time:** The image states &quot;Current time: 09:12&quot;.
+2.  **Identify the columns:** The table has columns for &quot;Line&quot;, &quot;Arrives&quot;, &quot;Transfer&quot;, and &quot;Destination&quot;.
+3.  **Identify the rows:**
+    *   Row 1: Blue line, Arrives 09:18, Transfer 6 min, Destination Museum.
+    *   Row 2: Red line, Arrives 09:15, Transfer 12 min, Destination Museum.
+    *   Row 3: Green line, Arrives 09:24, Transfer 0 min, Destination Museum.
+4.  **Understand the calculation:** The text at the bottom says &quot;Earliest arrival = train arrival time + transfer time.&quot; This is a bit confusingly phrased. It likely means &quot;Total time to get to destination = Arrival time + Transfer time&quot;. Wait, let me re-read. &quot;Earliest arrival = train arrival time + transfer time.&quot; This implies the *final* arrival time at the Museum is the sum of when the train arrives and how long the transfer takes.
+    *   Let's check the logic.
+    *   Blue: Arrives 09:18. Transfer takes 6 mins. So, you get to the Museum at 09:18 + 6 mins = 09:24.
+    *   Red: Arrives 09:15. Transfer takes 12 mins. So, you get to the Museum at 09:15 + 12 mins = 09:27.
+    *   Green: Arrives 09:24. Transfer takes 0 mins. So, you get to the Museum at 09:24 + 0 mins = 09:24.
+
+    *Wait, let me look closer at the &quot;Arrives&quot; column.*
+    Does &quot;Arrives&quot; mean &quot;Arrives at the transfer station&quot; or &quot;Arrives at the final destination&quot;?
+    The column header is just &quot;Arrives&quot;. The destination is &quot;Museum&quot;.
+    If the destination is already &quot;Museum&quot;, then the &quot;Arrives&quot; time is the arrival time at the Museum.
+    But then what is the &quot;Transfer&quot; column for?
+    Maybe the &quot;Arrives&quot; time is when the train arrives at a *transfer point*, and the &quot;Transfer&quot; time is how long it takes to get to the Museum from that point?
+    Let's re-read the bottom text: &quot;Earliest arrival = train arrival time + transfer time.&quot;
+    This formula suggests that the &quot;Earliest arrival&quot; (presumably at the final destination) is calculated by adding the &quot;train arrival time&quot; (from the &quot;Arrives&quot; column) and the &quot;transfer time&quot;.
+    This implies the &quot;Arrives&quot; column is *not* the final arrival time at the Museum, but rather the arrival time at a transfer station.
+    Let's assume the &quot;Arrives&quot; column is the time the train gets to the transfer hub.
+    *   Blue train arrives at hub at 09:18. Transfer takes 6 mins. Total time to Museum = 09:18 + 6 min = 09:24.
+    *   Red train arrives at hub at 09:15. Transfer takes 12 mins. Total time to Museum = 09:15 + 12 min = 09:27.
+    *   Green train arrives at hub at 09:24. Transfer takes 0 mins. Total time to Museum = 09:24 + 0 min = 09:24.
+
+    *Alternative interpretation:* Maybe the &quot;Arrives&quot; column is the arrival time at the Museum, and the &quot;Transfer&quot; column is irrelevant or refers to something else? No, that doesn't make sense with the formula at the bottom.
+    The formula &quot;Earliest arrival = train arrival time + transfer time&quot; strongly implies that the &quot;Arrives&quot; column is an intermediate time.
+    Let's look at the Green line. Arrives 09:24, Transfer 0 min. This suggests the train arrives at the Museum at 09:24 and you don't need to transfer.
+    Let's look at the Blue line. Arrives 09:18. If this is the time at the transfer station, and transfer takes 6 mins, you arrive at the Museum at 09:24.
+    Let's look at the Red line. Arrives 09:15. If this is the time at the transfer station, and transfer takes 12 mins, you arrive at the Museum at 09:27.
+
+    So</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag ">fail</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Based on the information provided in the image, the earliest arrival time after adding transfer time is 09:18 for the line that arrives at 09:12.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Based on the current time of 09:12, the Blue Line arrives at the Museum at 09:18, the Red Line at 09:27, and the Green Line at 09:24. Adding the transfer time, the Blue Line would take 6 minutes to reach the Museum, the Red Line would take 12 minutes, and the Green Line would take 0 minutes since it is already at the Museum. Therefore, the Green Line would get to the Museum earliest after adding the transfer time.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: completed</summary>
+      <p><strong>Runner:</strong> OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1000,&quot;do_sample&quot;:false,&quot;num_beams&quot;:1,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;,&quot;worker_id&quot;:6,&quot;num_workers&quot;:8}</code></p>
+      <p><strong>Matched checks:</strong> Blue and Green, 09:24, adds transfer times, Red later (1)</p>
+      
+    </details>
+  </article>
+      </div>
+    </div>
+  </article><article class="case-block understanding-case">
+    <div class="case-head">
+      <h3>Balance-scale hidden weight</h3>
+      <span class="tag adapted">Hard OOD</span>
+      <span class="tag">equation solving</span><span class="tag">visual arithmetic</span><span class="tag">counterfactual-free reasoning</span>
+    </div>
+    <div class="understanding-layout">
+      <div class="understanding-input">
+        <img src="assets/understanding_hardu_balance_hidden_weight.png" alt="Balance-scale hidden weight">
+        <p class="prompt"><strong>Question:</strong> The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?</p>
+        <p class="meta"><strong>Expected:</strong> X is 3 kg.</p>
+        <p class="meta"><strong>Source:</strong> Synthetic 2026-05-20 hard understanding case; not in paper.</p>
+      </div>
+      <div class="understanding-results">
+        <article class="card result understanding-card">
+    <div class="result-head"><strong>Janus-Pro-7B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>To determine the value of X, we need to set the two sides of the scale to be equal.
+
+The left side of the scale has 2 kg plus X.
+The right side of the scale has 5 kg.
+
+For the scale to be balanced, the sum of the weights on the left side must equal the sum of the weights on the right side.
+
+So, we set up the equation:
+
+2 kg + X = 5 kg
+
+Now, we solve for X:
+
+X = 5 kg - 2 kg
+X = 3 kg
+
+Therefore, X is 3 kg.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Janus-Pro-7B · status: completed</summary>
+      <p><strong>Runner:</strong> Janus-Pro self-readback via run_janus_pro_demos.image_to_text</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:256,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;}</code></p>
+      <p><strong>Matched checks:</strong> X=3, left equation, right total (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>BAGEL-7B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>To find the value of X, we need to set up an equation based on the balance of the scale. Since the scale is balanced, the total weight on the left pan must equal the total weight on the right pan.
+
+Let's denote the weight of X as X kg.
+
+The total weight on the left pan is 2 kg + X kg.
+The total weight on the right pan is 5 kg.
+
+Setting up the equation:
+\[ 2 + X = 5 \]
+
+To solve for X, we subtract 2 from both sides of the equation:
+\[ X = 5 - 2 \]
+\[ X = 3 \]
+
+Therefore, the value of X is 3 kg.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: BAGEL-7B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)</p>
+      <p><strong>Config:</strong> <code>{&quot;max_think_token_n&quot;:512,&quot;do_sample&quot;:false,&quot;text_temperature&quot;:0.3,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device_map&quot;:&quot;accelerate infer_auto_device_map&quot;}</code></p>
+      <p><strong>Matched checks:</strong> X=3, left equation, right total (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>SenseNova-U1-8B-MoT</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Based on the image, the balance scale is level, which means the total weight on the left side is equal to the total weight on the right side.
+
+Here is the equation:
+*2 kg + X = 5 kg**
+
+To find X, you subtract 2 from 5:
+*X = 5 - 2**
+*X = 3**
+
+So, **X is 3 kg**.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: SenseNova-U1-8B-MoT · status: completed</summary>
+      <p><strong>Runner:</strong> SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1024,&quot;do_sample&quot;:false,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;attn_backend&quot;:&quot;sdpa&quot;}</code></p>
+      <p><strong>Matched checks:</strong> X=3, left equation, right total (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>&lt;think&gt;
+The user wants me to solve a simple physics/math puzzle based on an image.
+
+**1. Analyze the image:**
+*   **Title:** &quot;BALANCE PUZZLE&quot;
+*   **Visual:** A balance scale.
+*   **Left side:** Two blue blocks. One is labeled &quot;2 kg&quot;, the other is labeled &quot;X&quot;. They are sitting on a platform.
+*   **Right side:** One red block labeled &quot;5 kg&quot; sitting on a platform.
+*   **State:** The beam is horizontal, which means it is balanced.
+*   **Text at bottom:** &quot;The beam is level. What is X?&quot;
+
+**2. Formulate the equation:**
+*   For a balance scale to be level, the total weight on the left side must equal the total weight on the right side.
+*   Left side weight = Weight of first block + Weight of second block = 2 kg + X
+*   Right side weight = Weight of the single block = 5 kg
+*   Equation: 2 + X = 5
+
+**3. Solve for X:**
+*   Subtract 2 from both sides of the equation.
+*   X = 5 - 2
+*   X = 3
+
+**4. Construct the final answer:**
+*   State the principle: Since the beam is level, the weights on both sides are equal.
+*   Set up the math: 2 kg + X = 5 kg.
+*   Solve: X = 5 - 2.
+*   Result: X = 3 kg.
+&lt;/think&gt;
+
+Based on the image, the balance scale is level, which means the total weight on the left side is equal to the total weight on the right side.
+
+Here is the equation:
+**2 kg + X = 5 kg**
+
+To find X, you subtract 2 from 5:
+**X = 5 - 2**
+**X = 3**
+
+So, **X is 3 kg**.</p></details>
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Show-o2-1.5B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>The scale is balanced, so the weights on both sides are equal. The left pan has 2 kg plus X, and the right pan has 5 kg. To find X, we need to set the weights equal to each other and solve for X. So, 2 kg + X = 5 kg. Subtracting 2 kg from both sides gives us X = 3 kg. Therefore, X is 3 kg.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Show-o2-1.5B · status: completed</summary>
+      <p><strong>Runner:</strong> Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:300,&quot;top_k&quot;:1,&quot;dtype&quot;:&quot;float32&quot;,&quot;resolution&quot;:432,&quot;config&quot;:&quot;configs/showo2_1.5b_demo_432x432.yaml&quot;}</code></p>
+      <p><strong>Matched checks:</strong> X=3, left equation, right total (1)</p>
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>Emu3.5-Image vLLM 8x80GB</strong><span class="tag adapted">unsupported</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: Emu3.5-Image vLLM 8x80GB · status: unsupported</summary>
+      <p><strong>Runner:</strong> </p>
+      
+      
+      
+    </details>
+  </article><article class="card result understanding-card">
+    <div class="result-head"><strong>OneCAT-3B</strong><span class="tag exact">pass</span></div>
+    <div class="readback-answer understanding-answer"><div class="readback-label">Answer</div><p>To find the value of X, we need to determine the balance point of the scale. The scale is balanced when the weight on both sides is equal.
+
+Given:
+Left pan: 2 kg + X
+Right pan: 5 kg
+
+Since the scale is balanced, the weight on the left pan must equal the weight on the right pan. Therefore, we can set up the following equation:
+
+2 kg + X = 5 kg
+
+To solve for X, we need to isolate X on one side of the equation. We can do this by subtracting 2 kg from both sides of the equation:
+
+2 kg + X - 2 kg = 5 kg - 2 kg
+
+This simplifies to:
+
+X = 3 kg
+
+Therefore, the value of X is 3 kg.</p></div>
+    <details class="readback-config">
+      <summary>Understanding config: OneCAT-3B · status: completed</summary>
+      <p><strong>Runner:</strong> OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat</p>
+      <p><strong>Config:</strong> <code>{&quot;max_new_tokens&quot;:1000,&quot;do_sample&quot;:false,&quot;num_beams&quot;:1,&quot;dtype&quot;:&quot;bfloat16&quot;,&quot;device&quot;:&quot;cuda&quot;,&quot;worker_id&quot;:7,&quot;num_workers&quot;:8}</code></p>
+      <p><strong>Matched checks:</strong> X=3, left equation, right total (1)</p>
+      <details class="raw-answer"><summary>Raw model output</summary><p>To find the value of X, we need to determine the balance point of the scale. The scale is balanced when the weight on both sides is equal.
+
+Given:
+- Left pan: 2 kg + X
+- Right pan: 5 kg
+
+Since the scale is balanced, the weight on the left pan must equal the weight on the right pan. Therefore, we can set up the following equation:
+
+2 kg + X = 5 kg
+
+To solve for X, we need to isolate X on one side of the equation. We can do this by subtracting 2 kg from both sides of the equation:
+
+2 kg + X - 2 kg = 5 kg - 2 kg
+
+This simplifies to:
+
+X = 3 kg
+
+Therefore, the value of X is 3 kg.</p></details>
+    </details>
+  </article>
+      </div>
+    </div>
   </article>
 </section></div>
     <div class="tab-panel" id="tab-interleaved"><section>
@@ -7835,8 +9579,8 @@ The user wants me to identify the correct reflection of the arrow shown in the i
     <ul>
       <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models</code></li>
       <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo</code></li>
-      <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/all_results_report/publish_20260519_1325_interleaved_tabs_self_readback</code></li>
-      <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/all_results_report/publish_20260519_1325_interleaved_tabs_self_readback/assets</code></li>
+      <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/all_results_report/publish_20260520_hard_mixed_generation_understanding</code></li>
+      <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/all_results_report/publish_20260520_hard_mixed_generation_understanding/assets</code></li>
       <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845</code></li>
       <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247</code></li>
       <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0242</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0214</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0146</code></li>
@@ -7845,8 +9589,8 @@ The user wants me to identify the correct reflection of the arrow shown in the i
     <h3>Files Used</h3>
     <ul>
       <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/all_results_report/build_all_results_report.js</code></li>
-      <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/all_results_report/publish_20260519_1325_interleaved_tabs_self_readback/index.html</code></li>
-      <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/cross_eval/cross_eval_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_eval/expanded_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_eval/paper_ood_cases_v2.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_eval/interesting_cases_v1.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_eval/model_metadata.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/imagegen_codex_baseline/codex_imagegen_manifest.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/report_site/data/summaries/janus_pro_7b/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/report_site/data/summaries/bagel_7b_mot/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/report_site/data/summaries/sensenova_u1_8b_mot/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/janus_pro_7b/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/bagel_7b_mot/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/sensenova_u1_8b_mot/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/show_o2_1_5b/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/emu3_5_image_vllm_8x80/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/onecat_3b/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/janus_pro_7b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/bagel_7b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/sensenova_u1_8b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/emu3_5_image_vllm_8x80/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/onecat_3b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/janus_pro_7b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/bagel_7b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/sensenova_u1_8b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/emu3_5_image_vllm_8x80/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/onecat_3b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/saltwater_edit_more_models/full_run_20260519_0108/outputs/saltwater_more_models/onecat_3b/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/saltwater_edit_more_models/full_run_20260519_0108/outputs/saltwater_more_models/emu3_5_image_vllm_8x80/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/show_o_corrected_report/full_run_20260518_2308/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/show_o_corrected_report/full_run_20260518_2308/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_paper/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/show_o_corrected_report/full_run_20260518_2308/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_interesting/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0242/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/summary_interleaved.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0214/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/summary_interleaved.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0146/outputs/exact_interleaved_20260519_0136/emu3_5_vllm_8x80/summary_interleaved.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/self_readback/manifest_20260519_0310.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/self_readback/full_run_20260519_self_readback/combined_self_readback.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/image_understanding/full_run_20260519_hard_reasoning/combined_image_understanding_with_hard.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/collected_outputs/bagel_7b_mot/summary.json</code></li>
+      <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/all_results_report/publish_20260520_hard_mixed_generation_understanding/index.html</code></li>
+      <li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/cross_eval/cross_eval_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_eval/expanded_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_eval/paper_ood_cases_v2.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_eval/interesting_cases_v1.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/hard_mixed_eval/generation_cases_20260520_v1.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_eval/model_metadata.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/imagegen_codex_baseline/codex_imagegen_manifest.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/report_site/data/summaries/janus_pro_7b/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/report_site/data/summaries/bagel_7b_mot/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/report_site/data/summaries/sensenova_u1_8b_mot/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/janus_pro_7b/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/bagel_7b_mot/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/sensenova_u1_8b_mot/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/show_o2_1_5b/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/emu3_5_image_vllm_8x80/summary_new_cases.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/expanded_report/full_run_20260518_1738/outputs/expanded_eval/onecat_3b/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/janus_pro_7b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/bagel_7b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/sensenova_u1_8b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/emu3_5_image_vllm_8x80/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/paper_ood_report/full_run_20260518_1845/outputs/paper_ood_eval/onecat_3b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/janus_pro_7b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/bagel_7b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/sensenova_u1_8b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/emu3_5_image_vllm_8x80/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/interesting_ood_report/full_run_20260518_2247/outputs/interesting_ood_v1/onecat_3b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/hard_mixed_report/full_run_20260520_0235/outputs/generation/janus_pro_7b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/hard_mixed_report/full_run_20260520_0235/outputs/generation/bagel_7b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/hard_mixed_report/full_run_20260520_0235/outputs/generation/sensenova_u1_8b_mot/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/hard_mixed_report/full_run_20260520_0235/outputs/generation/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/hard_mixed_report/full_run_20260520_0235/outputs/generation/emu3_5_image_vllm_8x80/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/hard_mixed_report/full_run_20260520_0235/outputs/generation/onecat_3b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/saltwater_edit_more_models/full_run_20260519_0108/outputs/saltwater_more_models/onecat_3b/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/saltwater_edit_more_models/full_run_20260519_0108/outputs/saltwater_more_models/emu3_5_image_vllm_8x80/summary.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/show_o_corrected_report/full_run_20260518_2308/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_expanded/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/show_o_corrected_report/full_run_20260518_2308/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_paper/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/show_o_corrected_report/full_run_20260518_2308/outputs/show_o2_corrected_20260518_2308/show_o2_corrected_interesting/show_o2_1_5b/summary_paper_ood.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0242/outputs/sensenova_interleaved_20260519_0232/sensenova_u1_8b_mot/summary_interleaved.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0214/outputs/interleaved_story_suite_20260519_0202/emu3_5_vllm_8x80/summary_interleaved.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/exact_interleaved_report/full_run_20260519_0146/outputs/exact_interleaved_20260519_0136/emu3_5_vllm_8x80/summary_interleaved.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/self_readback/manifest_20260519_0310.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/self_readback/full_run_20260519_self_readback/combined_self_readback.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/image_understanding/full_run_20260520_hard_mixed/combined_image_understanding.json</code></li><li><code>/Users/qitaoz/Documents/Codex/2026-05-18/unified-multimodel-models/artifacts/pluto_omni_demo/collected_outputs/bagel_7b_mot/summary.json</code></li>
     </ul>
   </footer>
 </main>

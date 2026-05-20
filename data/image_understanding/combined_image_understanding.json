@@ -404,6 +404,134 @@
       "question": "The real arrow on the left points toward the mirror. Which reflected arrow, R1, R2, or R3, is physically consistent with a vertical mirror? Explain briefly.",
       "expected": "R1 or R3 directionally face left, but only R1 is positioned opposite the real arrow at the matching height. R2 points the wrong way.",
       "asset_url": "https://phidias.s3.us-west-2.amazonaws.com/qitaoz/codex/omni-id-ood-report/20260519_image_understanding_v1/assets/hard_mirror_direction.png"
+    },
+    {
+      "id": "hardu_gear_train_direction",
+      "split": "Hard OOD",
+      "category": "mechanistic reasoning",
+      "title": "Gear train direction inference",
+      "image": "assets/hardu_gear_train_direction.png",
+      "question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "expected": "Gear D rotates counterclockwise.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "causal chain",
+        "mechanistic reasoning",
+        "direction inference"
+      ]
+    },
+    {
+      "id": "hardu_stove_knob_mapping",
+      "split": "Hard OOD",
+      "category": "real-world control mapping",
+      "title": "Stove knob to burner mapping",
+      "image": "assets/hardu_stove_knob_mapping.png",
+      "question": "Which burner is on, and which knob position proves it?",
+      "expected": "The front-right burner is on; the FR knob is set to HIGH while the others are OFF.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world rule",
+        "symbol grounding",
+        "spatial mapping"
+      ]
+    },
+    {
+      "id": "hardu_shelf_unit_price",
+      "split": "Hard OOD",
+      "category": "visual arithmetic",
+      "title": "Shelf unit-price comparison",
+      "image": "assets/hardu_shelf_unit_price.png",
+      "question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "expected": "Product C is cheapest: $5.00 / 25 oz = $0.20 per oz, lower than A ($0.30/oz) and B ($0.25/oz).",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "arithmetic",
+        "comparison"
+      ]
+    },
+    {
+      "id": "hardu_elevator_direction",
+      "split": "Hard OOD",
+      "category": "real-world state reasoning",
+      "title": "Elevator panel direction",
+      "image": "assets/hardu_elevator_direction.png",
+      "question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "expected": "Higher floor next; the up arrow is lit and the display shows floor 3.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world state",
+        "direction inference",
+        "symbol reading"
+      ]
+    },
+    {
+      "id": "hardu_assembly_missing_bolt",
+      "split": "Hard OOD",
+      "category": "assembly inspection",
+      "title": "Missing chair bolt",
+      "image": "assets/hardu_assembly_missing_bolt.png",
+      "question": "Which chair leg is missing its top bolt?",
+      "expected": "The rear-right leg is missing its top bolt.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "visual inspection",
+        "spatial relation",
+        "assembly reasoning"
+      ]
+    },
+    {
+      "id": "hardu_liquid_conservation",
+      "split": "Hard OOD",
+      "category": "physical conservation",
+      "title": "Liquid transfer conservation",
+      "image": "assets/hardu_liquid_conservation.png",
+      "question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "expected": "No. The diagram states no liquid is spilled, so the same total amount is conserved even though it is now in glass B.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "physical reasoning",
+        "conservation",
+        "diagram reading"
+      ]
+    },
+    {
+      "id": "hardu_train_transfer",
+      "split": "Hard OOD",
+      "category": "schedule reasoning",
+      "title": "Transit transfer timing",
+      "image": "assets/hardu_train_transfer.png",
+      "question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "expected": "Blue and Green tie for earliest at 09:24. Blue arrives at 09:18 plus 6 minutes; Green arrives at 09:24 plus 0 minutes. Red is later at 09:27.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "time arithmetic",
+        "schedule reasoning"
+      ]
+    },
+    {
+      "id": "hardu_balance_hidden_weight",
+      "split": "Hard OOD",
+      "category": "equation from image",
+      "title": "Balance-scale hidden weight",
+      "image": "assets/hardu_balance_hidden_weight.png",
+      "question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "expected": "X is 3 kg.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "equation solving",
+        "visual arithmetic",
+        "counterfactual-free reasoning"
+      ]
     }
   ],
   "results": [
@@ -7414,106 +7542,2569 @@
         "matched": [],
         "total_checks": 0
       }
+    },
+    {
+      "id": "bagel_7b_mot_hardu_gear_train_direction",
+      "split": "Hard OOD",
+      "category": "mechanistic reasoning",
+      "title": "Gear train direction inference",
+      "image": "assets/hardu_gear_train_direction.png",
+      "question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "expected": "Gear D rotates counterclockwise.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "causal chain",
+        "mechanistic reasoning",
+        "direction inference"
+      ],
+      "case_id": "hardu_gear_train_direction",
+      "model_key": "bagel_7b_mot",
+      "asset": "assets/hardu_gear_train_direction.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_gear_train_direction.png",
+      "readback_answer": "Gear D rotates clockwise.",
+      "readback_question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "readback_provider_model_key": "bagel_7b_mot",
+      "readback_provider_model_label": "BAGEL-7B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)",
+      "readback_config": {
+        "max_think_token_n": 512,
+        "do_sample": false,
+        "text_temperature": 0.3,
+        "dtype": "bfloat16",
+        "device_map": "accelerate infer_auto_device_map"
+      },
+      "model_label": "BAGEL-7B-MoT",
+      "understanding_answer": "Gear D rotates clockwise.",
+      "raw_understanding_answer": "Gear D rotates clockwise.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.333,
+        "label": "fail",
+        "matched": [
+          "reads A clockwise"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "bagel_7b_mot_hardu_stove_knob_mapping",
+      "split": "Hard OOD",
+      "category": "real-world control mapping",
+      "title": "Stove knob to burner mapping",
+      "image": "assets/hardu_stove_knob_mapping.png",
+      "question": "Which burner is on, and which knob position proves it?",
+      "expected": "The front-right burner is on; the FR knob is set to HIGH while the others are OFF.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world rule",
+        "symbol grounding",
+        "spatial mapping"
+      ],
+      "case_id": "hardu_stove_knob_mapping",
+      "model_key": "bagel_7b_mot",
+      "asset": "assets/hardu_stove_knob_mapping.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_stove_knob_mapping.png",
+      "readback_answer": "The front right burner is on, as indicated by the yellow color and the red border around the burner. The corresponding knob position is set to the \"HIGH\" setting, as shown by the red arrow pointing to the rightmost position on the knob.",
+      "readback_question": "Which burner is on, and which knob position proves it?",
+      "readback_provider_model_key": "bagel_7b_mot",
+      "readback_provider_model_label": "BAGEL-7B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)",
+      "readback_config": {
+        "max_think_token_n": 512,
+        "do_sample": false,
+        "text_temperature": 0.3,
+        "dtype": "bfloat16",
+        "device_map": "accelerate infer_auto_device_map"
+      },
+      "model_label": "BAGEL-7B-MoT",
+      "understanding_answer": "The front right burner is on, as indicated by the yellow color and the red border around the burner. The corresponding knob position is set to the \"HIGH\" setting, as shown by the red arrow pointing to the rightmost position on the knob.",
+      "raw_understanding_answer": "The front right burner is on, as indicated by the yellow color and the red border around the burner. The corresponding knob position is set to the \"HIGH\" setting, as shown by the red arrow pointing to the rightmost position on the knob.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.5,
+        "label": "partial",
+        "matched": [
+          "front-right burner",
+          "HIGH state"
+        ],
+        "total_checks": 4
+      }
+    },
+    {
+      "id": "bagel_7b_mot_hardu_shelf_unit_price",
+      "split": "Hard OOD",
+      "category": "visual arithmetic",
+      "title": "Shelf unit-price comparison",
+      "image": "assets/hardu_shelf_unit_price.png",
+      "question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "expected": "Product C is cheapest: $5.00 / 25 oz = $0.20 per oz, lower than A ($0.30/oz) and B ($0.25/oz).",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "arithmetic",
+        "comparison"
+      ],
+      "case_id": "hardu_shelf_unit_price",
+      "model_key": "bagel_7b_mot",
+      "asset": "assets/hardu_shelf_unit_price.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_shelf_unit_price.png",
+      "readback_answer": "To determine which product has the lowest price per ounce, we need to calculate the price per ounce for each product and then compare them.\n*Product A:**\nPrice: $3.00\nWeight: 10 oz\nPrice per ounce: $3.00 / 10 oz = $0.30 per oz\n*Product B:**\nPrice: $4.50\nWeight: 18 oz\nPrice per ounce: $4.50 / 18 oz = $0.25 per oz\n*Product C:**\nPrice: $5.00\nWeight: 25 oz\nPrice per ounce: $5.00 / 25 oz = $0.20 per oz\n\nComparing the prices per ounce:\nProduct A: $0.30 per oz\nProduct B: $0.25 per oz\nProduct C: $0.20 per oz\n\nProduct C has the lowest price per ounce at $0.20 per oz.",
+      "readback_question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "readback_provider_model_key": "bagel_7b_mot",
+      "readback_provider_model_label": "BAGEL-7B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)",
+      "readback_config": {
+        "max_think_token_n": 512,
+        "do_sample": false,
+        "text_temperature": 0.3,
+        "dtype": "bfloat16",
+        "device_map": "accelerate infer_auto_device_map"
+      },
+      "model_label": "BAGEL-7B-MoT",
+      "understanding_answer": "To determine which product has the lowest price per ounce, we need to calculate the price per ounce for each product and then compare them.\n*Product A:**\nPrice: $3.00\nWeight: 10 oz\nPrice per ounce: $3.00 / 10 oz = $0.30 per oz\n*Product B:**\nPrice: $4.50\nWeight: 18 oz\nPrice per ounce: $4.50 / 18 oz = $0.25 per oz\n*Product C:**\nPrice: $5.00\nWeight: 25 oz\nPrice per ounce: $5.00 / 25 oz = $0.20 per oz\n\nComparing the prices per ounce:\nProduct A: $0.30 per oz\nProduct B: $0.25 per oz\nProduct C: $0.20 per oz\n\nProduct C has the lowest price per ounce at $0.20 per oz.",
+      "raw_understanding_answer": "To determine which product has the lowest price per ounce, we need to calculate the price per ounce for each product and then compare them.\n\n**Product A:**\n- Price: $3.00\n- Weight: 10 oz\n- Price per ounce: $3.00 / 10 oz = $0.30 per oz\n\n**Product B:**\n- Price: $4.50\n- Weight: 18 oz\n- Price per ounce: $4.50 / 18 oz = $0.25 per oz\n\n**Product C:**\n- Price: $5.00\n- Weight: 25 oz\n- Price per ounce: $5.00 / 25 oz = $0.20 per oz\n\nComparing the prices per ounce:\n- Product A: $0.30 per oz\n- Product B: $0.25 per oz\n- Product C: $0.20 per oz\n\nProduct C has the lowest price per ounce at $0.20 per oz.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "Product C",
+          "$0.20/oz",
+          "compares A and B"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "bagel_7b_mot_hardu_elevator_direction",
+      "split": "Hard OOD",
+      "category": "real-world state reasoning",
+      "title": "Elevator panel direction",
+      "image": "assets/hardu_elevator_direction.png",
+      "question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "expected": "Higher floor next; the up arrow is lit and the display shows floor 3.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world state",
+        "direction inference",
+        "symbol reading"
+      ],
+      "case_id": "hardu_elevator_direction",
+      "model_key": "bagel_7b_mot",
+      "asset": "assets/hardu_elevator_direction.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_elevator_direction.png",
+      "readback_answer": "The elevator is set to go to a higher floor next, as indicated by the lit green upward-pointing arrow.",
+      "readback_question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "readback_provider_model_key": "bagel_7b_mot",
+      "readback_provider_model_label": "BAGEL-7B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)",
+      "readback_config": {
+        "max_think_token_n": 512,
+        "do_sample": false,
+        "text_temperature": 0.3,
+        "dtype": "bfloat16",
+        "device_map": "accelerate infer_auto_device_map"
+      },
+      "model_label": "BAGEL-7B-MoT",
+      "understanding_answer": "The elevator is set to go to a higher floor next, as indicated by the lit green upward-pointing arrow.",
+      "raw_understanding_answer": "The elevator is set to go to a higher floor next, as indicated by the lit green upward-pointing arrow.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "higher/up",
+          "uses arrow",
+          "mentions display/floor"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "bagel_7b_mot_hardu_assembly_missing_bolt",
+      "split": "Hard OOD",
+      "category": "assembly inspection",
+      "title": "Missing chair bolt",
+      "image": "assets/hardu_assembly_missing_bolt.png",
+      "question": "Which chair leg is missing its top bolt?",
+      "expected": "The rear-right leg is missing its top bolt.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "visual inspection",
+        "spatial relation",
+        "assembly reasoning"
+      ],
+      "case_id": "hardu_assembly_missing_bolt",
+      "model_key": "bagel_7b_mot",
+      "asset": "assets/hardu_assembly_missing_bolt.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_assembly_missing_bolt.png",
+      "readback_answer": "The right front chair leg is missing its top bolt.",
+      "readback_question": "Which chair leg is missing its top bolt?",
+      "readback_provider_model_key": "bagel_7b_mot",
+      "readback_provider_model_label": "BAGEL-7B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)",
+      "readback_config": {
+        "max_think_token_n": 512,
+        "do_sample": false,
+        "text_temperature": 0.3,
+        "dtype": "bfloat16",
+        "device_map": "accelerate infer_auto_device_map"
+      },
+      "model_label": "BAGEL-7B-MoT",
+      "understanding_answer": "The right front chair leg is missing its top bolt.",
+      "raw_understanding_answer": "The right front chair leg is missing its top bolt.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.5,
+        "label": "partial",
+        "matched": [
+          "top bolt missing"
+        ],
+        "total_checks": 2
+      }
+    },
+    {
+      "id": "bagel_7b_mot_hardu_liquid_conservation",
+      "split": "Hard OOD",
+      "category": "physical conservation",
+      "title": "Liquid transfer conservation",
+      "image": "assets/hardu_liquid_conservation.png",
+      "question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "expected": "No. The diagram states no liquid is spilled, so the same total amount is conserved even though it is now in glass B.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "physical reasoning",
+        "conservation",
+        "diagram reading"
+      ],
+      "case_id": "hardu_liquid_conservation",
+      "model_key": "bagel_7b_mot",
+      "asset": "assets/hardu_liquid_conservation.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_liquid_conservation.png",
+      "readback_answer": "No, the total amount of liquid did not change. The transfer only moved the liquid from one container to another, maintaining the same total volume.",
+      "readback_question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "readback_provider_model_key": "bagel_7b_mot",
+      "readback_provider_model_label": "BAGEL-7B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)",
+      "readback_config": {
+        "max_think_token_n": 512,
+        "do_sample": false,
+        "text_temperature": 0.3,
+        "dtype": "bfloat16",
+        "device_map": "accelerate infer_auto_device_map"
+      },
+      "model_label": "BAGEL-7B-MoT",
+      "understanding_answer": "No, the total amount of liquid did not change. The transfer only moved the liquid from one container to another, maintaining the same total volume.",
+      "raw_understanding_answer": "No, the total amount of liquid did not change. The transfer only moved the liquid from one container to another, maintaining the same total volume.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.333,
+        "label": "fail",
+        "matched": [
+          "no change"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "bagel_7b_mot_hardu_train_transfer",
+      "split": "Hard OOD",
+      "category": "schedule reasoning",
+      "title": "Transit transfer timing",
+      "image": "assets/hardu_train_transfer.png",
+      "question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "expected": "Blue and Green tie for earliest at 09:24. Blue arrives at 09:18 plus 6 minutes; Green arrives at 09:24 plus 0 minutes. Red is later at 09:27.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "time arithmetic",
+        "schedule reasoning"
+      ],
+      "case_id": "hardu_train_transfer",
+      "model_key": "bagel_7b_mot",
+      "asset": "assets/hardu_train_transfer.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_train_transfer.png",
+      "readback_answer": "To determine which line or lines get to the Museum earliest after adding the transfer time, we need to calculate the earliest arrival time for each line.\n\n1. **Blue Line:**\nArrival time: 09:18\nTransfer time: 6 minutes\nEarliest arrival time: 09:18 + 6 minutes = 09:24\n\n2. **Red Line:**\nArrival time: 09:15\nTransfer time: 12 minutes\nEarliest arrival time: 09:15 + 12 minutes = 09:27\n\n3. **Green Line:**\nArrival time: 09:24\nTransfer time: 0 minutes\nEarliest arrival time: 09:24 + 0 minutes = 09:24\n\nComparing the earliest arrival times:\nBlue Line: 09:24\nRed Line: 09:27\nGreen Line: 09:24\n\nBoth the Blue and Green lines arrive at the Museum at the same earliest time, which is 09:24. Therefore, the Blue and Green lines get to the Museum earliest after adding the transfer time.",
+      "readback_question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "readback_provider_model_key": "bagel_7b_mot",
+      "readback_provider_model_label": "BAGEL-7B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)",
+      "readback_config": {
+        "max_think_token_n": 512,
+        "do_sample": false,
+        "text_temperature": 0.3,
+        "dtype": "bfloat16",
+        "device_map": "accelerate infer_auto_device_map"
+      },
+      "model_label": "BAGEL-7B-MoT",
+      "understanding_answer": "To determine which line or lines get to the Museum earliest after adding the transfer time, we need to calculate the earliest arrival time for each line.\n\n1. **Blue Line:**\nArrival time: 09:18\nTransfer time: 6 minutes\nEarliest arrival time: 09:18 + 6 minutes = 09:24\n\n2. **Red Line:**\nArrival time: 09:15\nTransfer time: 12 minutes\nEarliest arrival time: 09:15 + 12 minutes = 09:27\n\n3. **Green Line:**\nArrival time: 09:24\nTransfer time: 0 minutes\nEarliest arrival time: 09:24 + 0 minutes = 09:24\n\nComparing the earliest arrival times:\nBlue Line: 09:24\nRed Line: 09:27\nGreen Line: 09:24\n\nBoth the Blue and Green lines arrive at the Museum at the same earliest time, which is 09:24. Therefore, the Blue and Green lines get to the Museum earliest after adding the transfer time.",
+      "raw_understanding_answer": "To determine which line or lines get to the Museum earliest after adding the transfer time, we need to calculate the earliest arrival time for each line.\n\n1. **Blue Line:**\n   - Arrival time: 09:18\n   - Transfer time: 6 minutes\n   - Earliest arrival time: 09:18 + 6 minutes = 09:24\n\n2. **Red Line:**\n   - Arrival time: 09:15\n   - Transfer time: 12 minutes\n   - Earliest arrival time: 09:15 + 12 minutes = 09:27\n\n3. **Green Line:**\n   - Arrival time: 09:24\n   - Transfer time: 0 minutes\n   - Earliest arrival time: 09:24 + 0 minutes = 09:24\n\nComparing the earliest arrival times:\n- Blue Line: 09:24\n- Red Line: 09:27\n- Green Line: 09:24\n\nBoth the Blue and Green lines arrive at the Museum at the same earliest time, which is 09:24. Therefore, the Blue and Green lines get to the Museum earliest after adding the transfer time.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "Blue and Green",
+          "09:24",
+          "adds transfer times",
+          "Red later"
+        ],
+        "total_checks": 4
+      }
+    },
+    {
+      "id": "bagel_7b_mot_hardu_balance_hidden_weight",
+      "split": "Hard OOD",
+      "category": "equation from image",
+      "title": "Balance-scale hidden weight",
+      "image": "assets/hardu_balance_hidden_weight.png",
+      "question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "expected": "X is 3 kg.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "equation solving",
+        "visual arithmetic",
+        "counterfactual-free reasoning"
+      ],
+      "case_id": "hardu_balance_hidden_weight",
+      "model_key": "bagel_7b_mot",
+      "asset": "assets/hardu_balance_hidden_weight.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_balance_hidden_weight.png",
+      "readback_answer": "To find the value of X, we need to set up an equation based on the balance of the scale. Since the scale is balanced, the total weight on the left pan must equal the total weight on the right pan.\n\nLet's denote the weight of X as X kg.\n\nThe total weight on the left pan is 2 kg + X kg.\nThe total weight on the right pan is 5 kg.\n\nSetting up the equation:\n\\[ 2 + X = 5 \\]\n\nTo solve for X, we subtract 2 from both sides of the equation:\n\\[ X = 5 - 2 \\]\n\\[ X = 3 \\]\n\nTherefore, the value of X is 3 kg.",
+      "readback_question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "readback_provider_model_key": "bagel_7b_mot",
+      "readback_provider_model_label": "BAGEL-7B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "BAGEL self-readback via InterleaveInferencer(image, text, understanding_output=True)",
+      "readback_config": {
+        "max_think_token_n": 512,
+        "do_sample": false,
+        "text_temperature": 0.3,
+        "dtype": "bfloat16",
+        "device_map": "accelerate infer_auto_device_map"
+      },
+      "model_label": "BAGEL-7B-MoT",
+      "understanding_answer": "To find the value of X, we need to set up an equation based on the balance of the scale. Since the scale is balanced, the total weight on the left pan must equal the total weight on the right pan.\n\nLet's denote the weight of X as X kg.\n\nThe total weight on the left pan is 2 kg + X kg.\nThe total weight on the right pan is 5 kg.\n\nSetting up the equation:\n\\[ 2 + X = 5 \\]\n\nTo solve for X, we subtract 2 from both sides of the equation:\n\\[ X = 5 - 2 \\]\n\\[ X = 3 \\]\n\nTherefore, the value of X is 3 kg.",
+      "raw_understanding_answer": "To find the value of X, we need to set up an equation based on the balance of the scale. Since the scale is balanced, the total weight on the left pan must equal the total weight on the right pan.\n\nLet's denote the weight of X as X kg.\n\nThe total weight on the left pan is 2 kg + X kg.\nThe total weight on the right pan is 5 kg.\n\nSetting up the equation:\n\\[ 2 + X = 5 \\]\n\nTo solve for X, we subtract 2 from both sides of the equation:\n\\[ X = 5 - 2 \\]\n\\[ X = 3 \\]\n\nTherefore, the value of X is 3 kg.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "X=3",
+          "left equation",
+          "right total"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "janus_pro_7b_hardu_gear_train_direction",
+      "split": "Hard OOD",
+      "category": "mechanistic reasoning",
+      "title": "Gear train direction inference",
+      "image": "assets/hardu_gear_train_direction.png",
+      "question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "expected": "Gear D rotates counterclockwise.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "causal chain",
+        "mechanistic reasoning",
+        "direction inference"
+      ],
+      "case_id": "hardu_gear_train_direction",
+      "model_key": "janus_pro_7b",
+      "asset": "assets/hardu_gear_train_direction.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_gear_train_direction.png",
+      "readback_answer": "To determine the direction of rotation for gear D, we need to consider the relationship between the adjacent gears and the direction of rotation for gear A.\n\n1. Gear A rotates clockwise.\n2. Since adjacent gears turn in opposite directions, gear B must rotate counterclockwise.\n3. Gear C, being adjacent to gear B, must also rotate counterclockwise.\n4. Finally, gear D, being adjacent to gear C, must rotate clockwise.\n\nTherefore, gear D rotates counterclockwise.",
+      "readback_question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "readback_provider_model_key": "janus_pro_7b",
+      "readback_provider_model_label": "Janus-Pro-7B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Janus-Pro self-readback via run_janus_pro_demos.image_to_text",
+      "readback_config": {
+        "max_new_tokens": 256,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "device": "cuda"
+      },
+      "model_label": "Janus-Pro-7B",
+      "understanding_answer": "To determine the direction of rotation for gear D, we need to consider the relationship between the adjacent gears and the direction of rotation for gear A.\n\n1. Gear A rotates clockwise.\n2. Since adjacent gears turn in opposite directions, gear B must rotate counterclockwise.\n3. Gear C, being adjacent to gear B, must also rotate counterclockwise.\n4. Finally, gear D, being adjacent to gear C, must rotate clockwise.\n\nTherefore, gear D rotates counterclockwise.",
+      "raw_understanding_answer": "To determine the direction of rotation for gear D, we need to consider the relationship between the adjacent gears and the direction of rotation for gear A.\n\n1. Gear A rotates clockwise.\n2. Since adjacent gears turn in opposite directions, gear B must rotate counterclockwise.\n3. Gear C, being adjacent to gear B, must also rotate counterclockwise.\n4. Finally, gear D, being adjacent to gear C, must rotate clockwise.\n\nTherefore, gear D rotates counterclockwise.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "D counterclockwise",
+          "reads A clockwise",
+          "uses alternating gear rule"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "janus_pro_7b_hardu_stove_knob_mapping",
+      "split": "Hard OOD",
+      "category": "real-world control mapping",
+      "title": "Stove knob to burner mapping",
+      "image": "assets/hardu_stove_knob_mapping.png",
+      "question": "Which burner is on, and which knob position proves it?",
+      "expected": "The front-right burner is on; the FR knob is set to HIGH while the others are OFF.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world rule",
+        "symbol grounding",
+        "spatial mapping"
+      ],
+      "case_id": "hardu_stove_knob_mapping",
+      "model_key": "janus_pro_7b",
+      "asset": "assets/hardu_stove_knob_mapping.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_stove_knob_mapping.png",
+      "readback_answer": "The front right burner is on. This is indicated by the red color of the circle, which signifies that the burner is active. The knob corresponding to the front right burner is also in the \"FR HIGH\" position, which further confirms that the burner is on.",
+      "readback_question": "Which burner is on, and which knob position proves it?",
+      "readback_provider_model_key": "janus_pro_7b",
+      "readback_provider_model_label": "Janus-Pro-7B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Janus-Pro self-readback via run_janus_pro_demos.image_to_text",
+      "readback_config": {
+        "max_new_tokens": 256,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "device": "cuda"
+      },
+      "model_label": "Janus-Pro-7B",
+      "understanding_answer": "The front right burner is on. This is indicated by the red color of the circle, which signifies that the burner is active. The knob corresponding to the front right burner is also in the \"FR HIGH\" position, which further confirms that the burner is on.",
+      "raw_understanding_answer": "The front right burner is on. This is indicated by the red color of the circle, which signifies that the burner is active. The knob corresponding to the front right burner is also in the \"FR HIGH\" position, which further confirms that the burner is on.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.75,
+        "label": "pass",
+        "matched": [
+          "front-right burner",
+          "FR knob",
+          "HIGH state"
+        ],
+        "total_checks": 4
+      }
+    },
+    {
+      "id": "janus_pro_7b_hardu_shelf_unit_price",
+      "split": "Hard OOD",
+      "category": "visual arithmetic",
+      "title": "Shelf unit-price comparison",
+      "image": "assets/hardu_shelf_unit_price.png",
+      "question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "expected": "Product C is cheapest: $5.00 / 25 oz = $0.20 per oz, lower than A ($0.30/oz) and B ($0.25/oz).",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "arithmetic",
+        "comparison"
+      ],
+      "case_id": "hardu_shelf_unit_price",
+      "model_key": "janus_pro_7b",
+      "asset": "assets/hardu_shelf_unit_price.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_shelf_unit_price.png",
+      "readback_answer": "Product A has the lowest price per ounce. The arithmetic is as follows:\nProduct A: $3.00 / 10 oz = $0.30 per oz\nProduct B: $4.50 / 18 oz = $0.25 per oz\nProduct C: $5.00 / 25 oz = $0.20 per oz\n\nTherefore, Product A has the lowest price per ounce.",
+      "readback_question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "readback_provider_model_key": "janus_pro_7b",
+      "readback_provider_model_label": "Janus-Pro-7B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Janus-Pro self-readback via run_janus_pro_demos.image_to_text",
+      "readback_config": {
+        "max_new_tokens": 256,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "device": "cuda"
+      },
+      "model_label": "Janus-Pro-7B",
+      "understanding_answer": "Product A has the lowest price per ounce. The arithmetic is as follows:\nProduct A: $3.00 / 10 oz = $0.30 per oz\nProduct B: $4.50 / 18 oz = $0.25 per oz\nProduct C: $5.00 / 25 oz = $0.20 per oz\n\nTherefore, Product A has the lowest price per ounce.",
+      "raw_understanding_answer": "Product A has the lowest price per ounce. The arithmetic is as follows:\n\n- Product A: $3.00 / 10 oz = $0.30 per oz\n- Product B: $4.50 / 18 oz = $0.25 per oz\n- Product C: $5.00 / 25 oz = $0.20 per oz\n\nTherefore, Product A has the lowest price per ounce.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "Product C",
+          "$0.20/oz",
+          "compares A and B"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "janus_pro_7b_hardu_elevator_direction",
+      "split": "Hard OOD",
+      "category": "real-world state reasoning",
+      "title": "Elevator panel direction",
+      "image": "assets/hardu_elevator_direction.png",
+      "question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "expected": "Higher floor next; the up arrow is lit and the display shows floor 3.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world state",
+        "direction inference",
+        "symbol reading"
+      ],
+      "case_id": "hardu_elevator_direction",
+      "model_key": "janus_pro_7b",
+      "asset": "assets/hardu_elevator_direction.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_elevator_direction.png",
+      "readback_answer": "The elevator is set to go to a higher floor next. This is indicated by the green arrow pointing upwards, which typically signifies an upward movement in elevator controls.",
+      "readback_question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "readback_provider_model_key": "janus_pro_7b",
+      "readback_provider_model_label": "Janus-Pro-7B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Janus-Pro self-readback via run_janus_pro_demos.image_to_text",
+      "readback_config": {
+        "max_new_tokens": 256,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "device": "cuda"
+      },
+      "model_label": "Janus-Pro-7B",
+      "understanding_answer": "The elevator is set to go to a higher floor next. This is indicated by the green arrow pointing upwards, which typically signifies an upward movement in elevator controls.",
+      "raw_understanding_answer": "The elevator is set to go to a higher floor next. This is indicated by the green arrow pointing upwards, which typically signifies an upward movement in elevator controls.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "higher/up",
+          "uses arrow",
+          "mentions display/floor"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "janus_pro_7b_hardu_assembly_missing_bolt",
+      "split": "Hard OOD",
+      "category": "assembly inspection",
+      "title": "Missing chair bolt",
+      "image": "assets/hardu_assembly_missing_bolt.png",
+      "question": "Which chair leg is missing its top bolt?",
+      "expected": "The rear-right leg is missing its top bolt.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "visual inspection",
+        "spatial relation",
+        "assembly reasoning"
+      ],
+      "case_id": "hardu_assembly_missing_bolt",
+      "model_key": "janus_pro_7b",
+      "asset": "assets/hardu_assembly_missing_bolt.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_assembly_missing_bolt.png",
+      "readback_answer": "The chair leg on the right side is missing its top bolt.",
+      "readback_question": "Which chair leg is missing its top bolt?",
+      "readback_provider_model_key": "janus_pro_7b",
+      "readback_provider_model_label": "Janus-Pro-7B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Janus-Pro self-readback via run_janus_pro_demos.image_to_text",
+      "readback_config": {
+        "max_new_tokens": 256,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "device": "cuda"
+      },
+      "model_label": "Janus-Pro-7B",
+      "understanding_answer": "The chair leg on the right side is missing its top bolt.",
+      "raw_understanding_answer": "The chair leg on the right side is missing its top bolt.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.5,
+        "label": "partial",
+        "matched": [
+          "top bolt missing"
+        ],
+        "total_checks": 2
+      }
+    },
+    {
+      "id": "janus_pro_7b_hardu_liquid_conservation",
+      "split": "Hard OOD",
+      "category": "physical conservation",
+      "title": "Liquid transfer conservation",
+      "image": "assets/hardu_liquid_conservation.png",
+      "question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "expected": "No. The diagram states no liquid is spilled, so the same total amount is conserved even though it is now in glass B.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "physical reasoning",
+        "conservation",
+        "diagram reading"
+      ],
+      "case_id": "hardu_liquid_conservation",
+      "model_key": "janus_pro_7b",
+      "asset": "assets/hardu_liquid_conservation.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_liquid_conservation.png",
+      "readback_answer": "Yes. The total amount of liquid changed because the liquid in container A was transferred to container B, leaving container A empty.",
+      "readback_question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "readback_provider_model_key": "janus_pro_7b",
+      "readback_provider_model_label": "Janus-Pro-7B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Janus-Pro self-readback via run_janus_pro_demos.image_to_text",
+      "readback_config": {
+        "max_new_tokens": 256,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "device": "cuda"
+      },
+      "model_label": "Janus-Pro-7B",
+      "understanding_answer": "Yes. The total amount of liquid changed because the liquid in container A was transferred to container B, leaving container A empty.",
+      "raw_understanding_answer": "Yes. The total amount of liquid changed because the liquid in container A was transferred to container B, leaving container A empty.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.333,
+        "label": "fail",
+        "matched": [
+          "transferred to B"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "janus_pro_7b_hardu_train_transfer",
+      "split": "Hard OOD",
+      "category": "schedule reasoning",
+      "title": "Transit transfer timing",
+      "image": "assets/hardu_train_transfer.png",
+      "question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "expected": "Blue and Green tie for earliest at 09:24. Blue arrives at 09:18 plus 6 minutes; Green arrives at 09:24 plus 0 minutes. Red is later at 09:27.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "time arithmetic",
+        "schedule reasoning"
+      ],
+      "case_id": "hardu_train_transfer",
+      "model_key": "janus_pro_7b",
+      "asset": "assets/hardu_train_transfer.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_train_transfer.png",
+      "readback_answer": "Green",
+      "readback_question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "readback_provider_model_key": "janus_pro_7b",
+      "readback_provider_model_label": "Janus-Pro-7B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Janus-Pro self-readback via run_janus_pro_demos.image_to_text",
+      "readback_config": {
+        "max_new_tokens": 256,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "device": "cuda"
+      },
+      "model_label": "Janus-Pro-7B",
+      "understanding_answer": "Green",
+      "raw_understanding_answer": "Green",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0,
+        "label": "fail",
+        "matched": [],
+        "total_checks": 4
+      }
+    },
+    {
+      "id": "janus_pro_7b_hardu_balance_hidden_weight",
+      "split": "Hard OOD",
+      "category": "equation from image",
+      "title": "Balance-scale hidden weight",
+      "image": "assets/hardu_balance_hidden_weight.png",
+      "question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "expected": "X is 3 kg.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "equation solving",
+        "visual arithmetic",
+        "counterfactual-free reasoning"
+      ],
+      "case_id": "hardu_balance_hidden_weight",
+      "model_key": "janus_pro_7b",
+      "asset": "assets/hardu_balance_hidden_weight.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_balance_hidden_weight.png",
+      "readback_answer": "To determine the value of X, we need to set the two sides of the scale to be equal.\n\nThe left side of the scale has 2 kg plus X.\nThe right side of the scale has 5 kg.\n\nFor the scale to be balanced, the sum of the weights on the left side must equal the sum of the weights on the right side.\n\nSo, we set up the equation:\n\n2 kg + X = 5 kg\n\nNow, we solve for X:\n\nX = 5 kg - 2 kg\nX = 3 kg\n\nTherefore, X is 3 kg.",
+      "readback_question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "readback_provider_model_key": "janus_pro_7b",
+      "readback_provider_model_label": "Janus-Pro-7B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Janus-Pro self-readback via run_janus_pro_demos.image_to_text",
+      "readback_config": {
+        "max_new_tokens": 256,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "device": "cuda"
+      },
+      "model_label": "Janus-Pro-7B",
+      "understanding_answer": "To determine the value of X, we need to set the two sides of the scale to be equal.\n\nThe left side of the scale has 2 kg plus X.\nThe right side of the scale has 5 kg.\n\nFor the scale to be balanced, the sum of the weights on the left side must equal the sum of the weights on the right side.\n\nSo, we set up the equation:\n\n2 kg + X = 5 kg\n\nNow, we solve for X:\n\nX = 5 kg - 2 kg\nX = 3 kg\n\nTherefore, X is 3 kg.",
+      "raw_understanding_answer": "To determine the value of X, we need to set the two sides of the scale to be equal.\n\nThe left side of the scale has 2 kg plus X.\nThe right side of the scale has 5 kg.\n\nFor the scale to be balanced, the sum of the weights on the left side must equal the sum of the weights on the right side.\n\nSo, we set up the equation:\n\n2 kg + X = 5 kg\n\nNow, we solve for X:\n\nX = 5 kg - 2 kg\nX = 3 kg\n\nTherefore, X is 3 kg.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "X=3",
+          "left equation",
+          "right total"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_gear_train_direction",
+      "split": "Hard OOD",
+      "category": "mechanistic reasoning",
+      "title": "Gear train direction inference",
+      "image": "assets/hardu_gear_train_direction.png",
+      "question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "expected": "Gear D rotates counterclockwise.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "causal chain",
+        "mechanistic reasoning",
+        "direction inference"
+      ],
+      "case_id": "hardu_gear_train_direction",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_gear_train_direction.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_gear_train_direction.png",
+      "readback_answer": "To determine the direction in which gear D rotates, we need to analyze the rotational directions of the gears in the sequence.\n\n1. **Identify the Rotational Directions:**\nGear A rotates clockwise.\nGear B rotates counterclockwise.\nGear C rotates clockwise.\nGear D rotates counterclockwise.\n\n2. **Understand the Relationship Between Gears:**\nAdjacent gears turn in opposite directions. This means that if one gear rotates clockwise, the next gear will rotate counterclockwise, and vice versa.\n\n3. **Determine Gear D's Direction:**\nSince Gear A rotates clockwise and Gear B rotates counterclockwise, Gear C must rotate clockwise to maintain the opposite direction rule.\nGear D, being the next gear, must rotate counterclockwise to continue the pattern.\n\nTherefore, Gear D rotates counterclockwise.",
+      "readback_question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 0,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "To determine the direction in which gear D rotates, we need to analyze the rotational directions of the gears in the sequence.\n\n1. **Identify the Rotational Directions:**\nGear A rotates clockwise.\nGear B rotates counterclockwise.\nGear C rotates clockwise.\nGear D rotates counterclockwise.\n\n2. **Understand the Relationship Between Gears:**\nAdjacent gears turn in opposite directions. This means that if one gear rotates clockwise, the next gear will rotate counterclockwise, and vice versa.\n\n3. **Determine Gear D's Direction:**\nSince Gear A rotates clockwise and Gear B rotates counterclockwise, Gear C must rotate clockwise to maintain the opposite direction rule.\nGear D, being the next gear, must rotate counterclockwise to continue the pattern.\n\nTherefore, Gear D rotates counterclockwise.",
+      "raw_understanding_answer": "To determine the direction in which gear D rotates, we need to analyze the rotational directions of the gears in the sequence.\n\n1. **Identify the Rotational Directions:**\n   - Gear A rotates clockwise.\n   - Gear B rotates counterclockwise.\n   - Gear C rotates clockwise.\n   - Gear D rotates counterclockwise.\n\n2. **Understand the Relationship Between Gears:**\n   - Adjacent gears turn in opposite directions. This means that if one gear rotates clockwise, the next gear will rotate counterclockwise, and vice versa.\n\n3. **Determine Gear D's Direction:**\n   - Since Gear A rotates clockwise and Gear B rotates counterclockwise, Gear C must rotate clockwise to maintain the opposite direction rule.\n   - Gear D, being the next gear, must rotate counterclockwise to continue the pattern.\n\nTherefore, Gear D rotates counterclockwise.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "D counterclockwise",
+          "reads A clockwise",
+          "uses alternating gear rule"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_stove_knob_mapping",
+      "split": "Hard OOD",
+      "category": "real-world control mapping",
+      "title": "Stove knob to burner mapping",
+      "image": "assets/hardu_stove_knob_mapping.png",
+      "question": "Which burner is on, and which knob position proves it?",
+      "expected": "The front-right burner is on; the FR knob is set to HIGH while the others are OFF.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world rule",
+        "symbol grounding",
+        "spatial mapping"
+      ],
+      "case_id": "hardu_stove_knob_mapping",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_stove_knob_mapping.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_stove_knob_mapping.png",
+      "readback_answer": "The \"front right\" burner is on, as indicated by the red line on the \"FR: HIGH\" knob, which is the only knob with a line, suggesting that the corresponding burner is active.",
+      "readback_question": "Which burner is on, and which knob position proves it?",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 1,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "The \"front right\" burner is on, as indicated by the red line on the \"FR: HIGH\" knob, which is the only knob with a line, suggesting that the corresponding burner is active.",
+      "raw_understanding_answer": "The \"front right\" burner is on, as indicated by the red line on the \"FR: HIGH\" knob, which is the only knob with a line, suggesting that the corresponding burner is active.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.75,
+        "label": "pass",
+        "matched": [
+          "front-right burner",
+          "FR knob",
+          "HIGH state"
+        ],
+        "total_checks": 4
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_shelf_unit_price",
+      "split": "Hard OOD",
+      "category": "visual arithmetic",
+      "title": "Shelf unit-price comparison",
+      "image": "assets/hardu_shelf_unit_price.png",
+      "question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "expected": "Product C is cheapest: $5.00 / 25 oz = $0.20 per oz, lower than A ($0.30/oz) and B ($0.25/oz).",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "arithmetic",
+        "comparison"
+      ],
+      "case_id": "hardu_shelf_unit_price",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_shelf_unit_price.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_shelf_unit_price.png",
+      "readback_answer": "Product A has the lowest price per ounce. To calculate, divide the price of each product by the number of ounces: Product A = $3.00 / 10 oz = $0.30 per oz, Product B = $4.50 / 18 oz = $0.25 per oz, Product C = $5.00 / 25 oz = $0.20 per oz. Therefore, Product C has the lowest price per ounce at $0.20.",
+      "readback_question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 2,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "Product A has the lowest price per ounce. To calculate, divide the price of each product by the number of ounces: Product A = $3.00 / 10 oz = $0.30 per oz, Product B = $4.50 / 18 oz = $0.25 per oz, Product C = $5.00 / 25 oz = $0.20 per oz. Therefore, Product C has the lowest price per ounce at $0.20.",
+      "raw_understanding_answer": "Product A has the lowest price per ounce. To calculate, divide the price of each product by the number of ounces: Product A = $3.00 / 10 oz = $0.30 per oz, Product B = $4.50 / 18 oz = $0.25 per oz, Product C = $5.00 / 25 oz = $0.20 per oz. Therefore, Product C has the lowest price per ounce at $0.20.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "Product C",
+          "$0.20/oz",
+          "compares A and B"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_elevator_direction",
+      "split": "Hard OOD",
+      "category": "real-world state reasoning",
+      "title": "Elevator panel direction",
+      "image": "assets/hardu_elevator_direction.png",
+      "question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "expected": "Higher floor next; the up arrow is lit and the display shows floor 3.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world state",
+        "direction inference",
+        "symbol reading"
+      ],
+      "case_id": "hardu_elevator_direction",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_elevator_direction.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_elevator_direction.png",
+      "readback_answer": "The elevator is set to go to a higher floor next, as indicated by the lit green arrow pointing upwards.",
+      "readback_question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 3,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "The elevator is set to go to a higher floor next, as indicated by the lit green arrow pointing upwards.",
+      "raw_understanding_answer": "The elevator is set to go to a higher floor next, as indicated by the lit green arrow pointing upwards.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "higher/up",
+          "uses arrow",
+          "mentions display/floor"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_assembly_missing_bolt",
+      "split": "Hard OOD",
+      "category": "assembly inspection",
+      "title": "Missing chair bolt",
+      "image": "assets/hardu_assembly_missing_bolt.png",
+      "question": "Which chair leg is missing its top bolt?",
+      "expected": "The rear-right leg is missing its top bolt.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "visual inspection",
+        "spatial relation",
+        "assembly reasoning"
+      ],
+      "case_id": "hardu_assembly_missing_bolt",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_assembly_missing_bolt.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_assembly_missing_bolt.png",
+      "readback_answer": "The rightmost chair leg is missing its top bolt.",
+      "readback_question": "Which chair leg is missing its top bolt?",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 4,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "The rightmost chair leg is missing its top bolt.",
+      "raw_understanding_answer": "The rightmost chair leg is missing its top bolt.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.5,
+        "label": "partial",
+        "matched": [
+          "top bolt missing"
+        ],
+        "total_checks": 2
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_liquid_conservation",
+      "split": "Hard OOD",
+      "category": "physical conservation",
+      "title": "Liquid transfer conservation",
+      "image": "assets/hardu_liquid_conservation.png",
+      "question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "expected": "No. The diagram states no liquid is spilled, so the same total amount is conserved even though it is now in glass B.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "physical reasoning",
+        "conservation",
+        "diagram reading"
+      ],
+      "case_id": "hardu_liquid_conservation",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_liquid_conservation.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_liquid_conservation.png",
+      "readback_answer": "No, the total amount of liquid did not change. Initially, there was a combined total of 100% liquid in both containers A and B. After the transfer, the total amount of liquid remained at 100%, with container A now containing 50% and container B containing 50%.",
+      "readback_question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 5,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "No, the total amount of liquid did not change. Initially, there was a combined total of 100% liquid in both containers A and B. After the transfer, the total amount of liquid remained at 100%, with container A now containing 50% and container B containing 50%.",
+      "raw_understanding_answer": "No, the total amount of liquid did not change. Initially, there was a combined total of 100% liquid in both containers A and B. After the transfer, the total amount of liquid remained at 100%, with container A now containing 50% and container B containing 50%.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.667,
+        "label": "partial",
+        "matched": [
+          "no change",
+          "transferred to B"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_train_transfer",
+      "split": "Hard OOD",
+      "category": "schedule reasoning",
+      "title": "Transit transfer timing",
+      "image": "assets/hardu_train_transfer.png",
+      "question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "expected": "Blue and Green tie for earliest at 09:24. Blue arrives at 09:18 plus 6 minutes; Green arrives at 09:24 plus 0 minutes. Red is later at 09:27.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "time arithmetic",
+        "schedule reasoning"
+      ],
+      "case_id": "hardu_train_transfer",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_train_transfer.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_train_transfer.png",
+      "readback_answer": "Based on the current time of 09:12, the Blue Line arrives at the Museum at 09:18, the Red Line at 09:27, and the Green Line at 09:24. Adding the transfer time, the Blue Line would take 6 minutes to reach the Museum, the Red Line would take 12 minutes, and the Green Line would take 0 minutes since it is already at the Museum. Therefore, the Green Line would get to the Museum earliest after adding the transfer time.",
+      "readback_question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 6,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "Based on the current time of 09:12, the Blue Line arrives at the Museum at 09:18, the Red Line at 09:27, and the Green Line at 09:24. Adding the transfer time, the Blue Line would take 6 minutes to reach the Museum, the Red Line would take 12 minutes, and the Green Line would take 0 minutes since it is already at the Museum. Therefore, the Green Line would get to the Museum earliest after adding the transfer time.",
+      "raw_understanding_answer": "Based on the current time of 09:12, the Blue Line arrives at the Museum at 09:18, the Red Line at 09:27, and the Green Line at 09:24. Adding the transfer time, the Blue Line would take 6 minutes to reach the Museum, the Red Line would take 12 minutes, and the Green Line would take 0 minutes since it is already at the Museum. Therefore, the Green Line would get to the Museum earliest after adding the transfer time.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "Blue and Green",
+          "09:24",
+          "adds transfer times",
+          "Red later"
+        ],
+        "total_checks": 4
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_balance_hidden_weight",
+      "split": "Hard OOD",
+      "category": "equation from image",
+      "title": "Balance-scale hidden weight",
+      "image": "assets/hardu_balance_hidden_weight.png",
+      "question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "expected": "X is 3 kg.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "equation solving",
+        "visual arithmetic",
+        "counterfactual-free reasoning"
+      ],
+      "case_id": "hardu_balance_hidden_weight",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_balance_hidden_weight.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_balance_hidden_weight.png",
+      "readback_answer": "To find the value of X, we need to determine the balance point of the scale. The scale is balanced when the weight on both sides is equal.\n\nGiven:\nLeft pan: 2 kg + X\nRight pan: 5 kg\n\nSince the scale is balanced, the weight on the left pan must equal the weight on the right pan. Therefore, we can set up the following equation:\n\n2 kg + X = 5 kg\n\nTo solve for X, we need to isolate X on one side of the equation. We can do this by subtracting 2 kg from both sides of the equation:\n\n2 kg + X - 2 kg = 5 kg - 2 kg\n\nThis simplifies to:\n\nX = 3 kg\n\nTherefore, the value of X is 3 kg.",
+      "readback_question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 7,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "To find the value of X, we need to determine the balance point of the scale. The scale is balanced when the weight on both sides is equal.\n\nGiven:\nLeft pan: 2 kg + X\nRight pan: 5 kg\n\nSince the scale is balanced, the weight on the left pan must equal the weight on the right pan. Therefore, we can set up the following equation:\n\n2 kg + X = 5 kg\n\nTo solve for X, we need to isolate X on one side of the equation. We can do this by subtracting 2 kg from both sides of the equation:\n\n2 kg + X - 2 kg = 5 kg - 2 kg\n\nThis simplifies to:\n\nX = 3 kg\n\nTherefore, the value of X is 3 kg.",
+      "raw_understanding_answer": "To find the value of X, we need to determine the balance point of the scale. The scale is balanced when the weight on both sides is equal.\n\nGiven:\n- Left pan: 2 kg + X\n- Right pan: 5 kg\n\nSince the scale is balanced, the weight on the left pan must equal the weight on the right pan. Therefore, we can set up the following equation:\n\n2 kg + X = 5 kg\n\nTo solve for X, we need to isolate X on one side of the equation. We can do this by subtracting 2 kg from both sides of the equation:\n\n2 kg + X - 2 kg = 5 kg - 2 kg\n\nThis simplifies to:\n\nX = 3 kg\n\nTherefore, the value of X is 3 kg.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "X=3",
+          "left equation",
+          "right total"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_gear_train_direction",
+      "split": "Hard OOD",
+      "category": "mechanistic reasoning",
+      "title": "Gear train direction inference",
+      "image": "assets/hardu_gear_train_direction.png",
+      "question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "expected": "Gear D rotates counterclockwise.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "causal chain",
+        "mechanistic reasoning",
+        "direction inference"
+      ],
+      "case_id": "hardu_gear_train_direction",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_gear_train_direction.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_gear_train_direction.png",
+      "readback_answer": "To determine the direction in which gear D rotates, we need to analyze the rotational directions of the gears in the sequence.\n\n1. **Identify the Rotational Directions:**\nGear A rotates clockwise.\nGear B rotates counterclockwise.\nGear C rotates clockwise.\nGear D rotates counterclockwise.\n\n2. **Understand the Relationship Between Gears:**\nAdjacent gears turn in opposite directions. This means that if one gear rotates clockwise, the next gear will rotate counterclockwise, and vice versa.\n\n3. **Determine Gear D's Direction:**\nSince Gear A rotates clockwise and Gear B rotates counterclockwise, Gear C must rotate clockwise to maintain the opposite direction rule.\nGear D, being the next gear, must rotate counterclockwise to continue the pattern.\n\nTherefore, Gear D rotates counterclockwise.",
+      "readback_question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 0,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "To determine the direction in which gear D rotates, we need to analyze the rotational directions of the gears in the sequence.\n\n1. **Identify the Rotational Directions:**\nGear A rotates clockwise.\nGear B rotates counterclockwise.\nGear C rotates clockwise.\nGear D rotates counterclockwise.\n\n2. **Understand the Relationship Between Gears:**\nAdjacent gears turn in opposite directions. This means that if one gear rotates clockwise, the next gear will rotate counterclockwise, and vice versa.\n\n3. **Determine Gear D's Direction:**\nSince Gear A rotates clockwise and Gear B rotates counterclockwise, Gear C must rotate clockwise to maintain the opposite direction rule.\nGear D, being the next gear, must rotate counterclockwise to continue the pattern.\n\nTherefore, Gear D rotates counterclockwise.",
+      "raw_understanding_answer": "To determine the direction in which gear D rotates, we need to analyze the rotational directions of the gears in the sequence.\n\n1. **Identify the Rotational Directions:**\n   - Gear A rotates clockwise.\n   - Gear B rotates counterclockwise.\n   - Gear C rotates clockwise.\n   - Gear D rotates counterclockwise.\n\n2. **Understand the Relationship Between Gears:**\n   - Adjacent gears turn in opposite directions. This means that if one gear rotates clockwise, the next gear will rotate counterclockwise, and vice versa.\n\n3. **Determine Gear D's Direction:**\n   - Since Gear A rotates clockwise and Gear B rotates counterclockwise, Gear C must rotate clockwise to maintain the opposite direction rule.\n   - Gear D, being the next gear, must rotate counterclockwise to continue the pattern.\n\nTherefore, Gear D rotates counterclockwise.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "D counterclockwise",
+          "reads A clockwise",
+          "uses alternating gear rule"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_stove_knob_mapping",
+      "split": "Hard OOD",
+      "category": "real-world control mapping",
+      "title": "Stove knob to burner mapping",
+      "image": "assets/hardu_stove_knob_mapping.png",
+      "question": "Which burner is on, and which knob position proves it?",
+      "expected": "The front-right burner is on; the FR knob is set to HIGH while the others are OFF.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world rule",
+        "symbol grounding",
+        "spatial mapping"
+      ],
+      "case_id": "hardu_stove_knob_mapping",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_stove_knob_mapping.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_stove_knob_mapping.png",
+      "readback_answer": "The \"front right\" burner is on, as indicated by the red line on the \"FR: HIGH\" knob, which is the only knob with a line, suggesting that the corresponding burner is active.",
+      "readback_question": "Which burner is on, and which knob position proves it?",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 1,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "The \"front right\" burner is on, as indicated by the red line on the \"FR: HIGH\" knob, which is the only knob with a line, suggesting that the corresponding burner is active.",
+      "raw_understanding_answer": "The \"front right\" burner is on, as indicated by the red line on the \"FR: HIGH\" knob, which is the only knob with a line, suggesting that the corresponding burner is active.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.75,
+        "label": "pass",
+        "matched": [
+          "front-right burner",
+          "FR knob",
+          "HIGH state"
+        ],
+        "total_checks": 4
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_shelf_unit_price",
+      "split": "Hard OOD",
+      "category": "visual arithmetic",
+      "title": "Shelf unit-price comparison",
+      "image": "assets/hardu_shelf_unit_price.png",
+      "question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "expected": "Product C is cheapest: $5.00 / 25 oz = $0.20 per oz, lower than A ($0.30/oz) and B ($0.25/oz).",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "arithmetic",
+        "comparison"
+      ],
+      "case_id": "hardu_shelf_unit_price",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_shelf_unit_price.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_shelf_unit_price.png",
+      "readback_answer": "Product A has the lowest price per ounce. To calculate, divide the price of each product by the number of ounces: Product A = $3.00 / 10 oz = $0.30 per oz, Product B = $4.50 / 18 oz = $0.25 per oz, Product C = $5.00 / 25 oz = $0.20 per oz. Therefore, Product C has the lowest price per ounce at $0.20.",
+      "readback_question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 2,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "Product A has the lowest price per ounce. To calculate, divide the price of each product by the number of ounces: Product A = $3.00 / 10 oz = $0.30 per oz, Product B = $4.50 / 18 oz = $0.25 per oz, Product C = $5.00 / 25 oz = $0.20 per oz. Therefore, Product C has the lowest price per ounce at $0.20.",
+      "raw_understanding_answer": "Product A has the lowest price per ounce. To calculate, divide the price of each product by the number of ounces: Product A = $3.00 / 10 oz = $0.30 per oz, Product B = $4.50 / 18 oz = $0.25 per oz, Product C = $5.00 / 25 oz = $0.20 per oz. Therefore, Product C has the lowest price per ounce at $0.20.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "Product C",
+          "$0.20/oz",
+          "compares A and B"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_elevator_direction",
+      "split": "Hard OOD",
+      "category": "real-world state reasoning",
+      "title": "Elevator panel direction",
+      "image": "assets/hardu_elevator_direction.png",
+      "question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "expected": "Higher floor next; the up arrow is lit and the display shows floor 3.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world state",
+        "direction inference",
+        "symbol reading"
+      ],
+      "case_id": "hardu_elevator_direction",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_elevator_direction.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_elevator_direction.png",
+      "readback_answer": "The elevator is set to go to a higher floor next, as indicated by the lit green arrow pointing upwards.",
+      "readback_question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 3,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "The elevator is set to go to a higher floor next, as indicated by the lit green arrow pointing upwards.",
+      "raw_understanding_answer": "The elevator is set to go to a higher floor next, as indicated by the lit green arrow pointing upwards.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "higher/up",
+          "uses arrow",
+          "mentions display/floor"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_assembly_missing_bolt",
+      "split": "Hard OOD",
+      "category": "assembly inspection",
+      "title": "Missing chair bolt",
+      "image": "assets/hardu_assembly_missing_bolt.png",
+      "question": "Which chair leg is missing its top bolt?",
+      "expected": "The rear-right leg is missing its top bolt.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "visual inspection",
+        "spatial relation",
+        "assembly reasoning"
+      ],
+      "case_id": "hardu_assembly_missing_bolt",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_assembly_missing_bolt.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_assembly_missing_bolt.png",
+      "readback_answer": "The rightmost chair leg is missing its top bolt.",
+      "readback_question": "Which chair leg is missing its top bolt?",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 4,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "The rightmost chair leg is missing its top bolt.",
+      "raw_understanding_answer": "The rightmost chair leg is missing its top bolt.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.5,
+        "label": "partial",
+        "matched": [
+          "top bolt missing"
+        ],
+        "total_checks": 2
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_liquid_conservation",
+      "split": "Hard OOD",
+      "category": "physical conservation",
+      "title": "Liquid transfer conservation",
+      "image": "assets/hardu_liquid_conservation.png",
+      "question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "expected": "No. The diagram states no liquid is spilled, so the same total amount is conserved even though it is now in glass B.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "physical reasoning",
+        "conservation",
+        "diagram reading"
+      ],
+      "case_id": "hardu_liquid_conservation",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_liquid_conservation.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_liquid_conservation.png",
+      "readback_answer": "No, the total amount of liquid did not change. Initially, there was a combined total of 100% liquid in both containers A and B. After the transfer, the total amount of liquid remained at 100%, with container A now containing 50% and container B containing 50%.",
+      "readback_question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 5,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "No, the total amount of liquid did not change. Initially, there was a combined total of 100% liquid in both containers A and B. After the transfer, the total amount of liquid remained at 100%, with container A now containing 50% and container B containing 50%.",
+      "raw_understanding_answer": "No, the total amount of liquid did not change. Initially, there was a combined total of 100% liquid in both containers A and B. After the transfer, the total amount of liquid remained at 100%, with container A now containing 50% and container B containing 50%.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.667,
+        "label": "partial",
+        "matched": [
+          "no change",
+          "transferred to B"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_train_transfer",
+      "split": "Hard OOD",
+      "category": "schedule reasoning",
+      "title": "Transit transfer timing",
+      "image": "assets/hardu_train_transfer.png",
+      "question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "expected": "Blue and Green tie for earliest at 09:24. Blue arrives at 09:18 plus 6 minutes; Green arrives at 09:24 plus 0 minutes. Red is later at 09:27.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "time arithmetic",
+        "schedule reasoning"
+      ],
+      "case_id": "hardu_train_transfer",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_train_transfer.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_train_transfer.png",
+      "readback_answer": "Based on the current time of 09:12, the Blue Line arrives at the Museum at 09:18, the Red Line at 09:27, and the Green Line at 09:24. Adding the transfer time, the Blue Line would take 6 minutes to reach the Museum, the Red Line would take 12 minutes, and the Green Line would take 0 minutes since it is already at the Museum. Therefore, the Green Line would get to the Museum earliest after adding the transfer time.",
+      "readback_question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 6,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "Based on the current time of 09:12, the Blue Line arrives at the Museum at 09:18, the Red Line at 09:27, and the Green Line at 09:24. Adding the transfer time, the Blue Line would take 6 minutes to reach the Museum, the Red Line would take 12 minutes, and the Green Line would take 0 minutes since it is already at the Museum. Therefore, the Green Line would get to the Museum earliest after adding the transfer time.",
+      "raw_understanding_answer": "Based on the current time of 09:12, the Blue Line arrives at the Museum at 09:18, the Red Line at 09:27, and the Green Line at 09:24. Adding the transfer time, the Blue Line would take 6 minutes to reach the Museum, the Red Line would take 12 minutes, and the Green Line would take 0 minutes since it is already at the Museum. Therefore, the Green Line would get to the Museum earliest after adding the transfer time.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "Blue and Green",
+          "09:24",
+          "adds transfer times",
+          "Red later"
+        ],
+        "total_checks": 4
+      }
+    },
+    {
+      "id": "onecat_3b_hardu_balance_hidden_weight",
+      "split": "Hard OOD",
+      "category": "equation from image",
+      "title": "Balance-scale hidden weight",
+      "image": "assets/hardu_balance_hidden_weight.png",
+      "question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "expected": "X is 3 kg.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "equation solving",
+        "visual arithmetic",
+        "counterfactual-free reasoning"
+      ],
+      "case_id": "hardu_balance_hidden_weight",
+      "model_key": "onecat_3b",
+      "asset": "assets/hardu_balance_hidden_weight.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_balance_hidden_weight.png",
+      "readback_answer": "To find the value of X, we need to determine the balance point of the scale. The scale is balanced when the weight on both sides is equal.\n\nGiven:\nLeft pan: 2 kg + X\nRight pan: 5 kg\n\nSince the scale is balanced, the weight on the left pan must equal the weight on the right pan. Therefore, we can set up the following equation:\n\n2 kg + X = 5 kg\n\nTo solve for X, we need to isolate X on one side of the equation. We can do this by subtracting 2 kg from both sides of the equation:\n\n2 kg + X - 2 kg = 5 kg - 2 kg\n\nThis simplifies to:\n\nX = 3 kg\n\nTherefore, the value of X is 3 kg.",
+      "readback_question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "readback_provider_model_key": "onecat_3b",
+      "readback_provider_model_label": "OneCAT-3B",
+      "readback_same_as_generator": true,
+      "readback_runner": "OneCAT self-readback via generate_understanding.py logic / OneCatVLModel.chat",
+      "readback_config": {
+        "max_new_tokens": 1000,
+        "do_sample": false,
+        "num_beams": 1,
+        "dtype": "bfloat16",
+        "device": "cuda",
+        "worker_id": 7,
+        "num_workers": 8
+      },
+      "model_label": "OneCAT-3B",
+      "understanding_answer": "To find the value of X, we need to determine the balance point of the scale. The scale is balanced when the weight on both sides is equal.\n\nGiven:\nLeft pan: 2 kg + X\nRight pan: 5 kg\n\nSince the scale is balanced, the weight on the left pan must equal the weight on the right pan. Therefore, we can set up the following equation:\n\n2 kg + X = 5 kg\n\nTo solve for X, we need to isolate X on one side of the equation. We can do this by subtracting 2 kg from both sides of the equation:\n\n2 kg + X - 2 kg = 5 kg - 2 kg\n\nThis simplifies to:\n\nX = 3 kg\n\nTherefore, the value of X is 3 kg.",
+      "raw_understanding_answer": "To find the value of X, we need to determine the balance point of the scale. The scale is balanced when the weight on both sides is equal.\n\nGiven:\n- Left pan: 2 kg + X\n- Right pan: 5 kg\n\nSince the scale is balanced, the weight on the left pan must equal the weight on the right pan. Therefore, we can set up the following equation:\n\n2 kg + X = 5 kg\n\nTo solve for X, we need to isolate X on one side of the equation. We can do this by subtracting 2 kg from both sides of the equation:\n\n2 kg + X - 2 kg = 5 kg - 2 kg\n\nThis simplifies to:\n\nX = 3 kg\n\nTherefore, the value of X is 3 kg.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "X=3",
+          "left equation",
+          "right total"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "sensenova_u1_8b_mot_hardu_gear_train_direction",
+      "split": "Hard OOD",
+      "category": "mechanistic reasoning",
+      "title": "Gear train direction inference",
+      "image": "assets/hardu_gear_train_direction.png",
+      "question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "expected": "Gear D rotates counterclockwise.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "causal chain",
+        "mechanistic reasoning",
+        "direction inference"
+      ],
+      "case_id": "hardu_gear_train_direction",
+      "model_key": "sensenova_u1_8b_mot",
+      "asset": "assets/hardu_gear_train_direction.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_gear_train_direction.png",
+      "readback_answer": "Based on the rule that \"Adjacent gears turn in opposite directions,\" here is the step-by-step breakdown:\n\n1.  **Gear A** rotates **clockwise** (as shown).\n2.  **Gear B** is adjacent to A, so it rotates in the opposite direction: **counter-clockwise**.\n3.  **Gear C** is adjacent to B, so it rotates in the opposite direction: **clockwise**.\n4.  **Gear D** is adjacent to C, so it rotates in the opposite direction: **counter-clockwise**.\n\nTherefore, gear D rotates **counter-clockwise**.",
+      "readback_question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "readback_provider_model_key": "sensenova_u1_8b_mot",
+      "readback_provider_model_label": "SenseNova-U1-8B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl",
+      "readback_config": {
+        "max_new_tokens": 1024,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "attn_backend": "sdpa"
+      },
+      "model_label": "SenseNova-U1-8B-MoT",
+      "understanding_answer": "Based on the rule that \"Adjacent gears turn in opposite directions,\" here is the step-by-step breakdown:\n\n1.  **Gear A** rotates **clockwise** (as shown).\n2.  **Gear B** is adjacent to A, so it rotates in the opposite direction: **counter-clockwise**.\n3.  **Gear C** is adjacent to B, so it rotates in the opposite direction: **clockwise**.\n4.  **Gear D** is adjacent to C, so it rotates in the opposite direction: **counter-clockwise**.\n\nTherefore, gear D rotates **counter-clockwise**.",
+      "raw_understanding_answer": "<think>\nThe user wants me to determine the rotation direction of gear D based on the provided image and text.\n\n1.  **Analyze the initial condition:** The text says \"A rotates clockwise\". The image shows a red arrow on gear A curving downwards, confirming a clockwise rotation.\n2.  **Analyze the rule:** The text at the bottom says \"Adjacent gears turn in opposite directions.\" This is the key rule.\n3.  **Step-by-step deduction:**\n    *   **Gear A:** Clockwise (given).\n    *   **Gear B:** Adjacent to A. So, it must turn in the opposite direction. Opposite of Clockwise is Counter-clockwise. So, Gear B rotates Counter-clockwise.\n    *   **Gear C:** Adjacent to B. So, it must turn in the opposite direction. Opposite of Counter-clockwise is Clockwise. So, Gear C rotates Clockwise.\n    *   **Gear D:** Adjacent to C. So, it must turn in the opposite direction. Opposite of Clockwise is Counter-clockwise. So, Gear D rotates Counter-clockwise.\n\n4.  **Final Conclusion:** Gear D rotates counter-clockwise.\n\n5.  **Formulate the response:** State the logic clearly.\n    *   Start with Gear A (Clockwise).\n    *   Explain Gear B is opposite (Counter-clockwise).\n    *   Explain Gear C is opposite to B (Clockwise).\n    *   Explain Gear D is opposite to C (Counter-clockwise).\n    *   State the final answer clearly.\n</think>\n\nBased on the rule that \"Adjacent gears turn in opposite directions,\" here is the step-by-step breakdown:\n\n1.  **Gear A** rotates **clockwise** (as shown).\n2.  **Gear B** is adjacent to A, so it rotates in the opposite direction: **counter-clockwise**.\n3.  **Gear C** is adjacent to B, so it rotates in the opposite direction: **clockwise**.\n4.  **Gear D** is adjacent to C, so it rotates in the opposite direction: **counter-clockwise**.\n\nTherefore, gear D rotates **counter-clockwise**.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "D counterclockwise",
+          "reads A clockwise",
+          "uses alternating gear rule"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "sensenova_u1_8b_mot_hardu_stove_knob_mapping",
+      "split": "Hard OOD",
+      "category": "real-world control mapping",
+      "title": "Stove knob to burner mapping",
+      "image": "assets/hardu_stove_knob_mapping.png",
+      "question": "Which burner is on, and which knob position proves it?",
+      "expected": "The front-right burner is on; the FR knob is set to HIGH while the others are OFF.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world rule",
+        "symbol grounding",
+        "spatial mapping"
+      ],
+      "case_id": "hardu_stove_knob_mapping",
+      "model_key": "sensenova_u1_8b_mot",
+      "asset": "assets/hardu_stove_knob_mapping.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_stove_knob_mapping.png",
+      "readback_answer": "Based on the image provided:\n\nThe **front right** burner is on.\n\nYou can tell this because:\n1.  **Visual Cue:** The \"front right\" circle is colored yellow with a red outline, indicating heat, while the others are blue/grey.\n2.  **Knob Position:** The knob on the far right is turned to the right side (pointing towards the red indicator line). The text below it reads **\"FR: HIGH\"**, which corresponds to the Front Right burner being set to a high heat setting.",
+      "readback_question": "Which burner is on, and which knob position proves it?",
+      "readback_provider_model_key": "sensenova_u1_8b_mot",
+      "readback_provider_model_label": "SenseNova-U1-8B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl",
+      "readback_config": {
+        "max_new_tokens": 1024,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "attn_backend": "sdpa"
+      },
+      "model_label": "SenseNova-U1-8B-MoT",
+      "understanding_answer": "Based on the image provided:\n\nThe **front right** burner is on.\n\nYou can tell this because:\n1.  **Visual Cue:** The \"front right\" circle is colored yellow with a red outline, indicating heat, while the others are blue/grey.\n2.  **Knob Position:** The knob on the far right is turned to the right side (pointing towards the red indicator line). The text below it reads **\"FR: HIGH\"**, which corresponds to the Front Right burner being set to a high heat setting.",
+      "raw_understanding_answer": "<think>\nThe user wants me to identify which stove burner is on and which knob corresponds to it based on the provided image.\n\n1.  **Analyze the \"Stove Panel\" section:**\n    *   There are four circles representing burners.\n    *   Top left: \"rear left\" - Blue outline, light blue fill. Looks off.\n    *   Top right: \"rear right\" - Blue outline, light blue fill. Looks off.\n    *   Bottom left: \"front left\" - Blue outline, light blue fill. Looks off.\n    *   Bottom right: \"front right\" - Pink/Red outline, yellow fill. This is clearly \"on\" or active. The color change (yellow inside, red outline) signifies heat.\n\n2.  **Analyze the \"Knobs\" section:**\n    *   There are four knobs at the bottom.\n    *   Knob 1 (leftmost): Pointer is up (vertical). Label below says \"RL: OFF\". This likely corresponds to Rear Left.\n    *   Knob 2 (second from left): Pointer is up (vertical). Label below says \"RR: OFF\". This likely corresponds to Rear Right.\n    *   Knob 3 (third from left): Pointer is up (vertical). Label below says \"FL: OFF\". This likely corresponds to Front Left.\n    *   Knob 4 (rightmost): Pointer is pointing to the right (roughly 4 o'clock position). Label below says \"FR: HIGH\". This likely corresponds to Front Right.\n\n3.  **Connect the two sections:**\n    *   The \"front right\" burner is the one that is visually \"on\" (yellow/red).\n    *   The corresponding knob is the fourth one, labeled \"FR: HIGH\".\n    *   The label \"FR\" stands for Front Right.\n    *   The position of the knob pointer is turned to the right, indicating a high setting.\n\n4.  **Formulate the answer:**\n    *   Identify the active burner: The \"front right\" burner is on. I can tell because it has a yellow center and a red outline, unlike the others which are blue/grey.\n    *   Identify the knob: The knob on the far right is the one controlling it.\n    *   Explain the proof: The knob is turned to the right (pointing towards the red indicator line), and the text below it says \"FR: HIGH\". \"FR\" corresponds to \"Front Right\".\n\n    *   Wait, let me double check the mapping.\n        *   Knob 1: RL (Rear Left) -> Matches top left burner.\n        *   Knob 2: RR (Rear Right) -> Matches top right burner.\n        *   Knob 3: FL (Front Left) -> Matches bottom left burner.\n        *   Knob 4: FR (Front Right) -> Matches bottom right burner.\n\n    *   So, the \"front right\" burner is on.\n    *   The knob position is the far right knob, which is turned to the right side (indicating \"HIGH\").\n    *   The text \"FR: HIGH\" confirms this.\n\n    *   Final check of the question: \"Which burner is on, and which knob position proves it?\"\n    *   Answer: The **front right** burner is on. The **far right knob** (labeled FR) is turned to the right position, indicating \"HIGH\", which matches the active state of the burner. The text \"FR: HIGH\" explicitly states this.\n</think>\n\nBased on the image provided:\n\nThe **front right** burner is on.\n\nYou can tell this because:\n1.  **Visual Cue:** The \"front right\" circle is colored yellow with a red outline, indicating heat, while the others are blue/grey.\n2.  **Knob Position:** The knob on the far right is turned to the right side (pointing towards the red indicator line). The text below it reads **\"FR: HIGH\"**, which corresponds to the Front Right burner being set to a high heat setting.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "front-right burner",
+          "FR knob",
+          "HIGH state",
+          "other knobs off"
+        ],
+        "total_checks": 4
+      }
+    },
+    {
+      "id": "sensenova_u1_8b_mot_hardu_shelf_unit_price",
+      "split": "Hard OOD",
+      "category": "visual arithmetic",
+      "title": "Shelf unit-price comparison",
+      "image": "assets/hardu_shelf_unit_price.png",
+      "question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "expected": "Product C is cheapest: $5.00 / 25 oz = $0.20 per oz, lower than A ($0.30/oz) and B ($0.25/oz).",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "arithmetic",
+        "comparison"
+      ],
+      "case_id": "hardu_shelf_unit_price",
+      "model_key": "sensenova_u1_8b_mot",
+      "asset": "assets/hardu_shelf_unit_price.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_shelf_unit_price.png",
+      "readback_answer": "Based on the calculations below, **Product C** has the lowest price per ounce.\n\nHere is the breakdown:\n**Product A:** $\\$3.00 / 10 \\text{ oz} = \\mathbf{\\$0.30 \\text{ per oz}}$\n**Product B:** $\\$4.50 / 18 \\text{ oz} = \\mathbf{\\$0.25 \\text{ per oz}}$\n**Product C:** $\\$5.00 / 25 \\text{ oz} = \\mathbf{\\$0.20 \\text{ per oz}}$",
+      "readback_question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "readback_provider_model_key": "sensenova_u1_8b_mot",
+      "readback_provider_model_label": "SenseNova-U1-8B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl",
+      "readback_config": {
+        "max_new_tokens": 1024,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "attn_backend": "sdpa"
+      },
+      "model_label": "SenseNova-U1-8B-MoT",
+      "understanding_answer": "Based on the calculations below, **Product C** has the lowest price per ounce.\n\nHere is the breakdown:\n**Product A:** $\\$3.00 / 10 \\text{ oz} = \\mathbf{\\$0.30 \\text{ per oz}}$\n**Product B:** $\\$4.50 / 18 \\text{ oz} = \\mathbf{\\$0.25 \\text{ per oz}}$\n**Product C:** $\\$5.00 / 25 \\text{ oz} = \\mathbf{\\$0.20 \\text{ per oz}}$",
+      "raw_understanding_answer": "<think>\nThe user wants me to identify the product with the lowest price per ounce based on the provided image.\n\n**1. Extract data from the image:**\n*   **Product A:**\n    *   Price: $3.00\n    *   Weight: 10 oz\n*   **Product B:**\n    *   Price: $4.50\n    *   Weight: 18 oz\n*   **Product C:**\n    *   Price: $5.00\n    *   Weight: 25 oz\n\n**2. Formulate the calculation:**\nI need to calculate the price per ounce for each product.\nFormula: Price / Weight = Price per ounce\n\n*   **Product A:** $3.00 / 10 oz\n*   **Product B:** $4.50 / 18 oz\n*   **Product C:** $5.00 / 25 oz\n\n**3. Perform the calculations:**\n*   **Product A:** 3.00 / 10 = 0.30 $/oz\n*   **Product B:** 4.50 / 18.\n    *   4.5 / 18 is the same as 45 / 180.\n    *   Divide both by 9: 5 / 20.\n    *   5 / 20 = 1 / 4 = 0.25 $/oz.\n*   **Product C:** 5.00 / 25.\n    *   5 / 25 = 1 / 5 = 0.20 $/oz.\n\n**4. Compare the results:**\n*   Product A: $0.30/oz\n*   Product B: $0.25/oz\n*   Product C: $0.20/oz\n\n**5. Determine the lowest:**\n$0.20 is the lowest number. Therefore, Product C has the lowest price per ounce.\n\n**6. Construct the final response:**\n*   State the calculation for each product clearly.\n*   Compare the final values.\n*   Declare the winner.\n</think>\n\nBased on the calculations below, **Product C** has the lowest price per ounce.\n\nHere is the breakdown:\n\n*   **Product A:** $\\$3.00 / 10 \\text{ oz} = \\mathbf{\\$0.30 \\text{ per oz}}$\n*   **Product B:** $\\$4.50 / 18 \\text{ oz} = \\mathbf{\\$0.25 \\text{ per oz}}$\n*   **Product C:** $\\$5.00 / 25 \\text{ oz} = \\mathbf{\\$0.20 \\text{ per oz}}$",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "Product C",
+          "$0.20/oz",
+          "compares A and B"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "sensenova_u1_8b_mot_hardu_elevator_direction",
+      "split": "Hard OOD",
+      "category": "real-world state reasoning",
+      "title": "Elevator panel direction",
+      "image": "assets/hardu_elevator_direction.png",
+      "question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "expected": "Higher floor next; the up arrow is lit and the display shows floor 3.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world state",
+        "direction inference",
+        "symbol reading"
+      ],
+      "case_id": "hardu_elevator_direction",
+      "model_key": "sensenova_u1_8b_mot",
+      "asset": "assets/hardu_elevator_direction.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_elevator_direction.png",
+      "readback_answer": "Based on the display, the elevator is set to go to a **higher floor**.\n\nHere are the clues from the image:\n**Green Up Arrow:** The green triangle is pointing upwards, indicating upward movement.\n**Text:** At the bottom, it explicitly says \"UP call active.\"",
+      "readback_question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "readback_provider_model_key": "sensenova_u1_8b_mot",
+      "readback_provider_model_label": "SenseNova-U1-8B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl",
+      "readback_config": {
+        "max_new_tokens": 1024,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "attn_backend": "sdpa"
+      },
+      "model_label": "SenseNova-U1-8B-MoT",
+      "understanding_answer": "Based on the display, the elevator is set to go to a **higher floor**.\n\nHere are the clues from the image:\n**Green Up Arrow:** The green triangle is pointing upwards, indicating upward movement.\n**Text:** At the bottom, it explicitly says \"UP call active.\"",
+      "raw_understanding_answer": "<think>\nThe user wants to know the direction of the elevator based on the image.\n\n1.  **Analyze the image:**\n    *   The sign says \"ELEVATOR\" at the top.\n    *   There is a digital display showing \"FLOOR 3\". This indicates the current floor.\n    *   Below the display, there are two arrows.\n    *   The top arrow is a green triangle pointing upwards. In elevator contexts, a green upward arrow usually means the elevator is moving up or the \"Up\" button is pressed.\n    *   The bottom arrow is a grey triangle pointing downwards. This is unlit or inactive.\n    *   At the very bottom, there is text that says \"UP call active\". This confirms that someone has pressed the button to go up.\n\n2.  **Synthesize the findings:**\n    *   The green arrow points up.\n    *   The text explicitly says \"UP call active\".\n    *   Therefore, the elevator is set to go to a higher floor.\n\n3.  **Formulate the answer:**\n    *   Start with a direct answer: \"higher floor\".\n    *   Explain the visual evidence: The green arrow is pointing up.\n    *   Mention the text confirmation: The text at the bottom says \"UP call active\".\n</think>\n\nBased on the display, the elevator is set to go to a **higher floor**.\n\nHere are the clues from the image:\n*   **Green Up Arrow:** The green triangle is pointing upwards, indicating upward movement.\n*   **Text:** At the bottom, it explicitly says \"UP call active.\"",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "higher/up",
+          "uses arrow",
+          "mentions display/floor"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "sensenova_u1_8b_mot_hardu_assembly_missing_bolt",
+      "split": "Hard OOD",
+      "category": "assembly inspection",
+      "title": "Missing chair bolt",
+      "image": "assets/hardu_assembly_missing_bolt.png",
+      "question": "Which chair leg is missing its top bolt?",
+      "expected": "The rear-right leg is missing its top bolt.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "visual inspection",
+        "spatial relation",
+        "assembly reasoning"
+      ],
+      "case_id": "hardu_assembly_missing_bolt",
+      "model_key": "sensenova_u1_8b_mot",
+      "asset": "assets/hardu_assembly_missing_bolt.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_assembly_missing_bolt.png",
+      "readback_answer": "Based on the image, the **back-right leg** (the leg on the right side that is straight down) is missing its top bolt.\n\nYou can tell because:\n1.  There is a red circle at the top joint of that leg.\n2.  The text \"missing bolt\" is written right next to it in red.\n3.  The other three legs have grey circles indicating they have bolts.",
+      "readback_question": "Which chair leg is missing its top bolt?",
+      "readback_provider_model_key": "sensenova_u1_8b_mot",
+      "readback_provider_model_label": "SenseNova-U1-8B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl",
+      "readback_config": {
+        "max_new_tokens": 1024,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "attn_backend": "sdpa"
+      },
+      "model_label": "SenseNova-U1-8B-MoT",
+      "understanding_answer": "Based on the image, the **back-right leg** (the leg on the right side that is straight down) is missing its top bolt.\n\nYou can tell because:\n1.  There is a red circle at the top joint of that leg.\n2.  The text \"missing bolt\" is written right next to it in red.\n3.  The other three legs have grey circles indicating they have bolts.",
+      "raw_understanding_answer": "<think>\nThe user wants me to identify which chair leg is missing a bolt based on the provided image.\n\n1.  **Analyze the image:**\n    *   The image shows a diagram of a chair with four legs.\n    *   There are four circles at the top of the legs where they connect to the seat.\n    *   Three of these circles are grey.\n    *   One circle is red and outlined in red.\n    *   Next to the red circle, there is text that says \"missing bolt\".\n    *   The text at the bottom says \"Each leg should have a gray bolt at the top joint.\"\n\n2.  **Locate the missing bolt:**\n    *   Looking at the legs from left to right:\n        *   Front-left leg: Has a grey bolt.\n        *   Back-left leg: Has a grey bolt.\n        *   Back-right leg: Has a red circle (missing bolt).\n        *   Front-right leg: Has a grey bolt. Wait, let me look closer.\n    *   Let's re-evaluate the leg positions.\n        *   Left side: Two legs. One angled out (front-left), one straight down (back-left). Both have grey bolts.\n        *   Right side: Two legs. One straight down (back-right), one angled out (front-right).\n        *   Wait, let's look at the connections.\n        *   Left side: There are two grey circles. One is on the angled leg, one is on the straight leg.\n        *   Right side: There is a red circle and a grey circle.\n        *   The red circle is on the leg that is straight down (the back-right leg).\n        *   The grey circle is on the leg that is angled out (the front-right leg).\n\n3.  **Formulate the answer:**\n    *   The question asks \"Which chair leg is missing its top bolt?\".\n    *   The image explicitly labels the missing bolt with red text \"missing bolt\" pointing to the red circle.\n    *   The red circle is located on the back-right leg (the leg that is straight down on the right side).\n    *   So, the back-right leg is the one missing the bolt.\n\n4.  **Refine the description:**\n    *   It's the leg on the right side, specifically the one that is positioned further back (straight down).\n    *   The other leg on the right side (angled forward) has a grey bolt.\n    *   So, \"the back right leg\" or \"the right rear leg\" is the correct identification.\n    *   I can also just describe it by position: \"the leg on the right side that is straight down\".\n\n    Let's double check.\n    - Left side: Two grey bolts.\n    - Right side: One red circle (missing bolt), one grey bolt.\n    - The red circle is on the leg that is vertical.\n    - The grey bolt is on the leg that is angled outwards.\n    - Therefore, the vertical leg on the right is the one missing the bolt.\n\n    Final Answer construction:\n    - Identify the visual cue: The red circle and the text \"missing bolt\".\n    - Locate it: It's on the right side of the chair.\n    - Specify the leg: It's the back-right leg (the one standing straight up).\n</think>\n\nBased on the image, the **back-right leg** (the leg on the right side that is straight down) is missing its top bolt.\n\nYou can tell because:\n1.  There is a red circle at the top joint of that leg.\n2.  The text \"missing bolt\" is written right next to it in red.\n3.  The other three legs have grey circles indicating they have bolts.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "rear-right",
+          "top bolt missing"
+        ],
+        "total_checks": 2
+      }
+    },
+    {
+      "id": "sensenova_u1_8b_mot_hardu_liquid_conservation",
+      "split": "Hard OOD",
+      "category": "physical conservation",
+      "title": "Liquid transfer conservation",
+      "image": "assets/hardu_liquid_conservation.png",
+      "question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "expected": "No. The diagram states no liquid is spilled, so the same total amount is conserved even though it is now in glass B.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "physical reasoning",
+        "conservation",
+        "diagram reading"
+      ],
+      "case_id": "hardu_liquid_conservation",
+      "model_key": "sensenova_u1_8b_mot",
+      "asset": "assets/hardu_liquid_conservation.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_liquid_conservation.png",
+      "readback_answer": "No.\n\nThe total amount of liquid did not change. The image shows liquid being moved from container A to container B. The text at the bottom explicitly states, \"No liquid is spilled during the transfer,\" which means the total volume of liquid is conserved; it is simply redistributed from one container to the other.",
+      "readback_question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "readback_provider_model_key": "sensenova_u1_8b_mot",
+      "readback_provider_model_label": "SenseNova-U1-8B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl",
+      "readback_config": {
+        "max_new_tokens": 1024,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "attn_backend": "sdpa"
+      },
+      "model_label": "SenseNova-U1-8B-MoT",
+      "understanding_answer": "No.\n\nThe total amount of liquid did not change. The image shows liquid being moved from container A to container B. The text at the bottom explicitly states, \"No liquid is spilled during the transfer,\" which means the total volume of liquid is conserved; it is simply redistributed from one container to the other.",
+      "raw_understanding_answer": "<think>\nThe user wants me to determine if the total amount of liquid changed based on the provided image.\n\n1.  **Analyze the \"Before\" state:**\n    *   Container A has a certain amount of liquid (let's call it $V_A$).\n    *   Container B has a certain amount of liquid (let's call it $V_B$).\n    *   Visually, $V_A$ looks like it's about half full. $V_B$ looks like it's about half full as well, maybe slightly less. Wait, let's look closer.\n    *   Container A is shorter and wider. The liquid level is roughly in the middle.\n    *   Container B is taller and narrower. The liquid level is roughly in the middle.\n    *   Actually, let's just look at the total volume. The blue area represents the liquid.\n\n2.  **Analyze the \"After\" state:**\n    *   Container A is labeled \"A empty\". It has no blue liquid.\n    *   Container B has liquid in it. The liquid level is higher than in the \"Before\" state.\n    *   The label says \"No liquid is spilled during the transfer.\" This is a huge clue.\n\n3.  **Compare \"Before\" and \"After\":**\n    *   In the \"Before\" image, there is liquid in A and liquid in B.\n    *   In the \"After\" image, the liquid from A has been moved into B.\n    *   The text explicitly states \"No liquid is spilled during the transfer.\"\n    *   Therefore, the total volume of liquid is the sum of liquid in A and liquid in B before, which is equal to the liquid in B after (since A is empty).\n    *   Conservation of mass/volume applies here. The liquid just moved from one container to another.\n\n4.  **Formulate the answer:**\n    *   **Direct Answer:** No.\n    *   **Explanation:** The image shows liquid moving from container A to container B. The text at the bottom explicitly states \"No liquid is spilled during the transfer.\" This means the total volume of liquid remains constant; it just changes location. The blue area in the \"After\" section (container B) represents the sum of the blue areas in the \"Before\" section (containers A and B).\n\n    *   Wait, let me double check the visual levels.\n    *   Before: A has ~50% full. B has ~50% full.\n    *   After: A is empty. B is ~75% full.\n    *   This implies the liquid from A was transferred to B.\n    *   The question is \"did the total amount of liquid change?\".\n    *   The answer is definitely No. The total amount is conserved.\n\n    *   Let's refine the explanation.\n    *   Start with \"No\".\n    *   Explain that the liquid was simply moved from container A to container B.\n    *   Point out the text \"No liquid is spilled during the transfer\" which confirms conservation of volume.\n    *   Visually, the blue area in the \"After\" picture (just in B) is equal to the blue area in the \"Before\" picture (in A + B).\n\n    *   Final check: Does the user want a simple \"yes or no\"? The prompt says \"Answer yes or no and explain briefly.\" So I need to start with the answer.\n\n    *   Draft: No. The image illustrates a transfer where liquid moves from container A to container B. The text at the bottom confirms that \"No liquid is spilled,\" meaning the total volume of liquid remains the same, just redistributed between the containers.\n</think>\n\nNo.\n\nThe total amount of liquid did not change. The image shows liquid being moved from container A to container B. The text at the bottom explicitly states, \"No liquid is spilled during the transfer,\" which means the total volume of liquid is conserved; it is simply redistributed from one container to the other.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "no change",
+          "conservation reason",
+          "transferred to B"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "sensenova_u1_8b_mot_hardu_train_transfer",
+      "split": "Hard OOD",
+      "category": "schedule reasoning",
+      "title": "Transit transfer timing",
+      "image": "assets/hardu_train_transfer.png",
+      "question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "expected": "Blue and Green tie for earliest at 09:24. Blue arrives at 09:18 plus 6 minutes; Green arrives at 09:24 plus 0 minutes. Red is later at 09:27.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "time arithmetic",
+        "schedule reasoning"
+      ],
+      "case_id": "hardu_train_transfer",
+      "model_key": "sensenova_u1_8b_mot",
+      "asset": "assets/hardu_train_transfer.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_train_transfer.png",
+      "readback_answer": "<think>\nThe user wants me to determine which train line arrives at the Museum earliest based on the provided image.\n\n1.  **Identify the current time:** The image states \"Current time: 09:12\".\n2.  **Identify the columns:** The table has columns for \"Line\", \"Arrives\", \"Transfer\", and \"Destination\".\n3.  **Identify the rows:**\nRow 1: Blue line, Arrives 09:18, Transfer 6 min, Destination Museum.\nRow 2: Red line, Arrives 09:15, Transfer 12 min, Destination Museum.\nRow 3: Green line, Arrives 09:24, Transfer 0 min, Destination Museum.\n4.  **Understand the calculation:** The text at the bottom says \"Earliest arrival = train arrival time + transfer time.\" This is a bit confusingly phrased. It likely means \"Total time to get to destination = Arrival time + Transfer time\". Wait, let me re-read. \"Earliest arrival = train arrival time + transfer time.\" This implies the *final* arrival time at the Museum is the sum of when the train arrives and how long the transfer takes.\nLet's check the logic.\nBlue: Arrives 09:18. Transfer takes 6 mins. So, you get to the Museum at 09:18 + 6 mins = 09:24.\nRed: Arrives 09:15. Transfer takes 12 mins. So, you get to the Museum at 09:15 + 12 mins = 09:27.\nGreen: Arrives 09:24. Transfer takes 0 mins. So, you get to the Museum at 09:24 + 0 mins = 09:24.\nWait, let me look closer at the \"Arrives\" column.*\n    Does \"Arrives\" mean \"Arrives at the transfer station\" or \"Arrives at the final destination\"?\n    The column header is just \"Arrives\". The destination is \"Museum\".\n    If the destination is already \"Museum\", then the \"Arrives\" time is the arrival time at the Museum.\n    But then what is the \"Transfer\" column for?\n    Maybe the \"Arrives\" time is when the train arrives at a *transfer point*, and the \"Transfer\" time is how long it takes to get to the Museum from that point?\n    Let's re-read the bottom text: \"Earliest arrival = train arrival time + transfer time.\"\n    This formula suggests that the \"Earliest arrival\" (presumably at the final destination) is calculated by adding the \"train arrival time\" (from the \"Arrives\" column) and the \"transfer time\".\n    This implies the \"Arrives\" column is *not* the final arrival time at the Museum, but rather the arrival time at a transfer station.\n    Let's assume the \"Arrives\" column is the time the train gets to the transfer hub.\nBlue train arrives at hub at 09:18. Transfer takes 6 mins. Total time to Museum = 09:18 + 6 min = 09:24.\nRed train arrives at hub at 09:15. Transfer takes 12 mins. Total time to Museum = 09:15 + 12 min = 09:27.\nGreen train arrives at hub at 09:24. Transfer takes 0 mins. Total time to Museum = 09:24 + 0 min = 09:24.\nAlternative interpretation:* Maybe the \"Arrives\" column is the arrival time at the Museum, and the \"Transfer\" column is irrelevant or refers to something else? No, that doesn't make sense with the formula at the bottom.\n    The formula \"Earliest arrival = train arrival time + transfer time\" strongly implies that the \"Arrives\" column is an intermediate time.\n    Let's look at the Green line. Arrives 09:24, Transfer 0 min. This suggests the train arrives at the Museum at 09:24 and you don't need to transfer.\n    Let's look at the Blue line. Arrives 09:18. If this is the time at the transfer station, and transfer takes 6 mins, you arrive at the Museum at 09:24.\n    Let's look at the Red line. Arrives 09:15. If this is the time at the transfer station, and transfer takes 12 mins, you arrive at the Museum at 09:27.\n\n    So",
+      "readback_question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "readback_provider_model_key": "sensenova_u1_8b_mot",
+      "readback_provider_model_label": "SenseNova-U1-8B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl",
+      "readback_config": {
+        "max_new_tokens": 1024,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "attn_backend": "sdpa"
+      },
+      "model_label": "SenseNova-U1-8B-MoT",
+      "understanding_answer": "<think>\nThe user wants me to determine which train line arrives at the Museum earliest based on the provided image.\n\n1.  **Identify the current time:** The image states \"Current time: 09:12\".\n2.  **Identify the columns:** The table has columns for \"Line\", \"Arrives\", \"Transfer\", and \"Destination\".\n3.  **Identify the rows:**\nRow 1: Blue line, Arrives 09:18, Transfer 6 min, Destination Museum.\nRow 2: Red line, Arrives 09:15, Transfer 12 min, Destination Museum.\nRow 3: Green line, Arrives 09:24, Transfer 0 min, Destination Museum.\n4.  **Understand the calculation:** The text at the bottom says \"Earliest arrival = train arrival time + transfer time.\" This is a bit confusingly phrased. It likely means \"Total time to get to destination = Arrival time + Transfer time\". Wait, let me re-read. \"Earliest arrival = train arrival time + transfer time.\" This implies the *final* arrival time at the Museum is the sum of when the train arrives and how long the transfer takes.\nLet's check the logic.\nBlue: Arrives 09:18. Transfer takes 6 mins. So, you get to the Museum at 09:18 + 6 mins = 09:24.\nRed: Arrives 09:15. Transfer takes 12 mins. So, you get to the Museum at 09:15 + 12 mins = 09:27.\nGreen: Arrives 09:24. Transfer takes 0 mins. So, you get to the Museum at 09:24 + 0 mins = 09:24.\nWait, let me look closer at the \"Arrives\" column.*\n    Does \"Arrives\" mean \"Arrives at the transfer station\" or \"Arrives at the final destination\"?\n    The column header is just \"Arrives\". The destination is \"Museum\".\n    If the destination is already \"Museum\", then the \"Arrives\" time is the arrival time at the Museum.\n    But then what is the \"Transfer\" column for?\n    Maybe the \"Arrives\" time is when the train arrives at a *transfer point*, and the \"Transfer\" time is how long it takes to get to the Museum from that point?\n    Let's re-read the bottom text: \"Earliest arrival = train arrival time + transfer time.\"\n    This formula suggests that the \"Earliest arrival\" (presumably at the final destination) is calculated by adding the \"train arrival time\" (from the \"Arrives\" column) and the \"transfer time\".\n    This implies the \"Arrives\" column is *not* the final arrival time at the Museum, but rather the arrival time at a transfer station.\n    Let's assume the \"Arrives\" column is the time the train gets to the transfer hub.\nBlue train arrives at hub at 09:18. Transfer takes 6 mins. Total time to Museum = 09:18 + 6 min = 09:24.\nRed train arrives at hub at 09:15. Transfer takes 12 mins. Total time to Museum = 09:15 + 12 min = 09:27.\nGreen train arrives at hub at 09:24. Transfer takes 0 mins. Total time to Museum = 09:24 + 0 min = 09:24.\nAlternative interpretation:* Maybe the \"Arrives\" column is the arrival time at the Museum, and the \"Transfer\" column is irrelevant or refers to something else? No, that doesn't make sense with the formula at the bottom.\n    The formula \"Earliest arrival = train arrival time + transfer time\" strongly implies that the \"Arrives\" column is an intermediate time.\n    Let's look at the Green line. Arrives 09:24, Transfer 0 min. This suggests the train arrives at the Museum at 09:24 and you don't need to transfer.\n    Let's look at the Blue line. Arrives 09:18. If this is the time at the transfer station, and transfer takes 6 mins, you arrive at the Museum at 09:24.\n    Let's look at the Red line. Arrives 09:15. If this is the time at the transfer station, and transfer takes 12 mins, you arrive at the Museum at 09:27.\n\n    So",
+      "raw_understanding_answer": "<think>\nThe user wants me to determine which train line arrives at the Museum earliest based on the provided image.\n\n1.  **Identify the current time:** The image states \"Current time: 09:12\".\n2.  **Identify the columns:** The table has columns for \"Line\", \"Arrives\", \"Transfer\", and \"Destination\".\n3.  **Identify the rows:**\n    *   Row 1: Blue line, Arrives 09:18, Transfer 6 min, Destination Museum.\n    *   Row 2: Red line, Arrives 09:15, Transfer 12 min, Destination Museum.\n    *   Row 3: Green line, Arrives 09:24, Transfer 0 min, Destination Museum.\n4.  **Understand the calculation:** The text at the bottom says \"Earliest arrival = train arrival time + transfer time.\" This is a bit confusingly phrased. It likely means \"Total time to get to destination = Arrival time + Transfer time\". Wait, let me re-read. \"Earliest arrival = train arrival time + transfer time.\" This implies the *final* arrival time at the Museum is the sum of when the train arrives and how long the transfer takes.\n    *   Let's check the logic.\n    *   Blue: Arrives 09:18. Transfer takes 6 mins. So, you get to the Museum at 09:18 + 6 mins = 09:24.\n    *   Red: Arrives 09:15. Transfer takes 12 mins. So, you get to the Museum at 09:15 + 12 mins = 09:27.\n    *   Green: Arrives 09:24. Transfer takes 0 mins. So, you get to the Museum at 09:24 + 0 mins = 09:24.\n\n    *Wait, let me look closer at the \"Arrives\" column.*\n    Does \"Arrives\" mean \"Arrives at the transfer station\" or \"Arrives at the final destination\"?\n    The column header is just \"Arrives\". The destination is \"Museum\".\n    If the destination is already \"Museum\", then the \"Arrives\" time is the arrival time at the Museum.\n    But then what is the \"Transfer\" column for?\n    Maybe the \"Arrives\" time is when the train arrives at a *transfer point*, and the \"Transfer\" time is how long it takes to get to the Museum from that point?\n    Let's re-read the bottom text: \"Earliest arrival = train arrival time + transfer time.\"\n    This formula suggests that the \"Earliest arrival\" (presumably at the final destination) is calculated by adding the \"train arrival time\" (from the \"Arrives\" column) and the \"transfer time\".\n    This implies the \"Arrives\" column is *not* the final arrival time at the Museum, but rather the arrival time at a transfer station.\n    Let's assume the \"Arrives\" column is the time the train gets to the transfer hub.\n    *   Blue train arrives at hub at 09:18. Transfer takes 6 mins. Total time to Museum = 09:18 + 6 min = 09:24.\n    *   Red train arrives at hub at 09:15. Transfer takes 12 mins. Total time to Museum = 09:15 + 12 min = 09:27.\n    *   Green train arrives at hub at 09:24. Transfer takes 0 mins. Total time to Museum = 09:24 + 0 min = 09:24.\n\n    *Alternative interpretation:* Maybe the \"Arrives\" column is the arrival time at the Museum, and the \"Transfer\" column is irrelevant or refers to something else? No, that doesn't make sense with the formula at the bottom.\n    The formula \"Earliest arrival = train arrival time + transfer time\" strongly implies that the \"Arrives\" column is an intermediate time.\n    Let's look at the Green line. Arrives 09:24, Transfer 0 min. This suggests the train arrives at the Museum at 09:24 and you don't need to transfer.\n    Let's look at the Blue line. Arrives 09:18. If this is the time at the transfer station, and transfer takes 6 mins, you arrive at the Museum at 09:24.\n    Let's look at the Red line. Arrives 09:15. If this is the time at the transfer station, and transfer takes 12 mins, you arrive at the Museum at 09:27.\n\n    So",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "Blue and Green",
+          "09:24",
+          "adds transfer times",
+          "Red later"
+        ],
+        "total_checks": 4
+      }
+    },
+    {
+      "id": "sensenova_u1_8b_mot_hardu_balance_hidden_weight",
+      "split": "Hard OOD",
+      "category": "equation from image",
+      "title": "Balance-scale hidden weight",
+      "image": "assets/hardu_balance_hidden_weight.png",
+      "question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "expected": "X is 3 kg.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "equation solving",
+        "visual arithmetic",
+        "counterfactual-free reasoning"
+      ],
+      "case_id": "hardu_balance_hidden_weight",
+      "model_key": "sensenova_u1_8b_mot",
+      "asset": "assets/hardu_balance_hidden_weight.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_balance_hidden_weight.png",
+      "readback_answer": "Based on the image, the balance scale is level, which means the total weight on the left side is equal to the total weight on the right side.\n\nHere is the equation:\n*2 kg + X = 5 kg**\n\nTo find X, you subtract 2 from 5:\n*X = 5 - 2**\n*X = 3**\n\nSo, **X is 3 kg**.",
+      "readback_question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "readback_provider_model_key": "sensenova_u1_8b_mot",
+      "readback_provider_model_label": "SenseNova-U1-8B-MoT",
+      "readback_same_as_generator": true,
+      "readback_runner": "SenseNova-U1 self-readback via examples/vqa/inference.py --jsonl",
+      "readback_config": {
+        "max_new_tokens": 1024,
+        "do_sample": false,
+        "dtype": "bfloat16",
+        "attn_backend": "sdpa"
+      },
+      "model_label": "SenseNova-U1-8B-MoT",
+      "understanding_answer": "Based on the image, the balance scale is level, which means the total weight on the left side is equal to the total weight on the right side.\n\nHere is the equation:\n*2 kg + X = 5 kg**\n\nTo find X, you subtract 2 from 5:\n*X = 5 - 2**\n*X = 3**\n\nSo, **X is 3 kg**.",
+      "raw_understanding_answer": "<think>\nThe user wants me to solve a simple physics/math puzzle based on an image.\n\n**1. Analyze the image:**\n*   **Title:** \"BALANCE PUZZLE\"\n*   **Visual:** A balance scale.\n*   **Left side:** Two blue blocks. One is labeled \"2 kg\", the other is labeled \"X\". They are sitting on a platform.\n*   **Right side:** One red block labeled \"5 kg\" sitting on a platform.\n*   **State:** The beam is horizontal, which means it is balanced.\n*   **Text at bottom:** \"The beam is level. What is X?\"\n\n**2. Formulate the equation:**\n*   For a balance scale to be level, the total weight on the left side must equal the total weight on the right side.\n*   Left side weight = Weight of first block + Weight of second block = 2 kg + X\n*   Right side weight = Weight of the single block = 5 kg\n*   Equation: 2 + X = 5\n\n**3. Solve for X:**\n*   Subtract 2 from both sides of the equation.\n*   X = 5 - 2\n*   X = 3\n\n**4. Construct the final answer:**\n*   State the principle: Since the beam is level, the weights on both sides are equal.\n*   Set up the math: 2 kg + X = 5 kg.\n*   Solve: X = 5 - 2.\n*   Result: X = 3 kg.\n</think>\n\nBased on the image, the balance scale is level, which means the total weight on the left side is equal to the total weight on the right side.\n\nHere is the equation:\n**2 kg + X = 5 kg**\n\nTo find X, you subtract 2 from 5:\n**X = 5 - 2**\n**X = 3**\n\nSo, **X is 3 kg**.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "X=3",
+          "left equation",
+          "right total"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "show_o2_1_5b_hardu_gear_train_direction",
+      "split": "Hard OOD",
+      "category": "mechanistic reasoning",
+      "title": "Gear train direction inference",
+      "image": "assets/hardu_gear_train_direction.png",
+      "question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "expected": "Gear D rotates counterclockwise.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "causal chain",
+        "mechanistic reasoning",
+        "direction inference"
+      ],
+      "case_id": "hardu_gear_train_direction",
+      "model_key": "show_o2_1_5b",
+      "asset": "assets/hardu_gear_train_direction.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_gear_train_direction.png",
+      "readback_answer": "Gear D rotates counterclockwise.",
+      "readback_question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "readback_provider_model_key": "show_o2_1_5b",
+      "readback_provider_model_label": "Show-o2-1.5B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml",
+      "readback_config": {
+        "max_new_tokens": 300,
+        "top_k": 1,
+        "dtype": "float32",
+        "resolution": 432,
+        "config": "configs/showo2_1.5b_demo_432x432.yaml"
+      },
+      "model_label": "Show-o2-1.5B",
+      "understanding_answer": "Gear D rotates counterclockwise.",
+      "raw_understanding_answer": "Gear D rotates counterclockwise.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.667,
+        "label": "partial",
+        "matched": [
+          "D counterclockwise",
+          "reads A clockwise"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "show_o2_1_5b_hardu_stove_knob_mapping",
+      "split": "Hard OOD",
+      "category": "real-world control mapping",
+      "title": "Stove knob to burner mapping",
+      "image": "assets/hardu_stove_knob_mapping.png",
+      "question": "Which burner is on, and which knob position proves it?",
+      "expected": "The front-right burner is on; the FR knob is set to HIGH while the others are OFF.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world rule",
+        "symbol grounding",
+        "spatial mapping"
+      ],
+      "case_id": "hardu_stove_knob_mapping",
+      "model_key": "show_o2_1_5b",
+      "asset": "assets/hardu_stove_knob_mapping.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_stove_knob_mapping.png",
+      "readback_answer": "The 'FR. HIGH' burner is on, as indicated by the red circle around the knob that is set to the 'FR. HIGH' position.",
+      "readback_question": "Which burner is on, and which knob position proves it?",
+      "readback_provider_model_key": "show_o2_1_5b",
+      "readback_provider_model_label": "Show-o2-1.5B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml",
+      "readback_config": {
+        "max_new_tokens": 300,
+        "top_k": 1,
+        "dtype": "float32",
+        "resolution": 432,
+        "config": "configs/showo2_1.5b_demo_432x432.yaml"
+      },
+      "model_label": "Show-o2-1.5B",
+      "understanding_answer": "The 'FR. HIGH' burner is on, as indicated by the red circle around the knob that is set to the 'FR. HIGH' position.",
+      "raw_understanding_answer": "The 'FR. HIGH' burner is on, as indicated by the red circle around the knob that is set to the 'FR. HIGH' position.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.75,
+        "label": "pass",
+        "matched": [
+          "front-right burner",
+          "FR knob",
+          "HIGH state"
+        ],
+        "total_checks": 4
+      }
+    },
+    {
+      "id": "show_o2_1_5b_hardu_shelf_unit_price",
+      "split": "Hard OOD",
+      "category": "visual arithmetic",
+      "title": "Shelf unit-price comparison",
+      "image": "assets/hardu_shelf_unit_price.png",
+      "question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "expected": "Product C is cheapest: $5.00 / 25 oz = $0.20 per oz, lower than A ($0.30/oz) and B ($0.25/oz).",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "arithmetic",
+        "comparison"
+      ],
+      "case_id": "hardu_shelf_unit_price",
+      "model_key": "show_o2_1_5b",
+      "asset": "assets/hardu_shelf_unit_price.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_shelf_unit_price.png",
+      "readback_answer": "Find the least number in the table. Remember to compare the numbers starting with the highest place value. The least number is $4.50.\nNow find the corresponding product. Product B corresponds to $4.50.",
+      "readback_question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "readback_provider_model_key": "show_o2_1_5b",
+      "readback_provider_model_label": "Show-o2-1.5B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml",
+      "readback_config": {
+        "max_new_tokens": 300,
+        "top_k": 1,
+        "dtype": "float32",
+        "resolution": 432,
+        "config": "configs/showo2_1.5b_demo_432x432.yaml"
+      },
+      "model_label": "Show-o2-1.5B",
+      "understanding_answer": "Find the least number in the table. Remember to compare the numbers starting with the highest place value. The least number is $4.50.\nNow find the corresponding product. Product B corresponds to $4.50.",
+      "raw_understanding_answer": "Find the least number in the table. Remember to compare the numbers starting with the highest place value. The least number is $4.50.\nNow find the corresponding product. Product B corresponds to $4.50.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0,
+        "label": "fail",
+        "matched": [],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "show_o2_1_5b_hardu_elevator_direction",
+      "split": "Hard OOD",
+      "category": "real-world state reasoning",
+      "title": "Elevator panel direction",
+      "image": "assets/hardu_elevator_direction.png",
+      "question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "expected": "Higher floor next; the up arrow is lit and the display shows floor 3.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world state",
+        "direction inference",
+        "symbol reading"
+      ],
+      "case_id": "hardu_elevator_direction",
+      "model_key": "show_o2_1_5b",
+      "asset": "assets/hardu_elevator_direction.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_elevator_direction.png",
+      "readback_answer": "The elevator is set to go to a higher floor next, as indicated by the lit green upward arrow.",
+      "readback_question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "readback_provider_model_key": "show_o2_1_5b",
+      "readback_provider_model_label": "Show-o2-1.5B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml",
+      "readback_config": {
+        "max_new_tokens": 300,
+        "top_k": 1,
+        "dtype": "float32",
+        "resolution": 432,
+        "config": "configs/showo2_1.5b_demo_432x432.yaml"
+      },
+      "model_label": "Show-o2-1.5B",
+      "understanding_answer": "The elevator is set to go to a higher floor next, as indicated by the lit green upward arrow.",
+      "raw_understanding_answer": "The elevator is set to go to a higher floor next, as indicated by the lit green upward arrow.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "higher/up",
+          "uses arrow",
+          "mentions display/floor"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "show_o2_1_5b_hardu_assembly_missing_bolt",
+      "split": "Hard OOD",
+      "category": "assembly inspection",
+      "title": "Missing chair bolt",
+      "image": "assets/hardu_assembly_missing_bolt.png",
+      "question": "Which chair leg is missing its top bolt?",
+      "expected": "The rear-right leg is missing its top bolt.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "visual inspection",
+        "spatial relation",
+        "assembly reasoning"
+      ],
+      "case_id": "hardu_assembly_missing_bolt",
+      "model_key": "show_o2_1_5b",
+      "asset": "assets/hardu_assembly_missing_bolt.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_assembly_missing_bolt.png",
+      "readback_answer": "The chair leg on the left side of the image is missing its top bolt.",
+      "readback_question": "Which chair leg is missing its top bolt?",
+      "readback_provider_model_key": "show_o2_1_5b",
+      "readback_provider_model_label": "Show-o2-1.5B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml",
+      "readback_config": {
+        "max_new_tokens": 300,
+        "top_k": 1,
+        "dtype": "float32",
+        "resolution": 432,
+        "config": "configs/showo2_1.5b_demo_432x432.yaml"
+      },
+      "model_label": "Show-o2-1.5B",
+      "understanding_answer": "The chair leg on the left side of the image is missing its top bolt.",
+      "raw_understanding_answer": "The chair leg on the left side of the image is missing its top bolt.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.5,
+        "label": "partial",
+        "matched": [
+          "top bolt missing"
+        ],
+        "total_checks": 2
+      }
+    },
+    {
+      "id": "show_o2_1_5b_hardu_liquid_conservation",
+      "split": "Hard OOD",
+      "category": "physical conservation",
+      "title": "Liquid transfer conservation",
+      "image": "assets/hardu_liquid_conservation.png",
+      "question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "expected": "No. The diagram states no liquid is spilled, so the same total amount is conserved even though it is now in glass B.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "physical reasoning",
+        "conservation",
+        "diagram reading"
+      ],
+      "case_id": "hardu_liquid_conservation",
+      "model_key": "show_o2_1_5b",
+      "asset": "assets/hardu_liquid_conservation.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_liquid_conservation.png",
+      "readback_answer": "No, the total amount of liquid did not change. The liquid was transferred from the beaker labeled 'Before' to the beaker labeled 'A empty', resulting in the same volume of liquid remaining in both beakers.",
+      "readback_question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "readback_provider_model_key": "show_o2_1_5b",
+      "readback_provider_model_label": "Show-o2-1.5B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml",
+      "readback_config": {
+        "max_new_tokens": 300,
+        "top_k": 1,
+        "dtype": "float32",
+        "resolution": 432,
+        "config": "configs/showo2_1.5b_demo_432x432.yaml"
+      },
+      "model_label": "Show-o2-1.5B",
+      "understanding_answer": "No, the total amount of liquid did not change. The liquid was transferred from the beaker labeled 'Before' to the beaker labeled 'A empty', resulting in the same volume of liquid remaining in both beakers.",
+      "raw_understanding_answer": "No, the total amount of liquid did not change. The liquid was transferred from the beaker labeled 'Before' to the beaker labeled 'A empty', resulting in the same volume of liquid remaining in both beakers.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0.667,
+        "label": "partial",
+        "matched": [
+          "no change",
+          "conservation reason"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "show_o2_1_5b_hardu_train_transfer",
+      "split": "Hard OOD",
+      "category": "schedule reasoning",
+      "title": "Transit transfer timing",
+      "image": "assets/hardu_train_transfer.png",
+      "question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "expected": "Blue and Green tie for earliest at 09:24. Blue arrives at 09:18 plus 6 minutes; Green arrives at 09:24 plus 0 minutes. Red is later at 09:27.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "time arithmetic",
+        "schedule reasoning"
+      ],
+      "case_id": "hardu_train_transfer",
+      "model_key": "show_o2_1_5b",
+      "asset": "assets/hardu_train_transfer.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_train_transfer.png",
+      "readback_answer": "Based on the information provided in the image, the earliest arrival time after adding transfer time is 09:18 for the line that arrives at 09:12.",
+      "readback_question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "readback_provider_model_key": "show_o2_1_5b",
+      "readback_provider_model_label": "Show-o2-1.5B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml",
+      "readback_config": {
+        "max_new_tokens": 300,
+        "top_k": 1,
+        "dtype": "float32",
+        "resolution": 432,
+        "config": "configs/showo2_1.5b_demo_432x432.yaml"
+      },
+      "model_label": "Show-o2-1.5B",
+      "understanding_answer": "Based on the information provided in the image, the earliest arrival time after adding transfer time is 09:18 for the line that arrives at 09:12.",
+      "raw_understanding_answer": "Based on the information provided in the image, the earliest arrival time after adding transfer time is 09:18 for the line that arrives at 09:12.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 0,
+        "label": "fail",
+        "matched": [],
+        "total_checks": 4
+      }
+    },
+    {
+      "id": "show_o2_1_5b_hardu_balance_hidden_weight",
+      "split": "Hard OOD",
+      "category": "equation from image",
+      "title": "Balance-scale hidden weight",
+      "image": "assets/hardu_balance_hidden_weight.png",
+      "question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "expected": "X is 3 kg.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "equation solving",
+        "visual arithmetic",
+        "counterfactual-free reasoning"
+      ],
+      "case_id": "hardu_balance_hidden_weight",
+      "model_key": "show_o2_1_5b",
+      "asset": "assets/hardu_balance_hidden_weight.png",
+      "asset_url": "file:///sensei-fs/users/qitaoz/codex_projects/omni_model_demos_20260518/hard_mixed_eval/assets/hardu_balance_hidden_weight.png",
+      "readback_answer": "The scale is balanced, so the weights on both sides are equal. The left pan has 2 kg plus X, and the right pan has 5 kg. To find X, we need to set the weights equal to each other and solve for X. So, 2 kg + X = 5 kg. Subtracting 2 kg from both sides gives us X = 3 kg. Therefore, X is 3 kg.",
+      "readback_question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "readback_provider_model_key": "show_o2_1_5b",
+      "readback_provider_model_label": "Show-o2-1.5B",
+      "readback_same_as_generator": true,
+      "readback_runner": "Show-o2 self-readback via show-o2/inference_mmu.py logic with config showo2_1.5b_demo_432x432.yaml",
+      "readback_config": {
+        "max_new_tokens": 300,
+        "top_k": 1,
+        "dtype": "float32",
+        "resolution": 432,
+        "config": "configs/showo2_1.5b_demo_432x432.yaml"
+      },
+      "model_label": "Show-o2-1.5B",
+      "understanding_answer": "The scale is balanced, so the weights on both sides are equal. The left pan has 2 kg plus X, and the right pan has 5 kg. To find X, we need to set the weights equal to each other and solve for X. So, 2 kg + X = 5 kg. Subtracting 2 kg from both sides gives us X = 3 kg. Therefore, X is 3 kg.",
+      "raw_understanding_answer": "The scale is balanced, so the weights on both sides are equal. The left pan has 2 kg plus X, and the right pan has 5 kg. To find X, we need to set the weights equal to each other and solve for X. So, 2 kg + X = 5 kg. Subtracting 2 kg from both sides gives us X = 3 kg. Therefore, X is 3 kg.",
+      "understanding_status": "completed",
+      "assessment": {
+        "score": 1,
+        "label": "pass",
+        "matched": [
+          "X=3",
+          "left equation",
+          "right total"
+        ],
+        "total_checks": 3
+      }
+    },
+    {
+      "id": "emu3_5_image_vllm_8x80_hardu_gear_train_direction",
+      "split": "Hard OOD",
+      "category": "mechanistic reasoning",
+      "title": "Gear train direction inference",
+      "image": "assets/hardu_gear_train_direction.png",
+      "question": "Gear A is shown rotating clockwise, and each adjacent gear turns in the opposite direction. What direction does gear D rotate?",
+      "expected": "Gear D rotates counterclockwise.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "causal chain",
+        "mechanistic reasoning",
+        "direction inference"
+      ],
+      "case_id": "hardu_gear_train_direction",
+      "model_key": "emu3_5_image_vllm_8x80",
+      "model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_provider_model_key": "emu3_5_image_vllm_8x80",
+      "readback_provider_model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_same_as_generator": false,
+      "readback_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "understanding_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "raw_understanding_answer": "",
+      "understanding_status": "unsupported",
+      "assessment": {
+        "score": 0,
+        "label": "unsupported",
+        "matched": [],
+        "total_checks": 0
+      }
+    },
+    {
+      "id": "emu3_5_image_vllm_8x80_hardu_stove_knob_mapping",
+      "split": "Hard OOD",
+      "category": "real-world control mapping",
+      "title": "Stove knob to burner mapping",
+      "image": "assets/hardu_stove_knob_mapping.png",
+      "question": "Which burner is on, and which knob position proves it?",
+      "expected": "The front-right burner is on; the FR knob is set to HIGH while the others are OFF.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world rule",
+        "symbol grounding",
+        "spatial mapping"
+      ],
+      "case_id": "hardu_stove_knob_mapping",
+      "model_key": "emu3_5_image_vllm_8x80",
+      "model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_provider_model_key": "emu3_5_image_vllm_8x80",
+      "readback_provider_model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_same_as_generator": false,
+      "readback_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "understanding_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "raw_understanding_answer": "",
+      "understanding_status": "unsupported",
+      "assessment": {
+        "score": 0,
+        "label": "unsupported",
+        "matched": [],
+        "total_checks": 0
+      }
+    },
+    {
+      "id": "emu3_5_image_vllm_8x80_hardu_shelf_unit_price",
+      "split": "Hard OOD",
+      "category": "visual arithmetic",
+      "title": "Shelf unit-price comparison",
+      "image": "assets/hardu_shelf_unit_price.png",
+      "question": "Which product has the lowest price per ounce? Show the arithmetic briefly.",
+      "expected": "Product C is cheapest: $5.00 / 25 oz = $0.20 per oz, lower than A ($0.30/oz) and B ($0.25/oz).",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "arithmetic",
+        "comparison"
+      ],
+      "case_id": "hardu_shelf_unit_price",
+      "model_key": "emu3_5_image_vllm_8x80",
+      "model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_provider_model_key": "emu3_5_image_vllm_8x80",
+      "readback_provider_model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_same_as_generator": false,
+      "readback_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "understanding_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "raw_understanding_answer": "",
+      "understanding_status": "unsupported",
+      "assessment": {
+        "score": 0,
+        "label": "unsupported",
+        "matched": [],
+        "total_checks": 0
+      }
+    },
+    {
+      "id": "emu3_5_image_vllm_8x80_hardu_elevator_direction",
+      "split": "Hard OOD",
+      "category": "real-world state reasoning",
+      "title": "Elevator panel direction",
+      "image": "assets/hardu_elevator_direction.png",
+      "question": "Based on the display and lit arrow, is the elevator set to go to a higher or lower floor next?",
+      "expected": "Higher floor next; the up arrow is lit and the display shows floor 3.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "real-world state",
+        "direction inference",
+        "symbol reading"
+      ],
+      "case_id": "hardu_elevator_direction",
+      "model_key": "emu3_5_image_vllm_8x80",
+      "model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_provider_model_key": "emu3_5_image_vllm_8x80",
+      "readback_provider_model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_same_as_generator": false,
+      "readback_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "understanding_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "raw_understanding_answer": "",
+      "understanding_status": "unsupported",
+      "assessment": {
+        "score": 0,
+        "label": "unsupported",
+        "matched": [],
+        "total_checks": 0
+      }
+    },
+    {
+      "id": "emu3_5_image_vllm_8x80_hardu_assembly_missing_bolt",
+      "split": "Hard OOD",
+      "category": "assembly inspection",
+      "title": "Missing chair bolt",
+      "image": "assets/hardu_assembly_missing_bolt.png",
+      "question": "Which chair leg is missing its top bolt?",
+      "expected": "The rear-right leg is missing its top bolt.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "visual inspection",
+        "spatial relation",
+        "assembly reasoning"
+      ],
+      "case_id": "hardu_assembly_missing_bolt",
+      "model_key": "emu3_5_image_vllm_8x80",
+      "model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_provider_model_key": "emu3_5_image_vllm_8x80",
+      "readback_provider_model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_same_as_generator": false,
+      "readback_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "understanding_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "raw_understanding_answer": "",
+      "understanding_status": "unsupported",
+      "assessment": {
+        "score": 0,
+        "label": "unsupported",
+        "matched": [],
+        "total_checks": 0
+      }
+    },
+    {
+      "id": "emu3_5_image_vllm_8x80_hardu_liquid_conservation",
+      "split": "Hard OOD",
+      "category": "physical conservation",
+      "title": "Liquid transfer conservation",
+      "image": "assets/hardu_liquid_conservation.png",
+      "question": "After the transfer, did the total amount of liquid change? Answer yes or no and explain briefly.",
+      "expected": "No. The diagram states no liquid is spilled, so the same total amount is conserved even though it is now in glass B.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "physical reasoning",
+        "conservation",
+        "diagram reading"
+      ],
+      "case_id": "hardu_liquid_conservation",
+      "model_key": "emu3_5_image_vllm_8x80",
+      "model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_provider_model_key": "emu3_5_image_vllm_8x80",
+      "readback_provider_model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_same_as_generator": false,
+      "readback_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "understanding_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "raw_understanding_answer": "",
+      "understanding_status": "unsupported",
+      "assessment": {
+        "score": 0,
+        "label": "unsupported",
+        "matched": [],
+        "total_checks": 0
+      }
+    },
+    {
+      "id": "emu3_5_image_vllm_8x80_hardu_train_transfer",
+      "split": "Hard OOD",
+      "category": "schedule reasoning",
+      "title": "Transit transfer timing",
+      "image": "assets/hardu_train_transfer.png",
+      "question": "Using current time 09:12, which line or lines get to Museum earliest after adding transfer time?",
+      "expected": "Blue and Green tie for earliest at 09:24. Blue arrives at 09:18 plus 6 minutes; Green arrives at 09:24 plus 0 minutes. Red is later at 09:27.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "OCR",
+        "time arithmetic",
+        "schedule reasoning"
+      ],
+      "case_id": "hardu_train_transfer",
+      "model_key": "emu3_5_image_vllm_8x80",
+      "model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_provider_model_key": "emu3_5_image_vllm_8x80",
+      "readback_provider_model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_same_as_generator": false,
+      "readback_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "understanding_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "raw_understanding_answer": "",
+      "understanding_status": "unsupported",
+      "assessment": {
+        "score": 0,
+        "label": "unsupported",
+        "matched": [],
+        "total_checks": 0
+      }
+    },
+    {
+      "id": "emu3_5_image_vllm_8x80_hardu_balance_hidden_weight",
+      "split": "Hard OOD",
+      "category": "equation from image",
+      "title": "Balance-scale hidden weight",
+      "image": "assets/hardu_balance_hidden_weight.png",
+      "question": "The scale is balanced. If the left pan has 2 kg plus X and the right pan has 5 kg, what is X?",
+      "expected": "X is 3 kg.",
+      "source": "Synthetic 2026-05-20 hard understanding case; not in paper.",
+      "source_url": "",
+      "capacity_tags": [
+        "equation solving",
+        "visual arithmetic",
+        "counterfactual-free reasoning"
+      ],
+      "case_id": "hardu_balance_hidden_weight",
+      "model_key": "emu3_5_image_vllm_8x80",
+      "model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_provider_model_key": "emu3_5_image_vllm_8x80",
+      "readback_provider_model_label": "Emu3.5-Image vLLM 8x80GB",
+      "readback_same_as_generator": false,
+      "readback_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "understanding_answer": "Unsupported in the current Emu3.5-Image generation/X2I runner. This report does not use a different model as judge.",
+      "raw_understanding_answer": "",
+      "understanding_status": "unsupported",
+      "assessment": {
+        "score": 0,
+        "label": "unsupported",
+        "matched": [],
+        "total_checks": 0
+      }
     }
   ],
   "summary": {
     "janus_pro_7b": {
-      "completed": 27,
-      "pass": 18,
-      "partial": 9,
-      "fail": 0,
+      "completed": 35,
+      "pass": 23,
+      "partial": 10,
+      "fail": 2,
       "unsupported": 0,
       "not_run": 0,
-      "id_total": 5,
-      "id_pass": 5,
-      "ood_total": 5,
-      "ood_pass": 3,
-      "real_total": 9,
-      "real_pass": 7,
-      "hard_total": 8,
-      "hard_pass": 3
+      "hard_mixed_total": 16,
+      "hard_mixed_pass": 8
     },
     "bagel_7b_mot": {
-      "completed": 27,
-      "pass": 19,
-      "partial": 3,
-      "fail": 5,
+      "completed": 35,
+      "pass": 23,
+      "partial": 5,
+      "fail": 7,
       "unsupported": 0,
       "not_run": 0,
-      "id_total": 5,
-      "id_pass": 5,
-      "ood_total": 5,
-      "ood_pass": 3,
-      "real_total": 9,
-      "real_pass": 7,
-      "hard_total": 8,
-      "hard_pass": 4
+      "hard_mixed_total": 16,
+      "hard_mixed_pass": 8
     },
     "sensenova_u1_8b_mot": {
-      "completed": 27,
-      "pass": 24,
+      "completed": 35,
+      "pass": 32,
       "partial": 3,
       "fail": 0,
       "unsupported": 0,
       "not_run": 0,
-      "id_total": 5,
-      "id_pass": 5,
-      "ood_total": 5,
-      "ood_pass": 5,
-      "real_total": 9,
-      "real_pass": 9,
-      "hard_total": 8,
-      "hard_pass": 5
+      "hard_mixed_total": 16,
+      "hard_mixed_pass": 13
     },
     "show_o2_1_5b": {
-      "completed": 27,
-      "pass": 11,
-      "partial": 8,
-      "fail": 8,
+      "completed": 35,
+      "pass": 14,
+      "partial": 11,
+      "fail": 10,
       "unsupported": 0,
       "not_run": 0,
-      "id_total": 5,
-      "id_pass": 3,
-      "ood_total": 5,
-      "ood_pass": 0,
-      "real_total": 9,
-      "real_pass": 6,
-      "hard_total": 8,
-      "hard_pass": 2
+      "hard_mixed_total": 16,
+      "hard_mixed_pass": 5
     },
     "emu3_5_image_vllm_8x80": {
       "completed": 0,
       "pass": 0,
       "partial": 0,
       "fail": 0,
-      "unsupported": 27,
+      "unsupported": 16,
       "not_run": 0,
-      "id_total": 5,
-      "id_pass": 0,
-      "ood_total": 5,
-      "ood_pass": 0,
-      "real_total": 9,
-      "real_pass": 0,
-      "hard_total": 8,
-      "hard_pass": 0
+      "hard_mixed_total": 16,
+      "hard_mixed_pass": 0
     },
     "onecat_3b": {
-      "completed": 10,
-      "pass": 9,
-      "partial": 1,
+      "completed": 26,
+      "pass": 21,
+      "partial": 5,
       "fail": 0,
       "unsupported": 0,
-      "not_run": 17,
-      "id_total": 5,
-      "id_pass": 5,
-      "ood_total": 5,
-      "ood_pass": 4,
-      "real_total": 9,
-      "real_pass": 0,
-      "hard_total": 8,
-      "hard_pass": 0
+      "not_run": 0,
+      "hard_mixed_total": 16,
+      "hard_mixed_pass": 12
     }
   },
   "notes": "Combined original synthetic ID/OOD cases with real-world reasoning cases added 2026-05-19. Assessments are heuristic checks for report triage, not a formal benchmark.",
-  "generation_timestamp": "2026-05-20T00:04:29.736Z"
+  "generation_timestamp": "2026-05-20T09:56:36.961Z"
 }
